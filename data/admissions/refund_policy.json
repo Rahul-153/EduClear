@@ -1,0 +1,94 @@
+{
+  "retrievedAt": "2026-11-06",
+  "authority": "UGC",
+  "notice": {
+    "title": "UGC Fee Refund Policy 2024-25 (D.O. No.F.2-71/2022 (CPP-II) (C-114546), 12 June 2024), continued for 2025-26 by D.O.No.F.12-5/2024(FNT/NET)-FeeNivaran(Notice), 27 October 2025, which attaches the October 2018 UGC Notification on Refund of Fees and Non-Retention of Original Certificates",
+    "number_or_date": "12 June 2024 (policy); 27 October 2025 (continuation for 2025-26); tiers table from October 2018 notification, Clause 4.1.3",
+    "url": "https://www.ugc.gov.in/pdfnews/1857727_Fee-Refund-Policy-2025-26.pdf",
+    "locator": "Page 4 of 18, 2018 notification Clause 4.1.3 (scanned; read from page image). Notice p.1; 12 June 2024 letter para 3(d) reproduces the same table.",
+    "snapshot": "data/sources/_admissions/ugc_fee_refund_policy_2025-26.pdf"
+  },
+  "tiers": [
+    {
+      "id": "t1",
+      "label": "100% refund of fees (point of time when notice of withdrawal is received in the HEI)",
+      "refund_percent": 100,
+      "window": "15 days or more before the formally-notified last date of admission",
+      "anchor": "closure_of_admission",
+      "from_days": null,
+      "to_days": -15,
+      "note": "Processing charge: HEI may deduct up to 5% of fees paid, max Rs 5,000 (Cl. 4.1.4, applies to tier (1) only)."
+    },
+    {
+      "id": "t2",
+      "label": "90% refund of fees (point of time when notice of withdrawal is received in the HEI)",
+      "refund_percent": 90,
+      "window": "Less than 15 days before the formally-notified last date of admission",
+      "anchor": "closure_of_admission",
+      "from_days": -14,
+      "to_days": 0,
+      "note": "Day bounds are an integer reading of the printed wording; 'last date' day itself assumed in this tier."
+    },
+    {
+      "id": "t3",
+      "label": "80% refund of fees (point of time when notice of withdrawal is received in the HEI)",
+      "refund_percent": 80,
+      "window": "15 days or less after the formally-notified last date of admission",
+      "anchor": "closure_of_admission",
+      "from_days": 1,
+      "to_days": 15,
+      "note": ""
+    },
+    {
+      "id": "t4",
+      "label": "50% refund of fees (point of time when notice of withdrawal is received in the HEI)",
+      "refund_percent": 50,
+      "window": "30 days or less, but more than 15 days, after formally-notified last date of admission",
+      "anchor": "closure_of_admission",
+      "from_days": 16,
+      "to_days": 30,
+      "note": ""
+    },
+    {
+      "id": "t5",
+      "label": "0% refund of fees (point of time when notice of withdrawal is received in the HEI)",
+      "refund_percent": 0,
+      "window": "More than 30 days after formally-notified last date of admission",
+      "anchor": "closure_of_admission",
+      "from_days": 31,
+      "to_days": null,
+      "note": ""
+    },
+    {
+      "id": "y2425-full",
+      "label": "Full refund (2024-25 session special rule)",
+      "refund_percent": 100,
+      "window": "all cancellations/migrations up to 30 September 2024",
+      "anchor": null,
+      "from_days": null,
+      "to_days": null,
+      "note": "Absolute calendar date in the 12 June 2024 letter, anchor not relative; applies to session 2024-25. Not used for later sessions."
+    },
+    {
+      "id": "y2425-1000",
+      "label": "Refund less processing fee (2024-25 session special rule)",
+      "refund_percent": null,
+      "window": "deduction of not more than Rs. 1,000 as processing fee, up to 31 October 2024",
+      "anchor": null,
+      "from_days": null,
+      "to_days": null,
+      "note": "Absolute date; refund percent printed as full refund minus up to Rs 1,000."
+    }
+  ],
+  "processing_fee_deduction_max_inr": 5000,
+  "return_within_days": 15,
+  "aicte_differs": null,
+  "aicte_note": "Not determined. AICTE page 'Notice on AICTE Refund Policy' (aicte.gov.in/content/notice-aicte-refund-policy, 2018) is only about payments by institutions to AICTE through its portal, not student fee refunds (page not retained: aicte.gov.in is outside the approved source domains). Student refund rules are in the AICTE Approval Process Handbook (clause reportedly 6.45), which could not be fetched; aicte-india.org failed TLS handshake (not bypassed).",
+  "unverified": [
+    "AICTE student withdrawal refund rules not verified from an official document; secondary sources only, not used.",
+    "No UGC fee refund policy specific to 2026-27 found; UGC letter dated 7 Oct 2026 (published 22/10/2026 on ugc.gov.in, saved as ugc_letter_2026-10-22_noncompliance_fee_refund.pdf) is an enforcement request that lists 12 June 2024 as the latest policy circular. Treat 2018 tiers as in force for 2026-27 admission schedules beyond 31 Oct only if UGC has not issued a newer policy; not confirmed.",
+    "Processing deduction: Rs 5,000 cap is 5% of fees paid, max Rs 5,000, tier (1) only; 2024-25 special rule says Rs 1,000 up to 31 Oct 2024.",
+    "Tier day bounds are an integer reading of printed wording; 'last date of admission' is institution-notified per HEI, not a fixed date.",
+    "Return timeline: 'within fifteen days from the date of receiving a written application' (Cl. 4.1.5, page 5 of the PDF text layer)."
+  ]
+}

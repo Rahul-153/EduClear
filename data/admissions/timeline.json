@@ -1,0 +1,413 @@
+{
+  "cycle": "2026",
+  "retrievedAt": "2026-11-06",
+  "seatAcceptanceFee": {
+    "generalInr": 30000,
+    "reservedInr": 15000,
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf",
+    "locator": "JoSAA 2026 Business Rules: Step 3 'Seat Acceptance Fee' (printed p.33-34), Clauses 56-58 (Section XXII, p.49-51)",
+    "snapshot": "data/sources/_admissions/josaa2026_business_rules.pdf",
+    "rule_text": "Rs. 15,000 for candidates with the category tag SC, ST, GEN-PwD, GEN-EWS-PwD, OBC-NCL-PwD, SC-PwD or ST-PwD and Rs. 30,000 for all other candidates (the fee includes Rs. 5,000 JoSAA processing charges). Excluding Rs 5000 processing charges it is adjusted against admission fee. Fee must be paid only in the round in which the seat is allotted for the first time, or via optional pre-payment; no further SAF on float/slide (Cl. 57). Non-payment = rejection of seat. Cl. 58: once paid not refundable; however on valid withdrawal refunded after deducting JoSAA withdrawal processing charges of Rs. 7000; if seat cancelled for not meeting eligibility / unresolved document discrepancy, refunded after deducting processing charges of Rs. 5000. Pre-payment refunded in FULL if no seat is allotted. Payment window is printed as dates per round (allotment date to a 17:00 IST deadline), not as a number of hours."
+  },
+  "events": [
+    {
+      "id": "josaa-prepay",
+      "label": "Pre-payment of seat acceptance fee and pre-upload of documents",
+      "kind": "deposit_window",
+      "start": "2026-06-02",
+      "end": "2026-06-11",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Candidate Registration and Choice Filling rows (starts 2 June 17:00; ends 11 June 17:00)",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Optional; pre-payment refunded in FULL if no seat allotted (Business Rules, Seat Acceptance Fee section)."
+    },
+    {
+      "id": "josaa-r1-allotment",
+      "label": "JoSAA Round 1 seat allocation",
+      "kind": "allotment",
+      "start": "2026-06-13",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 1 Seat Allocation row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Time 10:00 IST."
+    },
+    {
+      "id": "josaa-r1-reporting",
+      "label": "JoSAA Round 1 online reporting: fee payment / document upload / response to queries",
+      "kind": "reporting",
+      "start": "2026-06-13",
+      "end": "2026-06-26",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 1 Online reporting row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Last date for fee payment: 2026-06-26 by 17:00 IST. This window also covers document upload; no separate verification window is printed in the schedule."
+    },
+    {
+      "id": "josaa-r1-deposit-deadline",
+      "label": "JoSAA Round 1 last date for seat acceptance fee payment",
+      "kind": "deposit_window",
+      "start": "2026-06-26",
+      "end": "2026-06-26",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 1 '*Last date for fee payment' row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "By 17:00 IST. Payment window runs from allotment date to this date (printed as dates, not as hours)."
+    },
+    {
+      "id": "josaa-r2-allotment",
+      "label": "JoSAA Round 2 seat allocation",
+      "kind": "allotment",
+      "start": "2026-06-30",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 2 Seat Allocation row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Time 17:00 IST."
+    },
+    {
+      "id": "josaa-r2-reporting",
+      "label": "JoSAA Round 2 online reporting: fee payment / document upload / response to queries",
+      "kind": "reporting",
+      "start": "2026-06-30",
+      "end": "2026-07-03",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 2 Online reporting row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Last date for fee payment: 2026-07-03 by 17:00 IST. This window also covers document upload; no separate verification window is printed in the schedule."
+    },
+    {
+      "id": "josaa-r2-deposit-deadline",
+      "label": "JoSAA Round 2 last date for seat acceptance fee payment",
+      "kind": "deposit_window",
+      "start": "2026-07-03",
+      "end": "2026-07-03",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 2 '*Last date for fee payment' row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "By 17:00 IST. Payment window runs from allotment date to this date (printed as dates, not as hours)."
+    },
+    {
+      "id": "josaa-r2-withdrawal",
+      "label": "JoSAA Round 2 withdrawal of seat / exit",
+      "kind": "withdrawal",
+      "start": "2026-07-01",
+      "end": "2026-07-03",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 2 withdrawal row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "2026-07-01 10:00 to 2026-07-03 17:00 IST."
+    },
+    {
+      "id": "josaa-r3-allotment",
+      "label": "JoSAA Round 3 seat allocation",
+      "kind": "allotment",
+      "start": "2026-07-06",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 3 Seat Allocation row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Time 17:00 IST."
+    },
+    {
+      "id": "josaa-r3-reporting",
+      "label": "JoSAA Round 3 online reporting: fee payment / document upload / response to queries",
+      "kind": "reporting",
+      "start": "2026-07-06",
+      "end": "2026-07-08",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 3 Online reporting row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Last date for fee payment: 2026-07-08 by 17:00 IST. This window also covers document upload; no separate verification window is printed in the schedule."
+    },
+    {
+      "id": "josaa-r3-deposit-deadline",
+      "label": "JoSAA Round 3 last date for seat acceptance fee payment",
+      "kind": "deposit_window",
+      "start": "2026-07-08",
+      "end": "2026-07-08",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 3 '*Last date for fee payment' row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "By 17:00 IST. Payment window runs from allotment date to this date (printed as dates, not as hours)."
+    },
+    {
+      "id": "josaa-r3-withdrawal",
+      "label": "JoSAA Round 3 withdrawal of seat / exit",
+      "kind": "withdrawal",
+      "start": "2026-07-07",
+      "end": "2026-07-08",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 3 withdrawal row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "2026-07-07 10:00 to 2026-07-08 17:00 IST."
+    },
+    {
+      "id": "josaa-r4-allotment",
+      "label": "JoSAA Round 4 seat allocation",
+      "kind": "allotment",
+      "start": "2026-07-10",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 4 Seat Allocation row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Time 17:00 IST."
+    },
+    {
+      "id": "josaa-r4-reporting",
+      "label": "JoSAA Round 4 online reporting: fee payment / document upload / response to queries",
+      "kind": "reporting",
+      "start": "2026-07-10",
+      "end": "2026-07-13",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 4 Online reporting row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Last date for fee payment: 2026-07-13 by 17:00 IST. This window also covers document upload; no separate verification window is printed in the schedule."
+    },
+    {
+      "id": "josaa-r4-deposit-deadline",
+      "label": "JoSAA Round 4 last date for seat acceptance fee payment",
+      "kind": "deposit_window",
+      "start": "2026-07-13",
+      "end": "2026-07-13",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 4 '*Last date for fee payment' row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "By 17:00 IST. Payment window runs from allotment date to this date (printed as dates, not as hours)."
+    },
+    {
+      "id": "josaa-r4-withdrawal",
+      "label": "JoSAA Round 4 withdrawal of seat / exit",
+      "kind": "withdrawal",
+      "start": "2026-07-11",
+      "end": "2026-07-14",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 4 withdrawal row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "July 11 10:00 to July 14 17:00 IST; July 14 is LAST ROUND FOR WITHDRAWAL/EXIT for IITs/IISc only."
+    },
+    {
+      "id": "josaa-r5-allotment",
+      "label": "JoSAA Round 5 seat allocation",
+      "kind": "allotment",
+      "start": "2026-07-16",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 5 Seat Allocation row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Time 17:00 IST. FINAL round for IITs/IISc."
+    },
+    {
+      "id": "josaa-r5-reporting",
+      "label": "JoSAA Round 5 online reporting: fee payment / document upload / response to queries",
+      "kind": "reporting",
+      "start": "2026-07-16",
+      "end": "2026-07-20",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 5 Online reporting row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "Last date for fee payment: 2026-07-20 by 17:00 IST. This window also covers document upload; no separate verification window is printed in the schedule."
+    },
+    {
+      "id": "josaa-r5-deposit-deadline",
+      "label": "JoSAA Round 5 last date for seat acceptance fee payment",
+      "kind": "deposit_window",
+      "start": "2026-07-20",
+      "end": "2026-07-20",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 5 '*Last date for fee payment' row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "By 17:00 IST. Payment window runs from allotment date to this date (printed as dates, not as hours)."
+    },
+    {
+      "id": "josaa-r5-withdrawal",
+      "label": "JoSAA Round 5 withdrawal of seat / exit",
+      "kind": "withdrawal",
+      "start": "2026-07-16",
+      "end": "2026-07-20",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): Round 5 withdrawal row",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "NIT+ System only: withdrawal initiation July 16 to July 20 17:00 IST; withdrawal query response July 17 to July 21 17:00 IST. Not available for IITs/IISc after last round commencement."
+    },
+    {
+      "id": "josaa-r5-nitplus-paf",
+      "label": "Partial Admission Fee (PAF) payment, NIT+ system only",
+      "kind": "deposit_window",
+      "start": "2026-07-22",
+      "end": "2026-07-24",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/202606011735423571.pdf",
+        "locator": "Schedule of Events of JoSAA 2026 (ONLINE REPORTING): For NIT+ System only: Online payment of PAF",
+        "snapshot": "data/sources/_admissions/josaa2026_schedule.pdf"
+      },
+      "note": "By 17:00 IST. PAF Rs 45,000 (GEN/OBC-NCL/GEN-EWS) / Rs 20,000 (SC/ST/PwD) per CSAB Important Notice 20.07.2026; adjusted against admission fee."
+    },
+    {
+      "id": "csab-special-registration",
+      "label": "CSAB Special Rounds / DASA registration, SREF payment, choice filling",
+      "kind": "deposit_window",
+      "start": "2026-07-28",
+      "end": "2026-08-03",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s305a70454516ecd9194c293b0e415777f/uploads/2026/06/20260603805734243.pdf",
+        "locator": "Annexure 3, Schedule for DASA (UG) and CSAB Special Rounds 2026: Registration rows (start 28 Jul 10:00; END 03 Aug 10:00)",
+        "snapshot": "data/sources/_admissions/csab2026_special_schedule.pdf"
+      },
+      "note": "DASA also has document upload in this window; DASA candidates fill choices only after document verification."
+    },
+    {
+      "id": "csab-special-r1-allotment",
+      "label": "CSAB Special Round I seat allotment result",
+      "kind": "allotment",
+      "start": "2026-08-06",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s305a70454516ecd9194c293b0e415777f/uploads/2026/06/20260603805734243.pdf",
+        "locator": "Annexure 3, Schedule for DASA (UG) and CSAB Special Rounds 2026: Round-I row",
+        "snapshot": "data/sources/_admissions/csab2026_special_schedule.pdf"
+      },
+      "note": "17:00 IST."
+    },
+    {
+      "id": "csab-special-r1-reporting",
+      "label": "CSAB Special Round I willingness and online reporting (IAF-II payment, document upload)",
+      "kind": "reporting",
+      "start": "2026-08-06",
+      "end": "2026-08-10",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s305a70454516ecd9194c293b0e415777f/uploads/2026/06/20260603805734243.pdf",
+        "locator": "Annexure 3, Schedule for DASA (UG) and CSAB Special Rounds 2026: Round-I item b",
+        "snapshot": "data/sources/_admissions/csab2026_special_schedule.pdf"
+      },
+      "note": "Ends 17:00 IST. Last day to respond to document verifying officer queries: 11 Aug 17:00."
+    },
+    {
+      "id": "csab-special-r2-allotment",
+      "label": "CSAB Special Round II seat allotment result",
+      "kind": "allotment",
+      "start": "2026-08-12",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s305a70454516ecd9194c293b0e415777f/uploads/2026/06/20260603805734243.pdf",
+        "locator": "Annexure 3, Schedule for DASA (UG) and CSAB Special Rounds 2026: Round-II row",
+        "snapshot": "data/sources/_admissions/csab2026_special_schedule.pdf"
+      },
+      "note": "17:00 IST."
+    },
+    {
+      "id": "csab-special-r2-reporting",
+      "label": "CSAB Special Round II online reporting (IAF-II payment, document upload)",
+      "kind": "reporting",
+      "start": "2026-08-12",
+      "end": "2026-08-14",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s305a70454516ecd9194c293b0e415777f/uploads/2026/06/20260603805734243.pdf",
+        "locator": "Annexure 3, Schedule for DASA (UG) and CSAB Special Rounds 2026: Round-II row",
+        "snapshot": "data/sources/_admissions/csab2026_special_schedule.pdf"
+      },
+      "note": "Ends 17:00 IST. Last day to respond to queries: 17 Aug 17:00."
+    },
+    {
+      "id": "csab-special-physical-reporting",
+      "label": "Physical reporting at allotted institutes and balance fee payment (tentative)",
+      "kind": "reporting",
+      "start": "2026-08-13",
+      "end": "2026-08-18",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s305a70454516ecd9194c293b0e415777f/uploads/2026/06/20260603805734243.pdf",
+        "locator": "Annexure 3, Schedule for DASA (UG) and CSAB Special Rounds 2026: PI Reporting row",
+        "snapshot": "data/sources/_admissions/csab2026_special_schedule.pdf"
+      },
+      "note": "Printed as tentative; the schedule says to check the allotted institute's website for actual dates."
+    },
+    {
+      "id": "jeemain2027-s1-application",
+      "label": "JEE (Main) 2027 Session 1 online application",
+      "kind": "exam",
+      "start": "2026-10-24",
+      "end": "2026-11-22",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/10/20261024390682350.pdf",
+        "locator": "NTA Public Notice dated 24.10.2026, JEE (Main) 2027 Session 1 table: Online Submission of Application Form",
+        "snapshot": "data/sources/_admissions/jeemain2027_s1_public_notice_2026-10-24.pdf"
+      },
+      "note": "Up to 11:50 PM; late submission with Rs 500 late fee 23 to 26 Nov 2026."
+    },
+    {
+      "id": "jeemain2027-s1-admitcard",
+      "label": "JEE (Main) 2027 Session 1 admit card download",
+      "kind": "exam",
+      "start": "2027-01-13",
+      "end": null,
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/10/20261024390682350.pdf",
+        "locator": "NTA Public Notice dated 24.10.2026, JEE (Main) 2027 Session 1 table: Downloading of Admit Cards",
+        "snapshot": "data/sources/_admissions/jeemain2027_s1_public_notice_2026-10-24.pdf"
+      },
+      "note": null
+    },
+    {
+      "id": "jeemain2027-s1-exam",
+      "label": "JEE (Main) 2027 Session 1 examination",
+      "kind": "exam",
+      "start": "2027-01-20",
+      "end": "2027-01-28",
+      "source": {
+        "url": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/10/20261024390682350.pdf",
+        "locator": "NTA Public Notice dated 24.10.2026, JEE (Main) 2027 Session 1 table: Date of Examination",
+        "snapshot": "data/sources/_admissions/jeemain2027_s1_public_notice_2026-10-24.pdf"
+      },
+      "note": "Printed as '20,21,22,23,24 and 28 January 2027' (not a continuous range). Session 2 is April 2027; exact dates not in this notice."
+    }
+  ],
+  "unverified": [
+    "JoSAA 2026 had 5 rounds in the published schedule; no Round 6 exists to record.",
+    "No separate 'document verification' window is printed in the JoSAA schedule; document upload is part of the online reporting window. Physical PwD verification schedule is in Business Rules Section XIX and was not extracted.",
+    "JEE Advanced 2027 dates: none on jeeadv.ac.in (homepage shows JEE Advanced 2026); third-party sites speculate, ignored.",
+    "JEE Main 2027 Session 2 (April 2027) exact dates not in the 24.10.2026 notice (it says tentative schedule is in the Information Bulletin, not fetched).",
+    "Seat-acceptance hours (72h vs 96h) from D-03: official 2026 schedule uses date windows (e.g. Round 1 13 Jun to 26 Jun; Rounds 2-4 about 3-4 days), no hours figure printed.",
+    "Source files hosted at josaa.nic.in and its cdnbbsr.s3waas.gov.in CDN: josaa.admissions.nic.in only redirects to josaa.nic.in. Schedule PDF pages were read as text (not scanned); not visually compared to page images.",
+    "Round 5 CSAB NIT+ PAF details are in csab public notice saved as josaa2026_public_notice_PAF.pdf (dated 20.07.2026)."
+  ]
+}

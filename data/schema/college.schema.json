@@ -1,0 +1,356 @@
+{
+  "$defs": {
+    "Cutoffs": {
+      "additionalProperties": false,
+      "properties": {
+        "primaryExam": {
+          "title": "Primaryexam",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "minPercentileOrRank": {
+          "title": "Minpercentileorrank",
+          "type": "string"
+        },
+        "safeCutoffScore": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Safecutoffscore"
+        }
+      },
+      "required": [
+        "primaryExam",
+        "category",
+        "minPercentileOrRank"
+      ],
+      "title": "Cutoffs",
+      "type": "object"
+    },
+    "Fees": {
+      "additionalProperties": false,
+      "properties": {
+        "tuitionAnnual": {
+          "title": "Tuitionannual",
+          "type": "integer"
+        },
+        "mandatoryInstituteFeesAnnual": {
+          "title": "Mandatoryinstitutefeesannual",
+          "type": "integer"
+        },
+        "hostelAndMessAnnual": {
+          "title": "Hostelandmessannual",
+          "type": "integer"
+        },
+        "estimatedLivingAnnual": {
+          "title": "Estimatedlivingannual",
+          "type": "integer"
+        },
+        "totalFourYearCostINR": {
+          "title": "Totalfouryearcostinr",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tuitionAnnual",
+        "mandatoryInstituteFeesAnnual",
+        "hostelAndMessAnnual",
+        "estimatedLivingAnnual",
+        "totalFourYearCostINR"
+      ],
+      "title": "Fees",
+      "type": "object"
+    },
+    "Location": {
+      "additionalProperties": false,
+      "properties": {
+        "city": {
+          "title": "City",
+          "type": "string"
+        },
+        "state": {
+          "title": "State",
+          "type": "string"
+        },
+        "tier": {
+          "title": "Tier",
+          "type": "string"
+        },
+        "region": {
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "city",
+        "state",
+        "tier",
+        "region"
+      ],
+      "title": "Location",
+      "type": "object"
+    },
+    "Placement": {
+      "additionalProperties": false,
+      "properties": {
+        "headlineCTC": {
+          "title": "Headlinectc",
+          "type": "number"
+        },
+        "medianBaseSalary": {
+          "title": "Medianbasesalary",
+          "type": "number"
+        },
+        "batchSize": {
+          "title": "Batchsize",
+          "type": "integer"
+        },
+        "eligibleStudents": {
+          "title": "Eligiblestudents",
+          "type": "integer"
+        },
+        "actuallyPlaced": {
+          "title": "Actuallyplaced",
+          "type": "integer"
+        },
+        "higherStudiesOrFounders": {
+          "title": "Higherstudiesorfounders",
+          "type": "integer"
+        },
+        "disclosedPlacementRate": {
+          "title": "Disclosedplacementrate",
+          "type": "number"
+        },
+        "placementAuditNote": {
+          "title": "Placementauditnote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "headlineCTC",
+        "medianBaseSalary",
+        "batchSize",
+        "eligibleStudents",
+        "actuallyPlaced",
+        "higherStudiesOrFounders",
+        "disclosedPlacementRate",
+        "placementAuditNote"
+      ],
+      "title": "Placement",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "snapshot": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snapshot"
+        }
+      },
+      "required": [
+        "url",
+        "locator"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Sources": {
+      "additionalProperties": false,
+      "properties": {
+        "nirfDisclosureUrl": {
+          "title": "Nirfdisclosureurl",
+          "type": "string"
+        },
+        "feeCircularDate": {
+          "title": "Feecirculardate",
+          "type": "string"
+        },
+        "verificationStatus": {
+          "title": "Verificationstatus",
+          "type": "string"
+        },
+        "nirfYear": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nirfyear"
+        },
+        "retrievedAt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrievedat"
+        },
+        "headlineCtcUrl": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Headlinectcurl"
+        },
+        "feeCircularUrl": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Feecircularurl"
+        },
+        "cutoffUrl": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cutoffurl"
+        },
+        "snapshots": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Snapshots",
+          "type": "object"
+        },
+        "provenance": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Provenance",
+          "type": "object"
+        }
+      },
+      "required": [
+        "nirfDisclosureUrl",
+        "feeCircularDate",
+        "verificationStatus"
+      ],
+      "title": "Sources",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "shortName": {
+      "title": "Shortname",
+      "type": "string"
+    },
+    "stream": {
+      "title": "Stream",
+      "type": "string"
+    },
+    "type": {
+      "title": "Type",
+      "type": "string"
+    },
+    "location": {
+      "$ref": "#/$defs/Location"
+    },
+    "nirfRank": {
+      "title": "Nirfrank",
+      "type": "integer"
+    },
+    "accreditation": {
+      "title": "Accreditation",
+      "type": "string"
+    },
+    "flagshipPrograms": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Flagshipprograms",
+      "type": "array"
+    },
+    "cutoffs": {
+      "$ref": "#/$defs/Cutoffs"
+    },
+    "fees": {
+      "$ref": "#/$defs/Fees"
+    },
+    "placement": {
+      "$ref": "#/$defs/Placement"
+    },
+    "sources": {
+      "$ref": "#/$defs/Sources"
+    },
+    "commercialRelationship": {
+      "title": "Commercialrelationship",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "shortName",
+    "stream",
+    "type",
+    "location",
+    "nirfRank",
+    "accreditation",
+    "flagshipPrograms",
+    "cutoffs",
+    "fees",
+    "placement",
+    "sources",
+    "commercialRelationship"
+  ],
+  "title": "College",
+  "type": "object"
+}

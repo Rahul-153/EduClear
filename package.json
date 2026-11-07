@@ -1,0 +1,9 @@
+{
+  "name": "educlear",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "validate:data": ".venv/bin/python scripts/validate_data.py",
+    "test:data": ".venv/bin/python -m pytest tests -q"
+  }
+}

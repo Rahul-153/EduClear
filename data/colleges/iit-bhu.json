@@ -1,0 +1,122 @@
+{
+  "id": "iit-bhu",
+  "name": "Indian Institute of Technology (BHU) Varanasi",
+  "shortName": "IIT BHU",
+  "stream": "Engineering",
+  "type": "Indian Institute of Technology (Banaras Hindu University) Varanasi (name as printed in NIRF 2025 DCS)",
+  "location": {
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "tier": "Tier 2",
+    "region": "North"
+  },
+  "nirfRank": 10,
+  "accreditation": "Not stated in official sources reviewed",
+  "flagshipPrograms": [
+    "B.Tech Computer Science and Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Advanced",
+    "category": "General (OPEN)",
+    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral, All-India quota: opening AIR 747, closing AIR 1489 (JEE Advanced rank)",
+    "safeCutoffScore": null
+  },
+  "fees": {
+    "tuitionAnnual": 200000,
+    "mandatoryInstituteFeesAnnual": 7138,
+    "hostelAndMessAnnual": 40500,
+    "estimatedLivingAnnual": 37500,
+    "totalFourYearCostINR": 1140552
+  },
+  "placement": {
+    "headlineCTC": 165.0,
+    "medianBaseSalary": 20.0,
+    "batchSize": 1073,
+    "eligibleStudents": 998,
+    "actuallyPlaced": 996,
+    "higherStudiesOrFounders": 75,
+    "disclosedPlacementRate": 99.8,
+    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 1,073 graduated, 75 to higher studies, 996 placed of 998 eligible. Median Rs 2,000,000. Headline CTC: AMBIGUITY: two official own-domain newsletters. Jan 2024 newsletter (alumni-newsletter-2024-jan.pdf, p.1 'Internship/Placement Updates') explicitly states for session 2023-24, as of 1 Feb 2024: 1044 offers incl. 11 international, 'highest offered CTC Rs. 1.68 crores' (168 LPA). Dec 2024 newsletter says 1.65 crore as of 30 Dec 2024 but does NOT tie it to a season (Dec 2024 is within the 2024-25 season, so likely different season). Lower official figure used per D-23 (165 LPA) although season attribution of the Dec figure is unclear; the only explicitly 2023-24-labelled figure is 168 LPA. CTC, not stated domestic/international, partial-season snapshot. Caller may prefer 168 LPA."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0701.pdf",
+    "feeCircularDate": "2 July 2025 (publication date on IIT (BHU) fresher news page; PDF itself prints no date, PDF metadata created 2 Jul 2025)",
+    "verificationStatus": "Audited & Verified",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-06",
+    "headlineCtcUrl": "https://iitbhu.ac.in/contents/institute/dean/dora/doc/alumni_newsletter_2024_dec.pdf",
+    "feeCircularUrl": "https://iitbhu.ac.in/sites/default/files/institute/academics/fresher/doc/fee_structure_2025-26.pdf",
+    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+    "snapshots": {
+      "alumni-newsletter-2024-dec.pdf": "64a318efd18e6081938bf6de11312b7a6c74bda653201973848e1d717c5b78b0",
+      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
+      "josaa-2025-round6.html": "10412b2e547d197287e9f225602ae8ea713605d220759effbc3e9d8c27badf73",
+      "fee-structure-2025-26.pdf": "f1cfa2581f06ad71c85672e26ff3d1485e5eb8f45fe62256b49bbf0edd856286",
+      "doe-hra-cities-classification-om-2015-07-21.pdf": "38b935a849826dd0c1502f6de8d74529c6d33469e178d6843f4fd9b0f51a5cb3",
+      "nirf-2025-dcs.pdf": "0d486ec19d11864a221cb9c6235dbce2145ad3751b3ea0087fe3bb0cc1da2e1d"
+    },
+    "provenance": {
+      "placement.batchSize": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0701.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.eligibleStudents": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0701.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.actuallyPlaced": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0701.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.medianBaseSalary": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0701.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.headlineCTC": {
+        "url": "https://iitbhu.ac.in/contents/institute/dean/dora/doc/alumni_newsletter_2024_dec.pdf",
+        "locator": "Alma Communique Dec 2024, Internship/Placement Updates: 'maximum placement package offered was Rs. 1.65 crore per annum' (as of 30 Dec 2024)",
+        "snapshot": "alumni-newsletter-2024-dec.pdf"
+      },
+      "fees.tuitionAnnual": {
+        "url": "https://iitbhu.ac.in/sites/default/files/institute/academics/fresher/doc/fee_structure_2025-26.pdf",
+        "locator": "Fee structure PDF p.1 table sections A, C, D and footnote Note on Mess Advance",
+        "snapshot": "fee-structure-2025-26.pdf"
+      },
+      "fees.hostelAndMessAnnual": {
+        "url": "https://iitbhu.ac.in/sites/default/files/institute/academics/fresher/doc/fee_structure_2025-26.pdf",
+        "locator": "Fee structure PDF p.1 table sections A, C, D and footnote Note on Mess Advance",
+        "snapshot": "fee-structure-2025-26.pdf"
+      },
+      "fees.mandatoryInstituteFeesAnnual": {
+        "url": "https://iitbhu.ac.in/sites/default/files/institute/academics/fresher/doc/fee_structure_2025-26.pdf",
+        "locator": "Fee structure PDF p.1 table sections A, C, D and footnote Note on Mess Advance",
+        "snapshot": "fee-structure-2025-26.pdf"
+      },
+      "fees.estimatedLivingAnnual": {
+        "url": "https://doe.gov.in/files/circulars_document/21_07_2015.pdf",
+        "locator": "HRA class Y for Varanasi; band midpoint per D-19",
+        "snapshot": "doe-hra-cities-classification-om-2015-07-21.pdf"
+      },
+      "cutoffs.minPercentileOrRank": {
+        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
+        "snapshot": "josaa-2025-round6.html"
+      },
+      "nirfRank": {
+        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+        "locator": "NIRF 2025 Engineering ranking table",
+        "snapshot": "nirf-2025-engineering-ranking.html"
+      },
+      "accreditation": {
+        "url": "https://www.nirfindia.org/",
+        "locator": "No NAAC grade or NBA status found in official IIT documents reached (placement/fee/NIRF DCS) or via search of institute domain; not asserted",
+        "snapshot": "nirf-2025-dcs.pdf"
+      }
+    }
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}
