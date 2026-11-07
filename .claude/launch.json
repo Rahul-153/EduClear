@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "educlear", "runtimeExecutable": "/Users/rahul/Desktop/Gen AI/Paypal-hackthon/.venv/bin/python", "runtimeArgs": ["-m", "uvicorn", "backend.app.main:app", "--port", "8000"], "port": 8000 }
+  ]
+}
