@@ -90,3 +90,12 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [x] T-7.06 Stretch: Zapier hook (INT-08) — 2026-11-07 · integrations/zapier.py best-effort PII-free hook + tests; not exercised against a real Zap
 - [ ] T-7.07 Stretch: Elastic hybrid search (INT-06) — NOT BUILT (P2): needs Elastic Cloud keys; documented in REQUIREMENTS_STATUS.md
 - [x] T-7.08 Final requirements traceability check against `requirements.md` — 2026-11-07 · REQUIREMENTS_STATUS.md written
+
+## Phase 8 — Hardening and sponsor tracks (7–13 Nov)
+- [x] T-8.01 Live PayPal sandbox payment through the app — 2026-11-07 · booking funded ("Funds held in escrow ledger"); payout release and signed webhook still to confirm
+- [x] T-8.02 Checkout fallback when the PayPal pop-up hangs after login — 2026-11-07 · CheckoutPanel auto-captures every 4 s for 3 min + "check my payment" link (D-43); committed 13b04e2
+- [x] T-8.03 Bryntum Scheduler booking calendar (FR-10, INT-03) — 2026-11-07 · BookingScheduler.tsx; 18 slot events render, click-to-reserve creates a booking and the slot turns orange; verified in browser pane
+- [x] T-8.04 Bryntum Gantt admissions timeline (FR-07, INT-03) — 2026-11-07 · AdmissionsGantt.tsx; 24 tasks, 10 dependencies, user sessions group; verified in browser pane
+- [ ] T-8.05 Auto-expire unpaid bookings so they free their slots
+- [ ] T-8.06 Push to GitHub and confirm Render redeploy (needs user OK)
+- [ ] T-8.07 Release funds / payout, signed webhook, Pay Later checks on the live site (needs user actions)

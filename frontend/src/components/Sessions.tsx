@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { bookSlot, completeBooking, myBookings, payConfig, programs, slotsFor, type BookingView, type PayConfig, type Program, type Slot } from "../api";
 import CheckoutPanel from "./CheckoutPanel";
+import Boundary from "./Boundary";
+
+const BookingScheduler = lazy(() => import("./BookingScheduler"));
 
 const when = (iso: string) => new Date(iso).toLocaleString("en-IN", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }) + " IST";
 const STATUS: Record<string, string> = { pending: "Awaiting payment", escrow_funded: "Funds held in escrow ledger", paid: "Paid", payout_failed: "Release failed — retry",
@@ -17,10 +20,12 @@ export default function Sessions() {
   const reload = () => myBookings().then(setRows).catch(() => setRows([]));
   useEffect(() => { payConfig().then(setCfg); programs().then(setProgs); reload(); }, []);
   useEffect(() => { if (open) slotsFor(open).then(setSlots); }, [open]);
+  // payment state changes outside this tab (PayPal webhook, expiry), so keep the calendar and list fresh
+  useEffect(() => { const t = window.setInterval(reload, 15000); return () => window.clearInterval(t); }, []);
 
-  const reserve = async (s: Slot) => {
+  const reserve = async (s: Slot, programId = open!) => {
     setErr(null);
-    try { setActive(await bookSlot(open!, s.start)); reload(); } catch (e) { setErr((e as Error).message); }
+    try { setActive(await bookSlot(programId, s.start)); setOpen(programId); reload(); } catch (e) { setErr((e as Error).message); }
   };
   const settle = (b: BookingView | null) => { setActive(b && b.status !== "pending" ? null : b); reload(); if (open) slotsFor(open).then(setSlots); };
   const release = async (id: number) => { setErr(null); try { await completeBooking(id); reload(); } catch (e) { setErr((e as Error).message); reload(); } };
@@ -43,6 +48,13 @@ export default function Sessions() {
           </article>
         ))}
       </div>
+      {progs.length > 0 && (
+        <Boundary name="Booking calendar">
+          <Suspense fallback={<div className="card empty" style={{ marginTop: 16 }}>Loading booking calendar…</div>}>
+            <BookingScheduler programs={progs} bookings={rows} onPick={(pid, s) => reserve(s, pid)} />
+          </Suspense>
+        </Boundary>
+      )}
       {open && (
         <div className="card" style={{ marginTop: 16 }}>
           <div className="label">Available times (IST)</div>

@@ -87,3 +87,6 @@ Format: **D-nn · date · status** — Decision · Why · Alternatives · Impact
 
 ## D-43 — Checkout fallback for a hung PayPal pop-up (2026-11-07)
 PayPal's sandbox login pop-up can stay on its spinner after the buyer signs in, so the SDK `onApprove` never fires. The checkout now retries the capture every 4 s for 3 minutes after the PayPal button is clicked and offers a "check my payment" link. PayPal refuses capture until the buyer approves, and capture is idempotent in the ledger, so a premature attempt is harmless.
+
+## D-44 — Bryntum via public trial packages; one bundle (2026-11-07)
+Devpost's Bryntum page documents a 45-day trial installed from public npm (`@bryntum/*-trial`), so no registry credentials or Render build secret are needed. Two Bryntum bundles cannot share a page ("bundle loaded multiple times"), and the trial ships no thin bundles. The Gantt trial bundle already contains the `Scheduler` class, so only `@bryntum/gantt` is installed and `BookingScheduler.tsx` uses `Scheduler` from it directly. Both views are lazy-loaded and wrapped in error boundaries; the simple-bars timeline and slot buttons remain as fallbacks. The trial adds a watermark and expires after 45 days.

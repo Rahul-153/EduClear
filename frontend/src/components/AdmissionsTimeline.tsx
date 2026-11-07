@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
-import { timeline, type Timeline, type TimelineEvent } from "../api";
+import { lazy, Suspense, useEffect, useState } from "react";
+import { myBookings, timeline, type BookingView, type Timeline, type TimelineEvent } from "../api";
+import Boundary from "./Boundary";
 import { inr } from "../lib/format";
+
+const AdmissionsGantt = lazy(() => import("./AdmissionsGantt"));
 
 const COLOR: Record<string, string> = { deposit_window: "#d97706", allotment: "#0f172a", reporting: "#475569", withdrawal: "#94a3b8", exam: "#059669" };
 const day = (d: string) => new Date(d + "T00:00:00").getTime();
 const fmt = (d: string) => new Date(d + "T00:00:00").toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 
-/* Plain-DOM timeline behind the same data contract a Bryntum Scheduler/Gantt would use. Swap in Bryntum here once the
-   trial registry credentials are available (see KEYS_CHECKLIST.md). */
+/* Simple-bars view of the same data: the default is the Bryntum Gantt, this stays as a lightweight fallback. */
 function Lane({ title, events }: { title: string; events: TimelineEvent[] }) {
   if (!events.length) return null;
   const lo = Math.min(...events.map((e) => day(e.start)));
@@ -38,7 +40,10 @@ function Lane({ title, events }: { title: string; events: TimelineEvent[] }) {
 
 export default function AdmissionsTimeline() {
   const [t, setT] = useState<Timeline | null>(null);
+  const [rows, setRows] = useState<BookingView[]>([]);
+  const [view, setView] = useState<"gantt" | "bars">("gantt");
   useEffect(() => { timeline().then(setT).catch(() => setT(null)); }, []);
+  useEffect(() => { const load = () => myBookings().then(setRows).catch(() => setRows([])); load(); const i = window.setInterval(load, 15000); return () => window.clearInterval(i); }, []);
   if (!t) return <section className="card"><div className="empty">Admissions timeline unavailable.</div></section>;
   const upcoming = t.events.filter((e) => e.kind === "exam");
   const cycle = t.events.filter((e) => e.kind !== "exam");
@@ -58,8 +63,18 @@ export default function AdmissionsTimeline() {
           <p className="note" style={{ color: "var(--ink)" }}>Each round’s fee must be paid by 17:00 IST on the deadline date. Missing it rejects the seat. Dates below are the 2026 cycle; 2027 dates are not yet published.</p>
         </div>
       </div>
-      <Lane title="Coming up: JEE Main 2027 Session 1" events={upcoming} />
-      <Lane title={`Latest published counselling cycle (${t.cycle}) — for planning the next one`} events={cycle} />
+      <div className="row" style={{ marginTop: 16 }}>
+        <div className="label">{view === "gantt" ? `Gantt · ${t.cycle} counselling cycle and JEE Main 2027 · linked rounds, today marked` : "Simple bars"}</div>
+        <button className="link" onClick={() => setView(view === "gantt" ? "bars" : "gantt")}>{view === "gantt" ? "Show simple bars" : "Show Gantt"}</button>
+      </div>
+      {view === "gantt" ? (
+        <Boundary name="Admissions Gantt">
+          <Suspense fallback={<div className="empty">Loading Gantt…</div>}><AdmissionsGantt t={t} bookings={rows} /></Suspense>
+        </Boundary>
+      ) : (<>
+        <Lane title="Coming up: JEE Main 2027 Session 1" events={upcoming} />
+        <Lane title={`Latest published counselling cycle (${t.cycle}) — for planning the next one`} events={cycle} />
+      </>)}
     </section>
   );
 }

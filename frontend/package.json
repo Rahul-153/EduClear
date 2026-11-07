@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bryntum/gantt": "npm:@bryntum/gantt-trial@^7.3.8",
+    "@bryntum/gantt-react": "^7.3.8",
     "@paypal/paypal-js": "^11.3.0",
     "ag-charts-community": "^14.3.0",
     "ag-charts-react": "^14.3.0",
