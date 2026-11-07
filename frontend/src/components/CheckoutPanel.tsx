@@ -9,6 +9,19 @@ export default function CheckoutPanel({ booking, cfg, onChange, payLaterHint }: 
   const [msg, setMsg] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const host = useRef<HTMLDivElement>(null);
+  const poll = useRef<number | null>(null);
+  const stopPoll = () => { if (poll.current) { window.clearInterval(poll.current); poll.current = null; } };
+  // PayPal's sandbox pop-up sometimes hangs on its spinner after login even though the order is approved; if the SDK
+  // callback never fires, trying the capture picks the approval up (PayPal refuses it until the buyer has approved).
+  const startPoll = () => {
+    stopPoll();
+    const until = Date.now() + 3 * 60_000;
+    poll.current = window.setInterval(async () => {
+      if (Date.now() > until) return stopPoll();
+      try { const r = await captureBooking(booking.id); stopPoll(); onChange(r); } catch { /* not approved yet */ }
+    }, 4000);
+  };
+  useEffect(() => stopPoll, []);
 
   const run = async (fn: () => Promise<BookingView | void>) => {
     setBusy(true); setMsg(null);
@@ -25,9 +38,9 @@ export default function CheckoutPanel({ booking, cfg, onChange, payLaterHint }: 
         if (!paypal || dead) return;
         const sdk = await paypal.createInstance({ clientId: cfg.client_id!, components: ["paypal-payments"], pageType: "checkout" });
         const eligible = await sdk.findEligibleMethods({ currencyCode: "USD" });
-        const opts = { onApprove: async () => { await run(() => captureBooking(booking.id)); },
-          onCancel: () => setMsg("Payment cancelled."), onError: () => setMsg("PayPal reported an error. Nothing was charged.") };
-        const mount = (el: HTMLElement, start: () => void) => { el.addEventListener("click", start); host.current?.appendChild(el); };
+        const opts = { onApprove: async () => { stopPoll(); await run(() => captureBooking(booking.id)); },
+          onCancel: () => { stopPoll(); setMsg("Payment cancelled."); }, onError: () => setMsg("PayPal reported an error. Nothing was charged.") };
+        const mount = (el: HTMLElement, start: () => void) => { el.addEventListener("click", () => { startPoll(); start(); }); host.current?.appendChild(el); };
         host.current!.innerHTML = "";
         if (eligible.isEligible("paypal")) {
           const s = sdk.createPayPalOneTimePaymentSession(opts);
@@ -58,7 +71,10 @@ export default function CheckoutPanel({ booking, cfg, onChange, payLaterHint }: 
           <button disabled={busy} className="link" onClick={() => run(async () => { await mockApprove(booking.id, false); await captureBooking(booking.id); })}>Simulate decline</button>
           <button disabled={busy} className="link" onClick={() => run(async () => { const b = await cancelBooking(booking.id); onChange(null); return b; })}>Cancel</button>
         </div>
-      ) : <div ref={host} style={{ display: "flex", gap: 8, flexWrap: "wrap", minHeight: 44 }} />}
+      ) : (<>
+        <div ref={host} style={{ display: "flex", gap: 8, flexWrap: "wrap", minHeight: 44 }} />
+        <p className="note">PayPal window stuck after login? Close it and <button disabled={busy} className="link" onClick={() => run(() => captureBooking(booking.id))}>check my payment</button>. We also check automatically.</p>
+      </>)}
       {msg && <p role="alert" className="note" style={{ color: "var(--amber)" }}>{msg}</p>}
     </div>
   );

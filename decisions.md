@@ -84,3 +84,6 @@ Format: **D-nn · date · status** — Decision · Why · Alternatives · Impact
 **D-41 · 2026-11-07 · Accepted (user)** — Licence holder is "Rahul Rathore" (the LICENSE GitHub created in the new repo was kept; it supersedes the placeholder holder in D-38). Repository: https://github.com/Rahul-153/EduClear. The evidence folder is not pushed (D-40).
 
 **D-42 · 2026-11-07 · Accepted** — Live deployment: https://educlear.onrender.com (Render Docker service + Postgres, PAYPAL_ENV=sandbox, live-sandbox payment mode). Verified: smoke 14/14, Postgres schema creation, unsigned webhook rejected with 401, PayPal JS SDK v6 loads from sandbox and renders `paypal-button`. Pay Later did not show for the Rs 2,499 session ($29.99 is below PayPal's Pay in 4 minimum of about $30); it should be checked on the tech kit (about $1,062). Still to verify with a human: popup approval inside the app and the signed webhook.
+
+## D-43 — Checkout fallback for a hung PayPal pop-up (2026-11-07)
+PayPal's sandbox login pop-up can stay on its spinner after the buyer signs in, so the SDK `onApprove` never fires. The checkout now retries the capture every 4 s for 3 minutes after the PayPal button is clicked and offers a "check my payment" link. PayPal refuses capture until the buyer approves, and capture is idempotent in the ledger, so a premature attempt is harmless.
