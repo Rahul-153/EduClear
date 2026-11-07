@@ -7,3 +7,6 @@ dist/
 *.db
 .DS_Store
 .npmrc
+
+# Evidence snapshots (363 MB of downloaded PDFs/pages) stay on the owner's machine; records keep URL + SHA-256 for each
+data/sources/

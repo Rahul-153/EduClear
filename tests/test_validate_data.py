@@ -73,3 +73,12 @@ def test_iim_two_year_multiplier(good):
     d["fees"]["totalFourYearCostINR"] = 265000 * 2
     ok, errs = check(d)
     assert not any("G4" in e for e in errs)
+
+
+def test_missing_evidence_folder_is_a_warning_not_an_error(good, tmp_path):
+    import shutil
+    shutil.rmtree(tmp_path / "data" / "sources")
+    vd.EVIDENCE_MISSING.clear()
+    ok, errs = check(good)
+    assert ok, errs
+    assert vd.EVIDENCE_MISSING == ["test-college"]

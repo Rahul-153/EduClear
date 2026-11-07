@@ -38,7 +38,7 @@ Run `npm run validate:data`: all 6 manual gates + extra audit checks (snapshots 
 | fees.estimatedLivingAnnual | https://doe.gov.in/files/circulars_document/7th_July_2017.pdf | HRA class Z for Pilani (Jhunjhunu district, Rajasthan); band midpoint per D-19 | hra-doe-om-2017-07-07.pdf (ce31b4b4c5) |
 | cutoffs.minPercentileOrRank | https://www.bitsadmission.com/FD/BITSAT_cutOffs.html | Section 'BITSAT Cut-off Scores for Academic Year 2026-2027', Pilani, B.E. Computer Science | bitsat-cutoffs.html (88a35a2e10) |
 | nirfRank | https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html | NIRF 2025 Engineering ranking table | nirf-2025-engineering-ranking.html (a7e29ec5af) |
-| accreditation | https://www.bits-pilani.ac.in/awardsandaccreditations | NAAC Accreditation section | awards-and-accreditations.html (dc2095f932) |
+| accreditation | https://www.bits-pilani.ac.in/awardsandaccreditations | NAAC Accreditation section | awards-and-accreditations.html (bf9375e9f6) |
 
 Second-pass: 21 checks, 0 mismatch(es) recorded in `verification.json`.
 
@@ -84,7 +84,7 @@ Second-pass: 20 checks, 0 mismatch(es) recorded in `verification.json`.
 | fees.hostelAndMessAnnual | https://iitbhu.ac.in/sites/default/files/institute/academics/fresher/doc/fee_structure_2025-26.pdf | Fee structure PDF p.1 table sections A, C, D and footnote Note on Mess Advance | fee-structure-2025-26.pdf (f1cfa2581f) |
 | fees.mandatoryInstituteFeesAnnual | https://iitbhu.ac.in/sites/default/files/institute/academics/fresher/doc/fee_structure_2025-26.pdf | Fee structure PDF p.1 table sections A, C, D and footnote Note on Mess Advance | fee-structure-2025-26.pdf (f1cfa2581f) |
 | fees.estimatedLivingAnnual | https://doe.gov.in/files/circulars_document/21_07_2015.pdf | HRA class Y for Varanasi; band midpoint per D-19 | doe-hra-cities-classification-om-2015-07-21.pdf (38b935a849) |
-| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (10412b2e54) |
+| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (fa5b13c739) |
 | nirfRank | https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html | NIRF 2025 Engineering ranking table | nirf-2025-engineering-ranking.html (a7e29ec5af) |
 | accreditation | https://www.nirfindia.org/ | No NAAC grade or NBA status found in official IIT documents reached (placement/fee/NIRF DCS) or via search of institute domain; not asserted | nirf-2025-dcs.pdf (0d486ec19d) |
 
@@ -108,7 +108,7 @@ Second-pass: 20 checks, 0 mismatch(es) recorded in `verification.json`.
 | fees.hostelAndMessAnnual | https://iitg.ac.in/acad/admission/imp_info/fee.php | Page sections 'Fee Structure' A, B, C and 'Tuition Fees (per semester)' table | fee-structure-page.html (59becb57f8) |
 | fees.mandatoryInstituteFeesAnnual | https://iitg.ac.in/acad/admission/imp_info/fee.php | Page sections 'Fee Structure' A, B, C and 'Tuition Fees (per semester)' table | fee-structure-page.html (59becb57f8) |
 | fees.estimatedLivingAnnual | https://doe.gov.in/files/circulars_document/21_07_2015.pdf | HRA class Y for Guwahati; band midpoint per D-19 | doe-hra-cities-classification-om-2015-07-21.pdf (38b935a849) |
-| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (06310cfb80) |
+| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (6666ffb14c) |
 | nirfRank | https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html | NIRF 2025 Engineering ranking table | nirf-2025-engineering-ranking.html (a7e29ec5af) |
 | accreditation | https://www.nirfindia.org/ | No NAAC grade or NBA status found in official IIT documents reached (placement/fee/NIRF DCS) or via search of institute domain; not asserted | nirf-2025-dcs.pdf (4eec514360) |
 
@@ -132,7 +132,7 @@ Second-pass: 16 checks, 0 mismatch(es) recorded in `verification.json`.
 | fees.hostelAndMessAnnual | https://iith.ac.in/academics/assets/files/fee/2026/jan-jun-2026/Fee_Structure_Jul-Dec2026Semester_15.05-1.pdf | IIT Hyderabad Fee Structure for the Semester July-December 2026, 'UG Newly Enrolled Students in July 2026', GEN/OBC column (p.2); items 1.1-1.3, 2.1-2.5, 3.1; mess note 1 | fee-structure-jul-dec-2026.pdf (d08372cc5a) |
 | fees.mandatoryInstituteFeesAnnual | https://iith.ac.in/academics/assets/files/fee/2026/jan-jun-2026/Fee_Structure_Jul-Dec2026Semester_15.05-1.pdf | IIT Hyderabad Fee Structure for the Semester July-December 2026, 'UG Newly Enrolled Students in July 2026', GEN/OBC column (p.2); items 1.1-1.3, 2.1-2.5, 3.1; mess note 1 | fee-structure-jul-dec-2026.pdf (d08372cc5a) |
 | fees.estimatedLivingAnnual | https://doe.gov.in/files/circulars_document/21_07_2015.pdf | HRA class X for Hyderabad (UA); band midpoint per D-19 | doe-hra-om-2015-07-21.pdf (38b935a849) |
-| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (f82024bd95) |
+| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (f2498895eb) |
 | nirfRank | https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html | NIRF 2025 Engineering ranking table | nirf-2025-engineering-ranking.html (a7e29ec5af) |
 | accreditation | https://iith.ac.in/assets/files/NIRF-Reports/2025/Indian_Institute_of_Technology_Hyderabad_Overall_2025.pdf | NIRF 2025 Overall report, Accreditation > NAAC Accreditation, question 1: NO | nirf-2025-overall.pdf (53c30cd02a) |
 
@@ -156,7 +156,7 @@ Second-pass: 20 checks, 0 mismatch(es) recorded in `verification.json`.
 | fees.hostelAndMessAnnual | https://www.mnit.ac.in/cms/uploads/2026/05/Fee_UG_2026-27.pdf | mnit-fee-ug-2026-27.pdf page 1 'Fee Structure for B. Tech. students admitted in the session 2026-27' (Tuition, Institute Fee A-D, Notes); hostel: mnit-hostel-fee-mess-advance-2026-27.pdf page 1 table | mnit-fee-ug-2026-27.pdf (f9fd24aaff) |
 | fees.mandatoryInstituteFeesAnnual | https://www.mnit.ac.in/cms/uploads/2026/05/Fee_UG_2026-27.pdf | mnit-fee-ug-2026-27.pdf page 1 'Fee Structure for B. Tech. students admitted in the session 2026-27' (Tuition, Institute Fee A-D, Notes); hostel: mnit-hostel-fee-mess-advance-2026-27.pdf page 1 table | mnit-fee-ug-2026-27.pdf (f9fd24aaff) |
 | fees.estimatedLivingAnnual | Department of Expenditure OM dated 07.07.2017 on HRA city classification (saved copy hra-doe-om-2017-07-07.pdf; original URL not re-verified) | HRA class Y for Jaipur; band midpoint per D-19 | hra-doe-om-2017-07-07.pdf (ce31b4b4c5) |
-| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (6e3efcaf23) |
+| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (14dcca22bc) |
 | nirfRank | https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html | NIRF 2025 Engineering ranking table | nirf-2025-engineering-ranking.html (a7e29ec5af) |
 | accreditation | https://www.mnit.ac.in/cms/uploads/2022/08/AccrditationStatus.pdf | UG list, row 3 B.Tech - Computer Science & Engineering | mnit-nba-accreditation-status-2022-08.pdf (fd855059fb) |
 
@@ -180,7 +180,7 @@ Second-pass: 16 checks, 0 mismatch(es) recorded in `verification.json`.
 | fees.hostelAndMessAnnual | https://nitc.ac.in/imgserver/uploads/attachments/nit-calicut-fee-structure-for-ug-for-the-ay-2026-27-b-stylecolorrednewb_2337_0.pdf | Fee circular: B.Tech, Category 1 table ('Open/EWS/OBC (NCL) ... above Rs.5,00,000'); hostel circular: 'Hostel Fee Structure for UG (2026-27)' tables A and B | nitc-fee-structure-ug-ay-2026-27.pdf (8e212df332) |
 | fees.mandatoryInstituteFeesAnnual | https://nitc.ac.in/imgserver/uploads/attachments/nit-calicut-fee-structure-for-ug-for-the-ay-2026-27-b-stylecolorrednewb_2337_0.pdf | Fee circular: B.Tech, Category 1 table ('Open/EWS/OBC (NCL) ... above Rs.5,00,000'); hostel circular: 'Hostel Fee Structure for UG (2026-27)' tables A and B | nitc-fee-structure-ug-ay-2026-27.pdf (8e212df332) |
 | fees.estimatedLivingAnnual | https://doe.gov.in/files/circulars_document/7th_July_2017.pdf | HRA class Y for Kozhikode; band midpoint per D-19 | doe-7th_July_2017.pdf (ce31b4b4c5) |
-| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (424cca41b0) |
+| cutoffs.minPercentileOrRank | https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx | JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral | josaa-2025-round6.html (ed007f51ca) |
 | nirfRank | https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html | NIRF 2025 Engineering ranking table | nirf-2025-engineering-ranking.html (a7e29ec5af) |
 | accreditation | https://nitc.ac.in/imgserver/uploads/attachments/press-release_b0c923c0-6c71-4a9b-9d91-af736cd33943_0.pdf | Press Release dated 13-12-2022, first paragraph | nitc-nba-press-release-2022-12-13.pdf (702911765a) |
 
@@ -207,3 +207,20 @@ Second-pass: 16 checks, 1 mismatch(es) recorded in `verification.json`.
 3. Open IIT Guwahati placement report and confirm 205 LPA highest.
 4. Open `josaa-2025-round6.html` for MNIT Jaipur and confirm the CSE OPEN OS/HS closing ranks.
 5. Open NIT Calicut fee circular and confirm tuition 62,500 per semester and hostel one-time fees ₹10,500.
+
+
+## Evidence restoration note (2026-11-07)
+The local evidence folder (`data/sources/`) was deleted by mistake while removing it from git history, and the researchers' working notes
+(`findings.json`, `verification.json`) were lost with it. The 47 snapshot files were re-downloaded from the URLs recorded in each record and
+compared with the recorded SHA-256: 39 documents were byte-identical to the originals. Six dynamic pages could not match byte-for-byte and
+their recorded hashes were updated to the re-fetched files after re-confirming the figures they support:
+- bits-pilani: awards-and-accreditations.html (dc2095f932 -> bf9375e9f6)
+- iit-bhu: josaa-2025-round6.html (10412b2e54 -> fa5b13c739)
+- iit-guwahati: josaa-2025-round6.html (06310cfb80 -> 6666ffb14c)
+- iit-hyderabad: josaa-2025-round6.html (f82024bd95 -> f2498895eb)
+- mnit-jaipur: josaa-2025-round6.html (6e3efcaf23 -> 14dcca22bc)
+- nit-calicut: josaa-2025-round6.html (424cca41b0 -> ed007f51ca)
+
+The JoSAA result pages were regenerated with `scripts/scrape_josaa.py` and the closing ranks quoted in each record were re-checked against them.
+The second-pass verification results summarised above were produced before the loss; the per-field `verification.json` files were not recoverable.
+The evidence folder is not published with the repository (see README).

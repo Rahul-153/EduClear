@@ -71,7 +71,7 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [x] T-5.06 Payouts to counsellor on session completion — 2026-11-06 · Payouts on 'Confirm session completed'; failure then retry test; deterministic sender_batch_id
 - [x] T-5.07 Bryntum Scheduler booking for 4 programs; cohort cap 25 — 2026-11-06 · Sessions.tsx slot picker + capacity (25) + double-booking guard; Bryntum Scheduler swap-in DEFERRED (no credentials)
 - [x] T-5.08 Channel3 tech-kit with cache/mock fallback (FR-08) — 2026-11-06 · services/kit.py + TechKit.tsx; sample fallback labelled; live Channel3 parsing unverified (no key)
-- [ ] T-5.09 **PayPal sandbox live test run** (plan §PayPal sandbox testing 1–8) — results recorded here — BLOCKED: needs sandbox keys. Ready: `pytest -m paypal_sandbox backend/tests/paypal` and `scripts/paypal_sandbox_smoke.py order|capture|payout`
+- [~] T-5.09 **PayPal sandbox live test run** (plan §PayPal sandbox testing 1–8) — results recorded here — BLOCKED: needs sandbox keys. Ready: `pytest -m paypal_sandbox backend/tests/paypal` and `scripts/paypal_sandbox_smoke.py order|capture|payout` — 2026-11-07 PARTIAL: live sandbox auth, USD order creation, unapproved-capture rejection and bad-signature webhook rejection PASS (5/5). Still to run with a human: buyer approval -> capture -> payout, webhook after deploy
 - [x] T-5.10 Failure-path tests (decline, cancel, capture/payout failure, timeout) — 2026-11-06 · mock-mode: decline, cancel, unapproved capture, payout failure+retry, slot taken, bad webhook signature, wrong owner (56 tests pass)
 
 ## Phase 6 — Agent (11–12 Nov) · FR-01, FR-11

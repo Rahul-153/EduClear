@@ -1,0 +1,44 @@
+[
+ [
+  "bits-pilani",
+  "fd-fee.html",
+  "MATCH",
+  "https://www.bitsadmission.com/FD/FD_fee.html"
+ ],
+ [
+  "bits-pilani",
+  "pilani-placement-statistics.pdf",
+  "MATCH",
+  "https://www.bits-pilani.ac.in/wp-content/uploads/Pilani-Placement-Statistics-03-06-2025.pdf"
+ ],
+ [
+  "bits-pilani",
+  "hra-doe-om-2017-07-07.pdf",
+  "FAILED",
+  "ConnectionError https://doe.gov.in/files/circulars_document/7th_July_2017.pdf"
+ ],
+ [
+  "bits-pilani",
+  "nirf-2025-engineering-ranking.html",
+  "MATCH",
+  "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+ ],
+ [
+  "bits-pilani",
+  "nirf-2025-dcs.pdf",
+  "MATCH",
+  "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0391.pdf"
+ ],
+ [
+  "bits-pilani",
+  "bitsat-cutoffs.html",
+  "MATCH",
+  "https://www.bitsadmission.com/FD/BITSAT_cutOffs.html"
+ ],
+ [
+  "bits-pilani",
+  "awards-and-accreditations.html",
+  "DIFFERS",
+  "https://www.bits-pilani.ac.in/awardsandaccreditations"
+ ]
+]

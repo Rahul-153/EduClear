@@ -16,6 +16,7 @@ Built for the PayPal AI Hackathon 2026.
 ## Data policy (zero-synthetic)
 `data/colleges/*.json` holds 7 verified colleges (DTU Delhi, BITS Pilani, IIT Hyderabad, IIT BHU, IIT Guwahati, MNIT Jaipur, NIT Calicut).
 Each field carries its official URL, locator and the SHA-256 of the saved snapshot; `data/VERIFICATION_REPORT.md` lists them all.
+The downloaded evidence files themselves (`data/sources/`, hundreds of MB) are **not** published in this repository: the recorded URL and SHA-256 let anyone re-download a document and confirm it is unchanged. Without the folder, `npm run validate:data` skips the file checks and says so.
 Thirteen further candidates were excluded because their own documents did not support a figure (see `decisions.md` D-22 to D-26).
 ```bash
 npm run validate:data      # 6 integrity gates + provenance + snapshot hashes
