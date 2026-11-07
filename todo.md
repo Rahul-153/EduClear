@@ -82,7 +82,7 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [x] T-6.05 Copilot drawer UI (UX-08) — 2026-11-06 · Copilot.tsx 400px drawer with confirm button and inline checkout; verified in browser with local Qwen
 
 ## Phase 7 — Ship (12–13 Nov) · FR-12, DoD
-- [x] T-7.01 `render.yaml`, env config, deploy to Render, smoke script — 2026-11-07 · Dockerfile, render.yaml, requirements.txt, scripts/smoke.py; clean-venv image simulation OK; NOT built with Docker (daemon off), NOT deployed (needs Render account)
+- [x] T-7.01 `render.yaml`, env config, deploy to Render, smoke script — 2026-11-07 · Dockerfile, render.yaml, requirements.txt, scripts/smoke.py; clean-venv image simulation OK; NOT built with Docker (daemon off), NOT deployed (needs Render account) | 2026-11-07 UPDATE: DEPLOYED to https://educlear.onrender.com (Docker + Render Postgres). scripts/smoke.py 14/14 PASS in live-sandbox mode; unsigned webhook -> 401; PayPal SDK v6 button renders in the live app
 - [~] T-7.02 E2E demo path rehearsal (live + fallback) — PARTIAL 2026-11-07: smoke script passes 15/15 against local mock mode; live+fallback rehearsal needs keys
 - [x] T-7.03 README, MIT LICENSE, public repo (ask user before push) — 2026-11-07 · README.md + MIT LICENSE done; public repo NOT created (needs your OK)
 - [x] T-7.04 Demo script + <3-min video outline — 2026-11-07 · DEMO_SCRIPT.md (2:40 plan); video not recorded
