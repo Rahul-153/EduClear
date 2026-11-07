@@ -5,6 +5,7 @@
   python scripts/paypal_sandbox_smoke.py payout           # send $1.00 to PAYPAL_COUNSELLOR_PAYOUT_EMAIL
 """
 import sys
+import uuid
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -27,7 +28,7 @@ elif step == "capture":
 elif step == "payout":
     if not settings.paypal_counsellor_payout_email:
         sys.exit("Set PAYPAL_COUNSELLOR_PAYOUT_EMAIL (a sandbox Personal account) in .env first.")
-    print(pp.payout(settings.paypal_counsellor_payout_email, 100, "EduClear smoke payout", "smoke-" + str(abs(hash(sys.argv))) ))
+    print(pp.payout(settings.paypal_counsellor_payout_email, 100, "EduClear smoke payout", "smoke-" + uuid.uuid4().hex[:12]))
 else:
     sys.exit(__doc__)
 print("base:", SANDBOX_BASE)
