@@ -2,14 +2,14 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { bookSlot, completeBooking, myBookings, payConfig, programs, slotsFor, type BookingView, type PayConfig, type Program, type Slot } from "../api";
 import CheckoutPanel from "./CheckoutPanel";
 import Boundary from "./Boundary";
+import type { Strings } from "../i18n";
 
 const BookingScheduler = lazy(() => import("./BookingScheduler"));
 
 const when = (iso: string) => new Date(iso).toLocaleString("en-IN", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }) + " IST";
-const STATUS: Record<string, string> = { pending: "Awaiting payment", escrow_funded: "Funds held in escrow ledger", paid: "Paid", payout_failed: "Release failed — retry",
-  released: "Released to counsellor", cancelled: "Cancelled" };
+const statusLabel = (x: Strings, st: string) => ({ pending: x.stPending, escrow_funded: x.stEscrow, paid: x.stPaid, payout_failed: x.stFailed, released: x.stReleased, cancelled: x.stCancelled } as Record<string, string>)[st] ?? st;
 
-export default function Sessions() {
+export default function Sessions({ s: str }: { s: Strings }) {
   const [cfg, setCfg] = useState<PayConfig | null>(null);
   const [progs, setProgs] = useState<Program[]>([]);
   const [open, setOpen] = useState<string | null>(null);
@@ -32,7 +32,7 @@ export default function Sessions() {
 
   return (
     <section aria-label="Counselling sessions and career workshops">
-      <h2 style={{ fontSize: 13, textTransform: "uppercase" }}>Counselling sessions & career workshops</h2>
+      <h2 style={{ fontSize: 13, textTransform: "uppercase" }}>{str.sessionsTitle}</h2>
       <p className="note">{cfg?.counsellor} · {cfg?.escrow_note}</p>
       <div className="grid3" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))" }}>
         {progs.map((p) => (
@@ -44,20 +44,20 @@ export default function Sessions() {
             <div className="row"><span className="label">{p.kind === "cohort" ? "Per seat" : "Session fee"}</span>
               <span className="num value">₹{p.price_inr.toLocaleString("en-IN")} <span className="note">(${p.usd})</span></span></div>
             <button className="capsule" style={{ width: "100%", padding: 8, border: "1px solid var(--hairline)", fontWeight: 600 }} onClick={() => { setOpen(open === p.id ? null : p.id); setActive(null); }}
-              aria-expanded={open === p.id}>{open === p.id ? "Hide times" : p.escrow ? "Choose a time" : "Reserve a seat"}</button>
+              aria-expanded={open === p.id}>{open === p.id ? str.hideTimes : p.escrow ? str.chooseTime : str.reserveSeat}</button>
           </article>
         ))}
       </div>
       {progs.length > 0 && (
         <Boundary name="Booking calendar">
           <Suspense fallback={<div className="card empty" style={{ marginTop: 16 }}>Loading booking calendar…</div>}>
-            <BookingScheduler programs={progs} bookings={rows} onPick={(pid, s) => reserve(s, pid)} />
+            <BookingScheduler s={str} programs={progs} bookings={rows} onPick={(pid, s) => reserve(s, pid)} />
           </Suspense>
         </Boundary>
       )}
       {open && (
         <div className="card" style={{ marginTop: 16 }}>
-          <div className="label">Available times (IST)</div>
+          <div className="label">{str.availableTimes}</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
             {slots.map((s) => (
               <button key={s.start} disabled={s.left === 0} onClick={() => reserve(s)} className="capsule"
@@ -72,12 +72,12 @@ export default function Sessions() {
       {err && <p role="alert" className="note" style={{ color: "var(--amber)" }}>{err}</p>}
       {rows.filter((b) => b.program !== "tech-kit").length > 0 && (
         <div className="card" style={{ marginTop: 16 }}>
-          <div className="label">Your bookings</div>
+          <div className="label">{str.yourBookings}</div>
           {rows.filter((b) => b.program !== "tech-kit").map((b) => (
             <div key={b.id} className="row" style={{ borderTop: "1px solid var(--hairline)", paddingTop: 8 }}>
-              <span><strong style={{ color: "var(--ink)" }}>{b.title}</strong><div className="note">{b.slot_start ? when(b.slot_start) : ""} · {STATUS[b.status] ?? b.status}</div></span>
+              <span><strong style={{ color: "var(--ink)" }}>{b.title}</strong><div className="note">{b.slot_start ? when(b.slot_start) : ""} · {statusLabel(str, b.status)}</div></span>
               <span>{["escrow_funded", "payout_failed"].includes(b.status) &&
-                <button className="link" onClick={() => release(b.id)}>Confirm session completed (release funds)</button>}
+                <button className="link" onClick={() => release(b.id)}>{str.releaseFunds}</button>}
                 {b.status === "released" && <span className="note num">payout {b.payout_batch_id}</span>}</span>
             </div>
           ))}

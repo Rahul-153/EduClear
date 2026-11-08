@@ -1,10 +1,11 @@
+import type { Strings } from "../i18n";
 import { useEffect, useState } from "react";
 import { addDeposit, deleteDeposit, listDeposits, refundLetter, type Card, type DepositView } from "../api";
 import { inr } from "../lib/format";
 
 const today = () => new Date().toISOString().slice(0, 10);
 
-export default function DepositTracker({ colleges }: { colleges: Card[] }) {
+export default function DepositTracker({ s, colleges }: { s: Strings; colleges: Card[] }) {
   const [rows, setRows] = useState<DepositView[]>([]);
   const [f, setF] = useState({ college_id: "", amount_inr: "30000", paid_on: today(), closure_date: "" });
   const [err, setErr] = useState<string | null>(null);
@@ -30,7 +31,7 @@ export default function DepositTracker({ colleges }: { colleges: Card[] }) {
 
   return (
     <section className="card" aria-label="Seat deposit and refund tracker">
-      <h2 style={{ fontSize: 13, textTransform: "uppercase" }}>Seat deposit & UGC refund tracker</h2>
+      <h2 style={{ fontSize: 13, textTransform: "uppercase" }}>{s.depositTitle}</h2>
       <p className="note">Saved only against an anonymous ID in this browser. Under UGC rules the refund share drops on fixed dates around your institution’s last date of admission.</p>
       <div className="more" style={{ marginTop: 0 }}>
         <select aria-label="College" value={f.college_id} onChange={(e) => setF({ ...f, college_id: e.target.value })}>

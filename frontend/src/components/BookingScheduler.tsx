@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Scheduler } from "@bryntum/gantt";
 import "@bryntum/gantt/gantt.css";
 import "@bryntum/gantt/stockholm-light.css";
+import type { Strings } from "../i18n";
 import { slotsFor, type BookingView, type Program, type Slot } from "../api";
 
 /* The Bryntum trial ships Scheduler inside the Gantt bundle, and two Bryntum bundles cannot share a page, so this uses the
@@ -13,9 +14,9 @@ const COLOUR: Record<string, string> = { open: "green", full: "gray", pending: "
 const LABEL: Record<string, string> = { pending: "Awaiting payment", escrow_funded: "Paid · escrow", paid: "Paid", released: "Released", payout_failed: "Release failed" };
 const DAY_MS = 86400000;
 
-interface Props { programs: Program[]; bookings: BookingView[]; onPick: (programId: string, slot: Slot) => void }
+interface Props { s: Strings; programs: Program[]; bookings: BookingView[]; onPick: (programId: string, slot: Slot) => void }
 
-export default function BookingScheduler({ programs, bookings, onPick }: Props) {
+export default function BookingScheduler({ s: str, programs, bookings, onPick }: Props) {
   const [slots, setSlots] = useState<Record<string, Slot[]>>({});
   const host = useRef<HTMLDivElement>(null);
   const sched = useRef<Scheduler | null>(null);
@@ -83,10 +84,10 @@ export default function BookingScheduler({ programs, bookings, onPick }: Props) 
   return (
     <div className="card" style={{ marginTop: 16 }} aria-label="Booking calendar">
       <div className="row">
-        <div className="label">Booking calendar · click an open slot to reserve it</div>
+        <div className="label">{str.bookingCalendar}</div>
         <span style={{ display: "flex", gap: 8 }}>
-          <button className="link" disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - 3))}>← Earlier</button>
-          <button className="link" onClick={() => setOffset(offset + 3)}>Later →</button>
+          <button className="link" disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - 3))}>{str.earlier}</button>
+          <button className="link" onClick={() => setOffset(offset + 3)}>{str.later}</button>
         </span>
       </div>
       <div style={{ display: "flex", gap: 12, flexWrap: "wrap", margin: "6px 0 10px" }} className="note">

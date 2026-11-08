@@ -4,6 +4,29 @@ An independent, student-funded advisory platform for Indian college choice and f
 official filing; placement numbers show the true denominator (placed ÷ eligible); payments run **only in the PayPal sandbox**.
 Built for the PayPal AI Hackathon 2026.
 
+**Live demo:** https://educlear.onrender.com (Render, Postgres, PayPal **sandbox**). The first load after idle can take about a minute while Render wakes the service.
+
+## Try the payment flow
+1. Open the live demo, scroll to **Counselling sessions**, and click an open slot in the Bryntum booking calendar.
+2. Click the yellow **PayPal** button and log in with a PayPal **sandbox personal (buyer)** account. Any sandbox buyer works: create one free at developer.paypal.com under Testing Tools, or use the demo buyer credentials given in the Devpost submission notes. Nothing real is charged.
+3. After approval the booking shows "Funds held in escrow ledger". Click **Confirm session completed (release funds)** to send the PayPal Payouts release to the counsellor sandbox account.
+4. Open the **Copilot** and ask "book a branch vs college session": the agent proposes, you confirm, and the order is created through PayPal's official MCP server.
+If PayPal's sandbox pop-up hangs on its spinner after login, close it: the app already checks for the approval every few seconds and also offers a "check my payment" link.
+
+## Sponsor tools
+| Tool | Use |
+|---|---|
+| PayPal | Sandbox Orders v2, JS SDK v6 buttons incl. Pay Later, webhooks with signature verification, Payouts, official `@paypal/mcp` server for agent-created orders |
+| Bryntum | Scheduler (booking calendar, colour follows payment state) and Gantt (linked counselling-cycle timeline), trial build from public npm |
+| AG Grid | Placement Truth matrix (Community) and AG Charts for ROI |
+| Channel3 | Live product prices for the campus tech kit, with a labelled sample fallback |
+| Render | Docker web service and Postgres via `render.yaml` |
+| Postman | Collection with automated tests in `postman/` |
+| Zapier | Optional PII-free booking hook (`ZAPIER_WEBHOOK_URL`) |
+
+## Built during the submission period (1 Oct to 12 Nov 2026)
+The whole project was built in this period: dataset and verification pipeline, backend engines, the React app, PayPal sandbox payments and payouts, the Bryntum views, the agent, and the Render deployment. `todo.md` and `decisions.md` record each step with its evidence.
+
 ## What it does
 | Area | Feature |
 |---|---|
@@ -35,7 +58,7 @@ a local Ollama `qwen3:4b` is picked up automatically.
 
 ## Tests
 ```bash
-.venv/bin/python -m pytest backend/tests tests -q              # offline, 80 tests
+.venv/bin/python -m pytest backend/tests tests -q              # offline, 84 tests
 .venv/bin/python -m pytest -m paypal_sandbox backend/tests/paypal   # live sandbox (needs keys)
 .venv/bin/python scripts/smoke.py http://localhost:8000        # end-to-end smoke against a running instance
 ```
@@ -46,8 +69,10 @@ a local Ollama `qwen3:4b` is picked up automatically.
 in the dashboard. `PAYPAL_ENV` is pinned to `sandbox` and the app refuses to start otherwise. Check the public URL with `scripts/smoke.py <url>`.
 
 ## Honest limitations
-- PayPal live-sandbox calls, PayPal JS SDK v6 buttons, Pay Later, Channel3 live prices and a hosted Qwen model are written but unproven until keys are added.
-- The Bryntum timeline/scheduler and Elastic search are not built; plain components stand in. The official PayPal Agent Toolkit / MCP is not integrated.
+- Proven against the live sandbox: auth, order, capture, payout, an in-app payment, SDK v6 button. Pay Later and signed-webhook delivery are tested by hand in the sandbox only if noted in `todo.md`.
+- A hosted Qwen model is not used in the demo: the assistant is rules-first and calls a local or hosted model only for ambiguous messages.
+- Elastic search is not built. The Bryntum trial adds a watermark and expires 45 days after install.
+- Accessibility: our own pages pass an axe-core WCAG 2.1 AA scan; the Bryntum Gantt's internal ARIA structure reports `aria-required-children` (third-party widget).
 - "Escrow" is a platform ledger plus PayPal Payouts; PayPal has no escrow product. Prices show ₹ and charge USD at a fixed demo rate.
 - Only Computer Science is covered; the counsellor profile is a demo placeholder.
 See `REQUIREMENTS_STATUS.md` for the requirement-by-requirement status.

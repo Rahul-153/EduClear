@@ -6,12 +6,18 @@ RUN npm ci
 COPY frontend/ ./
 RUN npm run build
 
+# Stage 1b: PayPal's official MCP server (agent orders); pinned and installed here so the runtime image needs no npm
+FROM node:22-slim AS mcp
+RUN npm install --prefix /opt/mcp @paypal/mcp@1.8.1
+
 # Stage 2: FastAPI serves the API and the built app (one Render web service)
 FROM python:3.12-slim
 WORKDIR /app
 ENV PYTHONUNBUFFERED=1 PORT=8000
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+COPY --from=mcp /usr/local/bin/node /usr/local/bin/node
+COPY --from=mcp /opt/mcp /opt/mcp
 COPY backend backend
 COPY scripts/college_model.py scripts/college_model.py
 COPY data/colleges data/colleges

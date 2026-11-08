@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field
 from sqlmodel import Session
 
@@ -43,9 +43,10 @@ def chat(body: ChatIn, o: str = Depends(owner), llm: Optional[LLM] = Depends(get
 
 
 @router.post("/agent/confirm")
-def confirm(body: ConfirmIn, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+def confirm(body: ConfirmIn, request: Request, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
     p = agent_svc.take_pending(body.action_id, o)
     if not p:
         raise HTTPException(404, "This action expired or was already used. Ask again.")
-    b = guard(svc.create_booking, s, pp, o, p["program_id"], p["slot"])
-    return {"booking": view(b, s), "via": "agent", "note": "Order created in the PayPal sandbox after your confirmation. Approve it in the checkout panel."}
+    b = guard(svc.create_booking, s, pp, o, p["program_id"], p["slot"], mcp_return_url=str(request.base_url))
+    via = "paypal-mcp" if (b.note or "").startswith("order created through the PayPal MCP") else "agent"
+    return {"booking": view(b, s), "via": via, "note": "Order created in the PayPal sandbox after your confirmation. Approve it in the checkout panel."}

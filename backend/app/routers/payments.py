@@ -71,7 +71,8 @@ def book(body: BookIn, o: str = Depends(owner), s: Session = Depends(get_session
 
 
 @router.get("/bookings")
-def my_bookings(o: str = Depends(owner), s: Session = Depends(get_session)):
+def my_bookings(o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+    svc.expire_stale(s, pp)
     rows = s.exec(select(Booking).where(Booking.owner == o).order_by(Booking.id.desc())).all()  # type: ignore[attr-defined]
     return [view(b, s) for b in rows]
 

@@ -1,17 +1,18 @@
 """Booking, escrow ledger and payouts (FR-10, D-06). 'Escrow' = capture to the platform sandbox account plus an internal
 ledger (funded -> released); release happens through the PayPal Payouts API when the session is confirmed complete."""
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional
 
 from sqlmodel import Session, select
 
 from ..config import settings
 from ..db import Booking, LedgerEntry, WebhookEvent
-from ..integrations import zapier
+from ..integrations import paypal_mcp, zapier
 from ..integrations.paypal import PayPal, PayPalError, inr_to_usd_cents
 from .programs import PROGRAMS, slots
 
 ACTIVE = ("escrow_funded", "paid", "payout_failed", "released")
+PENDING_TTL = timedelta(minutes=15)
 
 
 class BookingError(Exception):
@@ -34,7 +35,7 @@ def taken(s: Session, program_id: str, slot: datetime) -> int:
 
 
 def create_booking(s: Session, pp: PayPal, owner: str, program_id: str, slot: Optional[datetime], *, amount_inr: Optional[int] = None,
-                   description: Optional[str] = None) -> Booking:
+                   description: Optional[str] = None, mcp_return_url: Optional[str] = None) -> Booking:
     if program_id == "tech-kit":
         if not amount_inr:
             raise BookingError("amount required for tech kit")
@@ -52,12 +53,15 @@ def create_booking(s: Session, pp: PayPal, owner: str, program_id: str, slot: Op
     b = Booking(owner=owner, program=program_id, amount_inr=price, usd_cents=cents, slot_start=slot)
     s.add(b); s.commit(); s.refresh(b)
     try:
-        order = pp.create_order(cents, f"booking-{b.id}", desc)
+        mcp_id = paypal_mcp.create_order(pp, cents, desc, mcp_return_url) if mcp_return_url else None
+        order = {"id": mcp_id, "via": "paypal-mcp"} if mcp_id else pp.create_order(cents, f"booking-{b.id}", desc)
     except PayPalError as e:
         b.status, b.note = "cancelled", f"order creation failed: {e}"
         s.add(b); s.commit()
         raise BookingError(str(e), e.status)
     b.paypal_order_id = order["id"]
+    if order.get("via") == "paypal-mcp":
+        b.note = "order created through the PayPal MCP server"
     s.add(b); s.commit(); s.refresh(b)
     return b
 
@@ -94,6 +98,27 @@ def capture(s: Session, pp: PayPal, owner: str, bid: int) -> Booking:
     _mark_funded(s, b, res["capture_id"], res["usd_cents"])
     s.refresh(b)
     return b
+
+
+def expire_stale(s: Session, pp: PayPal) -> int:
+    """Close bookings left 'pending' past the TTL so abandoned checkouts do not clutter the calendar. An order the buyer did
+    approve (pop-up hung before the app heard back) is captured instead of cancelled, so a paid booking is never lost.
+    PayPal outages (5xx) leave the booking pending for the next pass."""
+    cutoff = datetime.utcnow() - PENDING_TTL
+    stale = s.exec(select(Booking).where(Booking.status == "pending", Booking.created_at < cutoff)).all()  # type: ignore[attr-defined]
+    closed = 0
+    for b in stale:
+        try:
+            res = pp.capture_order(b.paypal_order_id) if b.paypal_order_id else None
+            if res and res["status"] == "COMPLETED":
+                _mark_funded(s, b, res["capture_id"], res["usd_cents"])
+                continue
+        except PayPalError as e:
+            if e.status >= 500:
+                continue
+        b.status, b.note = "cancelled", "expired: not paid within 15 minutes"
+        s.add(b); s.commit(); closed += 1
+    return closed
 
 
 def complete(s: Session, pp: PayPal, owner: str, bid: int) -> Booking:

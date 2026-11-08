@@ -1,9 +1,10 @@
+import type { Strings } from "../i18n";
 import { useEffect, useState } from "react";
 import { choiceOrder, type Card, type ChoiceResult, type Profile } from "../api";
 
-interface Props { colleges: Card[]; profile: Profile }
+interface Props { s: Strings; colleges: Card[]; profile: Profile }
 
-export default function ChoiceSimulator({ colleges, profile }: Props) {
+export default function ChoiceSimulator({ s, colleges, profile }: Props) {
   const [order, setOrder] = useState<string[]>([]);
   const [dragFrom, setDragFrom] = useState<number | null>(null);
   const [res, setRes] = useState<ChoiceResult | null>(null);
@@ -26,7 +27,7 @@ export default function ChoiceSimulator({ colleges, profile }: Props) {
 
   return (
     <section className="card" aria-label="Choice-filling simulator">
-      <div className="row"><h2 style={{ fontSize: 13, textTransform: "uppercase" }}>Choice-filling rehearsal</h2>
+      <div className="row"><h2 style={{ fontSize: 13, textTransform: "uppercase" }}>{s.choiceTitle}</h2>
         <button className="link" onClick={() => res && setOrder(res.suggested_order)}>Apply suggested order</button></div>
       <p className="note">Drag rows (or use the arrows) to rank your preferences. Seats are allotted top-down, so an easier option above a harder one can lock you out of it.</p>
       <div className="split">

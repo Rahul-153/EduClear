@@ -1,9 +1,10 @@
+import type { Strings } from "../i18n";
 import { useEffect, useState } from "react";
 import { getKit, orderKit, payConfig, type BookingView, type Kit, type PayConfig } from "../api";
 import { inr } from "../lib/format";
 import CheckoutPanel from "./CheckoutPanel";
 
-export default function TechKit() {
+export default function TechKit({ s }: { s: Strings }) {
   const [kit, setKit] = useState<Kit | null>(null);
   const [cfg, setCfg] = useState<PayConfig | null>(null);
   const [order, setOrder] = useState<(BookingView & { pay_in_4_usd: string }) | null>(null);
@@ -14,7 +15,7 @@ export default function TechKit() {
   const start = async () => { setErr(null); setDone(false); try { setOrder(await orderKit(kit.items.map((i) => i.id))); } catch (e) { setErr((e as Error).message); } };
   return (
     <section className="card" aria-label="Student tech kit">
-      <div className="row"><h2 style={{ fontSize: 13, textTransform: "uppercase" }}>Student hardware kit (Computer Science)</h2>
+      <div className="row"><h2 style={{ fontSize: 13, textTransform: "uppercase" }}>{s.kitTitle}</h2>
         <span className={`badge ${kit.sample_data ? "" : "green"}`}>{kit.sample_data ? "Sample listings" : "Live Channel3 prices"}</span></div>
       {kit.items.map((i) => (
         <div className="row" key={i.id} style={{ borderTop: "1px solid var(--hairline)", paddingTop: 8 }}>

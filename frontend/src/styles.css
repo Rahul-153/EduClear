@@ -1,6 +1,6 @@
 :root {
-  --canvas: #fafafa; --card: #ffffff; --hairline: rgba(0, 0, 0, 0.07); --ink: #0f172a; --body: #475569; --meta: #94a3b8;
-  --emerald: #059669; --amber: #d97706; --shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 12px 32px -8px rgba(0, 0, 0, 0.04);
+  --canvas: #fafafa; --card: #ffffff; --hairline: rgba(0, 0, 0, 0.07); --ink: #0f172a; --body: #475569; --meta: #5b6b80;
+  --emerald: #047857; --amber: #b45309; --shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 12px 32px -8px rgba(0, 0, 0, 0.04);
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--canvas); color: var(--body); font-family: "Plus Jakarta Sans", -apple-system, sans-serif; letter-spacing: -0.011em; -webkit-font-smoothing: antialiased; }

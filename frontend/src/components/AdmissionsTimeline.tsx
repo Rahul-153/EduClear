@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { myBookings, timeline, type BookingView, type Timeline, type TimelineEvent } from "../api";
 import Boundary from "./Boundary";
+import type { Strings } from "../i18n";
 import { inr } from "../lib/format";
 
 const AdmissionsGantt = lazy(() => import("./AdmissionsGantt"));
@@ -38,7 +39,7 @@ function Lane({ title, events }: { title: string; events: TimelineEvent[] }) {
   );
 }
 
-export default function AdmissionsTimeline() {
+export default function AdmissionsTimeline({ s }: { s: Strings }) {
   const [t, setT] = useState<Timeline | null>(null);
   const [rows, setRows] = useState<BookingView[]>([]);
   const [view, setView] = useState<"gantt" | "bars">("gantt");
@@ -49,7 +50,7 @@ export default function AdmissionsTimeline() {
   const cycle = t.events.filter((e) => e.kind !== "exam");
   return (
     <section className="card" aria-label="Admissions and deposit timeline">
-      <div className="row"><div><h2 style={{ fontSize: 13, textTransform: "uppercase" }}>Admissions & deposit timeline</h2>
+      <div className="row"><div><h2 style={{ fontSize: 13, textTransform: "uppercase" }}>{s.timelineTitle}</h2>
         <div className="note">{t.disclaimer}</div></div><span className="badge">Retrieved {t.retrieved_at}</span></div>
       <div className="split" style={{ marginTop: 12 }}>
         <div className="card" style={{ boxShadow: "none" }}>
@@ -65,7 +66,7 @@ export default function AdmissionsTimeline() {
       </div>
       <div className="row" style={{ marginTop: 16 }}>
         <div className="label">{view === "gantt" ? `Gantt · ${t.cycle} counselling cycle and JEE Main 2027 · linked rounds, today marked` : "Simple bars"}</div>
-        <button className="link" onClick={() => setView(view === "gantt" ? "bars" : "gantt")}>{view === "gantt" ? "Show simple bars" : "Show Gantt"}</button>
+        <button className="link" onClick={() => setView(view === "gantt" ? "bars" : "gantt")}>{view === "gantt" ? s.showBars : s.showGantt}</button>
       </div>
       {view === "gantt" ? (
         <Boundary name="Admissions Gantt">

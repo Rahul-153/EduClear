@@ -45,11 +45,11 @@ export default function App() {
       {rec?.needs_more_input.length ? <p className="note">{rec.needs_more_input.length} colleges need an extra input (JEE Advanced rank or BITSAT score) to be rated — open “More inputs”.</p> : null}
       <Boundary name="Placement Truth matrix"><Suspense fallback={<section className="card"><div className="empty">Loading matrix…</div></section>}><TruthMatrix s={s} rows={rows} truth={truth} onSelect={setSelected} /></Suspense></Boundary>
       <Boundary name="ROI panel"><Suspense fallback={<section className="card"><div className="empty">Loading ROI…</div></section>}><RoiPanel s={s} card={card} a={a} setA={setA} /></Suspense></Boundary>
-      <Boundary name="Admissions timeline"><AdmissionsTimeline /></Boundary>
-      <Boundary name="Counselling sessions"><Sessions /></Boundary>
-      <Boundary name="Tech kit"><TechKit /></Boundary>
-      <Boundary name="Choice-filling simulator"><ChoiceSimulator colleges={rows} profile={p} /></Boundary>
-      <Boundary name="Deposit tracker"><DepositTracker colleges={rows} /></Boundary>
+      <Boundary name="Admissions timeline"><AdmissionsTimeline s={s} /></Boundary>
+      <Boundary name="Counselling sessions"><Sessions s={s} /></Boundary>
+      <Boundary name="Tech kit"><TechKit s={s} /></Boundary>
+      <Boundary name="Choice-filling simulator"><ChoiceSimulator s={s} colleges={rows} profile={p} /></Boundary>
+      <Boundary name="Deposit tracker"><DepositTracker s={s} colleges={rows} /></Boundary>
       <Boundary name="Alignment survey"><AlignmentSurvey s={s} /></Boundary>
       <Copilot profile={p} lang={lang} />
     </div>

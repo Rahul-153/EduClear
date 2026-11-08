@@ -209,3 +209,45 @@ def test_zapier_hook_is_best_effort_and_pii_free(env, monkeypatch):
     assert pay(c, b2["id"], H2).json()["status"] == "escrow_funded"
     monkeypatch.setattr(settings, "zapier_webhook_url", "")
     assert zapier.notify_booked(1, "p", "t", "2026-01-01T10:00:00", 1) == "not-configured"
+
+
+def _age(c, bid, minutes):
+    from datetime import datetime, timedelta
+    from backend.app.db import Booking
+    gen = app.dependency_overrides[get_session]()
+    s = next(gen)
+    b = s.get(Booking, bid)
+    b.created_at = datetime.utcnow() - timedelta(minutes=minutes)
+    s.add(b); s.commit()
+
+
+def test_unpaid_booking_expires_and_frees_its_row(env):
+    c, _ = env
+    old, fresh = book(c, i=0).json(), book(c, i=1).json()
+    _age(c, old["id"], 20)
+    rows = {b["id"]: b["status"] for b in c.get("/api/bookings", headers=H).json()}
+    assert rows[old["id"]] == "cancelled" and rows[fresh["id"]] == "pending"
+
+
+def test_approved_but_uncaptured_booking_is_funded_not_cancelled(env):
+    c, mock = env
+    b = book(c).json()
+    mock.approve(b["paypal_order_id"])  # buyer approved, but the pop-up hung before the app captured
+    _age(c, b["id"], 20)
+    rows = {r["id"]: r["status"] for r in c.get("/api/bookings", headers=H).json()}
+    assert rows[b["id"]] == "escrow_funded"
+
+
+def test_kit_parses_channel3_nested_offers_and_price_floor(monkeypatch):
+    monkeypatch.setattr(settings, "channel3_api_key", "test-key")
+    kit_service._cache.clear()
+    offer = lambda price, avail="InStock": [{"url": "https://shop/x", "availability": avail, "price": {"price": price, "currency": "USD"}}]
+
+    class R:
+        def raise_for_status(self): pass
+        def json(self): return {"products": [{"title": "Laptop sleeve", "offers": offer(15)},
+                                             {"title": "Sold out laptop", "offers": offer(700, "OutOfStock")},
+                                             {"title": "GPU laptop", "offers": offer(1000)}]}
+    monkeypatch.setattr(kit_service.httpx, "post", lambda *a, **k: R())
+    k = kit_service.kit()
+    assert k["items"][0]["title"] == "GPU laptop" and k["items"][0]["url"] == "https://shop/x"

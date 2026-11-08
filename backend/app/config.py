@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     paypal_webhook_id: str = ""
     paypal_counsellor_payout_email: str = ""
     channel3_api_key: str = ""
+    paypal_mcp_enabled: bool = True  # agent orders go through the PayPal MCP server when available; false = direct REST only
     llm_provider: str = "auto"  # auto | ollama | openrouter | together | dashscope | hf
     llm_api_key: str = ""
     llm_model: str = ""

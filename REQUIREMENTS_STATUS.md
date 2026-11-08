@@ -16,12 +16,12 @@ Legend: **Done** built and tested · **Partial** built with a stated gap · **Op
 | FR-08 Tech kit | Partial | Kit, totals, checkout and Pay-in-4 preview done in mock mode. Channel3 live parsing and PayPal Pay Later unproven |
 | FR-09 Refund tracker | Partial | UGC tiers, countdowns, letter generator done. PayPal dispute/webhook simulation and push/email alerts not built |
 | FR-10 Booking and escrow | Done | Bryntum Scheduler booking calendar (slot colour follows PayPal state). Live sandbox: order, capture and in-app payment verified; payout and signed webhook still to be confirmed. Zapier hook built, not exercised live |
-| FR-11 Agent | Partial | Tools, guarded model use and confirm-before-order done. Official PayPal Agent Toolkit/MCP not integrated |
+| FR-11 Agent | Done | Tools, guarded model use, confirm-before-order; confirmed orders are created through the official PayPal MCP server with REST fallback (human approval of an MCP-made order still to be tested) |
 | FR-12 Deployment | Done | Live on Render (Docker + Postgres) at educlear.onrender.com; smoke script 14/14 against it. Docker image not built locally (daemon off) |
 
 ## UX
-UX-01 to UX-06 Done · UX-07 Partial (section order differs slightly from the spec) · UX-08 Done · UX-09 Partial (checked at 375 px; no full AA audit) ·
-UX-10 Partial (main strings translated; secondary strings still English) · UX-11 Done (USD and escrow disclosures shown).
+UX-01 to UX-06 Done · UX-07 Partial (section order differs slightly from the spec) · UX-08 Done · UX-09 Done (375 px; axe-core WCAG 2.1 AA scan clean on our pages, Bryntum Gantt internals report aria-required-children) ·
+UX-10 Partial (headings, booking and timeline controls translated; long notes still English) · UX-11 Done (USD and escrow disclosures shown).
 
 ## Data
 DR-01 to DR-09 Done. DR-10 Partial: 7 verified colleges, not 10 (13 candidates excluded, see decisions D-22 to D-26).
