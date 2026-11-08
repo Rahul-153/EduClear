@@ -1,4 +1,5 @@
 """Campus tech kit (FR-08, data manual section 3 step 5). Live prices from Channel3; labelled sample listings if unavailable."""
+import re
 from typing import Dict, List
 
 import httpx
@@ -8,13 +9,13 @@ from ..config import settings
 CHANNEL3_URL = "https://api.trychannel3.com/v1/search"  # per DATA_INGESTION_MANUAL section 2
 REQUIREMENTS: Dict[str, List[dict]] = {
     "Computer Science": [
-        {"id": "laptop", "label": "GPU laptop (16 GB RAM, RTX 3050/4060-class)", "query": "laptop RTX 4060 16GB RAM", "min_usd": 500},
-        {"id": "peripherals", "label": "Peripherals (wireless mouse and headset)", "query": "wireless mouse headset", "min_usd": 10},
+        {"id": "laptop", "label": "GPU laptop (16 GB RAM, RTX 3050/4060-class)", "query": "gaming laptop RTX 4060 16GB RAM", "min_usd": 500, "must": r"RTX|GeForce"},
+        {"id": "peripherals", "label": "Peripherals (wireless mouse)", "query": "wireless mouse", "min_usd": 10},
     ],
 }
 # Offline fallback: generic, clearly labelled illustrative listings (not live prices, not real products).
 SAMPLE = {"laptop": ("Sample listing: GPU laptop, 16 GB RAM, RTX 4060-class", 85_000),
-          "peripherals": ("Sample listing: wireless mouse and headset", 3_500)}
+          "peripherals": ("Sample listing: wireless mouse", 3_500)}
 _cache: Dict[str, dict] = {}
 
 
@@ -51,11 +52,12 @@ def _to_inr(price: float, cur: str) -> int:
     return round(price) if cur == "INR" else round(price / settings.inr_to_usd_rate)  # fixed documented rate, D-08
 
 
-def _live(query: str, min_usd: float = 0) -> dict:
+def _live(query: str, min_usd: float = 0, must: str = "") -> dict:
     r = httpx.post(CHANNEL3_URL, headers={"x-api-key": settings.channel3_api_key}, json={"query": query, "limit": 30}, timeout=20)
     r.raise_for_status()
     # a cheap accessory must not stand in for the item (a laptop sleeve is not a laptop), so apply a per-item floor
-    cands = [c for c in _parse(r.json()) if (c["price"] if c["currency"] == "USD" else c["price"] * settings.inr_to_usd_rate) >= min_usd]
+    cands = [c for c in _parse(r.json()) if (c["price"] if c["currency"] == "USD" else c["price"] * settings.inr_to_usd_rate) >= min_usd
+             and (not must or re.search(must, c["title"] or "", re.I))]  # the listing must match what the row claims (a GPU laptop has a GPU)
     if not cands:
         raise ValueError("no priced results above the item's price floor")
     best = min(cands, key=lambda c: c["price"])
@@ -72,7 +74,7 @@ def kit(stream: str = "Computer Science") -> dict:
         try:
             if not settings.channel3_api_key:
                 raise LookupError("no key")
-            got, src = _live(r["query"], r.get("min_usd", 0)), "channel3-live"
+            got, src = _live(r["query"], r.get("min_usd", 0), r.get("must", "")), "channel3-live"
             _cache[r["id"]] = got
         except Exception as e:  # noqa: BLE001 - any failure falls back so the demo never breaks (NFR-04)
             if settings.channel3_api_key:

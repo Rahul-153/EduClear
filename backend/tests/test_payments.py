@@ -169,11 +169,11 @@ def test_kit_live_parsing_and_failure_fallback(monkeypatch):
 
     class R:
         def raise_for_status(self): pass
-        def json(self): return {"products": [{"title": "A", "price": {"price": 1200.0, "currency": "USD"}, "url": "https://x"},
-                                             {"title": "B", "price": {"price": 900.0, "currency": "USD"}, "url": "https://y"}]}
+        def json(self): return {"products": [{"title": "RTX laptop A", "price": {"price": 1200.0, "currency": "USD"}, "url": "https://x"},
+                                             {"title": "RTX laptop B", "price": {"price": 900.0, "currency": "USD"}, "url": "https://y"}]}
     monkeypatch.setattr(kit_service.httpx, "post", lambda *a, **k: R())
     k = kit_service.kit()
-    assert k["sources"] == ["channel3-live"] and k["items"][0]["title"] == "B" and k["items"][0]["price_inr"] == 75_000
+    assert k["sources"] == ["channel3-live"] and k["items"][0]["title"] == "RTX laptop B" and k["items"][0]["price_inr"] == 75_000
     assert "converted" in k["items"][0]["currency_note"]
     monkeypatch.setattr(kit_service.httpx, "post", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("down")))
     assert kit_service.kit()["sources"] == ["channel3-cached"]  # last good response
@@ -247,7 +247,8 @@ def test_kit_parses_channel3_nested_offers_and_price_floor(monkeypatch):
         def raise_for_status(self): pass
         def json(self): return {"products": [{"title": "Laptop sleeve", "offers": offer(15)},
                                              {"title": "Sold out laptop", "offers": offer(700, "OutOfStock")},
-                                             {"title": "GPU laptop", "offers": offer(1000)}]}
+                                             {"title": "Office laptop", "offers": offer(600)},
+                                             {"title": "GPU laptop RTX 4060", "offers": offer(1000)}]}
     monkeypatch.setattr(kit_service.httpx, "post", lambda *a, **k: R())
     k = kit_service.kit()
-    assert k["items"][0]["title"] == "GPU laptop" and k["items"][0]["url"] == "https://shop/x"
+    assert k["items"][0]["title"] == "GPU laptop RTX 4060" and k["items"][0]["url"] == "https://shop/x"
