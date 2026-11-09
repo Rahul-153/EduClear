@@ -55,3 +55,9 @@ postman/  render.yaml  LICENSE
 - Validate dataset: `npm run validate:data` · Tests: `.venv/bin/python -m pytest backend/tests tests -q`
 - Run API (from repo root): `.venv/bin/uvicorn backend.app.main:app --reload --port 8000`
 - Frontend: `cd frontend && npm run build` (type-check + bundle) · dev: `npm run dev` (proxy to :8000)
+
+## 10. Working style (Karpathy guidelines, requested 2026-11-09)
+- Think before coding: state assumptions, surface alternatives, ask when something is unclear instead of picking silently.
+- Simplicity first: the minimum code that solves the task; no speculative features, flags or abstractions.
+- Surgical changes: every changed line traces to the request; mention unrelated problems, do not fix them unasked; remove only what your own change orphaned.
+- Goal-driven: turn each task into a verifiable check (a test or a command) and loop until it passes; report what was and was not verified.
