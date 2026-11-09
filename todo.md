@@ -105,3 +105,4 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [x] T-8.11 Demo seed state — 2026-11-08 · not needed: bookings are per browser (X-Client-Id), so a judge or a fresh browser profile starts empty; abandoned test orders expire
 - [x] T-8.12 README for judges (live URL, how to try payments, sponsor tools, built-in-period note) — 2026-11-08
 - [ ] T-8.13 Hosted Qwen — skipped: no provider/key supplied; the app is rules-first and does not need it
+- [x] T-8.14 Guideline cleanup — 2026-11-09 · removed 11 unused imports/placeholders found by ruff F401/F541 (no behaviour change); 84 tests, validate:data, ruff F/E722 all pass; vulture and tsc --noUnused found nothing else real

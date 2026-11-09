@@ -1,6 +1,5 @@
 """Mark verified records and generate data/VERIFICATION_REPORT.md from records + verification.json."""
 import json
-import subprocess
 import sys
 from pathlib import Path
 

@@ -1,5 +1,4 @@
 """Smart Sentence recommendation: budget/region filter + fit tier + payback (FR-01, FR-03)."""
-from typing import List, Optional
 
 from ..data import colleges
 from ..engines.assumptions import Assumptions

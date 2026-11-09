@@ -107,7 +107,7 @@ def test_one_to_one_slot_cannot_be_double_booked(env):
     assert c.post(f"/api/bookings/{b['id']}/mock-approve", json={}, headers=H2).status_code == 200
     assert c.post(f"/api/bookings/{b['id']}/capture", headers=H2).status_code == 409  # taken before payment completed
     assert book(c, h=H2).status_code == 409  # slot now full
-    first = c.get(f"/api/programs/branch-vs-college/slots").json()[0]
+    first = c.get("/api/programs/branch-vs-college/slots").json()[0]
     assert first["left"] == 0
 
 

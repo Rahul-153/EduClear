@@ -9,7 +9,6 @@ import uuid
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-import httpx  # noqa: E402
 
 from backend.app.config import settings  # noqa: E402
 from backend.app.integrations.paypal import SANDBOX_BASE, HttpPayPal, assert_sandbox  # noqa: E402

@@ -11,7 +11,7 @@ from typing import Dict, List, Optional
 from ..config import settings
 from ..data import colleges
 from ..engines.assumptions import Assumptions
-from ..engines.emi import emi, funding_plan
+from ..engines.emi import funding_plan
 from ..engines.roi import payback
 from ..llm.client import LLM
 from ..services.programs import PROGRAMS, slots

@@ -152,7 +152,7 @@ def main(ids):
                 text = (f"JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral: Other State closing AIR {jo['OS'][1]} "
                         f"(opening {jo['OS'][0]}); Home State closing AIR {jo['HS'][1]} (opening {jo['HS'][0]}) (JEE Main rank)")
                 cut = dict(primaryExam="JEE Main", category="General (OPEN)", minPercentileOrRank=text)
-            cutoff_url, cutoff_snap = JOSAA_URL, f"josaa-2025-round6.html"
+            cutoff_url, cutoff_snap = JOSAA_URL, "josaa-2025-round6.html"
             cut_loc = "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral"
         else:
             co = f.get("cutoff") or {}

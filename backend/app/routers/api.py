@@ -12,7 +12,6 @@ from ..engines.assumptions import Assumptions
 from ..engines.emi import funding_plan
 from ..engines.roi import payback, trajectory
 from ..services.recommend import SUPPORTED_STREAMS, card, recommend
-from ..engines.fit import fit
 from ..engines import refund as refund_engine
 from ..db import Deposit, get_session
 from ..services import admissions
