@@ -109,7 +109,10 @@ def cancel_ep(bid: int, o: str = Depends(owner), s: Session = Depends(get_sessio
 
 @router.post("/webhooks/paypal")
 async def paypal_webhook(request: Request, s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
-    event = await request.json()
+    try:
+        event = await request.json()
+    except ValueError:
+        raise HTTPException(400, "webhook body must be JSON")
     return guard(svc.process_webhook, s, pp, dict(request.headers), event)
 
 

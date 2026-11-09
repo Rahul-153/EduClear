@@ -1,5 +1,6 @@
 """Campus tech kit (FR-08, data manual section 3 step 5). Live prices from Channel3; labelled sample listings if unavailable."""
 import re
+import time
 from typing import Dict, List
 
 import httpx
@@ -17,6 +18,7 @@ REQUIREMENTS: Dict[str, List[dict]] = {
 SAMPLE = {"laptop": ("Sample listing: GPU laptop, 16 GB RAM, RTX 4060-class", 85_000),
           "peripherals": ("Sample listing: wireless mouse", 3_500)}
 _cache: Dict[str, dict] = {}
+TTL = 600  # seconds: a price the family has seen is the price the order uses, so listings are reused for this long
 
 
 def _offers(it: dict) -> List[dict]:
@@ -74,13 +76,17 @@ def kit(stream: str = "Computer Science") -> dict:
         try:
             if not settings.channel3_api_key:
                 raise LookupError("no key")
-            got, src = _live(r["query"], r.get("min_usd", 0), r.get("must", "")), "channel3-live"
-            _cache[r["id"]] = got
+            hit = _cache.get(r["id"])
+            if hit and time.time() - hit["at"] < TTL:
+                got, src = hit["got"], "channel3-live"
+            else:
+                got, src = _live(r["query"], r.get("min_usd", 0), r.get("must", "")), "channel3-live"
+                _cache[r["id"]] = {"got": got, "at": time.time()}
         except Exception as e:  # noqa: BLE001 - any failure falls back so the demo never breaks (NFR-04)
             if settings.channel3_api_key:
                 reasons.add(f"{type(e).__name__}: {str(e)[:120]}")  # never includes the key
             if r["id"] in _cache:
-                got, src = _cache[r["id"]], "channel3-cached"
+                got, src = _cache[r["id"]]["got"], "channel3-cached"
             else:
                 title, price = SAMPLE[r["id"]]
                 got, src = {"title": title, "price_inr": price, "url": None, "currency_note": None}, "sample"

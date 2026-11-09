@@ -175,6 +175,7 @@ def test_kit_live_parsing_and_failure_fallback(monkeypatch):
     k = kit_service.kit()
     assert k["sources"] == ["channel3-live"] and k["items"][0]["title"] == "RTX laptop B" and k["items"][0]["price_inr"] == 75_000
     assert "converted" in k["items"][0]["currency_note"]
+    monkeypatch.setattr(kit_service, "TTL", 0)  # expire the cache so the next call goes to the (failing) network
     monkeypatch.setattr(kit_service.httpx, "post", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("down")))
     assert kit_service.kit()["sources"] == ["channel3-cached"]  # last good response
     kit_service._cache.clear()
@@ -252,3 +253,21 @@ def test_kit_parses_channel3_nested_offers_and_price_floor(monkeypatch):
     monkeypatch.setattr(kit_service.httpx, "post", lambda *a, **k: R())
     k = kit_service.kit()
     assert k["items"][0]["title"] == "GPU laptop RTX 4060" and k["items"][0]["url"] == "https://shop/x"
+
+
+def test_kit_price_shown_is_price_charged_within_ttl(monkeypatch):
+    monkeypatch.setattr(settings, "channel3_api_key", "test-key")
+    kit_service._cache.clear()
+    prices = iter([1000, 1500])  # Channel3 may return a different cheapest listing on each search
+
+    class R:
+        def raise_for_status(self): pass
+        def json(self): return {"products": [{"title": "RTX laptop", "offers": [{"url": "https://x", "price": {"price": next(prices), "currency": "USD"}}]}]}
+    monkeypatch.setattr(kit_service.httpx, "post", lambda *a, **k: R())
+    assert kit_service.kit()["items"][0]["price_inr"] == kit_service.kit()["items"][0]["price_inr"]
+
+
+def test_webhook_with_malformed_json_is_a_400_not_a_500(env):
+    c, _ = env
+    r = c.post("/api/webhooks/paypal", content=b"not json", headers={"content-type": "application/json"})
+    assert r.status_code == 400

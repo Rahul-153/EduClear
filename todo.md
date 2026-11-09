@@ -106,3 +106,4 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [x] T-8.12 README for judges (live URL, how to try payments, sponsor tools, built-in-period note) — 2026-11-08
 - [ ] T-8.13 Hosted Qwen — skipped: no provider/key supplied; the app is rules-first and does not need it
 - [x] T-8.14 Guideline cleanup — 2026-11-09 · removed 11 unused imports/placeholders found by ruff F401/F541 (no behaviour change); 84 tests, validate:data, ruff F/E722 all pass; vulture and tsc --noUnused found nothing else real
+- [x] T-8.15 Audit fixes — 2026-11-09 · page grid column constrained (was 5276 px wide); kit prices cached 10 min so shown = charged; malformed webhook body now 400; DEMO_SCRIPT refreshed; 86 tests pass
