@@ -24,6 +24,16 @@ app.include_router(router)
 app.include_router(payments_router)
 app.include_router(agent_router)
 
+
+
+class WebFiles(StaticFiles):
+    """Hashed bundles never change, so cache them hard; index.html must always be re-checked or a returning visitor keeps the old build."""
+    async def get_response(self, path, scope):
+        r = await super().get_response(path, scope)
+        r.headers["Cache-Control"] = "public, max-age=31536000, immutable" if path.startswith("assets/") else "no-cache"
+        return r
+
+
 _dist = ROOT / "frontend" / "dist"
 if _dist.exists():  # production / demo: serve the built React app from the same service
-    app.mount("/", StaticFiles(directory=_dist, html=True), name="web")
+    app.mount("/", WebFiles(directory=_dist, html=True), name="web")

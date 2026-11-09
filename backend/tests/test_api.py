@@ -1,5 +1,7 @@
+import pytest
 from fastapi.testclient import TestClient
 
+from backend.app.config import ROOT
 from backend.app.main import app
 
 client = TestClient(app)
@@ -43,3 +45,11 @@ def test_roi_finance_alignment():
 def test_cards_carry_accreditation_and_zero_commission():
     r = client.get("/api/colleges").json()
     assert all(x["commercial_relationship"].startswith("None") and x["accreditation"] for x in r)
+
+
+@pytest.mark.skipif(not (ROOT / "frontend" / "dist").exists(), reason="frontend not built")
+def test_index_is_revalidated_and_hashed_assets_are_cached():
+    c = TestClient(app)
+    assert c.get("/").headers["cache-control"] == "no-cache"
+    asset = next((ROOT / "frontend" / "dist" / "assets").glob("index-*.css")).name
+    assert "immutable" in c.get(f"/assets/{asset}").headers["cache-control"]
