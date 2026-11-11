@@ -1,0 +1,126 @@
+{
+  "id": "nit-raipur",
+  "name": "National Institute of Technology Raipur",
+  "shortName": "NIT Raipur",
+  "stream": "Engineering",
+  "type": "Institute of National Importance (NIT)",
+  "location": {
+    "city": "Raipur",
+    "state": "Chhattisgarh",
+    "tier": "Tier 2",
+    "region": "Central"
+  },
+  "nirfRank": 86,
+  "accreditation": "Not stated in official sources reviewed (the site lists only NBA data-capture sheets, not an accreditation grant). NAAC not found.",
+  "flagshipPrograms": [
+    "B.Tech Computer Science and Engineering",
+    "B.Tech Electronics and Communication Engineering",
+    "B.Tech Information Technology"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General (OPEN)",
+    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral: Other State closing AIR 13559 (opening 8140); Home State closing AIR 21913 (opening 12916) (JEE Main rank)",
+    "safeCutoffScore": null
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 25348,
+    "hostelAndMessAnnual": 58300,
+    "estimatedLivingAnnual": 37500,
+    "totalFourYearCostINR": 984592
+  },
+  "placement": {
+    "headlineCTC": 62.0,
+    "medianBaseSalary": 8.5,
+    "batchSize": 1000,
+    "eligibleStudents": 951,
+    "actuallyPlaced": 724,
+    "higherStudiesOrFounders": 49,
+    "disclosedPlacementRate": 76.13,
+    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 1,000 graduated, 49 to higher studies, 724 placed of 951 eligible. Median Rs 850,000. Headline CTC: Highest UG CTC 62 LPA for the 2023-24 passing-out batch from the institute's own Annual Report 2023-24 (scanned, read visually). No conflicting official figure found."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0092.pdf",
+    "feeCircularDate": "16/4/2026 (No. NITRR/R-1/2026/816); hostel 19/06/2026 (No. NITRR/R-1/2026/929)",
+    "verificationStatus": "Audited & Verified",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "headlineCtcUrl": "http://nitrr.ac.in/downloads/annual_reports/Nit_book_combine_light%20(8).pdf",
+    "feeCircularUrl": "http://nitrr.ac.in/downloads/fees/Fees_2026/Fee%20Structure%202026-27.pdf",
+    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+    "snapshots": {
+      "nitrr-annual-report-2023-24-placement-page-pdf287-287.png": "e5b4794d671d1e84a6304ff7a04a5600b411e854456d3c6689c2e05e8425a78f",
+      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
+      "nirf-2025-dcs.pdf": "16068ab1ce5c5d79e8c48bba46ffcbc0f72b7905300c46a6c1bf69339d77f1f9",
+      "josaa-2025-round6.html": "0ec9d4b3e2f798388321fb149c3c7aca141a4a02adc84b1f9d00d1ef5f73c516",
+      "nitrr-fee-structure-2026-27.pdf": "851c2f2430d81db87d3288676aca31f3fb9c9a70de2c8747f0795e3ea20abba8",
+      "hra-doe-om-2017-07-07.pdf": "ce31b4b4c520ecd07178510143f05bce990849789b0e0117b5ea3b6333a20b50",
+      "nitrr-hostel-fee-structure-2026-27.pdf": "ad7da1eb8ba4e9b6592a0f48ad21fc63e485fde15ef4d28996eaf0e7b859e9c1",
+      "nitrr-misc-fees-2026-27.pdf": "c82ec7ed7293a328b9a4ac345eb212f02e2172b6a80fe2213ab8a369189ba88c"
+    },
+    "provenance": {
+      "placement.batchSize": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0092.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.eligibleStudents": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0092.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.actuallyPlaced": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0092.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.medianBaseSalary": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0092.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.headlineCTC": {
+        "url": "http://nitrr.ac.in/downloads/annual_reports/Nit_book_combine_light%20(8).pdf",
+        "locator": "NIT Raipur Annual Report 2023-24, Placement Statistics, printed p.32 (PDF p.287 of 502): '2023-24 passing-out batch ... UG ... Highest CTC INR 62 LPA'. Snapshot is a 150-dpi render of that page; the original (199 MB) has sha256 af6015719ccf954d49cbc1d7295f944af7c7ed89e5c1ce85d11d76d0fd6bd4df and is not stored",
+        "snapshot": "nitrr-annual-report-2023-24-placement-page-pdf287-287.png"
+      },
+      "fees.tuitionAnnual": {
+        "url": "http://nitrr.ac.in/downloads/fees/Fees_2026/Fee%20Structure%202026-27.pdf",
+        "locator": "Fee structure for B.Tech AY 2026-27 (PDF p.2, scanned, income above Rs 5 lakh) and Hostel Fee Structure 2026-27 Parts A and B. Mandatory = recurring 18,060/yr (library 2,420; computer 1,650; student activity 4,400; career 1,650; exam 3,300; medical 2,000; MIS 1,540; electricity 1,100) + one-time non-refundable 29,150 (admission 2,200, institute development 22,000, alumni 2,200, convocation 2,750)/4 = 7,287.50; sum 25,347.50 rounded to 25,348 to keep integer rupees (Rs 0.50/yr). Hostel = maintenance 6,000 + digital infrastructure 500 + mess advance 40,000 + hostel rent 5,800 + electricity & water 6,000; refundable cautions excluded; single hostel rate, no room types. Printed totals reconcile. Scanned figures; mess is an advance. Misc-fee Degree fee 2,500 not included",
+        "snapshot": "nitrr-fee-structure-2026-27.pdf"
+      },
+      "fees.hostelAndMessAnnual": {
+        "url": "http://nitrr.ac.in/downloads/fees/Fees_2026/Fee%20Structure%202026-27.pdf",
+        "locator": "Fee structure for B.Tech AY 2026-27 (PDF p.2, scanned, income above Rs 5 lakh) and Hostel Fee Structure 2026-27 Parts A and B. Mandatory = recurring 18,060/yr (library 2,420; computer 1,650; student activity 4,400; career 1,650; exam 3,300; medical 2,000; MIS 1,540; electricity 1,100) + one-time non-refundable 29,150 (admission 2,200, institute development 22,000, alumni 2,200, convocation 2,750)/4 = 7,287.50; sum 25,347.50 rounded to 25,348 to keep integer rupees (Rs 0.50/yr). Hostel = maintenance 6,000 + digital infrastructure 500 + mess advance 40,000 + hostel rent 5,800 + electricity & water 6,000; refundable cautions excluded; single hostel rate, no room types. Printed totals reconcile. Scanned figures; mess is an advance. Misc-fee Degree fee 2,500 not included",
+        "snapshot": "nitrr-fee-structure-2026-27.pdf"
+      },
+      "fees.mandatoryInstituteFeesAnnual": {
+        "url": "http://nitrr.ac.in/downloads/fees/Fees_2026/Fee%20Structure%202026-27.pdf",
+        "locator": "Fee structure for B.Tech AY 2026-27 (PDF p.2, scanned, income above Rs 5 lakh) and Hostel Fee Structure 2026-27 Parts A and B. Mandatory = recurring 18,060/yr (library 2,420; computer 1,650; student activity 4,400; career 1,650; exam 3,300; medical 2,000; MIS 1,540; electricity 1,100) + one-time non-refundable 29,150 (admission 2,200, institute development 22,000, alumni 2,200, convocation 2,750)/4 = 7,287.50; sum 25,347.50 rounded to 25,348 to keep integer rupees (Rs 0.50/yr). Hostel = maintenance 6,000 + digital infrastructure 500 + mess advance 40,000 + hostel rent 5,800 + electricity & water 6,000; refundable cautions excluded; single hostel rate, no room types. Printed totals reconcile. Scanned figures; mess is an advance. Misc-fee Degree fee 2,500 not included",
+        "snapshot": "nitrr-fee-structure-2026-27.pdf"
+      },
+      "fees.estimatedLivingAnnual": {
+        "url": "https://doe.gov.in/files/circulars_document/7th_July_2017.pdf",
+        "locator": "HRA class Y for Raipur; band midpoint per D-19",
+        "snapshot": "hra-doe-om-2017-07-07.pdf"
+      },
+      "cutoffs.minPercentileOrRank": {
+        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
+        "snapshot": "josaa-2025-round6.html"
+      },
+      "nirfRank": {
+        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+        "locator": "NIRF 2025 Engineering ranking table",
+        "snapshot": "nirf-2025-engineering-ranking.html"
+      },
+      "accreditation": {
+        "url": "http://nitrr.ac.in/",
+        "locator": "Institute site NBA/accreditation pages (no grant letter found)",
+        "snapshot": null
+      }
+    }
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

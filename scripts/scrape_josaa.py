@@ -31,6 +31,18 @@ TARGETS = {  # id -> (instype code, substring of the official institute name)
     "nit-calicut": ("NIT", "Calicut"),
     "mnit-jaipur": ("NIT", "Malaviya National Institute of Technology Jaipur"),
     "vnit-nagpur": ("NIT", "Visvesvaraya"),
+    "nit-kurukshetra": ("NIT", "Kurukshetra"),
+    "nit-durgapur": ("NIT", "Durgapur"),
+    "mnnit-allahabad": ("NIT", "Motilal Nehru"),
+    "nit-jalandhar": ("NIT", "Jalandhar"),
+    "nit-patna": ("NIT", "Technology Patna"),
+    "nit-silchar": ("NIT", "Silchar"),
+    "nit-raipur": ("NIT", "Raipur"),
+    "nit-hamirpur": ("NIT", "Hamirpur"),
+    "manit-bhopal": ("NIT", "Maulana Azad"),
+    "svnit-surat": ("NIT", "Sardar Vallabhbhai"),
+    "nit-jamshedpur": ("NIT", "Jamshedpur"),
+    "nit-srinagar": ("NIT", "Srinagar"),
 }
 
 

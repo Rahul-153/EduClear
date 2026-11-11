@@ -1,0 +1,129 @@
+{
+  "id": "nit-kurukshetra",
+  "name": "National Institute of Technology Kurukshetra",
+  "shortName": "NIT Kurukshetra",
+  "stream": "Engineering",
+  "type": "Institute of National Importance (NIT)",
+  "location": {
+    "city": "Kurukshetra",
+    "state": "Haryana",
+    "tier": "Tier 3",
+    "region": "North"
+  },
+  "nirfRank": 85,
+  "accreditation": "NBA: B.Tech ECE, Computer, Electrical, Mechanical, Civil and IT accredited with validity up to 30-06-2023 per the institute's NBA page; later validity not shown on the saved page. NAAC not found in official sources reviewed.",
+  "flagshipPrograms": [
+    "B.Tech Computer Engineering",
+    "B.Tech Information Technology",
+    "B.Tech Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General (OPEN)",
+    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral: Other State closing AIR 7037 (opening 5180); Home State closing AIR 8484 (opening 6588) (JEE Main rank)",
+    "safeCutoffScore": null
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 33775,
+    "hostelAndMessAnnual": 90300,
+    "estimatedLivingAnnual": 25000,
+    "totalFourYearCostINR": 1096300
+  },
+  "placement": {
+    "headlineCTC": 61.0,
+    "medianBaseSalary": 9.0,
+    "batchSize": 1100,
+    "eligibleStudents": 834,
+    "actuallyPlaced": 590,
+    "higherStudiesOrFounders": 266,
+    "disclosedPlacementRate": 70.74,
+    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 1,100 graduated, 266 to higher studies, 590 placed of 834 eligible. Median Rs 900,000. Headline CTC: Official 2023-24 documents conflict, so the lower figure is used (D-23): Annual Report 2023-24 states 61.00 LPA ('till now', mid-year wording); the T&P Cell Placement Statistics 2023-24 (UG max, Computer Engineering) and Convocation Souvenir 2024 p.18 state 64.28 lakh. Brochure 2023-24 shows 62.75 LPA but is 2022-23 season data and is not used."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0172.pdf",
+    "feeCircularDate": "AY 2026-27 (B.Tech batch 2026-2030); hostel notice dated 11.05.2026",
+    "verificationStatus": "Audited & Verified",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "headlineCtcUrl": "https://nitkkr.ac.in/wp-content/uploads/2025/05/Annual-Report-2023-24.pdf",
+    "feeCircularUrl": "https://nitkkr.ac.in/wp-content/uploads/2026/05/B.Teh_.-4-year-fee-structure-AY-2026-27.pdf",
+    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+    "snapshots": {
+      "josaa-2025-round6.html": "2a45b8afbde242baeafaf85cdedf322abd9736f61e817d6cb572c3ae552ca5f5",
+      "hra-doe-om-2017-07-07.pdf": "ce31b4b4c520ecd07178510143f05bce990849789b0e0117b5ea3b6333a20b50",
+      "nirf-2025-dcs.pdf": "bdf25422af03eb36f1eae8debd00eaa5a6cd389d3fca48f1e8236dda22632ecd",
+      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
+      "annual-report-2023-24.pdf": "178337cdc412cc4d53293c96bc1d20e0036093ceae6f81e044cf5845ebbf7c42",
+      "fee-btech-2026-27.pdf": "8114fbdb346a3b6df6c728f880c9803054cfba252bcce07e422940db7a8f44e1",
+      "nba-ug-accreditation-status.jpg": "382103a8437eee49f45a9fea956b4a047dfb6b361989a5a51a5cb4c0a70dc10b",
+      "hostel-2026-27.pdf": "26e009fdae5463508f2bdb821b7e9242c4dbee44d873d5f936e632e15f99ce91",
+      "placement-2023-24.pdf": "ab90ebd48458b95c83fd6bf5b91a668ff03ce14ff8fcd34f9fd5a4fc33ca93f6",
+      "convocation-souvenir-2024.pdf": "bb0b6ac473a523e66bb6c0191491cfb5876ab472cdd92e0f01a9d4b3b6cbbd9a",
+      "placement-brochure-2023-24.pdf": "a42b85b8d5253c57ffd84aff54de32052a50bd02250da0ac1c9189cb0d80bf00"
+    },
+    "provenance": {
+      "placement.batchSize": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0172.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.eligibleStudents": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0172.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.actuallyPlaced": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0172.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.medianBaseSalary": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0172.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.headlineCTC": {
+        "url": "https://nitkkr.ac.in/wp-content/uploads/2025/05/Annual-Report-2023-24.pdf",
+        "locator": "NIT Kurukshetra Annual Report 2023-24, PDF pp.46 and 95: 'highest pay package offer is 61.00 LPA' (academic year 2023-24)",
+        "snapshot": "annual-report-2023-24.pdf"
+      },
+      "fees.tuitionAnnual": {
+        "url": "https://nitkkr.ac.in/wp-content/uploads/2026/05/B.Teh_.-4-year-fee-structure-AY-2026-27.pdf",
+        "locator": "B.Tech 2026-30 fee structure, table 'General, OBC & EWS, annual family income greater than 5 lakhs' (scanned; line items sum to printed triple-seater total 721,800); hostel notice CW/NK/2026/114 item 3. Mandatory = recurring 29,500/yr (medical 2,000, student activity 12,200, institute dev 7,800, career dev 1,600, exam 3,600, campus amenities 1,200, entrepreneurship 1,100) + one-time non-refundable 17,100 (alumni 2,700, welfare 1,100, admission 1,800, watch&ward 6,200, convocation 2,600, library 700, lab 2,000)/4 = 4,275. Hostel = seat rent 44,000 + triple-room usage 35,200 over 4 yrs (19,800/yr) + HDMF 6,000 one-time/4 = 1,500 + mess advance 30,000x2 + electricity advance 4,500x2; refundable security excluded. Triple room used (cheapest). Scanned figures, flagged for spot-check",
+        "snapshot": "fee-btech-2026-27.pdf"
+      },
+      "fees.hostelAndMessAnnual": {
+        "url": "https://nitkkr.ac.in/wp-content/uploads/2026/05/B.Teh_.-4-year-fee-structure-AY-2026-27.pdf",
+        "locator": "B.Tech 2026-30 fee structure, table 'General, OBC & EWS, annual family income greater than 5 lakhs' (scanned; line items sum to printed triple-seater total 721,800); hostel notice CW/NK/2026/114 item 3. Mandatory = recurring 29,500/yr (medical 2,000, student activity 12,200, institute dev 7,800, career dev 1,600, exam 3,600, campus amenities 1,200, entrepreneurship 1,100) + one-time non-refundable 17,100 (alumni 2,700, welfare 1,100, admission 1,800, watch&ward 6,200, convocation 2,600, library 700, lab 2,000)/4 = 4,275. Hostel = seat rent 44,000 + triple-room usage 35,200 over 4 yrs (19,800/yr) + HDMF 6,000 one-time/4 = 1,500 + mess advance 30,000x2 + electricity advance 4,500x2; refundable security excluded. Triple room used (cheapest). Scanned figures, flagged for spot-check",
+        "snapshot": "fee-btech-2026-27.pdf"
+      },
+      "fees.mandatoryInstituteFeesAnnual": {
+        "url": "https://nitkkr.ac.in/wp-content/uploads/2026/05/B.Teh_.-4-year-fee-structure-AY-2026-27.pdf",
+        "locator": "B.Tech 2026-30 fee structure, table 'General, OBC & EWS, annual family income greater than 5 lakhs' (scanned; line items sum to printed triple-seater total 721,800); hostel notice CW/NK/2026/114 item 3. Mandatory = recurring 29,500/yr (medical 2,000, student activity 12,200, institute dev 7,800, career dev 1,600, exam 3,600, campus amenities 1,200, entrepreneurship 1,100) + one-time non-refundable 17,100 (alumni 2,700, welfare 1,100, admission 1,800, watch&ward 6,200, convocation 2,600, library 700, lab 2,000)/4 = 4,275. Hostel = seat rent 44,000 + triple-room usage 35,200 over 4 yrs (19,800/yr) + HDMF 6,000 one-time/4 = 1,500 + mess advance 30,000x2 + electricity advance 4,500x2; refundable security excluded. Triple room used (cheapest). Scanned figures, flagged for spot-check",
+        "snapshot": "fee-btech-2026-27.pdf"
+      },
+      "fees.estimatedLivingAnnual": {
+        "url": "https://doe.gov.in/files/circulars_document/7th_July_2017.pdf",
+        "locator": "HRA class Z for Kurukshetra; band midpoint per D-19",
+        "snapshot": "hra-doe-om-2017-07-07.pdf"
+      },
+      "cutoffs.minPercentileOrRank": {
+        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
+        "snapshot": "josaa-2025-round6.html"
+      },
+      "nirfRank": {
+        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+        "locator": "NIRF 2025 Engineering ranking table",
+        "snapshot": "nirf-2025-engineering-ranking.html"
+      },
+      "accreditation": {
+        "url": "https://nitkkr.ac.in/nba/",
+        "locator": "Institute NBA page, UG accreditation status table (image)",
+        "snapshot": "nba-ug-accreditation-status.jpg"
+      }
+    }
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

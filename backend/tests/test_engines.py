@@ -66,7 +66,8 @@ def test_percentile_to_rank():
 def test_all_verified_colleges_have_parsable_cutoffs():
     kinds = {cid: parse_cutoff(c)["kind"] for cid, c in colleges().items()}
     assert kinds == {"bits-pilani": "bitsat", "dtu-delhi": "jee_main", "iit-bhu": "jee_advanced", "iit-guwahati": "jee_advanced",
-                     "iit-hyderabad": "jee_advanced", "mnit-jaipur": "jee_main", "nit-calicut": "jee_main"}
+                     "iit-hyderabad": "jee_advanced", "mnit-jaipur": "jee_main", "nit-calicut": "jee_main",
+                     "nit-kurukshetra": "jee_main", "nit-patna": "jee_main", "nit-raipur": "jee_main", "nit-silchar": "jee_main"}
     assert parse_cutoff(colleges()["mnit-jaipur"]) == {"kind": "jee_main", "os": 5601, "hs": 6013}
     assert parse_cutoff(colleges()["dtu-delhi"]) == {"kind": "jee_main", "os": 7060, "hs": 14806}
     assert parse_cutoff(colleges()["iit-bhu"])["closing"] == 1489

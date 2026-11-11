@@ -224,3 +224,21 @@ their recorded hashes were updated to the re-fetched files after re-confirming t
 The JoSAA result pages were regenerated with `scripts/scrape_josaa.py` and the closing ranks quoted in each record were re-checked against them.
 The second-pass verification results summarised above were produced before the loss; the per-field `verification.json` files were not recoverable.
 The evidence folder is not published with the repository (see README).
+
+## Wave 3 additions (2026-11-09)
+
+Four mid-tier NITs added to widen the reachable rank range. Each was re-read independently by a separate subagent from the saved snapshots only; all listed figures matched, with the notes below. This section was appended by hand because `scripts/make_report.py` depends on per-field `verification.json` files that were lost in D-40 and would overwrite earlier notes.
+
+| College | NIRF rank | 4-yr cost (₹) | Median base (LPA) | Headline (LPA) | Placed / Eligible | Rate | Cutoff (OS / HS closing AIR) | 2nd-pass |
+|---|---|---|---|---|---|---|---|---|
+| NIT Kurukshetra | 85 | 1,096,300 | 9.0 | 61.0 | 590 / 834 | 70.74% | 7037 / 8484 | VERIFIED |
+| NIT Silchar | 50 | 905,640 | 11.0 | 52.89 | 520 / 784 | 66.33% | 12665 / 23366 | VERIFIED |
+| NIT Patna | 53 | 1,023,900 | 7.0 | 44.92 | 591 / 687 | 86.03% | 14996 / 17808 | VERIFIED |
+| NIT Raipur | 86 | 984,592 | 8.5 | 62.0 | 724 / 951 | 76.13% | 13559 / 21913 | VERIFIED |
+
+Spot-check notes:
+- **All four:** fee circulars are scanned images read by eye (flagged per D-25); line items reconcile to the printed totals. Mess figures are published advances. JoSAA pages regenerated with `scripts/scrape_josaa.py`.
+- **NIT Kurukshetra:** headline CTC 61.00 LPA is the lower of two official 2023-24 figures (Annual Report 61.00, 'till now' wording; T&P cell and convocation souvenir 64.28) per D-23. Triple-seater room used. Latest NBA validity shown on the institute page is 30-06-2023.
+- **NIT Silchar:** sem-1 T&P fee is 1,000 vs 500 later; the extra 500 is treated as one-time. CSE NBA validity ended 30-06-2024. Headline CTC read from a rotated table in the Annual Report.
+- **NIT Patna:** only UG fee circular is dated Oct 2024 ('2024-25 and onwards'), applied to the 2026 batch by its own wording; its URL is a Google Drive link. Headline CTC is from the T&P web page (session 2023-24), not a dated PDF.
+- **NIT Raipur:** mandatory fees 25,347.50 rounded to 25,348 (integer rupees). Degree fee 2,500 in the misc-fee sheet is not in the B.Tech table and is excluded (would add 625 per year). The Annual Report (199 MB) is not stored: the snapshot is a render of the placement page, original sha256 af6015719ccf954d49cbc1d7295f944af7c7ed89e5c1ce85d11d76d0fd6bd4df. No accreditation grant document found, so the record says so.

@@ -24,7 +24,7 @@ UX-01 to UX-06 Done · UX-07 Partial (section order differs slightly from the sp
 UX-10 Partial (headings, booking and timeline controls translated; long notes still English) · UX-11 Done (USD and escrow disclosures shown).
 
 ## Data
-DR-01 to DR-09 Done. DR-10 Partial: 7 verified colleges, not 10 (13 candidates excluded, see decisions D-22 to D-26).
+DR-01 to DR-09 Done. DR-10 Done: 11 verified colleges (candidates excluded for unsupported figures are listed in decisions D-22 to D-26 and D-47).
 
 ## Non-functional
 NFR-01 Done for the grid (see above); page load not measured on a real network, first load is 82 KB gzipped JS · NFR-02 Done (no PII in logs or model prompts, per-browser data) ·

@@ -8,7 +8,7 @@ client = TestClient(app)
 
 
 def test_health_and_list():
-    assert client.get("/api/health").json() == {"status": "ok", "colleges": 7}
+    assert client.get("/api/health").json() == {"status": "ok", "colleges": 11}
     rows = client.get("/api/colleges").json()
     assert [r["nirf_rank"] for r in rows] == sorted(r["nirf_rank"] for r in rows)
     assert all(r["source_url"].startswith("http") for r in rows)
