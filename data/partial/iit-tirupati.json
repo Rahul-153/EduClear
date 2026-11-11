@@ -1,0 +1,35 @@
+{
+  "id": "iit-tirupati",
+  "josaaName": "Indian Institute of Technology Tirupati",
+  "name": "Indian Institute of Technology Tirupati",
+  "shortName": "IIT Tirupati",
+  "type": "IIT",
+  "nirfRank": 57,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 205,
+    "higherStudies": 72,
+    "eligible": 133,
+    "placed": 114,
+    "placementRatePct": 85.71,
+    "medianSalaryInr": 1100000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0844.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "a694c8a3db8638338b3c1f6576706aa2e7166a7a0fd37c51ed0a6ccfc9eaa24d",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

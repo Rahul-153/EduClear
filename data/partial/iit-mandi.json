@@ -1,0 +1,35 @@
+{
+  "id": "iit-mandi",
+  "josaaName": "Indian Institute of Technology Mandi",
+  "name": "Indian Institute of Technology Mandi",
+  "shortName": "IIT Mandi",
+  "type": "IIT",
+  "nirfRank": 26,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 280,
+    "higherStudies": 73,
+    "eligible": 207,
+    "placed": 196,
+    "placementRatePct": 94.69,
+    "medianSalaryInr": 1850000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0184.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "ab87131fa9ba881b11e2d092737a421eb58fab66ca2f100a2a9121050644af11",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

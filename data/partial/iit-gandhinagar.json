@@ -1,0 +1,35 @@
+{
+  "id": "iit-gandhinagar",
+  "josaaName": "Indian Institute of Technology Gandhinagar",
+  "name": "Indian Institute of Technology Gandhinagar",
+  "shortName": "IIT Gandhinagar",
+  "type": "IIT",
+  "nirfRank": 25,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 214,
+    "higherStudies": 51,
+    "eligible": 163,
+    "placed": 160,
+    "placementRatePct": 98.16,
+    "medianSalaryInr": 1400000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0139.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "ce95a7ba10149dea60009c52cac01f5ec8f60f19b7c098f660ca2e5504119693",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

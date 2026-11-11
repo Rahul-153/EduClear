@@ -1,0 +1,35 @@
+{
+  "id": "iit-bhubaneswar",
+  "josaaName": "Indian Institute of Technology Bhubaneswar",
+  "name": "Indian Institute of Technology Bhubaneswar",
+  "shortName": "IIT Bhubaneswar",
+  "type": "IIT",
+  "nirfRank": 39,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 321,
+    "higherStudies": 41,
+    "eligible": 280,
+    "placed": 254,
+    "placementRatePct": 90.71,
+    "medianSalaryInr": 1400000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0355.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "4a1dd193f4325041b174efea8839d55ba74abf607afd20b00235c6a145a148d4",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

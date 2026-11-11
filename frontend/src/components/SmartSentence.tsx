@@ -29,11 +29,10 @@ export default function SmartSentence({ s, p, setP }: Props) {
   const regionLabel: Record<string, string> = { All: s.all, North: s.north, South: s.south, East: s.east, West: s.west };
   return (
     <section className="card" aria-label="Smart Sentence">
-      <div className="eyebrow">Intelligent discovery • live</div>
       <div className="sentence">
         {s.iAmLooking}
         <select aria-label="Stream" value={p.stream} onChange={(e) => set("stream", e.target.value)}>
-          <option>Computer Science</option><option disabled>Electronics & ECE (data pending)</option><option disabled>MBA (data pending)</option>
+          {["Computer Science", "Electronics & Communication", "Electrical", "Mechanical", "Civil"].map((b) => <option key={b}>{b}</option>)}<option disabled>MBA (data pending)</option>
         </select>
         {s.forStudent}
         <select aria-label="JEE Main percentile" value={p.percentile} onChange={(e) => set("percentile", Number(e.target.value))}>
@@ -56,12 +55,17 @@ export default function SmartSentence({ s, p, setP }: Props) {
       {heard && (
         <p className="note" role="status">Understood{heard.llm_used ? " (rules + local model)" : " (rules)"}: {Object.entries(heard.profile).filter(([, v]) => v !== null).map(([k, v]) => `${k.replace(/_/g, " ")} ${v}`).join(", ") || "nothing"}
           {heard.missing.length ? ` · not found: ${heard.missing.join(", ").replace(/_/g, " ")}` : ""}{heard.unsupported_stream ? " · only Computer Science data is available yet" : ""}</p>)}
-      <button className="link" onClick={() => setMore(!more)} aria-expanded={more}>{more ? "Hide" : "More inputs"} (JEE Advanced rank, BITSAT, home state)</button>
+      <button className="link" onClick={() => setMore(!more)} aria-expanded={more}>{more ? "Hide" : "More inputs"} (JEE Advanced rank, BITSAT, home state, category)</button>
       {more && (
         <div className="more">
           JEE Advanced rank <input aria-label="JEE Advanced rank" inputMode="numeric" value={p.jee_advanced_rank} onChange={(e) => set("jee_advanced_rank", e.target.value.replace(/\D/g, ""))} />
           BITSAT score <input aria-label="BITSAT score" inputMode="numeric" value={p.bitsat_score} onChange={(e) => set("bitsat_score", e.target.value.replace(/\D/g, ""))} />
           Home state <input aria-label="Home state" value={p.home_state} onChange={(e) => set("home_state", e.target.value)} />
+          Seat type <select aria-label="Seat type" value={p.seat_type} onChange={(e) => set("seat_type", e.target.value)}>
+            {["OPEN", "EWS", "OBC-NCL", "SC", "ST"].map((v) => <option key={v}>{v}</option>)}</select>
+          Gender <select aria-label="Gender" value={p.gender} onChange={(e) => set("gender", e.target.value)}>
+            <option value="Any">Any</option><option value="Female">Female</option></select>
+          Category rank <input aria-label="Category rank" inputMode="numeric" value={p.category_rank} onChange={(e) => set("category_rank", e.target.value.replace(/\D/g, ""))} />
         </div>
       )}
     </section>

@@ -20,8 +20,11 @@ COPY --from=mcp /usr/local/bin/node /usr/local/bin/node
 COPY --from=mcp /opt/mcp /opt/mcp
 COPY backend backend
 COPY scripts/college_model.py scripts/college_model.py
+COPY scripts/partial_model.py scripts/partial_model.py
 COPY data/colleges data/colleges
 COPY data/admissions data/admissions
+COPY data/cutoffs_2025.sqlite data/cutoffs_2025.sqlite
+COPY data/partial data/partial
 COPY --from=web /web/dist frontend/dist
 EXPOSE 8000
 CMD ["sh", "-c", "uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT}"]

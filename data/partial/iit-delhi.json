@@ -1,0 +1,35 @@
+{
+  "id": "iit-delhi",
+  "josaaName": "Indian Institute of Technology Delhi",
+  "name": "Indian Institute of Technology Delhi",
+  "shortName": "IIT Delhi",
+  "type": "IIT",
+  "nirfRank": 2,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 946,
+    "higherStudies": 49,
+    "eligible": 897,
+    "placed": 711,
+    "placementRatePct": 79.26,
+    "medianSalaryInr": 1908000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-I-1074.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "b74c0a4d4d0486c23a5ebd9d15631922707ef311544c1d9cae04f787f3258cb1",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

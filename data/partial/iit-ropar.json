@@ -1,0 +1,35 @@
+{
+  "id": "iit-ropar",
+  "josaaName": "Indian Institute of Technology Ropar",
+  "name": "Indian Institute of Technology Ropar",
+  "shortName": "IIT Ropar",
+  "type": "IIT",
+  "nirfRank": 32,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 321,
+    "higherStudies": 63,
+    "eligible": 258,
+    "placed": 220,
+    "placementRatePct": 85.27,
+    "medianSalaryInr": 1697000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0378.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "2554c1c26a731861649119d83a6cee6a55f454a111e9214da4c6c58e2fbf07a4",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

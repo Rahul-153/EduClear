@@ -1,0 +1,35 @@
+{
+  "id": "iit-bhilai",
+  "josaaName": "Indian Institute of Technology Bhilai",
+  "name": "Indian Institute of Technology Bhilai",
+  "shortName": "IIT Bhilai",
+  "type": "IIT",
+  "nirfRank": 72,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 162,
+    "higherStudies": 14,
+    "eligible": 148,
+    "placed": 116,
+    "placementRatePct": 78.38,
+    "medianSalaryInr": 1200000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0946.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "0800c65b5d79ed81d12808b4d687398e2e6519977ca5a3d2f087bff93affe2ee",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

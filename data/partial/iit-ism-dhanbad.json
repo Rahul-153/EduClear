@@ -1,0 +1,35 @@
+{
+  "id": "iit-ism-dhanbad",
+  "josaaName": "Indian Institute of Technology (ISM) Dhanbad",
+  "name": "Indian Institute of Technology (ISM) Dhanbad",
+  "shortName": "IIT (ISM) Dhanbad",
+  "type": "IIT",
+  "nirfRank": 15,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 884,
+    "higherStudies": 33,
+    "eligible": 851,
+    "placed": 714,
+    "placementRatePct": 83.9,
+    "medianSalaryInr": 1200000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.iitism.ac.in/nirf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "2f28fb8433e2be013b9eb0639757a8d18b1033553c83d71d75958dc87114caab",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import Dict, Literal, Optional
 
 from datetime import date
 
@@ -28,6 +28,9 @@ class RecommendIn(BaseModel):
     home_state: Optional[str] = None
     jee_advanced_rank: Optional[int] = Field(None, ge=1)
     bitsat_score: Optional[int] = Field(None, ge=0, le=390)
+    seat_type: Literal["OPEN", "EWS", "OBC-NCL", "SC", "ST"] = "OPEN"
+    gender: Literal["Any", "Female"] = "Any"
+    category_rank: Optional[int] = Field(None, ge=1)
     assumptions: Assumptions = Assumptions()
 
 
@@ -96,7 +99,8 @@ def sources(cid: str):
 def recommend_ep(body: RecommendIn):
     user = dict(percentile=body.percentile, home_state=body.home_state,
                 jee_advanced_rank=body.jee_advanced_rank, bitsat_score=body.bitsat_score)
-    return recommend(body.stream, body.budget_lakhs, body.region, body.assumptions, **user)
+    opts = dict(seat_type=body.seat_type, gender=body.gender, category_rank=body.category_rank)
+    return recommend(body.stream, body.budget_lakhs, body.region, body.assumptions, opts=opts, **user)
 
 
 @router.post("/roi")

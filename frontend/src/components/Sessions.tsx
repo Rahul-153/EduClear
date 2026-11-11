@@ -3,13 +3,15 @@ import { bookSlot, completeBooking, myBookings, payConfig, programs, slotsFor, t
 import CheckoutPanel from "./CheckoutPanel";
 import Boundary from "./Boundary";
 import type { Strings } from "../i18n";
+import type { View } from "../lib/nav";
 
 const BookingScheduler = lazy(() => import("./BookingScheduler"));
 
 const when = (iso: string) => new Date(iso).toLocaleString("en-IN", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }) + " IST";
 const statusLabel = (x: Strings, st: string) => ({ pending: x.stPending, escrow_funded: x.stEscrow, paid: x.stPaid, payout_failed: x.stFailed, released: x.stReleased, cancelled: x.stCancelled } as Record<string, string>)[st] ?? st;
 
-export default function Sessions({ s: str }: { s: Strings }) {
+export default function Sessions({ s: str, view }: { s: Strings; view: View }) {
+  const canBook = view === "parent";
   const [cfg, setCfg] = useState<PayConfig | null>(null);
   const [progs, setProgs] = useState<Program[]>([]);
   const [open, setOpen] = useState<string | null>(null);
@@ -43,19 +45,21 @@ export default function Sessions({ s: str }: { s: Strings }) {
             <p className="note">{p.summary}</p>
             <div className="row"><span className="label">{p.kind === "cohort" ? "Per seat" : "Session fee"}</span>
               <span className="num value">₹{p.price_inr.toLocaleString("en-IN")} <span className="note">(${p.usd})</span></span></div>
-            <button className="capsule" style={{ width: "100%", padding: 8, border: "1px solid var(--hairline)", fontWeight: 600 }} onClick={() => { setOpen(open === p.id ? null : p.id); setActive(null); }}
-              aria-expanded={open === p.id}>{open === p.id ? str.hideTimes : p.escrow ? str.chooseTime : str.reserveSeat}</button>
+            {canBook ? (
+              <button className="capsule" style={{ width: "100%", padding: 8, border: "1px solid var(--hairline)", fontWeight: 600 }} onClick={() => { setOpen(open === p.id ? null : p.id); setActive(null); }}
+                aria-expanded={open === p.id}>{open === p.id ? str.hideTimes : p.escrow ? str.chooseTime : str.reserveSeat}</button>
+            ) : <p className="note">{str.askParent}</p>}
           </article>
         ))}
       </div>
-      {progs.length > 0 && (
+      {canBook && progs.length > 0 && (
         <Boundary name="Booking calendar">
           <Suspense fallback={<div className="card empty" style={{ marginTop: 16 }}>Loading booking calendar…</div>}>
             <BookingScheduler s={str} programs={progs} bookings={rows} onPick={(pid, s) => reserve(s, pid)} />
           </Suspense>
         </Boundary>
       )}
-      {open && (
+      {canBook && open && (
         <div className="card" style={{ marginTop: 16 }}>
           <div className="label">{str.availableTimes}</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>

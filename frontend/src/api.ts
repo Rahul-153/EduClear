@@ -1,7 +1,14 @@
 export interface Fit { tier: "Safe" | "Target" | "Reach" | "Out of reach" | null; reason: string | null; quota?: string; closing_rank_used?: number; approx_user_rank?: number }
 export interface Payback { total_cost_inr: number; median_base_lpa: number; in_hand_monthly_inr: number; disposable_monthly_inr: number; payback_months: number; payback_months_gross_pay: number }
+export type DataLevel = "audited" | "partly_verified" | "cutoffs_only";
+export interface CutoffOption {
+  institute: string; kind: string; program: string; quota: string; seat_type: string; gender: string; closing_rank: number; user_rank: number;
+  tier: "Safe" | "Target" | "Reach"; data_level: DataLevel; source: string; source_url: string;
+  nirf_rank?: number | null;
+  placement?: { batch: string; placed: number; eligible: number; placement_rate: number; median_base_lpa: number; source_url: string };
+}
 export interface Card {
-  id: string; name: string; short_name: string; city_state: string; region: string; nirf_rank: number; fit: Fit;
+  id: string; data_level: DataLevel; name: string; short_name: string; city_state: string; region: string; nirf_rank: number; fit: Fit;
   four_year_cost_inr: number; headline_ctc_lpa: number; median_base_lpa: number; placed: number; eligible: number;
   placement_rate: number; payback: Payback; source_url: string; accreditation: string; commercial_relationship: string;
 }
@@ -9,11 +16,13 @@ export interface Recommendation {
   supported: boolean; message?: string;
   deck: { safe_anchor: Card | null; sweet_spot: Card | null; dream_reach: Card | null };
   matches: Card[]; needs_more_input: { id: string; reason: string }[];
+  cutoff_only?: { items: CutoffOption[]; iits_need_rank: boolean };
 }
 export interface Assumptions { savings_rate: number; salary_growth: number }
 export interface Profile {
   stream: string; percentile: number; budget_lakhs: number; region: string;
   home_state: string; jee_advanced_rank: string; bitsat_score: string;
+  seat_type: string; gender: string; category_rank: string;
 }
 export interface Roi { payback: Payback; trajectory: { points: { year: number; salary_lpa: number }[]; note: string } }
 export interface Sources { retrieved_at: string; nirf_year: number; provenance: Record<string, { url: string; locator: string }> }
@@ -30,6 +39,7 @@ export const recommend = (p: Profile, a: Assumptions) =>
     home_state: p.home_state || null,
     jee_advanced_rank: p.jee_advanced_rank ? Number(p.jee_advanced_rank) : null,
     bitsat_score: p.bitsat_score ? Number(p.bitsat_score) : null,
+    seat_type: p.seat_type, gender: p.gender, category_rank: p.category_rank ? Number(p.category_rank) : null,
     assumptions: a,
   });
 export const roi = (id: string, a: Assumptions) => post<Roi>("/api/roi", { college_id: id, assumptions: a });

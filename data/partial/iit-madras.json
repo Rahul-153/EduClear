@@ -1,0 +1,35 @@
+{
+  "id": "iit-madras",
+  "josaaName": "Indian Institute of Technology Madras",
+  "name": "Indian Institute of Technology Madras",
+  "shortName": "IIT Madras",
+  "type": "IIT",
+  "nirfRank": 1,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 714,
+    "higherStudies": 153,
+    "eligible": 561,
+    "placed": 549,
+    "placementRatePct": 97.86,
+    "medianSalaryInr": 1750000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org (NIRF 2025 DCS IR-E-U-0456)",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "4a7048dcbc040a44f4ec2fc8469552aa0fa747f977b72df213d122cf0357b936",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

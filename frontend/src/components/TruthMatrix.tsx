@@ -5,6 +5,7 @@ import { themeQuartz, type ColDef, type ICellRendererParams } from "ag-grid-comm
 import type { Card } from "../api";
 import type { Strings } from "../i18n";
 import { inr } from "../lib/format";
+import { levelLabel } from "./DataBadge";
 
 const theme = themeQuartz.withParams({
   accentColor: "#0f172a", fontFamily: "Plus Jakarta Sans, sans-serif", borderColor: "rgba(0,0,0,0.07)",
@@ -14,12 +15,13 @@ const theme = themeQuartz.withParams({
 const Denominator = (p: ICellRendererParams<Card>) =>
   p.data ? <span className="num">{p.data.placed.toLocaleString("en-IN")} / {p.data.eligible.toLocaleString("en-IN")} <span className="note">({p.data.placement_rate}%)</span></span> : null;
 
-interface Props { s: Strings; rows: Card[]; truth: boolean; onSelect: (id: string) => void }
+interface Props { s: Strings; rows: Card[]; truth: boolean; setTruth: (v: boolean) => void; onSelect: (id: string) => void }
 
-export default function TruthMatrix({ s, rows, truth, onSelect }: Props) {
+export default function TruthMatrix({ s, rows, truth, setTruth, onSelect }: Props) {
   const cols = useMemo<ColDef<Card>[]>(() => [
     { headerName: "NIRF", field: "nirf_rank", width: 90, type: "numericColumn", cellClass: "num" },
     { headerName: "College", field: "short_name", minWidth: 150, flex: 1, pinned: "left" },
+    { headerName: s.dataLabel, width: 150, valueGetter: (p) => (p.data ? levelLabel(s, p.data.data_level) : "") },
     { headerName: "Fit", valueGetter: (p) => p.data?.fit.tier ?? "needs input", width: 120,
       cellRenderer: (p: ICellRendererParams<Card>) => <span className={`tier ${p.value}`}>{p.value}</span> },
     { headerName: s.costLabel, field: "four_year_cost_inr", width: 150, type: "numericColumn", valueFormatter: (p) => inr(p.value), cellClass: "num" },
@@ -41,8 +43,12 @@ export default function TruthMatrix({ s, rows, truth, onSelect }: Props) {
     <section className="card" aria-label={s.matrix}>
       <div className="row" style={{ marginBottom: 12 }}>
         <h2 style={{ fontSize: 13, textTransform: "uppercase" }}>{s.matrix}</h2>
-        <span className="note">Click a row for ROI • sort and filter any column</span>
+        <div className="capsule" role="group" aria-label={s.matrix}>
+          <button aria-pressed={!truth} onClick={() => setTruth(false)}>{s.brochure}</button>
+          <button aria-pressed={truth} onClick={() => setTruth(true)}><span className="dot" />{s.truth}</button>
+        </div>
       </div>
+      <div className="note" style={{ marginBottom: 8 }}>Click a row for cost and payback • sort and filter any column</div>
       <div className="grid-wrap">
         <AgGridReact<Card> theme={theme} rowData={rows} columnDefs={cols} defaultColDef={{ sortable: true, filter: true, resizable: true }}
           getRowId={(p) => p.data.id} onRowClicked={(e) => e.data && onSelect(e.data.id)} animateRows />

@@ -1,0 +1,35 @@
+{
+  "id": "iit-roorkee",
+  "josaaName": "Indian Institute of Technology Roorkee",
+  "name": "Indian Institute of Technology Roorkee",
+  "shortName": "IIT Roorkee",
+  "type": "IIT",
+  "nirfRank": 6,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 1102,
+    "higherStudies": 333,
+    "eligible": 769,
+    "placed": 769,
+    "placementRatePct": 100.0,
+    "medianSalaryInr": 1700000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0560.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "f8232dfa9b06620c007d86c0c3c2e676e5995e663692e49090fa7500128492db",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

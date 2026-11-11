@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { agentChat, agentConfirm, payConfig, type AgentReply, type BookingView, type PayConfig, type Profile } from "../api";
 import type { Lang } from "../i18n";
+import type { View } from "../lib/nav";
 import CheckoutPanel from "./CheckoutPanel";
 
 interface Msg { who: "you" | "bot"; text: string; meta?: AgentReply }
-const SUGGESTED = ["Can I afford NIT Calicut with 8 lakh savings?", "Is MNIT Jaipur worth it?", "Suggest colleges for me", "NIT Calicut के बारे में बताओ"];
+const SUGGESTED: Record<View, string[]> = {
+  student: ["Suggest colleges for me", "Is MNIT Jaipur worth it?", "NIT Calicut के बारे में बताओ"],
+  parent: ["Can I afford NIT Calicut with 8 lakh savings?", "What is the EMI for NIT Calicut?", "Suggest colleges for me"],
+};
 
-export default function Copilot({ profile, lang }: { profile: Profile; lang: Lang }) {
+export default function Copilot({ profile, lang, view }: { profile: Profile; lang: Lang; view: View }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState<Msg[]>([{ who: "bot", text: "I answer from the verified college data and exact calculators. I can suggest colleges, check affordability and EMI, estimate payback and book a sandbox counselling session — only after you confirm." }]);
@@ -54,7 +58,7 @@ export default function Copilot({ profile, lang }: { profile: Profile; lang: Lan
               </div>
             ))}
             {booking && cfg && <CheckoutPanel booking={booking} cfg={cfg} onChange={(b) => { if (!b || b.status !== "pending") { setBooking(null); setMsgs((m) => [...m, { who: "bot", text: b ? "Payment captured in the sandbox. Funds are held in the escrow ledger." : "Booking cancelled." }]); } }} />}
-            {msgs.length < 3 && SUGGESTED.map((s) => <button key={s} className="link" style={{ textAlign: "left", padding: 8, border: "1px solid var(--hairline)", borderRadius: 12, textDecoration: "none", fontSize: 12 }} onClick={() => send(s)}>{s}</button>)}
+            {msgs.length < 3 && SUGGESTED[view].map((s) => <button key={s} className="link" style={{ textAlign: "left", padding: 8, border: "1px solid var(--hairline)", borderRadius: 12, textDecoration: "none", fontSize: 12 }} onClick={() => send(s)}>{s}</button>)}
             <div ref={end} />
           </div>
           <form onSubmit={(e) => { e.preventDefault(); send(input); }} style={{ padding: 12, borderTop: "1px solid var(--hairline)", display: "flex", gap: 8 }}>

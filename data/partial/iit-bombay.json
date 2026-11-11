@@ -1,0 +1,35 @@
+{
+  "id": "iit-bombay",
+  "josaaName": "Indian Institute of Technology Bombay",
+  "name": "Indian Institute of Technology Bombay",
+  "shortName": "IIT Bombay",
+  "type": "IIT",
+  "nirfRank": 3,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 990,
+    "higherStudies": 259,
+    "eligible": 731,
+    "placed": 731,
+    "placementRatePct": 100.0,
+    "medianSalaryInr": 1961000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/ (NIRF 2025 DCS, IR-E-U-0306)",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "89d6dc635fc382c9ff72f7fb60de2d9859efec370bcd492c0d3e11a43f9a827d",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

@@ -1,8 +1,10 @@
 import type { Lang, Strings } from "../i18n";
+import { pagesFor, type Page, type View } from "../lib/nav";
 
-interface Props { s: Strings; lang: Lang; setLang: (l: Lang) => void; truth: boolean; setTruth: (v: boolean) => void }
+interface Props { s: Strings; lang: Lang; setLang: (l: Lang) => void; page: Page; view: View; setView: (v: View) => void }
 
-export default function Header({ s, lang, setLang, truth, setTruth }: Props) {
+export default function Header({ s, lang, setLang, page, view, setView }: Props) {
+  const label: Record<Page, string> = { find: s.navFind, cost: s.navCost, apply: s.navApply, help: s.navHelp };
   return (
     <header className="top">
       <div className="brand">
@@ -15,15 +17,18 @@ export default function Header({ s, lang, setLang, truth, setTruth }: Props) {
         </div>
       </div>
       <div className="tools">
+        <div className="capsule" role="group" aria-label={s.viewLabel}>
+          <button aria-pressed={view === "student"} onClick={() => setView("student")}>{s.viewStudent}</button>
+          <button aria-pressed={view === "parent"} onClick={() => setView("parent")}>{s.viewParent}</button>
+        </div>
         <div className="capsule" role="group" aria-label="Language">
           <button aria-pressed={lang === "en"} onClick={() => setLang("en")}>English</button>
           <button aria-pressed={lang === "hi"} onClick={() => setLang("hi")}>हिंदी</button>
         </div>
-        <div className="capsule" role="group" aria-label="Truth Lens">
-          <button aria-pressed={!truth} onClick={() => setTruth(false)}>{s.brochure}</button>
-          <button aria-pressed={truth} onClick={() => setTruth(true)}><span className="dot" />{s.truth}</button>
-        </div>
       </div>
+      <nav className="pages" aria-label="Pages">
+        {pagesFor(view).map((p) => <a key={p} href={`#${p}`} aria-current={p === page ? "page" : undefined}>{label[p]}</a>)}
+      </nav>
     </header>
   );
 }

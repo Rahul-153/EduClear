@@ -1,30 +1,44 @@
 import { useEffect, useState } from "react";
 import { alignment } from "../api";
 import type { Strings } from "../i18n";
+import type { View } from "../lib/nav";
 
 const DIMS: [string, string][] = [["brand_prestige", "Brand prestige"], ["branch_passion", "Branch passion"], ["location_safety", "Location & safety"], ["budget_strictness", "Budget strictness"]];
 const init = () => Object.fromEntries(DIMS.map(([k]) => [k, 3])) as Record<string, number>;
 type Result = Awaited<ReturnType<typeof alignment>>;
+type Answers = Record<string, number>;
 
-export default function AlignmentSurvey({ s }: { s: Strings }) {
-  const [st, setSt] = useState(init());
-  const [pa, setPa] = useState(init());
+// Each side's saved answers stay in this browser only; the score needs both.
+const load = (view: View): Answers | null => {
+  try { const v = localStorage.getItem(`educlear.align.${view}`); return v ? (JSON.parse(v) as Answers) : null; } catch { return null; }
+};
+const store = (view: View, a: Answers) => { try { localStorage.setItem(`educlear.align.${view}`, JSON.stringify(a)); } catch { /* storage blocked: answers last for this visit only */ } };
+
+export default function AlignmentSurvey({ s, view }: { s: Strings; view: View }) {
+  const [saved, setSaved] = useState<Record<View, Answers | null>>({ student: load("student"), parent: load("parent") });
+  const [draft, setDraft] = useState<Answers>(saved[view] ?? init());
   const [res, setRes] = useState<Result | null>(null);
-  useEffect(() => { alignment(st, pa).then(setRes).catch(() => setRes(null)); }, [st, pa]);
+  useEffect(() => { setDraft(saved[view] ?? init()); }, [view]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (saved.student && saved.parent) alignment(saved.student, saved.parent).then(setRes).catch(() => setRes(null));
+    else setRes(null);
+  }, [saved]);
+  const save = () => { store(view, draft); setSaved({ ...saved, [view]: draft }); };
+  const who = view === "student" ? s.student : s.parent;
+  const other = view === "student" ? saved.parent : saved.student;
   return (
     <section className="card" aria-label={s.alignment}>
       <h2 style={{ fontSize: 13, textTransform: "uppercase", marginBottom: 12 }}>{s.alignment}</h2>
-      <div className="split">
-        {([[s.student, st, setSt], [s.parent, pa, setPa]] as const).map(([who, val, set]) => (
-          <div key={who}>
-            <div className="label">{who} — rate 1 (low) to 5 (high)</div>
-            {DIMS.map(([k, label]) => (
-              <div className="slider" key={k}><label htmlFor={`${who}-${k}`}>{label}</label><span className="num">{val[k]}</span>
-                <input id={`${who}-${k}`} type="range" min={1} max={5} value={val[k]} onChange={(e) => set({ ...val, [k]: Number(e.target.value) })} /></div>
-            ))}
-          </div>
-        ))}
+      <div className="label">{who} — rate 1 (low) to 5 (high)</div>
+      {DIMS.map(([k, label]) => (
+        <div className="slider" key={k}><label htmlFor={`${view}-${k}`}>{label}</label><span className="num">{draft[k]}</span>
+          <input id={`${view}-${k}`} type="range" min={1} max={5} value={draft[k]} onChange={(e) => setDraft({ ...draft, [k]: Number(e.target.value) })} /></div>
+      ))}
+      <div className="row" style={{ justifyContent: "flex-start", gap: 12 }}>
+        <button className="capsule" style={{ padding: "8px 14px", background: "var(--ink)", color: "#fff", border: 0 }} onClick={save}>{s.saveAnswers}</button>
+        {saved[view] && <span className="note">{s.saved}</span>}
       </div>
+      {!other && <p className="note">{s.switchView}</p>}
       {res && (
         <div>
           <div className="clock"><span>{s.score}</span><span className="num value">{res.alignment_score}% — {res.verdict}</span></div>

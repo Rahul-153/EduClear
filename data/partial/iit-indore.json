@@ -1,0 +1,35 @@
+{
+  "id": "iit-indore",
+  "josaaName": "Indian Institute of Technology Indore",
+  "name": "Indian Institute of Technology Indore",
+  "shortName": "IIT Indore",
+  "type": "IIT",
+  "nirfRank": 12,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 331,
+    "higherStudies": 27,
+    "eligible": 304,
+    "placed": 234,
+    "placementRatePct": 76.97,
+    "medianSalaryInr": 1948000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0273.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "81887c065a6fe90532b59d10802332950aadcd7aafd039a3a537307e81e30e4a",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

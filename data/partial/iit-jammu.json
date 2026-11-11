@@ -1,0 +1,35 @@
+{
+  "id": "iit-jammu",
+  "josaaName": "Indian Institute of Technology Jammu",
+  "name": "Indian Institute of Technology Jammu",
+  "shortName": "IIT Jammu",
+  "type": "IIT",
+  "nirfRank": 56,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 178,
+    "higherStudies": 19,
+    "eligible": 159,
+    "placed": 113,
+    "placementRatePct": 71.07,
+    "medianSalaryInr": 1169500
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0906.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "02386eff369ed27f08f47d40fa8857bd78a343dbb495168af9464ce4ac4e36ee",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

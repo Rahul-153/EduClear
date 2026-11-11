@@ -1,0 +1,35 @@
+{
+  "id": "iit-palakkad",
+  "josaaName": "Indian Institute of Technology Palakkad",
+  "name": "Indian Institute of Technology Palakkad",
+  "shortName": "IIT Palakkad",
+  "type": "IIT",
+  "nirfRank": 64,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 156,
+    "higherStudies": 16,
+    "eligible": 140,
+    "placed": 105,
+    "placementRatePct": 75.0,
+    "medianSalaryInr": 1200000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0878.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "305411b6f939434c650f7b8e180419487478ced487d967170d883e6d67f3891a",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

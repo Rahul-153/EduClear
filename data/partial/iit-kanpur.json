@@ -1,0 +1,35 @@
+{
+  "id": "iit-kanpur",
+  "josaaName": "Indian Institute of Technology Kanpur",
+  "name": "Indian Institute of Technology Kanpur",
+  "shortName": "IIT Kanpur",
+  "type": "IIT",
+  "nirfRank": 4,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 1133,
+    "higherStudies": 283,
+    "eligible": 850,
+    "placed": 754,
+    "placementRatePct": 88.71,
+    "medianSalaryInr": 1940000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-I-1075.pdf",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "728138b93d8a1e400aaa3478feac61cde981cb8f93c93158d8b2a934aa7c2b72",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}

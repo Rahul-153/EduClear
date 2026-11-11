@@ -1,0 +1,35 @@
+{
+  "id": "iit-dharwad",
+  "josaaName": "Indian Institute of Technology Dharwad",
+  "name": "Indian Institute of Technology Dharwad",
+  "shortName": "IIT Dharwad",
+  "type": "IIT",
+  "nirfRank": 77,
+  "dataLevel": "partly_verified",
+  "placement": {
+    "batch": "2023-24",
+    "graduated": 154,
+    "higherStudies": 39,
+    "eligible": 115,
+    "placed": 95,
+    "placementRatePct": 82.61,
+    "medianSalaryInr": 1162000
+  },
+  "verifiedFields": [
+    "placement"
+  ],
+  "notVerified": [
+    "fees",
+    "totalCost",
+    "headlineCTC",
+    "accreditation"
+  ],
+  "source": {
+    "url": "https://www.nirfindia.org",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "snapshot": "nirf-2025-dcs.pdf",
+    "sha256": "779df64dc1c5beca6c5812a6bf9a25397aa4bbcbf4c56448b2455acad7ce7645",
+    "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24"
+  }
+}
