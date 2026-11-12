@@ -26,6 +26,7 @@ class Settings(BaseSettings):
     llm_model: str = ""
     ollama_base_url: str = "http://localhost:11434"
     ollama_model: str = "qwen3:4b"
+    llm_local_fallback: bool = True  # when a hosted model fails or is rate-limited, try local Ollama if it is running
     llm_phrasing: bool = False  # optional LLM re-phrasing of finished answers (slower; numbers are guarded either way)
 
     @field_validator("database_url")

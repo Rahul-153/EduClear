@@ -122,3 +122,11 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [ ] T-10.08 CSAB 2025 (Part C1, needs domain approval)
 - [ ] T-10.09 NIRF 2025 at scale (Part C2)
 - [ ] T-10.10 MHT-CET 2025 (Part C4)
+
+## Phase 13 — OpenCode free LLM (branch feature/opencode-llm, see D-54)
+- [x] T-13.01 `opencode` provider, default model deepseek-v4.1-flash-free, mocked tests (109 pass), smoke script — 2026-11-12 · client.py, test_llm_client.py, scripts/llm_smoke.py; live check with a fake key returns 401 as expected
+- [x] T-13.02 Live check with the owner's key — 2026-11-12 · OpenCode free model: HTTP 429 FreeUsageLimitError, Retry-After resets at 00:00 UTC (05:30 IST 13 Nov); not usable before then
+- [x] T-13.03 Local Ollama fallback, 429 pause, think-mode fix — 2026-11-12 · client.py FallbackLLM; 118 tests pass; live: text and JSON answered by ollama:qwen3:4b, intake and agent routing verified
+- [ ] T-13.04 After 05:30 IST on 13 Nov rerun `.venv/bin/python scripts/llm_smoke.py`: if the text call says "answered by opencode:deepseek-v4.1-flash-free", the hosted model works for this app
+- [x] T-13.05 OpenRouter google/gemma-4-31b-it:free as the hosted model — 2026-11-12 · key accepted; hosted calls succeed intermittently (upstream 429), local Ollama covers; 124 tests pass; see D-56
+- [ ] T-13.06 Decide: add a single quick retry on a transient upstream 429 (raises the share of hosted answers), or keep one-minute pause only
