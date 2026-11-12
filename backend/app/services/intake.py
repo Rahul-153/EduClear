@@ -19,14 +19,16 @@ STATES = {
 }
 REGIONS = [("All", r"all india|pan india|anywhere|पूरे भारत|पूरा भारत|कहीं भी"), ("North", r"\bnorth\b|उत्तर भारत|उत्तर में|उत्तर"),
            ("South", r"\bsouth\b|दक्षिण"), ("East", r"\beast\b|पूर्व"), ("West", r"\bwest\b|पश्चिम")]
-STREAMS = [("Computer Science", r"computer|\bcse\b|\bcs\b|कंप्यूटर|कम्प्यूटर|सीएस"), ("Electronics & ECE", r"electronics|\bece\b|इलेक्ट्रॉनिक्स"),
-           ("MBA", r"\bmba\b|management|एमबीए")]
+STREAMS = [("Computer Science", r"computer|\bcse\b|\bcs\b|कंप्यूटर|कम्प्यूटर|सीएस"),
+           ("Electronics & Communication", r"electronics|\bece\b|इलेक्ट्रॉनिक्स"),
+           ("Electrical", r"electrical|\bee\b|इलेक्ट्रिकल"), ("Mechanical", r"mechanical|\bmech\b|मैकेनिकल|मेकैनिकल"),
+           ("Civil", r"civil|सिविल"), ("MBA", r"\bmba\b|management|एमबीए")]
 SCHEMA = {"type": "object", "properties": {"percentile": {"type": ["number", "null"]}, "budget_lakhs": {"type": ["number", "null"]},
           "region": {"type": ["string", "null"]}, "stream": {"type": ["string", "null"]}, "home_state": {"type": ["string", "null"]}},
           "required": ["percentile", "budget_lakhs", "region", "stream", "home_state"]}
 SYSTEM = ("Extract fields from an Indian student's message (English or Hindi). Use null for anything not stated. "
           "percentile: JEE Main percentile 0-100. budget_lakhs: total 4-year budget in lakhs of rupees (1 crore = 100). "
-          "region: one of All, North, South, East, West. stream: one of Computer Science, Electronics & ECE, MBA. home_state: an Indian state. "
+          "region: one of All, North, South, East, West. stream: one of Computer Science, Electronics & Communication, Electrical, Mechanical, Civil, MBA. home_state: an Indian state. "
           "Do not guess; copy numbers exactly as written.")
 
 
@@ -108,4 +110,5 @@ def parse(text: str, llm: Optional[LLM] = None) -> dict:
                 prof[k] = float(got[k]) if k in ("percentile", "budget_lakhs") else got[k]
                 src[k] = "llm"
     return {"language": lang, "profile": prof, "sources": src, "missing": [k for k in core if prof[k] is None],
-            "llm_used": used, "unsupported_stream": prof["stream"] not in (None, "Computer Science")}
+            "llm_used": used, "unsupported_stream": prof["stream"] == "MBA",  # every engineering branch has at least cutoff data (D-59)
+            "salary_not_budget": bool(re.search(r"\blpa\b|per annum|\bctc\b", text.lower()))}

@@ -160,3 +160,14 @@ def test_intake_endpoint_and_requires_client_id_for_chat(env):
     c = env
     assert c.post("/api/intake", json={"text": "99 percentile budget 15 lakh south"}).json()["profile"]["region"] == "South"
     assert c.post("/api/agent/chat", json={"message": "hi"}).status_code == 400
+
+
+def test_intake_reads_every_branch_and_flags_salary_and_mba():
+    r = intake.parse("Electrical, 10 lpa in north india with JEE advanced rank 1")
+    assert r["profile"]["stream"] == "Electrical" and r["profile"]["region"] == "North" and r["profile"]["jee_advanced_rank"] == 1
+    assert r["profile"]["budget_lakhs"] is None and r["salary_not_budget"] and not r["unsupported_stream"]  # LPA is a salary, never a budget
+    for text, want in (("mechanical engineering please", "Mechanical"), ("civil, 20 lakh budget", "Civil"), ("I want ECE", "Electronics & Communication"),
+                       ("मैकेनिकल चाहिए", "Mechanical"), ("tell me about CSE", "Computer Science"), ("tell me about me", None)):
+        assert intake.parse(text)["profile"]["stream"] == want, text
+    assert intake.parse("MBA please")["unsupported_stream"] is True
+

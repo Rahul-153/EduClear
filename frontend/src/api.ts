@@ -116,7 +116,7 @@ export const orderKit = (item_ids: string[]) => call<BookingView & { pay_in_4_us
 
 // ---- intake + agent (Phase 6) ----
 export interface IntakeResult { language: "en" | "hi"; profile: { percentile: number | null; budget_lakhs: number | null; region: string | null; stream: string | null;
-  home_state: string | null; jee_advanced_rank: number | null; bitsat_score: number | null }; sources: Record<string, string>; missing: string[]; llm_used: boolean; unsupported_stream: boolean }
+  home_state: string | null; jee_advanced_rank: number | null; bitsat_score: number | null }; sources: Record<string, string>; missing: string[]; llm_used: boolean; unsupported_stream: boolean; salary_not_budget?: boolean }
 export const intake = (text: string) => post<IntakeResult>("/api/intake", { text });
 export interface AgentReply { reply: string; tool: string; tool_chosen_by: string; llm: string | null; language: string;
   pending_action?: { id: string; type: string; program_id: string; slot_start: string; amount_inr: number } }

@@ -20,7 +20,7 @@ export default function SmartSentence({ s, p, setP }: Props) {
     try {
       const r = await intake(text); setHeard(r);
       const f = r.profile;
-      setP({ ...p, percentile: f.percentile ?? p.percentile, budget_lakhs: f.budget_lakhs ?? p.budget_lakhs, region: f.region ?? p.region,
+      setP({ ...p, stream: f.stream && f.stream !== "MBA" ? f.stream : p.stream, percentile: f.percentile ?? p.percentile, budget_lakhs: f.budget_lakhs ?? p.budget_lakhs, region: f.region ?? p.region,
         home_state: f.home_state ?? p.home_state, jee_advanced_rank: f.jee_advanced_rank ? String(f.jee_advanced_rank) : p.jee_advanced_rank,
         bitsat_score: f.bitsat_score ? String(f.bitsat_score) : p.bitsat_score });
     } finally { setBusy(false); }
@@ -54,7 +54,7 @@ export default function SmartSentence({ s, p, setP }: Props) {
       </form>
       {heard && (
         <p className="note" role="status">Understood{heard.llm_used ? " (rules + local model)" : " (rules)"}: {Object.entries(heard.profile).filter(([, v]) => v !== null).map(([k, v]) => `${k.replace(/_/g, " ")} ${v}`).join(", ") || "nothing"}
-          {heard.missing.length ? ` · not found: ${heard.missing.join(", ").replace(/_/g, " ")}` : ""}{heard.unsupported_stream ? " · only Computer Science data is available yet" : ""}</p>)}
+          {heard.missing.length ? ` · not found: ${heard.missing.join(", ").replace(/_/g, " ")}` : ""}{heard.unsupported_stream ? " · MBA data is not available yet" : ""}{heard.salary_not_budget ? " · LPA is a yearly salary, not the 4-year budget: choose the budget above" : ""}</p>)}
       <button className="link" onClick={() => setMore(!more)} aria-expanded={more}>{more ? "Hide" : "More inputs"} (JEE Advanced rank, BITSAT, home state, category)</button>
       {more && (
         <div className="more">
