@@ -32,6 +32,8 @@ class Settings(BaseSettings):
     guest_checkout: bool = True
     auth_show_code: bool = False  # demo only: return the sign-in code in the response so a judge can log in without email
     llm_local_fallback: bool = True  # when a hosted model fails or is rate-limited, try local Ollama if it is running
+    llm_chat_timeout_s: float = 8  # chat, intake and claim calls give up quickly and the rules answer (T-15.08)
+    agent_per_minute: int = 30  # per-IP limit on /api/agent/chat, /api/intake, /api/claims/check
     llm_phrasing: bool = False  # optional LLM re-phrasing of finished answers (slower; numbers are guarded either way)
 
     @field_validator("database_url")

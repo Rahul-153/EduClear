@@ -74,6 +74,11 @@ def rules(text: str) -> Dict[str, Optional[object]]:
     return out
 
 
+def _named_in(patterns, value, text_low: str) -> bool:
+    """The option's own keyword pattern must be found in the user's text (T-15.07)."""
+    return any(v == value and re.search(rx, text_low) for v, rx in patterns)
+
+
 def _supported(field: str, value, text_low: str, text_digits: str) -> bool:
     if value is None:
         return False
@@ -82,13 +87,20 @@ def _supported(field: str, value, text_low: str, text_digits: str) -> bool:
             v = float(value)
         except (TypeError, ValueError):
             return False
-        ok = 0 < v <= (100 if field == "percentile" else 500)
-        shown = {str(v), str(int(v)) if v == int(v) else str(v)}
-        return ok and any(re.search(rf"(?<![\d.]){re.escape(x)}(?![\d])", text_digits) for x in shown) or (field == "budget_lakhs" and ok and "crore" in text_low)
+        if not 0 < v <= (100 if field == "percentile" else 500):
+            return False
+        nums = [float(x) for x in re.findall(r"(?<![\d.])\d+(?:\.\d+)?", text_digits)]
+        if v in nums:
+            return True
+        # 'crore' is accepted only when a number written in the text, times 100, is the value
+        return field == "budget_lakhs" and bool(re.search(r"crores?|\bcr\b|करोड़|करोड", text_low)) and any(abs(n * 100 - v) < 1e-9 for n in nums)
     if field == "region":
-        return value in {r for r, _ in REGIONS}
+        stripped = text_low
+        for name in sorted(STATES, key=len, reverse=True):
+            stripped = stripped.replace(name, " ")
+        return _named_in(REGIONS, value, stripped)
     if field == "stream":
-        return value in {s for s, _ in STREAMS}
+        return _named_in(STREAMS, value, text_low)
     if field == "home_state":
         return value in set(STATES.values()) and (value.lower() in text_low or any(k in text_low for k, v in STATES.items() if v == value))
     return False

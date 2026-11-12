@@ -59,7 +59,10 @@ def test_intake_llm_fills_only_missing_and_is_guarded():
     llm = FakeLLM({"percentile": 99.9, "budget_lakhs": 25, "region": "South", "stream": "Computer Science", "home_state": "Kerala"})
     r = intake.parse("looking for something near Chennai for computers, budget is twenty lakhs", llm)
     assert r["profile"]["percentile"] is None and r["profile"]["budget_lakhs"] is None  # not in text
-    assert r["profile"]["region"] == "South" and r["sources"]["region"] == "llm" and r["profile"]["home_state"] is None
+    assert r["profile"]["region"] is None and r["profile"]["home_state"] is None  # 'Chennai' is not a region word (T-15.07)
+    assert r["profile"]["stream"] == "Computer Science"  # 'computers' names the stream (rules read it)
+    r2 = intake.parse("looking for colleges in the south, whatever the fee", FakeLLM({"percentile": None, "budget_lakhs": None, "region": "South", "stream": None, "home_state": None}))
+    assert r2["sources"].get("region") == "rules"
     llm2 = FakeLLM({"percentile": 98, "budget_lakhs": None, "region": None, "stream": None, "home_state": None})
     assert intake.parse("my score is 98 in the main exam", llm2)["profile"]["percentile"] == 98  # number literally appears
     over = FakeLLM({"percentile": 50, "budget_lakhs": 99, "region": "North", "stream": None, "home_state": None})
@@ -171,3 +174,80 @@ def test_intake_reads_every_branch_and_flags_salary_and_mba():
         assert intake.parse(text)["profile"]["stream"] == want, text
     assert intake.parse("MBA please")["unsupported_stream"] is True
 
+
+
+# ---------- Phase 15: router, branch, memory, matching ----------
+@pytest.mark.parametrize("msg", ["what does median salary mean", "what is the weather today", "tell me a joke"])
+def test_off_topic_with_percentile_is_help_not_recommend(msg):
+    assert ag.route_rules(msg, {"percentile": 94}) == "help"
+    assert ag.choose_tool(msg, {"percentile": 94}, FakeLLM({"tool": "payback"}))[0] == "payback"  # model gets the call
+
+
+def test_copilot_uses_chosen_branch_and_mba_is_unavailable():
+    from backend.app.services.recommend import recommend
+    prof = {"percentile": 94, "budget_lakhs": 18, "stream": "Mechanical"}
+    out = ag.handle("suggest colleges for me", prof, "en", Assumptions(), "o1", None)
+    ref = recommend("Mechanical", 18, "All", Assumptions(), {}, percentile=94)
+    names = [v["short_name"] for v in ref["deck"].values() if v] or [i["institute"] for i in ref["cutoff_only"]["items"][:3]]
+    assert names and all(n in out["reply"] for n in names)
+    assert "not available" in ag.handle("suggest colleges", {**prof, "stream": "MBA"}, "en", Assumptions(), "o1", None)["reply"]
+
+
+def test_memory_between_turns():
+    first = ag.handle("Tell me about NIT Calicut", {}, "en", Assumptions(), "o1", None)
+    assert first["profile"]["last_college"] == "nit-calicut"
+    second = ag.handle("can I afford it with 5 lakh savings", first["profile"], "en", Assumptions(), "o1", None)
+    assert second["tool"] == "affordability" and "NIT Calicut" in second["reply"]
+
+
+@pytest.mark.parametrize("msg,cid", [("tell me about IIIT Hyderabad", "iiit-hyderabad"), ("tell me about IIT Hyderabad", "iit-hyderabad"),
+                                     ("IIIT Delhi fees", "iiit-delhi"), ("IIT Delhi fees", "iit-delhi"), ("is DTU worth it", "dtu-delhi")])
+def test_college_matching_is_exact(msg, cid):
+    assert ag._find_colleges(msg) == [cid]
+
+
+def test_bare_city_asks_which_one():
+    r = ag.handle("tell me about Hyderabad placement", {}, "en", Assumptions(), "o1", None)["reply"]
+    assert "Which one" in r and "IIT Hyderabad" in r and "IIIT Hyderabad" in r
+
+
+# ---------- T-15.05: deadlines, refund, choice order, compare ----------
+@pytest.mark.parametrize("msg,tool", [
+    ("What is the refund deadline for JoSAA?", "refund"), ("how do I withdraw my seat", "refund"), ("रिफंड कैसे मिलेगा", "refund"),
+    ("Is my choice order ok? IIT Delhi then IIT Bombay", "check_choice_order"),
+    ("when is the next JoSAA round", "deadlines"), ("last date for registration", "deadlines"),
+    ("compare NIT Calicut vs MNIT Jaipur", "compare"), ("NIT Calicut तुलना MNIT Jaipur", "compare"),
+])
+def test_new_tool_routing(msg, tool):
+    assert ag.route_rules(msg, {"percentile": 94}) == tool
+
+
+def test_refund_reply_uses_policy_tiers_and_amount():
+    from backend.app.engines.refund import usable_tiers
+    from backend.app.services.admissions import refund_policy
+    out = ag.handle("refund rules for my 2 lakh deposit", {}, "en", Assumptions(), "o1", None)
+    for t in usable_tiers(refund_policy()):
+        assert f"{t['refund_percent']}%" in out["reply"] and f"₹{round(200000 * t['refund_percent'] / 100):,}" in out["reply"]
+
+
+def test_deadlines_reply_matches_timeline():
+    from backend.app.services.admissions import timeline
+    out = ag.handle("what is the next deadline", {}, "en", Assumptions(), "o1", None)
+    nxt = [e for e in timeline()["events"] if e["status"] != "past"][:3]
+    assert out["tool"] == "deadlines" and (all(e["label"] in out["reply"] for e in nxt) if nxt else "passed" in out["reply"])
+
+
+def test_choice_order_alert_equals_engine_and_needs_two_colleges():
+    from backend.app.engines.choice import analyse
+    prof = {"percentile": 99.5}
+    out = ag.handle("is my choice order ok: NIT Calicut then NIT Surathkal", prof, "en", Assumptions(), "o1", None)
+    ref = analyse(["nit-calicut", "nit-surathkal"], Assumptions(), percentile=99.5)
+    assert out["tool"] == "check_choice_order" and all(x["message"] in out["reply"] for x in ref["alerts"])
+    assert "at least two" in ag.handle("check my choice order", {}, "en", Assumptions(), "o1", None)["reply"]
+
+
+def test_compare_numbers_equal_card():
+    c1, c2 = get_college("nit-calicut"), get_college("mnit-jaipur")
+    out = ag.handle("compare NIT Calicut vs MNIT Jaipur", {}, "en", Assumptions(), "o1", None)
+    for c in (c1, c2):
+        assert f"₹{c.fees.totalFourYearCostINR:,}" in out["reply"] and f"{c.placement.actuallyPlaced:,} of {c.placement.eligibleStudents:,}" in out["reply"]

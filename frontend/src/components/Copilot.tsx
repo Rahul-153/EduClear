@@ -17,6 +17,7 @@ export default function Copilot({ profile, lang, view, canConfirm }: { profile: 
   const [busy, setBusy] = useState(false);
   const [cfg, setCfg] = useState<PayConfig | null>(null);
   const [booking, setBooking] = useState<BookingView | null>(null);
+  const lastCollege = useRef<string | undefined>(undefined);  // memory between turns (T-15.03)
   const end = useRef<HTMLDivElement>(null);
   useEffect(() => { payConfig().then(setCfg); }, []);
   useEffect(() => { end.current?.scrollIntoView({ block: "end" }); }, [msgs, booking, open]);
@@ -24,7 +25,7 @@ export default function Copilot({ profile, lang, view, canConfirm }: { profile: 
   const send = async (text: string) => {
     if (!text.trim() || busy) return;
     setMsgs((m) => [...m, { who: "you", text }]); setInput(""); setBusy(true);
-    try { const r = await agentChat(text, profile, lang); setMsgs((m) => [...m, { who: "bot", text: r.reply, meta: r }]); }
+    try { const r = await agentChat(text, profile, lang, lastCollege.current); lastCollege.current = r.profile?.last_college ?? lastCollege.current; setMsgs((m) => [...m, { who: "bot", text: r.reply, meta: r }]); }
     catch (e) { setMsgs((m) => [...m, { who: "bot", text: `Sorry, that failed (${(e as Error).message}).` }]); }
     finally { setBusy(false); }
   };

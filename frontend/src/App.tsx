@@ -4,6 +4,7 @@ import { t, type Lang } from "./i18n";
 import Header from "./components/Header";
 import { loadView, pageFromHash, saveView, type Page, type View } from "./lib/nav";
 import SmartSentence from "./components/SmartSentence";
+import ClaimChecker from "./components/ClaimChecker";
 import BentoDeck from "./components/BentoDeck";
 const TruthMatrix = lazy(() => import("./components/TruthMatrix")); // AG Grid / AG Charts load after first paint
 const RoiPanel = lazy(() => import("./components/RoiPanel"));
@@ -70,6 +71,7 @@ export default function App() {
           {rec?.needs_more_input.length ? <p className="note">{rec.needs_more_input.length} colleges need an extra input (JEE Advanced rank or BITSAT score) to be rated — open “More inputs”.</p> : null}
           {rows.length > 0 && <Boundary name="Placement Truth matrix"><Suspense fallback={<section className="card"><div className="empty">Loading matrix…</div></section>}><TruthMatrix s={s} rows={rows} truth={truth} setTruth={setTruth} onSelect={openRoi} /></Suspense></Boundary>}
           {rec?.cutoff_only && <CutoffOptions s={s} data={rec.cutoff_only} profile={p} />}
+          <ClaimChecker lang={lang} />
         </>
       )}
       {page === "cost" && (

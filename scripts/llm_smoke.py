@@ -10,12 +10,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from backend.app.config import settings  # noqa: E402
-from backend.app.llm.client import KEY_PREFIX, HostedLLM, get_llm  # noqa: E402
+from backend.app.llm.client import KEY_PREFIX, HostedLLM, build_llm  # noqa: E402
 
 
 def main() -> int:
     print(f"provider={settings.llm_provider} model={settings.llm_model or '(provider default)'} key={'set' if settings.llm_api_key else 'NOT SET'}")
-    llm = get_llm()
+    llm = build_llm()  # no short timeout: a reasoning model may need its full time
     if llm is None:
         print("No LLM configured: set LLM_PROVIDER, LLM_API_KEY (and LLM_MODEL) in .env. The app still works on its rules.")
         prefix = KEY_PREFIX.get(settings.llm_provider)

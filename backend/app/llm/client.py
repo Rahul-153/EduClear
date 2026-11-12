@@ -56,8 +56,8 @@ def _loads(raw: str) -> Optional[dict]:
 
 
 class OllamaLLM:
-    def __init__(self, base: str, model: str):
-        self.base, self.model, self.name = base.rstrip("/"), model, f"ollama:{model}"
+    def __init__(self, base: str, model: str, timeout: float = 90):
+        self.base, self.model, self.name, self.timeout = base.rstrip("/"), model, f"ollama:{model}", timeout
 
     def _chat(self, system: str, user: str, fmt=None) -> Optional[str]:
         # Plain text: think=True so Ollama puts the reasoning in message.thinking and the answer alone in message.content. With
@@ -69,7 +69,7 @@ class OllamaLLM:
         if fmt:
             body["format"] = fmt
         try:
-            r = httpx.post(f"{self.base}/api/chat", json=body, timeout=90)
+            r = httpx.post(f"{self.base}/api/chat", json=body, timeout=self.timeout)
             r.raise_for_status()
             return r.json()["message"]["content"] or None  # message.thinking is never used as an answer
         except Exception:  # noqa: BLE001 - any LLM failure falls back to rules
@@ -113,10 +113,12 @@ def _retry_wait(r: "httpx.Response") -> int:
 
 
 class HostedLLM:
-    def __init__(self, provider: str, key: str, model: str):
+    def __init__(self, provider: str, key: str, model: str, timeout: Optional[float] = None):
         self.base, self.key, self.model, self.name = HOSTED[provider], key, model, f"{provider}:{model}"
         # a reasoning model (the OpenCode DeepSeek one) spends tokens thinking before it answers, so 400 would cut the answer off
         self.max_tokens, self.timeout = (1500, 90) if provider in REASONING_CAPABLE else (400, 60)
+        if timeout is not None:  # chat callers pass a short one; scripts/llm_smoke.py keeps the long default
+            self.timeout = timeout
         self.last_error: Optional[str] = None  # why the last call returned None; read by scripts/llm_smoke.py
 
     def _post(self, body: dict) -> "httpx.Response":
@@ -200,12 +202,17 @@ def _ollama_up() -> bool:
 
 
 def get_llm() -> Optional[LLM]:
+    """The model for chat, intake and claim checks: short timeout, the rules answer when it does not reply in time."""
+    return build_llm(settings.llm_chat_timeout_s)
+
+
+def build_llm(timeout: Optional[float] = None) -> Optional[LLM]:
     p = settings.llm_provider
     model = settings.llm_model or DEFAULT_MODEL.get(p, "")
     ok_key = bool(settings.llm_api_key) and settings.llm_api_key.startswith(KEY_PREFIX.get(p, ""))
-    hosted = HostedLLM(p, settings.llm_api_key, model) if p in HOSTED and ok_key and model else None
+    hosted = HostedLLM(p, settings.llm_api_key, model, timeout) if p in HOSTED and ok_key and model else None
     wants_local = p in ("auto", "ollama") or (p in HOSTED and settings.llm_local_fallback)  # also when the hosted key is missing or unusable
-    local = OllamaLLM(settings.ollama_base_url, settings.ollama_model) if wants_local and _ollama_up() else None
+    local = OllamaLLM(settings.ollama_base_url, settings.ollama_model, timeout or 90) if wants_local and _ollama_up() else None
     if hosted and local:
         return FallbackLLM(hosted, local)
     return hosted or local

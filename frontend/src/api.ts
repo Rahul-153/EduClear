@@ -118,11 +118,16 @@ export const orderKit = (item_ids: string[]) => call<BookingView & { pay_in_4_us
 export interface IntakeResult { language: "en" | "hi"; profile: { percentile: number | null; budget_lakhs: number | null; region: string | null; stream: string | null;
   home_state: string | null; jee_advanced_rank: number | null; bitsat_score: number | null }; sources: Record<string, string>; missing: string[]; llm_used: boolean; unsupported_stream: boolean; salary_not_budget?: boolean }
 export const intake = (text: string) => post<IntakeResult>("/api/intake", { text });
-export interface AgentReply { reply: string; tool: string; tool_chosen_by: string; llm: string | null; language: string;
+export interface ClaimResult { college?: string; needs_college: boolean; lines: string[]; label?: string; source_url?: string;
+  verdicts?: { claim: string; status: "consistent" | "above_record" }[] }
+export const checkClaim = (text: string, lang: string) => post<ClaimResult>("/api/claims/check", { text, lang });
+export interface AgentReply { profile?: { last_college?: string }; reply: string; tool: string; tool_chosen_by: string; llm: string | null; language: string;
   pending_action?: { id: string; type: string; program_id: string; slot_start: string; amount_inr: number } }
-const agentProfile = (p: Profile) => ({ percentile: p.percentile, budget_lakhs: p.budget_lakhs, region: p.region, home_state: p.home_state || null,
+const agentProfile = (p: Profile, last_college?: string) => ({ stream: p.stream, seat_type: p.seat_type, gender: p.gender,
+  category_rank: p.category_rank ? Number(p.category_rank) : null, last_college: last_college || null, percentile: p.percentile, budget_lakhs: p.budget_lakhs, region: p.region, home_state: p.home_state || null,
   jee_advanced_rank: p.jee_advanced_rank ? Number(p.jee_advanced_rank) : null, bitsat_score: p.bitsat_score ? Number(p.bitsat_score) : null });
-export const agentChat = (message: string, p: Profile, lang: string) => call<AgentReply>("POST", "/api/agent/chat", { message, profile: agentProfile(p), lang });
+export const agentChat = (message: string, p: Profile, lang: string, last_college?: string) =>
+  call<AgentReply>("POST", "/api/agent/chat", { message, profile: agentProfile(p, last_college), lang });
 export const agentConfirm = (action_id: string) => call<{ booking: BookingView; note: string }>("POST", "/api/agent/confirm", { action_id });
 
 // ---- accounts (PLAN_AUTH.md) ----
