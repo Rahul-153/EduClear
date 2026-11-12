@@ -28,7 +28,7 @@ export interface Roi { payback: Payback; trajectory: { points: { year: number; s
 export interface Sources { retrieved_at: string; nirf_year: number; provenance: Record<string, { url: string; locator: string }> }
 
 async function post<T>(url: string, body: unknown): Promise<T> {
-  const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json", "X-Requested-With": "educlear" }, body: JSON.stringify(body) });
   if (!r.ok) throw new Error(`${url}: ${r.status}`);
   return r.json();
 }
@@ -78,7 +78,7 @@ const cid = () => {
     return v;
   } catch { return "anonymous-session-" + Math.random().toString(36).slice(2); }
 };
-const H = () => ({ "Content-Type": "application/json", "X-Client-Id": cid() });
+const H = () => ({ "Content-Type": "application/json", "X-Client-Id": cid(), "X-Requested-With": "educlear" });  // the second header is the CSRF check for signed-in sessions
 export const listDeposits = () => fetch("/api/deposits", { headers: H() }).then((r) => r.json() as Promise<DepositView[]>);
 export const addDeposit = (b: { college_id: string; amount_inr: number; paid_on: string; closure_date: string }) =>
   fetch("/api/deposits", { method: "POST", headers: H(), body: JSON.stringify(b) }).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
@@ -123,3 +123,21 @@ const agentProfile = (p: Profile) => ({ percentile: p.percentile, budget_lakhs: 
   jee_advanced_rank: p.jee_advanced_rank ? Number(p.jee_advanced_rank) : null, bitsat_score: p.bitsat_score ? Number(p.bitsat_score) : null });
 export const agentChat = (message: string, p: Profile, lang: string) => call<AgentReply>("POST", "/api/agent/chat", { message, profile: agentProfile(p), lang });
 export const agentConfirm = (action_id: string) => call<{ booking: BookingView; note: string }>("POST", "/api/agent/confirm", { action_id });
+
+// ---- accounts (PLAN_AUTH.md) ----
+export type Role = "student" | "parent";
+export interface Me {
+  user: { id: number; role: Role; email: string; display_name: string; is_minor: boolean } | null;
+  family?: { id: number; members: { id: number; role: Role; name: string; is_minor: boolean; you: boolean }[] } | null;
+  guest_checkout: boolean;
+  sign_in_available?: boolean;
+}
+export const getMe = () => call<Me>("GET", "/api/auth/me");
+export const authStart = (b: { email: string; role: Role; over18: boolean; display_name: string }) =>
+  call<{ ok: boolean; message: string; demo_code?: string }>("POST", "/api/auth/start", b);
+export const authVerify = (email: string, code: string) => call<Me>("POST", "/api/auth/verify", { email, code });
+export const authLogout = () => call<{ ok: boolean }>("POST", "/api/auth/logout");
+export const createFamily = () => call<Me>("POST", "/api/family");
+export const makeInvite = () => call<{ code: string; role_to_join: Role; expires_at: string }>("POST", "/api/family/invite");
+export const joinFamily = (code: string) => call<Me>("POST", "/api/family/join", { code });
+export const removeMember = (id: number) => call<Me>("DELETE", `/api/family/members/${id}`);

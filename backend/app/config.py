@@ -26,6 +26,11 @@ class Settings(BaseSettings):
     llm_model: str = ""
     ollama_base_url: str = "http://localhost:11434"
     ollama_model: str = "qwen3:4b"
+    # Accounts (PLAN_AUTH.md). Guests keep working: checkout stays open to them until GUEST_CHECKOUT=false.
+    env: str = "development"  # "production" turns off demo helpers and requires a real mailer
+    auth_secret: str = ""  # keys the code hashes; set in production (unset = a per-process secret, fine for dev)
+    guest_checkout: bool = True
+    auth_show_code: bool = False  # demo only: return the sign-in code in the response so a judge can log in without email
     llm_phrasing: bool = False  # optional LLM re-phrasing of finished answers (slower; numbers are guarded either way)
 
     @field_validator("database_url")

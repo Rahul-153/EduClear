@@ -16,6 +16,11 @@ services:
         fromDatabase:
           name: educlear-db
           property: connectionString
+      # Accounts: production = Secure cookie, no demo code, sign-in off until a real mail provider exists (guests keep working)
+      - key: ENV
+        value: production
+      - key: AUTH_SECRET
+        generateValue: true
       - key: PAYPAL_CLIENT_ID
         sync: false
       - key: PAYPAL_CLIENT_SECRET

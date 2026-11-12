@@ -1,15 +1,16 @@
 export type View = "student" | "parent";
-export type Page = "find" | "cost" | "apply" | "help";
+export type NavPage = "find" | "cost" | "apply" | "help";
+export type Page = NavPage | "login";
 
-const ORDER: Record<View, Page[]> = {
+const ORDER: Record<View, NavPage[]> = {
   student: ["find", "apply", "cost", "help"],
   parent: ["find", "cost", "help", "apply"],
 };
-export const pagesFor = (v: View): Page[] => ORDER[v];
+export const pagesFor = (v: View): NavPage[] => ORDER[v];
 
 export const pageFromHash = (): Page => {
   const h = location.hash.replace("#", "");
-  return (ORDER.student as string[]).includes(h) ? (h as Page) : "find";
+  return h === "login" || (ORDER.student as string[]).includes(h) ? (h as Page) : "find";
 };
 
 export const loadView = (): View => {

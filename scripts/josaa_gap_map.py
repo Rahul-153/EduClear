@@ -7,7 +7,6 @@ Output: data/josaa_gap_map.md plus a ranked list of institutes by how many gap c
 Usage: python scripts/josaa_gap_map.py [--year 2025] [--round 6]
 """
 import argparse
-import json
 import sqlite3
 from collections import defaultdict
 from pathlib import Path

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { agentChat, agentConfirm, payConfig, type AgentReply, type BookingView, type PayConfig, type Profile } from "../api";
-import type { Lang } from "../i18n";
+import { t, type Lang } from "../i18n";
 import type { View } from "../lib/nav";
 import CheckoutPanel from "./CheckoutPanel";
 
@@ -10,7 +10,7 @@ const SUGGESTED: Record<View, string[]> = {
   parent: ["Can I afford NIT Calicut with 8 lakh savings?", "What is the EMI for NIT Calicut?", "Suggest colleges for me"],
 };
 
-export default function Copilot({ profile, lang, view }: { profile: Profile; lang: Lang; view: View }) {
+export default function Copilot({ profile, lang, view, canConfirm }: { profile: Profile; lang: Lang; view: View; canConfirm: boolean }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState<Msg[]>([{ who: "bot", text: "I answer from the verified college data and exact calculators. I can suggest colleges, check affordability and EMI, estimate payback and book a sandbox counselling session — only after you confirm." }]);
@@ -51,7 +51,8 @@ export default function Copilot({ profile, lang, view }: { profile: Profile; lan
               <div key={i} style={{ justifySelf: m.who === "you" ? "end" : "start", maxWidth: "90%", whiteSpace: "pre-wrap", fontSize: 13, lineHeight: 1.5, padding: "8px 12px", borderRadius: 12,
                 background: m.who === "you" ? "var(--ink)" : "#f1f5f9", color: m.who === "you" ? "#fff" : "var(--ink)" }}>
                 {m.text}
-                {m.meta?.pending_action && !booking && (
+                {m.meta?.pending_action && !booking && !canConfirm && <div className="note" style={{ marginTop: 8 }}>{t(lang).parentConfirmOnly}</div>}
+                {m.meta?.pending_action && !booking && canConfirm && (
                   <div style={{ marginTop: 8 }}><button disabled={busy} onClick={() => confirm(m.meta!.pending_action!.id)} className="capsule"
                     style={{ padding: "6px 12px", background: "#FFC439", border: 0, fontWeight: 600 }}>Confirm and create sandbox order</button></div>)}
                 {m.meta && <div className="note" style={{ marginTop: 4 }}>{m.meta.tool}{m.meta.llm ? ` · routed by ${m.meta.tool_chosen_by}` : ""}</div>}

@@ -1,9 +1,10 @@
-from typing import List, Optional
+from typing import List
 
-from fastapi import APIRouter, Depends, Header, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field, NaiveDatetime
 from sqlmodel import Session, select
 
+from ..auth.deps import actor_read, pay_actor
 from ..config import settings
 from ..db import Booking, LedgerEntry, get_session
 from ..integrations.paypal import MockPayPal, PayPal, PayPalError, get_paypal, inr_to_usd_cents
@@ -14,10 +15,7 @@ from ..services.programs import COUNSELLOR, PROGRAMS, slots
 router = APIRouter(prefix="/api")
 
 
-def owner(x_client_id: Optional[str] = Header(None)) -> str:
-    if not x_client_id or not 8 <= len(x_client_id) <= 64:
-        raise HTTPException(400, "X-Client-Id header (8-64 chars) required")
-    return x_client_id
+owner = actor_read  # who is looking: a family, a signed-in user, or a guest browser (see auth/deps.py)
 
 
 def guard(fn, *a, **k):
@@ -65,7 +63,7 @@ class BookIn(BaseModel):
 
 
 @router.post("/bookings")
-def book(body: BookIn, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+def book(body: BookIn, o: str = Depends(pay_actor), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
     return view(guard(svc.create_booking, s, pp, o, body.program_id, body.slot_start), s)
 
 
@@ -81,7 +79,7 @@ class ApproveIn(BaseModel):
 
 
 @router.post("/bookings/{bid}/mock-approve")
-def mock_approve(bid: int, body: ApproveIn, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+def mock_approve(bid: int, body: ApproveIn, o: str = Depends(pay_actor), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
     if not isinstance(pp, MockPayPal):
         raise HTTPException(404, "mock approval exists only in mock mode")
     b = guard(svc._own, s, o, bid)
@@ -93,17 +91,17 @@ def mock_approve(bid: int, body: ApproveIn, o: str = Depends(owner), s: Session 
 
 
 @router.post("/bookings/{bid}/capture")
-def capture_ep(bid: int, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+def capture_ep(bid: int, o: str = Depends(pay_actor), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
     return view(guard(svc.capture, s, pp, o, bid), s)
 
 
 @router.post("/bookings/{bid}/complete")
-def complete_ep(bid: int, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+def complete_ep(bid: int, o: str = Depends(pay_actor), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
     return view(guard(svc.complete, s, pp, o, bid), s)
 
 
 @router.post("/bookings/{bid}/cancel")
-def cancel_ep(bid: int, o: str = Depends(owner), s: Session = Depends(get_session)):
+def cancel_ep(bid: int, o: str = Depends(pay_actor), s: Session = Depends(get_session)):
     return view(guard(svc.cancel, s, o, bid), s)
 
 
@@ -126,7 +124,7 @@ class KitOrderIn(BaseModel):
 
 
 @router.post("/kit/order")
-def kit_order(body: KitOrderIn, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+def kit_order(body: KitOrderIn, o: str = Depends(pay_actor), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
     k = kit_service.kit()  # price is recomputed server-side; the client never sets the amount
     chosen = [i for i in k["items"] if i["id"] in set(body.item_ids)]
     if not chosen:

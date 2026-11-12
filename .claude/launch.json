@@ -1,6 +1,31 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "educlear", "runtimeExecutable": "/Users/rahul/Desktop/Gen AI/Paypal-hackthon/.venv/bin/python", "runtimeArgs": ["-m", "uvicorn", "backend.app.main:app", "--port", "8000"], "port": 8000 }
+    {
+      "name": "educlear",
+      "runtimeExecutable": "/Users/rahul/Desktop/Gen AI/Paypal-hackthon/.venv/bin/python",
+      "runtimeArgs": [
+        "-m",
+        "uvicorn",
+        "backend.app.main:app",
+        "--port",
+        "8000"
+      ],
+      "port": 8000
+    },
+    {
+      "name": "educlear-auth",
+      "runtimeExecutable": "/usr/bin/env",
+      "runtimeArgs": [
+        "AUTH_SHOW_CODE=true",
+        "/Users/rahul/Desktop/Gen AI/Paypal-hackthon/.venv/bin/python",
+        "-m",
+        "uvicorn",
+        "backend.app.main:app",
+        "--port",
+        "8002"
+      ],
+      "port": 8002
+    }
   ]
 }
