@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
-import { authLogout, getMe, recommend, type Assumptions, type Me, type Profile, type Recommendation } from "./api";
+import { authLogout, getMe, recommend, type Assumptions, type Card, type Me, type Profile, type Recommendation } from "./api";
 import { t, type Lang } from "./i18n";
 import Header from "./components/Header";
 import { loadView, pageFromHash, saveView, type Page, type View } from "./lib/nav";
@@ -67,7 +67,7 @@ export default function App() {
       {page === "find" && (
         <>
           <SmartSentence s={s} p={p} setP={setP} />
-          {rec && <BentoDeck s={s} deck={rec.deck} truth={truth} onRoi={openRoi} message={rec.message} view={view} />}
+          {rec && <BentoDeck s={s} lang={lang} deck={rec.deck} truth={truth} onRoi={openRoi} message={rec.message} view={view} />}
           {rec?.needs_more_input.length ? <p className="note">{rec.needs_more_input.length} colleges need an extra input (JEE Advanced rank or BITSAT score) to be rated — open “More inputs”.</p> : null}
           {rows.length > 0 && <Boundary name="Placement Truth matrix"><Suspense fallback={<section className="card"><div className="empty">Loading matrix…</div></section>}><TruthMatrix s={s} rows={rows} truth={truth} setTruth={setTruth} onSelect={openRoi} /></Suspense></Boundary>}
           {rec?.cutoff_only && <CutoffOptions s={s} data={rec.cutoff_only} profile={p} />}
@@ -90,7 +90,7 @@ export default function App() {
       {page === "help" && (
         <>
           {me?.user && <FamilyPanel s={s} me={me} setMe={setMe} />}
-          <Boundary name="Alignment survey"><AlignmentSurvey s={s} view={view} /></Boundary>
+          <Boundary name="Alignment survey"><AlignmentSurvey s={s} lang={lang} view={view} collegeIds={[rec?.deck.dream_reach, rec?.deck.sweet_spot, rec?.deck.safe_anchor].filter((c): c is Card => !!c).map((c) => c.id)} /></Boundary>
           <Boundary name="Counselling sessions"><Sessions s={s} access={access} /></Boundary>
         </>
       )}

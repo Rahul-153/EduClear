@@ -177,7 +177,7 @@ def test_intake_reads_every_branch_and_flags_salary_and_mba():
 
 
 # ---------- Phase 15: router, branch, memory, matching ----------
-@pytest.mark.parametrize("msg", ["what does median salary mean", "what is the weather today", "tell me a joke"])
+@pytest.mark.parametrize("msg", ["what is the weather today", "tell me a joke", "who won the match"])
 def test_off_topic_with_percentile_is_help_not_recommend(msg):
     assert ag.route_rules(msg, {"percentile": 94}) == "help"
     assert ag.choose_tool(msg, {"percentile": 94}, FakeLLM({"tool": "payback"}))[0] == "payback"  # model gets the call
@@ -251,3 +251,67 @@ def test_compare_numbers_equal_card():
     out = ag.handle("compare NIT Calicut vs MNIT Jaipur", {}, "en", Assumptions(), "o1", None)
     for c in (c1, c2):
         assert f"₹{c.fees.totalFourYearCostINR:,}" in out["reply"] and f"{c.placement.actuallyPlaced:,} of {c.placement.eligibleStudents:,}" in out["reply"]
+
+
+# ---------- Stage 4: why line, family brief, glossary ----------
+def test_why_line_numbers_equal_card():
+    from backend.app.services.recommend import recommend
+    r = recommend("Computer Science", 25, "All", Assumptions(), {}, percentile=96)
+    assert r["matches"]
+    for x in r["matches"]:
+        w = x["why"]
+        assert f"{x['median_base_lpa']} LPA" in w["en"] and f"{x['payback']['payback_months']} months" in w["en"]
+        assert f"{x['median_base_lpa']} LPA" in w["hi"]
+        under = 25 * 100_000 - x["four_year_cost_inr"]
+        assert (f"₹{under:,} under your budget" in w["en"]) == (under >= 0)
+
+
+def test_brief_identical_answers_none_and_gap_names_real_college_and_emi():
+    from backend.app.services import brief
+    a = Assumptions()
+    same = {k: 0 for k in ("brand_prestige", "branch_passion", "location_safety", "budget_strictness")}
+    assert brief.build(same, ["nit-calicut"], a) == []
+    pts = brief.build({**same, "budget_strictness": 3}, ["nit-calicut", "dtu-delhi"], a)
+    c = get_college("nit-calicut")
+    plan = funding_plan(c.fees.totalFourYearCostINR, 0, 0, a)
+    assert len(pts) == 1 and "NIT Calicut" in pts[0]["en"] and f"₹{plan['loan']['emi_inr']:,}" in pts[0]["en"] and f"₹{plan['loan']['emi_inr']:,}" in pts[0]["hi"]
+    two = brief.build({**same, "brand_prestige": 2}, ["nit-calicut", "dtu-delhi"], a)
+    assert "NIT Calicut" in two[0]["en"] and "DTU Delhi" in two[0]["en"]
+
+
+def test_alignment_endpoint_returns_brief(env):
+    r = env.post("/api/alignment", json={"student": {"brand_prestige": 5, "branch_passion": 3, "location_safety": 3, "budget_strictness": 1},
+                                         "parent": {"brand_prestige": 1, "branch_passion": 3, "location_safety": 3, "budget_strictness": 5},
+                                         "college_ids": ["nit-calicut", "dtu-delhi"]}).json()
+    assert {p["dimension"] for p in r["brief"]} == {"brand_prestige", "budget_strictness"} and len(r["brief"]) == 2
+    assert env.post("/api/alignment", json={"student": {}, "parent": {}}).status_code == 422
+
+
+@pytest.mark.parametrize("msg,tid", [("what does median salary mean", "median-salary"), ("होम स्टेट कोटा क्या है", "home-state-quota"),
+                                     ("what does EMI mean", "emi"), ("freeze float meaning", "freeze-float-slide")])
+def test_glossary_routes_and_answers_with_curated_text(msg, tid):
+    from backend.app.services import glossary
+    assert ag.route_rules(msg, {"percentile": 94}) == "explain_term"
+    out = ag.handle(msg, {}, "en", Assumptions(), "o1", None)
+    e = next(x for x in glossary.entries() if x["id"] == tid)
+    assert out["data"]["id"] == tid and e["definition"]["hi" if out["language"] == "hi" else "en"] in out["reply"] and ("स्रोत" if out["language"] == "hi" else "Source:") in out["reply"]
+
+
+def test_glossary_refuses_unrelated_and_model_only_picks_among_candidates():
+    from backend.app.services import glossary
+    assert ag.route_rules("what does the weather mean", {}) == "help"
+    assert glossary.lookup("tell me a joke") is None
+    cands = [e["id"] for e, _ in glossary.rank("closing rank cutoff quota")]
+    assert glossary.lookup("closing rank cutoff quota", FakeLLM({"id": "escrow"}))["id"] == cands[0]  # not a candidate: ignored
+    if len(cands) > 1:
+        assert glossary.lookup("closing rank cutoff quota", FakeLLM({"id": cands[1]}))["id"] == cands[1]
+
+
+def test_glossary_entries_have_both_languages_and_a_source():
+    from backend.app.services import glossary
+    es = glossary.entries()
+    assert len(es) >= 20 and len({e["id"] for e in es}) == len(es)
+    for e in es:
+        assert e["definition"]["en"] and e["definition"]["hi"] and e["term"]["hi"] and e["source"]["label"]
+        if e["source"]["url"]:
+            assert e["source"]["url"].startswith("https://")

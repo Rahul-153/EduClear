@@ -4,10 +4,11 @@ import { lakhs, lpa } from "../lib/format";
 import SourceBadge from "./SourceBadge";
 import DataBadge from "./DataBadge";
 import type { View } from "../lib/nav";
+import type { Lang } from "../i18n";
 
-interface Props { s: Strings; deck: Record<string, Card | null>; truth: boolean; onRoi: (id: string) => void; message?: string; view: View }
+interface Props { s: Strings; lang: Lang; deck: Record<string, Card | null>; truth: boolean; onRoi: (id: string) => void; message?: string; view: View }
 
-export default function BentoDeck({ s, deck, truth, onRoi, message, view }: Props) {
+export default function BentoDeck({ s, lang, deck, truth, onRoi, message, view }: Props) {
   const slots: [string, string][] = [["safe_anchor", s.safe], ["sweet_spot", s.target], ["dream_reach", s.reach]];
   const missing = slots.filter(([key]) => !deck[key]).map(([, title]) => title);
   const filled = slots.filter(([key]) => deck[key]);
@@ -24,6 +25,7 @@ export default function BentoDeck({ s, deck, truth, onRoi, message, view }: Prop
               <DataBadge s={s} level={c.data_level} />
               <h3 style={{ fontSize: 17 }}>{c.short_name}</h3>
               <div className="note">{c.city_state}{c.branch_scope ? " · branch figures" : ""}</div>
+              {c.why && <p className="note" style={{ margin: "6px 0" }}>{c.why[lang]}</p>}
               {view === "parent" ? (
                 <>
                   <div className="clock"><span>⏱ {s.debtFree}</span><span className="num value">{c.payback.payback_months} mo</span></div>

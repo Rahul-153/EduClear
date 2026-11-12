@@ -1,4 +1,4 @@
-from typing import Dict, Literal, Optional
+from typing import Dict, List, Literal, Optional
 
 from datetime import date
 
@@ -15,7 +15,7 @@ from ..engines.roi import payback, trajectory
 from ..services.recommend import SUPPORTED_STREAMS, card, recommend
 from ..engines import refund as refund_engine
 from ..db import Deposit, get_session
-from ..services import admissions
+from ..services import admissions, brief
 from ..engines.choice import analyse as analyse_choices
 
 router = APIRouter(prefix="/api")
@@ -58,6 +58,8 @@ class ChoiceIn(BaseModel):
 class AlignIn(BaseModel):
     student: Dict[str, int]
     parent: Dict[str, int]
+    college_ids: List[str] = Field(default=[], max_length=3)  # shortlist, most ambitious first
+    assumptions: Assumptions = Assumptions()
 
 
 def _college(cid: str):
@@ -120,7 +122,10 @@ def finance(body: FinanceIn):
 @router.post("/alignment")
 def alignment_ep(body: AlignIn):
     try:
-        return align.score(body.student, body.parent)
+        out = align.score(body.student, body.parent)
+        for cid in body.college_ids:
+            _college(cid)
+        return {**out, "brief": brief.build(out["gaps"], body.college_ids, body.assumptions)}
     except ValueError as e:
         raise HTTPException(422, str(e))
 

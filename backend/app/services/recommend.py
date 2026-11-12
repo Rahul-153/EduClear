@@ -50,7 +50,29 @@ def _branch_fit(c, item: dict | None) -> dict:
     return {"tier": None, "reason": "No official cutoff row for this branch"}
 
 
+TIER_EN = {"Safe": "Safe", "Target": "Good fit", "Reach": "Stretch"}
+TIER_HI = {"Safe": "सुरक्षित", "Target": "अच्छा मेल", "Reach": "स्ट्रेच"}
+
+
+def why_line(x: dict, budget_lakhs: float) -> dict:
+    """One sentence per language built only from the card's own figures (T-15.10)."""
+    cost, med, pb, tier = x["four_year_cost_inr"], x["median_base_lpa"], x["payback"]["payback_months"], x["fit"]["tier"]
+    under = round(budget_lakhs * 100_000) - cost
+    en = [f"{TIER_EN[tier]} on last year's closing rank." if tier in TIER_EN else None, f"₹{under:,} under your budget." if under >= 0 else None,
+          f"Median base {med} LPA, payback about {pb} months."]
+    hi = [f"पिछले साल की क्लोज़िंग रैंक पर {TIER_HI[tier]}।" if tier in TIER_HI else None, f"आपके बजट से ₹{under:,} कम।" if under >= 0 else None,
+          f"मीडियन वेतन {med} LPA, पेबैक लगभग {pb} महीने।"]
+    return {"en": " ".join(p for p in en if p), "hi": " ".join(p for p in hi if p)}
+
+
 def recommend(stream: str, budget_lakhs: float, region: str, a: Assumptions, opts: dict | None = None, **user) -> dict:
+    out = _recommend(stream, budget_lakhs, region, a, opts, **user)
+    for x in out.get("matches", []):
+        x["why"] = why_line(x, budget_lakhs)
+    return out
+
+
+def _recommend(stream: str, budget_lakhs: float, region: str, a: Assumptions, opts: dict | None = None, **user) -> dict:
     """`opts` (seat_type, gender, category_rank) only feeds the cutoff-only list; audited cards keep the OPEN, CSE basis (D-29)."""
     has_table = bool(cutoff_rows())  # the JoSAA cutoff table is optional; without it only the college records are used
     if stream not in BRANCH_GROUPS or (stream not in SUPPORTED_STREAMS and not has_table):

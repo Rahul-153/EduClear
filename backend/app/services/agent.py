@@ -18,7 +18,7 @@ from ..engines.roi import payback
 from ..llm.client import LLM
 from ..services.programs import PROGRAMS, slots
 from ..services.recommend import card, recommend
-from . import admissions, claims, intake
+from . import admissions, claims, glossary, intake
 
 TOOLS = ["recommend", "affordability", "emi_compare", "payback", "explain_college", "list_slots", "propose_booking", "help"]
 # Only aliases that point to exactly one college (T-15.04). Bare cities shared by several colleges live in AMBIGUOUS.
@@ -75,6 +75,8 @@ def route_rules(msg: str, prof: dict) -> str:
     t = msg.lower()
     if re.search(r"\b(book|reserve|schedule|sessions?|counsell?ors?|appointments?)\b|बुक|सत्र|काउंसलर", t):
         return "propose_booking" if re.search(r"\b(book|reserve)\b|बुक", t) else "list_slots"
+    if re.search(r"\bmean(s|ing)?\b|\bdefine\b|definition|क्या (है|होता है)|मतलब|अर्थ", t) and glossary.best(msg):
+        return "explain_term"
     if re.search(r"refund|withdraw|cancel (my )?seat|रिफंड|वापसी", t):
         return "refund"
     if re.search(r"choice order|choice list|preference (list|order)|choice filling|वरीयता|चॉइस", t):
@@ -102,7 +104,7 @@ TOOL_SYSTEM = ("You route a student's message to exactly one tool. Tools: recomm
                "afford a college), emi_compare (loan EMI), payback (is it worth the cost), explain_college (facts about one college), "
                "list_slots (counselling times), propose_booking (the user explicitly asks to book a session), deadlines (admission dates), refund (fee refund rules), "
                "check_choice_order (is a JoSAA preference list in a good order), compare (two or more colleges side by side), "
-               "check_claim (verify a brochure claim), help. "
+               "check_claim (verify a brochure claim), explain_term (meaning of an admissions or placement term), help. "
                'Reply JSON: {"tool": "<name>"}. Never invent other tools.')
 
 
@@ -132,7 +134,7 @@ def _program_from(msg: str) -> str:
     return "branch-vs-college"
 
 
-def run_tool(tool: str, msg: str, profile: dict, a: Assumptions, owner: str, lang: str) -> dict:
+def run_tool(tool: str, msg: str, profile: dict, a: Assumptions, owner: str, lang: str, llm: Optional[LLM] = None) -> dict:
     hi = lang == "hi"
     ids = _find_colleges(msg)
     cs = colleges()
@@ -239,6 +241,13 @@ def run_tool(tool: str, msg: str, profile: dict, a: Assumptions, owner: str, lan
         lines = [(f"{x['short_name']}: लागत {_inr(x['four_year_cost_inr'])}, मीडियन {x['median_base_lpa']} LPA, {x['placed']:,}/{x['eligible']:,} प्लेस्ड, पेबैक {x['payback']['payback_months']} महीने" if hi else
                   f"{x['short_name']}: cost {_inr(x['four_year_cost_inr'])}, median {x['median_base_lpa']} LPA, {x['placed']:,} of {x['eligible']:,} placed, payback {x['payback']['payback_months']} months") for x in cards]
         return {"tool": tool, "data": {"cards": cards}, "reply": "\n".join(lines)}
+    if tool == "explain_term":
+        e = glossary.lookup(msg, llm)
+        if not e:
+            return {"tool": tool, "data": {}, "reply": "यह शब्द मेरे शब्दकोश में नहीं है।" if hi else "I do not have that term in my glossary."}
+        src = e["source"]
+        tail = (f"\nस्रोत: {src['label']}" if hi else f"\nSource: {src['label']}") + (f" ({src['url']})" if src.get("url") else "")
+        return {"tool": tool, "data": {"id": e["id"]}, "reply": f"{e['term']['hi' if hi else 'en']}: {e['definition']['hi' if hi else 'en']}{tail}"}
     if tool == "check_claim":
         res = claims.check(msg, ids, None, lang)
         return {"tool": tool, "data": res, "reply": "\n".join(res["lines"])}
@@ -283,7 +292,7 @@ def handle(msg: str, profile: dict, lang: str, a: Assumptions, owner: str, llm: 
     parsed = intake.parse(msg, llm)
     merged = {**profile, **{k: v for k, v in parsed["profile"].items() if v is not None}}
     tool, how = choose_tool(msg, merged, llm)
-    res = run_tool(tool, msg, merged, a, owner, lang)
+    res = run_tool(tool, msg, merged, a, owner, lang, llm)
     named = _find_colleges(msg)
     if len(named) == 1 and tool in ("affordability", "emi_compare", "payback", "explain_college"):
         merged["last_college"] = named[0]  # follow-up questions ("can I afford it") refer to this college (T-15.03)

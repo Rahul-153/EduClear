@@ -11,6 +11,7 @@ export interface Card {
   id: string; data_level: DataLevel; name: string; short_name: string; city_state: string; region: string; nirf_rank: number; fit: Fit;
   four_year_cost_inr: number; headline_ctc_lpa: number; median_base_lpa: number; placed: number; eligible: number;
   placement_rate: number; payback: Payback; source_url: string; accreditation: string; commercial_relationship: string;
+  why?: { en: string; hi: string };
   branch_scope?: boolean;  // placement and payback are this branch's own figures, not the institute-wide ones
 }
 export interface Recommendation {
@@ -44,9 +45,9 @@ export const recommend = (p: Profile, a: Assumptions) =>
     assumptions: a,
   });
 export const roi = (id: string, a: Assumptions) => post<Roi>("/api/roi", { college_id: id, assumptions: a });
-export const alignment = (student: Record<string, number>, parent: Record<string, number>) =>
-  post<{ alignment_score: number; verdict: string; discussion_guide: { dimension: string; gap: number; higher_priority: string; prompt: string }[] }>(
-    "/api/alignment", { student, parent });
+export const alignment = (student: Record<string, number>, parent: Record<string, number>, college_ids: string[] = []) =>
+  post<{ alignment_score: number; verdict: string; discussion_guide: { dimension: string; gap: number; higher_priority: string; prompt: string }[];
+    brief: { dimension: string; en: string; hi: string }[] }>("/api/alignment", { student, parent, college_ids });
 export const sources = (id: string) => fetch(`/api/colleges/${id}/sources`).then((r) => r.json() as Promise<Sources>);
 
 export interface ChoiceResult {

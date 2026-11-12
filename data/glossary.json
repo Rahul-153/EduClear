@@ -1,0 +1,421 @@
+{
+ "note": "Definitions and official rules only; each entry names its source. Official URLs are domains already used by this project or the body's home page.",
+ "entries": [
+  {
+   "id": "median-salary",
+   "term": {
+    "en": "Median salary",
+    "hi": "मीडियन वेतन"
+   },
+   "keywords": "median salary median base middle salary average pay मीडियन वेतन औसत सैलरी",
+   "definition": {
+    "en": "The middle value of the salaries of placed students: half earned more and half earned less. It is less affected by a few very high offers than the average or the headline package is.",
+    "hi": "प्लेस्ड छात्रों के वेतन का बीच का मान: आधे ने इससे ज़्यादा और आधे ने कम कमाया। यह औसत या ब्रोशर के सबसे ऊँचे पैकेज की तुलना में कुछ बहुत ऊँचे ऑफ़र से कम प्रभावित होता है।"
+   },
+   "source": {
+    "label": "NIRF placement data (median salary of graduating students)",
+    "url": "https://www.nirfindia.org"
+   }
+  },
+  {
+   "id": "headline-ctc",
+   "term": {
+    "en": "Headline package (highest CTC)",
+    "hi": "ब्रोशर पैकेज (सबसे ऊँचा CTC)"
+   },
+   "keywords": "headline ctc highest package brochure package top offer सबसे ऊँचा पैकेज ब्रोशर",
+   "definition": {
+    "en": "The highest cost-to-company offer an institute advertises. It describes one or a few students, not a typical graduate; compare it with the median.",
+    "hi": "संस्थान द्वारा बताया गया सबसे ऊँचा कॉस्ट-टू-कंपनी ऑफ़र। यह एक या कुछ छात्रों का है, सामान्य छात्र का नहीं; इसे मीडियन से तुलना करें।"
+   },
+   "source": {
+    "label": "NIRF placement data",
+    "url": "https://www.nirfindia.org"
+   }
+  },
+  {
+   "id": "ctc",
+   "term": {
+    "en": "CTC (cost to company)",
+    "hi": "CTC (कॉस्ट टू कंपनी)"
+   },
+   "keywords": "ctc cost to company lpa package in-hand take home कॉस्ट टू कंपनी",
+   "definition": {
+    "en": "The total yearly amount an employer spends on an employee, including parts that are not paid out monthly. In-hand pay is lower.",
+    "hi": "नियोक्ता द्वारा कर्मचारी पर सालाना होने वाला कुल खर्च, जिसमें वे हिस्से भी हैं जो हर महीने नहीं मिलते। हाथ में आने वाला वेतन इससे कम होता है।"
+   },
+   "source": {
+    "label": "NIRF placement data",
+    "url": "https://www.nirfindia.org"
+   }
+  },
+  {
+   "id": "placement-rate",
+   "term": {
+    "en": "Placement rate (placed of eligible)",
+    "hi": "प्लेसमेंट दर (योग्य में से प्लेस्ड)"
+   },
+   "keywords": "placement rate placed eligible students denominator percent placed प्लेसमेंट दर योग्य छात्र",
+   "definition": {
+    "en": "The share of eligible students who got a job through the institute. The denominator matters: 90% of a small eligible group is a different claim from 90% of the whole batch.",
+    "hi": "योग्य छात्रों में से कितनों को संस्थान के ज़रिए नौकरी मिली। भाजक मायने रखता है: छोटे योग्य समूह का 90% पूरे बैच के 90% से अलग दावा है।"
+   },
+   "source": {
+    "label": "NIRF placement data",
+    "url": "https://www.nirfindia.org"
+   }
+  },
+  {
+   "id": "eligible-students",
+   "term": {
+    "en": "Eligible students",
+    "hi": "योग्य छात्र"
+   },
+   "keywords": "eligible students eligible for placement batch size योग्य छात्र",
+   "definition": {
+    "en": "Students in a batch who registered for and were eligible for campus placement. Those who chose higher studies or started their own venture are usually not counted.",
+    "hi": "बैच के वे छात्र जो कैंपस प्लेसमेंट के लिए पंजीकृत और योग्य थे। उच्च शिक्षा या अपना उद्यम चुनने वाले आमतौर पर गिने नहीं जाते।"
+   },
+   "source": {
+    "label": "NIRF placement data",
+    "url": "https://www.nirfindia.org"
+   }
+  },
+  {
+   "id": "nirf",
+   "term": {
+    "en": "NIRF ranking",
+    "hi": "NIRF रैंकिंग"
+   },
+   "keywords": "nirf national institutional ranking framework rank एनआईआरएफ रैंकिंग",
+   "definition": {
+    "en": "The National Institutional Ranking Framework is the Government of India's yearly ranking of institutions, based on data the institutes submit.",
+    "hi": "नेशनल इंस्टीट्यूशनल रैंकिंग फ्रेमवर्क भारत सरकार की संस्थानों की वार्षिक रैंकिंग है, जो संस्थानों द्वारा दिए गए आँकड़ों पर आधारित है।"
+   },
+   "source": {
+    "label": "NIRF",
+    "url": "https://www.nirfindia.org"
+   }
+  },
+  {
+   "id": "jee-main-percentile",
+   "term": {
+    "en": "JEE Main percentile",
+    "hi": "JEE Main पर्सेंटाइल"
+   },
+   "keywords": "jee main percentile nta score पर्सेंटाइल जेईई मेन",
+   "definition": {
+    "en": "A JEE Main percentile shows the share of candidates in your session group who scored at or below you. It is converted to an all-India rank for admission, not used directly.",
+    "hi": "JEE Main पर्सेंटाइल बताता है कि आपके सेशन समूह के कितने प्रतिशत उम्मीदवारों के अंक आपसे बराबर या कम रहे। प्रवेश के लिए इसे अखिल भारतीय रैंक में बदला जाता है।"
+   },
+   "source": {
+    "label": "NTA JEE Main",
+    "url": "https://jeemain.nta.nic.in"
+   }
+  },
+  {
+   "id": "jee-advanced-rank",
+   "term": {
+    "en": "JEE Advanced rank",
+    "hi": "JEE Advanced रैंक"
+   },
+   "keywords": "jee advanced rank iit rank air एडवांस्ड रैंक आईआईटी",
+   "definition": {
+    "en": "The rank from JEE Advanced, which decides admission to the IITs through JoSAA. NITs, IIITs and GFTIs use JEE Main ranks instead.",
+    "hi": "JEE Advanced की रैंक, जो JoSAA के ज़रिए IIT में प्रवेश तय करती है। NIT, IIIT और GFTI में JEE Main की रैंक चलती है।"
+   },
+   "source": {
+    "label": "JEE Advanced",
+    "url": "https://jeeadv.ac.in"
+   }
+  },
+  {
+   "id": "josaa",
+   "term": {
+    "en": "JoSAA",
+    "hi": "JoSAA"
+   },
+   "keywords": "josaa joint seat allocation authority counselling जोसा काउंसलिंग",
+   "definition": {
+    "en": "The Joint Seat Allocation Authority runs the counselling that allots seats in IITs, NITs, IIITs and other centrally funded technical institutions, in several rounds.",
+    "hi": "जॉइंट सीट एलोकेशन अथॉरिटी IIT, NIT, IIIT और अन्य केंद्र-वित्तपोषित तकनीकी संस्थानों की सीटें कई राउंड में आवंटित करने वाली काउंसलिंग चलाती है।"
+   },
+   "source": {
+    "label": "JoSAA",
+    "url": "https://josaa.nic.in"
+   }
+  },
+  {
+   "id": "csab",
+   "term": {
+    "en": "CSAB",
+    "hi": "CSAB"
+   },
+   "keywords": "csab central seat allocation board special rounds सीएसएबी",
+   "definition": {
+    "en": "The Central Seat Allocation Board runs special rounds for seats that remain vacant after JoSAA.",
+    "hi": "सेंट्रल सीट एलोकेशन बोर्ड JoSAA के बाद खाली रह गई सीटों के लिए विशेष राउंड चलाता है।"
+   },
+   "source": {
+    "label": "CSAB",
+    "url": "https://csab.nic.in"
+   }
+  },
+  {
+   "id": "home-state-quota",
+   "term": {
+    "en": "Home State quota",
+    "hi": "होम स्टेट कोटा"
+   },
+   "keywords": "home state quota hs quota state quota होम स्टेट कोटा राज्य कोटा",
+   "definition": {
+    "en": "In NITs and some other institutes, a share of seats is reserved for candidates from the state where the institute is located. Their closing ranks are usually better (larger) than for the Other State quota.",
+    "hi": "NIT और कुछ अन्य संस्थानों में सीटों का एक हिस्सा उस राज्य के उम्मीदवारों के लिए आरक्षित होता है जहाँ संस्थान है। उनकी क्लोज़िंग रैंक आमतौर पर अन्य राज्य कोटे से बड़ी होती है।"
+   },
+   "source": {
+    "label": "JoSAA business rules",
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf"
+   }
+  },
+  {
+   "id": "other-state-quota",
+   "term": {
+    "en": "Other State quota",
+    "hi": "अन्य राज्य कोटा"
+   },
+   "keywords": "other state quota os quota अन्य राज्य कोटा",
+   "definition": {
+    "en": "The seats open to candidates from every state other than the institute's own state.",
+    "hi": "वे सीटें जो संस्थान के अपने राज्य के अलावा बाकी सभी राज्यों के उम्मीदवारों के लिए खुली हैं।"
+   },
+   "source": {
+    "label": "JoSAA business rules",
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf"
+   }
+  },
+  {
+   "id": "all-india-quota",
+   "term": {
+    "en": "All India quota",
+    "hi": "ऑल इंडिया कोटा"
+   },
+   "keywords": "all india quota ai quota ऑल इंडिया कोटा",
+   "definition": {
+    "en": "Seats open to candidates from all states, as in the IITs, which have no home-state split.",
+    "hi": "सभी राज्यों के उम्मीदवारों के लिए खुली सीटें, जैसे IIT में, जहाँ होम स्टेट का बँटवारा नहीं है।"
+   },
+   "source": {
+    "label": "JoSAA business rules",
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf"
+   }
+  },
+  {
+   "id": "closing-rank",
+   "term": {
+    "en": "Opening and closing rank",
+    "hi": "ओपनिंग और क्लोज़िंग रैंक"
+   },
+   "keywords": "opening rank closing rank cutoff last rank ओपनिंग क्लोज़िंग रैंक कटऑफ",
+   "definition": {
+    "en": "The best and the last rank at which a seat in a programme was allotted in a round. A closing rank is a past figure, not a promise for the next year.",
+    "hi": "किसी राउंड में किसी कोर्स की सीट जिस सबसे अच्छी और आख़िरी रैंक पर आवंटित हुई। क्लोज़िंग रैंक पिछले साल का आँकड़ा है, अगले साल की गारंटी नहीं।"
+   },
+   "source": {
+    "label": "JoSAA opening and closing rank archive",
+    "url": "https://josaa.nic.in"
+   }
+  },
+  {
+   "id": "seat-acceptance-fee",
+   "term": {
+    "en": "Seat acceptance fee",
+    "hi": "सीट एक्सेप्टेंस फीस"
+   },
+   "keywords": "seat acceptance fee saf josaa fee seat fee सीट एक्सेप्टेंस फीस",
+   "definition": {
+    "en": "The fee paid to accept a JoSAA seat. For 2026 it is Rs 30,000 for most candidates and Rs 15,000 for the categories the business rules list (SC, ST and the PwD tags); Rs 5,000 of it is a processing charge.",
+    "hi": "JoSAA सीट स्वीकार करने की फीस। 2026 में यह अधिकतर उम्मीदवारों के लिए 30,000 रुपये और बिज़नेस रूल्स में बताई श्रेणियों (SC, ST और PwD टैग) के लिए 15,000 रुपये है; इसमें 5,000 रुपये प्रोसेसिंग चार्ज है।"
+   },
+   "source": {
+    "label": "JoSAA 2026 business rules, Clauses 56-58",
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf"
+   }
+  },
+  {
+   "id": "freeze-float-slide",
+   "term": {
+    "en": "Freeze, Float and Slide",
+    "hi": "फ्रीज़, फ्लोट और स्लाइड"
+   },
+   "keywords": "freeze float slide josaa options फ्रीज़ फ्लोट स्लाइड",
+   "definition": {
+    "en": "Freeze: accept the allotted seat and stop. Float: accept it but stay eligible for a better choice in a later round. Slide: stay in the same institute but be considered for a better branch.",
+    "hi": "फ्रीज़: मिली सीट स्वीकार करके रुक जाना। फ्लोट: सीट स्वीकार करें पर अगले राउंड में बेहतर विकल्प के लिए योग्य बने रहें। स्लाइड: उसी संस्थान में रहकर बेहतर ब्रांच के लिए विचार किया जाना।"
+   },
+   "source": {
+    "label": "JoSAA business rules",
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf"
+   }
+  },
+  {
+   "id": "choice-filling",
+   "term": {
+    "en": "Choice filling",
+    "hi": "चॉइस फिलिंग"
+   },
+   "keywords": "choice filling preference list choice order चॉइस फिलिंग वरीयता सूची",
+   "definition": {
+    "en": "Listing institute and branch options in order of preference before JoSAA allotment. Seats are allotted in the order of your list, so the order matters.",
+    "hi": "JoSAA आवंटन से पहले संस्थान और ब्रांच के विकल्पों को पसंद के क्रम में सूचीबद्ध करना। सीटें आपकी सूची के क्रम में आवंटित होती हैं, इसलिए क्रम मायने रखता है।"
+   },
+   "source": {
+    "label": "JoSAA",
+    "url": "https://josaa.nic.in"
+   }
+  },
+  {
+   "id": "fee-refund",
+   "term": {
+    "en": "Fee refund rules (UGC)",
+    "hi": "फीस रिफंड नियम (UGC)"
+   },
+   "keywords": "fee refund ugc withdrawal refund policy रिफंड नियम फीस वापसी",
+   "definition": {
+    "en": "The UGC rules say how much of the fees an institute must return when a student withdraws, depending on how early the notice reaches it relative to the last date of admission.",
+    "hi": "UGC के नियम बताते हैं कि छात्र के नाम वापस लेने पर संस्थान को फीस का कितना हिस्सा लौटाना होगा, यह इस पर निर्भर है कि प्रवेश की अंतिम तिथि के सापेक्ष सूचना कितनी जल्दी पहुँची।"
+   },
+   "source": {
+    "label": "UGC Fee Refund Policy 2025-26",
+    "url": "https://www.ugc.gov.in/pdfnews/1857727_Fee-Refund-Policy-2025-26.pdf"
+   }
+  },
+  {
+   "id": "category-rank",
+   "term": {
+    "en": "Category rank",
+    "hi": "श्रेणी रैंक"
+   },
+   "keywords": "category rank obc sc st ews reserved rank श्रेणी रैंक आरक्षित",
+   "definition": {
+    "en": "The rank among candidates of your reservation category (OBC-NCL, SC, ST, EWS). Seats for those categories are allotted on this rank, not on the open rank.",
+    "hi": "आपकी आरक्षण श्रेणी (OBC-NCL, SC, ST, EWS) के उम्मीदवारों में आपकी रैंक। उन श्रेणियों की सीटें ओपन रैंक पर नहीं, इसी रैंक पर आवंटित होती हैं।"
+   },
+   "source": {
+    "label": "JoSAA business rules",
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf"
+   }
+  },
+  {
+   "id": "female-only-seats",
+   "term": {
+    "en": "Female-only and gender-neutral seats",
+    "hi": "महिला-केवल और जेंडर-न्यूट्रल सीटें"
+   },
+   "keywords": "female only gender neutral supernumerary women seats महिला सीटें जेंडर न्यूट्रल",
+   "definition": {
+    "en": "Gender-neutral seats are open to everyone. Female-only seats are an additional pool open to women candidates only.",
+    "hi": "जेंडर-न्यूट्रल सीटें सभी के लिए खुली हैं। महिला-केवल सीटें अतिरिक्त पूल हैं जो सिर्फ़ महिला उम्मीदवारों के लिए हैं।"
+   },
+   "source": {
+    "label": "JoSAA business rules",
+    "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf"
+   }
+  },
+  {
+   "id": "bitsat",
+   "term": {
+    "en": "BITSAT",
+    "hi": "BITSAT"
+   },
+   "keywords": "bitsat bits pilani admission test score बिटसैट",
+   "definition": {
+    "en": "BITS Pilani admits through its own test, BITSAT, not through JoSAA, so its cutoffs are BITSAT scores.",
+    "hi": "BITS पिलानी अपनी परीक्षा BITSAT से प्रवेश देता है, JoSAA से नहीं, इसलिए इसके कटऑफ BITSAT के अंक हैं।"
+   },
+   "source": {
+    "label": "BITS Pilani admissions",
+    "url": "https://www.bitsadmission.com"
+   }
+  },
+  {
+   "id": "emi",
+   "term": {
+    "en": "EMI",
+    "hi": "EMI"
+   },
+   "keywords": "emi equated monthly instalment loan installment ईएमआई किस्त लोन",
+   "definition": {
+    "en": "Equated monthly instalment: the fixed amount you repay each month on a loan, covering interest and part of the principal.",
+    "hi": "समान मासिक किस्त: लोन पर हर महीने चुकाई जाने वाली तय राशि, जिसमें ब्याज और मूलधन का हिस्सा शामिल है।"
+   },
+   "source": {
+    "label": "EduClear loan calculator (standard EMI formula)",
+    "url": null
+   }
+  },
+  {
+   "id": "payback",
+   "term": {
+    "en": "Payback and debt-free clock",
+    "hi": "पेबैक और डेट-फ्री क्लॉक"
+   },
+   "keywords": "payback debt free clock roi time to debt freedom पेबैक डेट फ्री",
+   "definition": {
+    "en": "The number of months it would take to earn back the four-year cost, if a set share of in-hand pay on the median salary goes to repayment. The share is an editable assumption.",
+    "hi": "चार साल की लागत वापस कमाने में लगने वाले महीने, अगर मीडियन वेतन के हाथ में आने वाले हिस्से का तय भाग चुकाने में जाए। यह हिस्सा बदला जा सकने वाला अनुमान है।"
+   },
+   "source": {
+    "label": "EduClear method (decision D-02)",
+    "url": null
+   }
+  },
+  {
+   "id": "fit-tier",
+   "term": {
+    "en": "Safe, Good fit and Stretch",
+    "hi": "सुरक्षित, अच्छा मेल और स्ट्रेच"
+   },
+   "keywords": "safe target reach fit tier tiers सुरक्षित स्ट्रेच अच्छा मेल",
+   "definition": {
+    "en": "Compared with last year's closing rank: Safe means your rank is at most 80% of it, Good fit means your rank is within it, and Stretch means your rank is up to 1.5 times it. The margins are editable assumptions. They compare past ranks only and do not predict this year.",
+    "hi": "पिछले साल की क्लोज़िंग रैंक से तुलना: सुरक्षित यानी आपकी रैंक उसके 80% तक है, अच्छा मेल यानी आपकी रैंक उसके भीतर है, और स्ट्रेच यानी आपकी रैंक उसके 1.5 गुना तक है। ये सीमाएँ बदली जा सकने वाले अनुमान हैं। यह सिर्फ़ पिछली रैंक की तुलना है, इस साल की भविष्यवाणी नहीं।"
+   },
+   "source": {
+    "label": "EduClear method (decision D-10)",
+    "url": null
+   }
+  },
+  {
+   "id": "escrow",
+   "term": {
+    "en": "Escrow ledger",
+    "hi": "एस्क्रो लेजर"
+   },
+   "keywords": "escrow ledger funds held payout counsellor एस्क्रो",
+   "definition": {
+    "en": "PayPal has no escrow product, so a session payment is captured into the platform's sandbox account and recorded in an internal ledger, then released to the counsellor when you confirm the session was completed.",
+    "hi": "PayPal में एस्क्रो उत्पाद नहीं है, इसलिए सेशन का भुगतान प्लेटफ़ॉर्म के सैंडबॉक्स खाते में लेकर आंतरिक लेजर में दर्ज होता है, और सेशन पूरा होने की पुष्टि पर काउंसलर को दिया जाता है।"
+   },
+   "source": {
+    "label": "EduClear method (decision D-06)",
+    "url": null
+   }
+  },
+  {
+   "id": "supplied-not-audited",
+   "term": {
+    "en": "Supplied, not audited",
+    "hi": "उपलब्ध कराया गया, ऑडिट नहीं"
+   },
+   "keywords": "supplied not audited data label audited verified आँकड़े ऑडिट",
+   "definition": {
+    "en": "The college figures come from a dataset that was supplied to this project and have not been independently checked against each institute's official disclosure.",
+    "hi": "कॉलेज के आँकड़े इस प्रोजेक्ट को दिए गए डेटासेट से हैं और हर संस्थान के आधिकारिक खुलासे से स्वतंत्र रूप से जाँचे नहीं गए हैं।"
+   },
+   "source": {
+    "label": "EduClear decision D-57",
+    "url": null
+   }
+  }
+ ]
+}
