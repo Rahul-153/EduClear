@@ -34,7 +34,7 @@ def test_other_branches_show_cutoff_only_options_from_the_josaa_table():
     for stream, word in (("Mechanical", "Mechanical"), ("Civil", "Civil"), ("Electrical", "Electrical"), ("Electronics & Communication", "Electronics")):
         r = client.post("/api/recommend", json={"stream": stream, "percentile": 97, "budget_lakhs": 12, "region": "All"}).json()
         rows = r["cutoff_only"]["items"]
-        assert r["supported"] and r["matches"] == [] and rows and all(word in x["program"] for x in rows), stream
+        assert r["supported"] and rows and all(word in x["program"] for x in rows), stream  # branch cards, if any, are covered by the next test
     top = client.post("/api/recommend", json={"stream": "Civil", "percentile": 99.9, "budget_lakhs": 12, "region": "All"}).json()["cutoff_only"]["items"]
     assert any(x["institute"] == "National Institute of Technology Calicut" for x in top)  # no institute is left out for these branches
     assert client.post("/api/recommend", json={"stream": "Astrology", "percentile": 97, "budget_lakhs": 12, "region": "All"}).json()["supported"] is False
@@ -66,3 +66,26 @@ def test_index_is_revalidated_and_hashed_assets_are_cached():
     assert c.get("/").headers["cache-control"] == "no-cache"
     asset = next((ROOT / "frontend" / "dist" / "assets").glob("index-*.css")).name
     assert "immutable" in c.get(f"/assets/{asset}").headers["cache-control"]
+
+
+def test_branch_placement_drives_cards_for_other_branches():
+    r = client.post("/api/recommend", json={"stream": "Mechanical", "percentile": 99, "budget_lakhs": 40, "region": "All", "jee_advanced_rank": 500}).json()
+    by = {m["id"]: m for m in r["matches"]}
+    assert {"iit-bombay", "nit-trichy", "dtu-delhi", "bits-pilani"} <= set(by)
+    b = by["iit-bombay"]  # branch_placements.csv: IIT Bombay ME 148 placed of 170, median 18.5 LPA
+    assert (b["placed"], b["eligible"], b["median_base_lpa"], b["branch_scope"]) == (148, 170, 18.5, True)
+    assert b["payback"]["median_base_lpa"] == 18.5 and b["fit"]["tier"] is not None  # tier from the official JoSAA ME row
+    assert by["dtu-delhi"]["fit"]["tier"] is None and by["dtu-delhi"]["fit"]["reason"]  # not in JoSAA: no rank, said so
+    shown = {x["institute"] for x in r["cutoff_only"]["items"]}
+    assert "Indian Institute of Technology Bombay" not in shown and "National Institute of Technology, Tiruchirappalli" not in shown
+    assert shown  # every other institute stays cutoff-only
+    low = client.post("/api/recommend", json={"stream": "Mechanical", "percentile": 99, "budget_lakhs": 12, "region": "All"}).json()
+    assert "iit-bombay" not in {m["id"] for m in low["matches"]} and "nit-trichy" in {m["id"] for m in low["matches"]}  # the budget filter applies
+    assert "Mechanical" in r["message"]
+
+
+def test_computer_science_uses_the_branch_row_when_there_is_one():
+    r = client.post("/api/recommend", json={"percentile": 99.95, "budget_lakhs": 40, "region": "All"}).json()
+    by = {m["id"]: m for m in r["matches"]}
+    assert (by["nit-trichy"]["placed"], by["nit-trichy"]["eligible"], by["nit-trichy"]["median_base_lpa"]) == (118, 120, 24.5)  # CSE row
+

@@ -11,6 +11,7 @@ export interface Card {
   id: string; data_level: DataLevel; name: string; short_name: string; city_state: string; region: string; nirf_rank: number; fit: Fit;
   four_year_cost_inr: number; headline_ctc_lpa: number; median_base_lpa: number; placed: number; eligible: number;
   placement_rate: number; payback: Payback; source_url: string; accreditation: string; commercial_relationship: string;
+  branch_scope?: boolean;  // placement and payback are this branch's own figures, not the institute-wide ones
 }
 export interface Recommendation {
   supported: boolean; message?: string;

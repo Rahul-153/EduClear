@@ -1,4 +1,5 @@
 """Loads the verified college dataset (data/colleges/*.json) once."""
+import csv
 import sqlite3
 from functools import lru_cache
 from typing import Dict, List
@@ -44,6 +45,24 @@ def partial_colleges() -> Dict[str, PartialCollege]:
     for p in sorted(PARTIAL_DIR.glob("*.json")):
         r = PartialCollege.model_validate_json(p.read_text())
         out[r.josaaName] = r
+    return out
+
+
+BRANCH_CSV = settings.data_dir.parent / "supplied" / "branch_placements.csv"  # branch-level placement, supplied dataset (D-57), not audited
+
+
+@lru_cache(maxsize=1)
+def branch_placements() -> Dict[tuple, dict]:
+    """(college id, branch code such as CSE, ECE, EE, ME, CE) -> that branch's placement row, numbers as supplied."""
+    if not BRANCH_CSV.exists():
+        return {}
+    out = {}
+    with BRANCH_CSV.open(newline="") as f:
+        for r in csv.DictReader(f):
+            out[(r["institute_id"], r["branch_code"])] = {
+                "year": r["academic_year"], "eligible": int(r["eligible_students"]), "placed": int(r["placed_students"]),
+                "rate": float(r["placement_rate_percent"]), "median": float(r["median_salary_lpa"]),
+                "highest": float(r["highest_salary_lpa"]), "source_url": r["document_source_url"]}
     return out
 
 

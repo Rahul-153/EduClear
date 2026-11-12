@@ -27,7 +27,7 @@ _EXCLUDE = re.compile(r"dual degree|mba|integrated|master|m\.tech", re.I)
 SEAT_TYPES = ("OPEN", "EWS", "OBC-NCL", "SC", "ST")
 FEMALE_ONLY = "Female-only (including Supernumerary)"
 LABEL = {"IIT": "IIT", "NIT": "NIT", "3IT": "IIIT", "CFI": "GFTI"}
-ORDER = {"Safe": 0, "Target": 1, "Reach": 2}
+ORDER = {"Safe": 0, "Target": 1, "Reach": 2, "Out of reach": 3}
 
 # Official JoSAA names of the institutes that already have an audited record (DTU and BITS are not in JoSAA).
 AUDITED_JOSAA_NAMES = {
@@ -44,7 +44,7 @@ def _published(v: float):
 
 
 def options(stream: str, a: Assumptions, *, percentile=None, jee_advanced_rank=None, seat_type="OPEN",
-            gender="Any", category_rank=None, include_audited=False) -> dict:
+            gender="Any", category_rank=None, include_audited=False, keep_out_of_reach=False) -> dict:
     pattern = re.compile(BRANCH_GROUPS[stream], re.I)
     genders = {"Gender-Neutral"} | ({FEMALE_ONLY} if gender == "Female" else set())
     skip = set() if include_audited else set(AUDITED_JOSAA_NAMES.values())  # those institutes already show as cards, for Computer Science only
@@ -72,7 +72,7 @@ def options(stream: str, a: Assumptions, *, percentile=None, jee_advanced_rank=N
     out = []
     for inst, (closing, r, rank) in best.items():
         tier = _tier(rank, closing, a)
-        if tier == "Out of reach":
+        if tier == "Out of reach" and not keep_out_of_reach:
             continue
         out.append({"institute": inst, "kind": LABEL[r["inst_type"]], "program": r["program"], "quota": r["quota"],
                     "seat_type": seat_type, "gender": r["gender"], "closing_rank": _published(closing), "user_rank": rank,

@@ -23,7 +23,7 @@ export default function BentoDeck({ s, deck, truth, onRoi, message, view }: Prop
               <div className="row"><span className="label">{title}</span><span className="mono note">NIRF #{c.nirf_rank}</span></div>
               <DataBadge s={s} level={c.data_level} />
               <h3 style={{ fontSize: 17 }}>{c.short_name}</h3>
-              <div className="note">{c.city_state}</div>
+              <div className="note">{c.city_state}{c.branch_scope ? " · branch figures" : ""}</div>
               {view === "parent" ? (
                 <>
                   <div className="clock"><span>⏱ {s.debtFree}</span><span className="num value">{c.payback.payback_months} mo</span></div>
