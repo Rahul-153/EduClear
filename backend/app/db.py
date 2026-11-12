@@ -50,6 +50,72 @@ class Deposit(SQLModel, table=True):
     note: Optional[str] = None
 
 
+# ---- accounts (PLAN_AUTH.md) ----
+class User(SQLModel, table=True):
+    __tablename__ = "app_user"  # "user" is a reserved word in Postgres
+    id: Optional[int] = Field(default=None, primary_key=True)
+    email: str = Field(unique=True, index=True)
+    role: str  # student | parent, fixed at first sign-in
+    display_name: str = ""
+    is_minor: bool = False  # self-declared at sign-up; a minor cannot hold or create a family alone
+    created_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+    last_login_at: Optional[NaiveDatetime] = None
+
+
+class Family(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    created_by: int = Field(foreign_key="app_user.id")
+    created_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+
+
+class FamilyMember(SQLModel, table=True):
+    user_id: int = Field(primary_key=True, foreign_key="app_user.id")  # one family per user
+    family_id: int = Field(foreign_key="family.id", index=True)
+    role: str
+    joined_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+
+
+class Invite(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    family_id: int = Field(foreign_key="family.id", index=True)
+    role_to_join: str
+    created_by: int = Field(foreign_key="app_user.id")
+    code_hash: str = Field(unique=True, index=True)  # the code itself is shown once and never stored
+    expires_at: NaiveDatetime
+    used_by: Optional[int] = None
+    used_at: Optional[NaiveDatetime] = None
+
+
+class Consent(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    student_user_id: int = Field(foreign_key="app_user.id", index=True)
+    parent_user_id: int = Field(foreign_key="app_user.id")
+    text_version: str
+    given_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+
+
+class AuthCode(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    email: str = Field(index=True)
+    code_hash: str  # HMAC of email + code with the server secret
+    role: str  # sign-up role, used only if the email has no account yet
+    over18: bool = False
+    display_name: str = ""
+    ip_hash: str = Field(index=True)
+    expires_at: NaiveDatetime
+    attempts: int = 0
+    used_at: Optional[NaiveDatetime] = None
+    created_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+
+
+class LoginSession(SQLModel, table=True):
+    id_hash: str = Field(primary_key=True)  # SHA-256 of the cookie token; the token itself is never stored
+    user_id: int = Field(foreign_key="app_user.id", index=True)
+    created_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+    expires_at: NaiveDatetime
+    last_seen_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+
+
 def init_db() -> None:
     SQLModel.metadata.create_all(engine)
 

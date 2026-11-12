@@ -3,15 +3,14 @@ import { bookSlot, completeBooking, myBookings, payConfig, programs, slotsFor, t
 import CheckoutPanel from "./CheckoutPanel";
 import Boundary from "./Boundary";
 import type { Strings } from "../i18n";
-import type { View } from "../lib/nav";
 
 const BookingScheduler = lazy(() => import("./BookingScheduler"));
 
 const when = (iso: string) => new Date(iso).toLocaleString("en-IN", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }) + " IST";
 const statusLabel = (x: Strings, st: string) => ({ pending: x.stPending, escrow_funded: x.stEscrow, paid: x.stPaid, payout_failed: x.stFailed, released: x.stReleased, cancelled: x.stCancelled } as Record<string, string>)[st] ?? st;
 
-export default function Sessions({ s: str, view }: { s: Strings; view: View }) {
-  const canBook = view === "parent";
+export default function Sessions({ s: str, access }: { s: Strings; access: "book" | "ask_parent" | "sign_in" }) {
+  const canBook = access === "book";
   const [cfg, setCfg] = useState<PayConfig | null>(null);
   const [progs, setProgs] = useState<Program[]>([]);
   const [open, setOpen] = useState<string | null>(null);
@@ -48,7 +47,7 @@ export default function Sessions({ s: str, view }: { s: Strings; view: View }) {
             {canBook ? (
               <button className="capsule" style={{ width: "100%", padding: 8, border: "1px solid var(--hairline)", fontWeight: 600 }} onClick={() => { setOpen(open === p.id ? null : p.id); setActive(null); }}
                 aria-expanded={open === p.id}>{open === p.id ? str.hideTimes : p.escrow ? str.chooseTime : str.reserveSeat}</button>
-            ) : <p className="note">{str.askParent}</p>}
+            ) : access === "sign_in" ? <p className="note"><a href="#login">{str.signInToBook}</a></p> : <p className="note">{str.askParent}</p>}
           </article>
         ))}
       </div>

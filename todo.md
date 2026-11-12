@@ -122,3 +122,12 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [ ] T-10.08 CSAB 2025 (Part C1, needs domain approval)
 - [ ] T-10.09 NIRF 2025 at scale (Part C2)
 - [ ] T-10.10 MHT-CET 2025 (Part C4)
+
+## Phase 11 — Accounts (branch feature/auth, see PLAN_AUTH.md)
+- [x] T-11.01 Email-code sign-in, sessions, CSRF header, rate limits (plan phase 1) — 2026-11-11 · routers/auth.py, auth/{security,deps}.py, integrations/mailer.py (mock only); 130 tests pass; checked in browser
+- [x] T-11.02 Family, invite, consent, parent-only pay/book/deposit-write guards (plan phase 2) — 2026-11-11 · role matrix tests; parent and student verified in two browser identities (localhost and 127.0.0.1); guests unchanged while GUEST_CHECKOUT=true
+- [x] T-11.02a Review fixes — 2026-11-12 · startup refuses ENV=production without AUTH_SECRET; render.yaml sets ENV=production and a generated AUTH_SECRET; uvicorn trusts the proxy's forwarded headers (per-IP limit, https base URL); a parent cannot leave while a student is in the family; `sign_in_available` in /api/auth/me hides the Sign in link when no real mailer exists; deposit note and Copilot parent-only text fixed (en+hi); 131 tests, ruff and `npm run build` pass; signed-in deposit note checked in browser. NOT done: guest-data claim (T-11.05), nothing checked on Render (see D-53)
+- [ ] T-11.03 Family profile and private-then-shared survey on the server (plan phase 3); survey still stores answers in the browser
+- [ ] T-11.04 Real email provider behind the mailer interface (needs your choice and key)
+- [ ] T-11.05 Guest-data claim, export and delete, headers and CSP (plan phase 4)
+- [ ] T-11.06 Merge decision: GUEST_CHECKOUT, AUTH_SECRET, ENV on Render; Postman and smoke authenticated path (plan phase 5)

@@ -4,7 +4,7 @@ import { getKit, orderKit, payConfig, type BookingView, type Kit, type PayConfig
 import { inr } from "../lib/format";
 import CheckoutPanel from "./CheckoutPanel";
 
-export default function TechKit({ s }: { s: Strings }) {
+export default function TechKit({ s, access }: { s: Strings; access: "book" | "ask_parent" | "sign_in" }) {
   const [kit, setKit] = useState<Kit | null>(null);
   const [cfg, setCfg] = useState<PayConfig | null>(null);
   const [order, setOrder] = useState<(BookingView & { pay_in_4_usd: string }) | null>(null);
@@ -25,7 +25,8 @@ export default function TechKit({ s }: { s: Strings }) {
       ))}
       <div className="row" style={{ marginTop: 8 }}><span className="label">Kit total</span><span className="num value">{inr(kit.total_inr)}</span></div>
       <p className="note">{kit.note} Pay Later (4 interest-free instalments) is offered by PayPal only when you are eligible; at checkout it would be about {inr(kit.pay_in_4_inr)} per instalment.</p>
-      {!order && !done && <button className="capsule" style={{ padding: "8px 16px", background: "#FFC439", border: 0, fontWeight: 600 }} onClick={start}>Checkout with PayPal / Pay Later</button>}
+      {access !== "book" && <p className="note">{access === "sign_in" ? <a href="#login">{s.signInToBook}</a> : s.askParent}</p>}
+      {access === "book" && !order && !done && <button className="capsule" style={{ padding: "8px 16px", background: "#FFC439", border: 0, fontWeight: 600 }} onClick={start}>Checkout with PayPal / Pay Later</button>}
       {order && cfg && !done && <CheckoutPanel booking={order} cfg={cfg} payLaterHint={`In 4 payments of $${order.pay_in_4_usd} if eligible.`} onChange={(b) => { if (!b || b.status !== "pending") { setOrder(null); setDone(!!b); } }} />}
       {done && <div className="clock"><span>Kit order paid in the PayPal sandbox</span><span>✓</span></div>}
       {err && <p role="alert" className="note" style={{ color: "var(--amber)" }}>{err}</p>}

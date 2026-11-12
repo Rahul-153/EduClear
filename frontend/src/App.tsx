@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
-import { recommend, type Assumptions, type Profile, type Recommendation } from "./api";
+import { authLogout, getMe, recommend, type Assumptions, type Me, type Profile, type Recommendation } from "./api";
 import { t, type Lang } from "./i18n";
 import Header from "./components/Header";
 import { loadView, pageFromHash, saveView, type Page, type View } from "./lib/nav";
@@ -10,6 +10,8 @@ const RoiPanel = lazy(() => import("./components/RoiPanel"));
 import AlignmentSurvey from "./components/AlignmentSurvey";
 import Boundary from "./components/Boundary";
 import CutoffOptions from "./components/CutoffOptions";
+import FamilyPanel from "./components/FamilyPanel";
+import Login from "./components/Login";
 import AdmissionsTimeline from "./components/AdmissionsTimeline";
 import DepositTracker from "./components/DepositTracker";
 import ChoiceSimulator from "./components/ChoiceSimulator";
@@ -28,9 +30,17 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [page, setPage] = useState<Page>(pageFromHash());
-  const [view, setViewState] = useState<View>(loadView());
+  const [guestView, setViewState] = useState<View>(loadView());
+  const [me, setMe] = useState<Me | null>(null);
   const s = t(lang);
   const setView = (v: View) => { setViewState(v); saveView(v); };
+  // A signed-in user's role decides the view; the header switch is only for guests (PLAN_AUTH.md 6.7).
+  const view: View = me?.user ? me.user.role : guestView;
+  const access: "book" | "ask_parent" | "sign_in" = me?.user
+    ? (me.user.role === "parent" && me.family ? "book" : "ask_parent")
+    : guestView === "parent" ? (me?.guest_checkout === false ? "sign_in" : "book") : "ask_parent";
+  const signOut = async () => { await authLogout().catch(() => undefined); setMe(await getMe().catch(() => null)); location.hash = "find"; };
+  useEffect(() => { getMe().then(setMe).catch(() => setMe(null)); }, []);
   const openRoi = (id: string) => { setSelected(id); location.hash = "cost"; };
 
   useEffect(() => {
@@ -50,8 +60,9 @@ export default function App() {
 
   return (
     <div className="wrap">
-      <Header s={s} lang={lang} setLang={setLang} page={page} view={view} setView={setView} />
+      <Header s={s} lang={lang} setLang={setLang} page={page} view={view} setView={setView} me={me} onSignOut={signOut} />
       {error && <div className="card" role="alert">Could not reach the API ({error}). Start the backend on port 8000.</div>}
+      {page === "login" && <Login s={s} onSignedIn={setMe} />}
       {page === "find" && (
         <>
           <SmartSentence s={s} p={p} setP={setP} />
@@ -64,8 +75,8 @@ export default function App() {
       {page === "cost" && (
         <>
           <Boundary name="ROI panel"><Suspense fallback={<section className="card"><div className="empty">Loading ROI…</div></section>}><RoiPanel s={s} card={card} a={a} setA={setA} /></Suspense></Boundary>
-          <Boundary name="Tech kit"><TechKit s={s} /></Boundary>
-          <Boundary name="Deposit tracker"><DepositTracker s={s} colleges={rows} /></Boundary>
+          <Boundary name="Tech kit"><TechKit s={s} access={access} /></Boundary>
+          <Boundary name="Deposit tracker"><DepositTracker s={s} colleges={rows} readOnly={me?.user?.role === "student"} signedIn={!!me?.user} /></Boundary>
         </>
       )}
       {page === "apply" && (
@@ -76,11 +87,12 @@ export default function App() {
       )}
       {page === "help" && (
         <>
+          {me?.user && <FamilyPanel s={s} me={me} setMe={setMe} />}
           <Boundary name="Alignment survey"><AlignmentSurvey s={s} view={view} /></Boundary>
-          <Boundary name="Counselling sessions"><Sessions s={s} view={view} /></Boundary>
+          <Boundary name="Counselling sessions"><Sessions s={s} access={access} /></Boundary>
         </>
       )}
-      <Copilot profile={p} lang={lang} view={view} />
+      <Copilot profile={p} lang={lang} view={view} canConfirm={access === "book"} />
     </div>
   );
 }

@@ -11,6 +11,7 @@ from ..llm.client import LLM, get_llm
 from ..services import agent as agent_svc
 from ..services import intake
 from ..services import payments as svc
+from ..auth.deps import pay_actor
 from .payments import guard, owner, view
 
 router = APIRouter(prefix="/api")
@@ -42,7 +43,7 @@ def chat(body: ChatIn, o: str = Depends(owner), llm: Optional[LLM] = Depends(get
 
 
 @router.post("/agent/confirm")
-def confirm(body: ConfirmIn, request: Request, o: str = Depends(owner), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
+def confirm(body: ConfirmIn, request: Request, o: str = Depends(pay_actor), s: Session = Depends(get_session), pp: PayPal = Depends(get_paypal)):
     p = agent_svc.take_pending(body.action_id, o)
     if not p:
         raise HTTPException(404, "This action expired or was already used. Ask again.")

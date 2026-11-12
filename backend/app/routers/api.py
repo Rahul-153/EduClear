@@ -2,10 +2,11 @@ from typing import Dict, Literal, Optional
 
 from datetime import date
 
-from fastapi import APIRouter, Depends, Header, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select
 from pydantic import BaseModel, Field
 
+from ..auth.deps import actor_read, family_actor
 from ..data import colleges, get_college
 from ..engines import alignment as align
 from ..engines.assumptions import Assumptions
@@ -160,30 +161,24 @@ def _deposit_view(d: Deposit, today: date):
             "alert": bool(nxt and nxt["days_left"] <= 7)}
 
 
-def _owner(x_client_id: Optional[str]) -> str:
-    if not x_client_id or not 8 <= len(x_client_id) <= 64:
-        raise HTTPException(400, "X-Client-Id header (8-64 chars) required")
-    return x_client_id
-
-
 @router.post("/deposits")
-def add_deposit(body: DepositIn, s: Session = Depends(get_session), x_client_id: Optional[str] = Header(None)):
+def add_deposit(body: DepositIn, s: Session = Depends(get_session), o: str = Depends(family_actor)):
     _college(body.college_id)
-    d = Deposit(owner=_owner(x_client_id), **body.model_dump())
+    d = Deposit(owner=o, **body.model_dump())
     s.add(d); s.commit(); s.refresh(d)
     return _deposit_view(d, date.today())
 
 
 @router.get("/deposits")
-def list_deposits(s: Session = Depends(get_session), x_client_id: Optional[str] = Header(None)):
-    rows = s.exec(select(Deposit).where(Deposit.owner == _owner(x_client_id))).all()
+def list_deposits(s: Session = Depends(get_session), o: str = Depends(actor_read)):
+    rows = s.exec(select(Deposit).where(Deposit.owner == o)).all()
     return [_deposit_view(d, date.today()) for d in rows]
 
 
 @router.delete("/deposits/{did}")
-def delete_deposit(did: int, s: Session = Depends(get_session), x_client_id: Optional[str] = Header(None)):
+def delete_deposit(did: int, s: Session = Depends(get_session), o: str = Depends(family_actor)):
     d = s.get(Deposit, did)
-    if not d or d.owner != _owner(x_client_id):
+    if not d or d.owner != o:
         raise HTTPException(404, "deposit not found")
     s.delete(d); s.commit()
     return {"deleted": did}

@@ -27,4 +27,4 @@ COPY data/cutoffs_2025.sqlite data/cutoffs_2025.sqlite
 COPY data/partial data/partial
 COPY --from=web /web/dist frontend/dist
 EXPOSE 8000
-CMD ["sh", "-c", "uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT}"]
+CMD ["sh", "-c", "uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT} --proxy-headers --forwarded-allow-ips '*'"]
