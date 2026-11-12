@@ -31,6 +31,7 @@ class Settings(BaseSettings):
     auth_secret: str = ""  # keys the code hashes; set in production (unset = a per-process secret, fine for dev)
     guest_checkout: bool = True
     auth_show_code: bool = False  # demo only: return the sign-in code in the response so a judge can log in without email
+    llm_local_fallback: bool = True  # when a hosted model fails or is rate-limited, try local Ollama if it is running
     llm_phrasing: bool = False  # optional LLM re-phrasing of finished answers (slower; numbers are guarded either way)
 
     @field_validator("database_url")
