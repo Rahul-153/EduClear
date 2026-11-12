@@ -1,0 +1,48 @@
+{
+  "id": "iiit-senapati-manipur",
+  "name": "Indian Institute of Information Technology Senapati, Manipur",
+  "shortName": "IIIT Manipur",
+  "stream": "Engineering",
+  "type": "Public-Private Partnership (PPP)",
+  "location": {
+    "city": "Mantripukhri",
+    "state": "Manipur",
+    "tier": "Tier 3",
+    "region": "East"
+  },
+  "nirfRank": 195,
+  "accreditation": "Institute of National Importance (PPP)",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 35,000 - 58,000 (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 95.0
+  },
+  "fees": {
+    "tuitionAnnual": 170000,
+    "mandatoryInstituteFeesAnnual": 28000,
+    "hostelAndMessAnnual": 60000,
+    "estimatedLivingAnnual": 26000,
+    "totalFourYearCostINR": 1136000
+  },
+  "placement": {
+    "headlineCTC": 22.0,
+    "medianBaseSalary": 10.0,
+    "batchSize": 88,
+    "eligibleStudents": 80,
+    "actuallyPlaced": 64,
+    "higherStudiesOrFounders": 8,
+    "disclosedPlacementRate": 80.0,
+    "placementAuditNote": "Affordable PPP IIIT (₹11.36 Lakhs total 4-yr); serves northeastern region. Supplied dataset, not independently verified; graduating batch as supplied: 90 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiitmanipur.ac.in/nirf",
+    "feeCircularDate": "CSAB Fee Compendium",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

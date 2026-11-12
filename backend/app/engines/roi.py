@@ -24,5 +24,5 @@ def payback(total_cost: int, median_lpa: float, a: Assumptions) -> dict:
 
 def trajectory(median_lpa: float, a: Assumptions, years: int = 10) -> dict:
     pts = [{"year": y, "salary_lpa": round(median_lpa * (1 + a.salary_growth) ** y, 2)} for y in range(years + 1)]
-    return {"illustrative": True, "note": "Year 0 is the audited NIRF median; later years apply the editable growth assumption and are not audited data.",
+    return {"illustrative": True, "note": "Year 0 is the median base salary in the data; later years apply the editable growth assumption and are not audited data.",
             "growth": a.salary_growth, "points": pts}

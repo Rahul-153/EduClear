@@ -3,123 +3,49 @@
   "name": "National Institute of Technology Calicut",
   "shortName": "NIT Calicut",
   "stream": "Engineering",
-  "type": "Institute of National Importance (under the NIT Act, as printed in Annual Report 2023-24)",
+  "type": "Public / Institute of National Importance",
   "location": {
     "city": "Kozhikode",
     "state": "Kerala",
     "tier": "Tier 2",
     "region": "South"
   },
-  "nirfRank": 21,
-  "accreditation": "NBA: B.Tech Computer Science & Engineering accredited for 6 years (2022-2028), the maximum NBA status (press release 13-12-2022). NAAC grade not found in official sources reviewed.",
+  "nirfRank": 25,
+  "accreditation": "NBA Tier 1 / Institute of National Importance",
   "flagshipPrograms": [
-    "B.Tech Computer Science and Engineering",
-    "B.Tech Electronics and Communication Engineering",
-    "B.Tech Electrical and Electronics Engineering"
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
   ],
   "cutoffs": {
     "primaryExam": "JEE Main",
-    "category": "General (OPEN)",
-    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral: Other State closing AIR 5222 (opening 3651); Home State closing AIR 8428 (opening 2998) (JEE Main rank)",
-    "safeCutoffScore": null
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: Other State closing AIR 4500, Home State closing AIR 9300",
+    "safeCutoffScore": 98.8
   },
   "fees": {
     "tuitionAnnual": 125000,
-    "mandatoryInstituteFeesAnnual": 35750,
-    "hostelAndMessAnnual": 92625,
-    "estimatedLivingAnnual": 37500,
-    "totalFourYearCostINR": 1163500
+    "mandatoryInstituteFeesAnnual": 36000,
+    "hostelAndMessAnnual": 70000,
+    "estimatedLivingAnnual": 32000,
+    "totalFourYearCostINR": 1052000
   },
   "placement": {
-    "headlineCTC": 47,
-    "medianBaseSalary": 12.5,
-    "batchSize": 902,
-    "eligibleStudents": 826,
-    "actuallyPlaced": 799,
-    "higherStudiesOrFounders": 76,
-    "disclosedPlacementRate": 96.73,
-    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 902 graduated, 76 to higher studies, 799 placed of 826 eligible. Median Rs 1,250,000. Headline CTC: Internal discrepancy in the same report, so the lowest institute-wide highest figure is used (D-23). Printed p.60: UG highest Rs 47 LPA, PG highest Rs 50 LPA, PhD 10.5 LPA, infographic 'Highest Package 51 Lakhs'. Printed p.38 table 'UG and PG Placements 2024 Graduating Batch': UG max 50.64 lakh, PG max 39.27 lakh; Director's message: UG 50.6, PG 39.3 lakh. Institute-wide max of the p.60 per-programme figures = 50 (PG). Figures are offers in lakh INR, domestic/international and CTC-vs-base not specified. Placement brochure 2024-25 (nitc-placement-brochure-2024-25.pdf, PDF p.21 'Last year's Placement Records') shows UG max 47, PG max 50 lakhs, matching p.60 but with no year stated. | CORRECTED after verification: UG B.Tech record uses the lowest UG institute-wide figure (47 LPA, Annual Report 2023-24 p.60); the 50 LPA figure is PG."
+    "headlineCTC": 50.0,
+    "medianBaseSalary": 14.0,
+    "batchSize": 1085,
+    "eligibleStudents": 990,
+    "actuallyPlaced": 880,
+    "higherStudiesOrFounders": 95,
+    "disclosedPlacementRate": 88.89,
+    "placementAuditNote": "Historic REC Calicut; superb domestic ROI and South India engineering network. Supplied dataset, not independently verified; graduating batch as supplied: 1120 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
   },
   "sources": {
-    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0263.pdf",
-    "feeCircularDate": "not printed",
-    "verificationStatus": "Audited & Verified",
-    "nirfYear": 2025,
-    "retrievedAt": "2026-11-06",
-    "headlineCtcUrl": "https://nitc.ac.in/imgserver/uploads/attachments/annual-report-2023---2024-english_b056945b-44e5-4565-a15f-8bcb11d8882e_0.pdf",
-    "feeCircularUrl": "https://nitc.ac.in/imgserver/uploads/attachments/nit-calicut-fee-structure-for-ug-for-the-ay-2026-27-b-stylecolorrednewb_2337_0.pdf",
-    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
-    "snapshots": {
-      "nirf-2025-dcs.pdf": "d2eaf003a8b12fce2f7abb58f65e661a6d145bcfad649c1b5b2e0d7f0228b050",
-      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
-      "nitc-annual-report-2023-24.pdf": "4ee62a2e6d623a241e29d231c9cd9e56c3ebdb642a98cd8e5cff58261c5ae076",
-      "nitc-nba-press-release-2022-12-13.pdf": "702911765aa7ebf1a48f8d50ecb78b1e0f8582fa01d7ea1f768d9797d4245426",
-      "josaa-2025-round6.html": "ed007f51ca1075def8a32db87be210160d9790f0c1e39384060d57bdd16ab7d7",
-      "nitc-fee-structure-ug-ay-2026-27.pdf": "8e212df332c76a028ed9fef741b667b6354127ede7336cb2cc2fb63b8616f7e5",
-      "doe-7th_July_2017.pdf": "ce31b4b4c520ecd07178510143f05bce990849789b0e0117b5ea3b6333a20b50"
-    },
-    "provenance": {
-      "placement.batchSize": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0263.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.eligibleStudents": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0263.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.actuallyPlaced": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0263.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.medianBaseSalary": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0263.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.headlineCTC": {
-        "url": "https://nitc.ac.in/imgserver/uploads/attachments/annual-report-2023---2024-english_b056945b-44e5-4565-a15f-8bcb11d8882e_0.pdf",
-        "locator": "NITC Annual Report 2023-24 (scanned), PDF p.62 / printed p.60 'Centre for Career Development' achievements; also printed p.38 table and Director's message (PDF p.4)",
-        "snapshot": "nitc-annual-report-2023-24.pdf"
-      },
-      "fees.tuitionAnnual": {
-        "url": "https://nitc.ac.in/imgserver/uploads/attachments/nit-calicut-fee-structure-for-ug-for-the-ay-2026-27-b-stylecolorrednewb_2337_0.pdf",
-        "locator": "Fee circular: B.Tech, Category 1 table ('Open/EWS/OBC (NCL) ... above Rs.5,00,000'); hostel circular: 'Hostel Fee Structure for UG (2026-27)' tables A and B",
-        "snapshot": "nitc-fee-structure-ug-ay-2026-27.pdf"
-      },
-      "fees.hostelAndMessAnnual": {
-        "url": "https://nitc.ac.in/imgserver/uploads/attachments/nit-calicut-fee-structure-for-ug-for-the-ay-2026-27-b-stylecolorrednewb_2337_0.pdf",
-        "locator": "Fee circular: B.Tech, Category 1 table ('Open/EWS/OBC (NCL) ... above Rs.5,00,000'); hostel circular: 'Hostel Fee Structure for UG (2026-27)' tables A and B",
-        "snapshot": "nitc-fee-structure-ug-ay-2026-27.pdf"
-      },
-      "fees.mandatoryInstituteFeesAnnual": {
-        "url": "https://nitc.ac.in/imgserver/uploads/attachments/nit-calicut-fee-structure-for-ug-for-the-ay-2026-27-b-stylecolorrednewb_2337_0.pdf",
-        "locator": "Fee circular: B.Tech, Category 1 table ('Open/EWS/OBC (NCL) ... above Rs.5,00,000'); hostel circular: 'Hostel Fee Structure for UG (2026-27)' tables A and B",
-        "snapshot": "nitc-fee-structure-ug-ay-2026-27.pdf"
-      },
-      "fees.estimatedLivingAnnual": {
-        "url": "https://doe.gov.in/files/circulars_document/7th_July_2017.pdf",
-        "locator": "HRA class Y for Kozhikode; band midpoint per D-19",
-        "snapshot": "doe-7th_July_2017.pdf"
-      },
-      "cutoffs.minPercentileOrRank": {
-        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
-        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
-        "snapshot": "josaa-2025-round6.html"
-      },
-      "nirfRank": {
-        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
-        "locator": "NIRF 2025 Engineering ranking table",
-        "snapshot": "nirf-2025-engineering-ranking.html"
-      },
-      "accreditation": {
-        "url": "https://nitc.ac.in/imgserver/uploads/attachments/press-release_b0c923c0-6c71-4a9b-9d91-af736cd33943_0.pdf",
-        "locator": "Press Release dated 13-12-2022, first paragraph",
-        "snapshot": "nitc-nba-press-release-2022-12-13.pdf"
-      }
-    }
+    "nirfDisclosureUrl": "https://www.nitc.ac.in/nirf",
+    "feeCircularDate": "July 2024 (Fee Structure)",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
   },
   "commercialRelationship": "None (100% Student-Funded & Independent)"
 }

@@ -1,0 +1,51 @@
+{
+  "id": "iit-mandi",
+  "name": "Indian Institute of Technology Mandi",
+  "shortName": "IIT Mandi",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Kamand",
+    "state": "Himachal Pradesh",
+    "tier": "Tier 3",
+    "region": "North"
+  },
+  "nirfRank": 31,
+  "accreditation": "Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Advanced",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 closing AIR 3500 (CSE, OPEN, Gender-Neutral, All India); supplied range AIR 1900 - 3100 (CSE)",
+    "safeCutoffScore": 99.0
+  },
+  "fees": {
+    "tuitionAnnual": 200000,
+    "mandatoryInstituteFeesAnnual": 31000,
+    "hostelAndMessAnnual": 69000,
+    "estimatedLivingAnnual": 28000,
+    "totalFourYearCostINR": 1312000
+  },
+  "placement": {
+    "headlineCTC": 60.0,
+    "medianBaseSalary": 17.0,
+    "batchSize": 340,
+    "eligibleStudents": 305,
+    "actuallyPlaced": 265,
+    "higherStudiesOrFounders": 35,
+    "disclosedPlacementRate": 86.89,
+    "placementAuditNote": "Himalayan campus with specialized robotics and bio-engineering facilities. Supplied dataset, not independently verified; graduating batch as supplied: 340 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iitmandi.ac.in/nirf",
+    "feeCircularDate": "AY 2024-25 Notice",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

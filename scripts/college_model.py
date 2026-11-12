@@ -37,7 +37,7 @@ class Fees(BaseModel):
 
 class Placement(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    headlineCTC: float  # LPA
+    headlineCTC: Optional[float] = None  # LPA; None when the institute withholds it (e.g. AIPC policy)
     medianBaseSalary: float  # LPA
     batchSize: int
     eligibleStudents: int

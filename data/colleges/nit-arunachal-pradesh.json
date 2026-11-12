@@ -1,0 +1,48 @@
+{
+  "id": "nit-arunachal-pradesh",
+  "name": "National Institute of Technology Arunachal Pradesh",
+  "shortName": "NIT Arunachal Pradesh",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Jote",
+    "state": "Arunachal Pradesh",
+    "tier": "Tier 3",
+    "region": "East"
+  },
+  "nirfRank": 106,
+  "accreditation": "Institute of National Importance",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 16,000 - 38,000 (OS) (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 96.6
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 28000,
+    "hostelAndMessAnnual": 61000,
+    "estimatedLivingAnnual": 26000,
+    "totalFourYearCostINR": 960000
+  },
+  "placement": {
+    "headlineCTC": 28.0,
+    "medianBaseSalary": 10.5,
+    "batchSize": 158,
+    "eligibleStudents": 142,
+    "actuallyPlaced": 118,
+    "higherStudiesOrFounders": 16,
+    "disclosedPlacementRate": 83.1,
+    "placementAuditNote": "Permanent campus at Jote; low cost 4-year degree (₹9.60 Lakhs). Supplied dataset, not independently verified; graduating batch as supplied: 160 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nitap.ac.in/nirf",
+    "feeCircularDate": "CSAB Matrix",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

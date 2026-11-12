@@ -1,0 +1,56 @@
+college_id,institute_name,city,state,campus_locality,7th_cpc_class,monthly_academic_inr,monthly_personal_inr,monthly_transit_inr,monthly_telecom_inr,monthly_health_inr,total_monthly_inr,annual_calibrated_inr,gazette_citation_ref
+iit-bombay,Indian Institute of Technology Bombay,Mumbai,Maharashtra,Powai,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Greater Mumbai UA
+iit-delhi,Indian Institute of Technology Delhi,New Delhi,Delhi NCR,Hauz Khas,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Delhi UA
+iit-madras,Indian Institute of Technology Madras,Chennai,Tamil Nadu,Adyar,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Chennai UA
+iit-hyderabad,Indian Institute of Technology Hyderabad,Hyderabad,Telangana,Kandi Sangareddy,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Hyderabad UA
+dtu-delhi,Delhi Technological University,New Delhi,Delhi NCR,Rohini,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Delhi UA
+nsut-delhi,Netaji Subhas University of Technology,New Delhi,Delhi NCR,Dwarka,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Delhi UA
+iiit-hyderabad,International Institute of Information Technology Hyderabad,Hyderabad,Telangana,Gachibowli,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Hyderabad UA
+iiit-bangalore,International Institute of Information Technology Bangalore,Bengaluru,Karnataka,Electronic City,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Bengaluru UA
+coep-pune,COEP Technological University,Pune,Maharashtra,Shivajinagar,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Pune UA
+vjti-mumbai,Veermata Jijabai Technological Institute,Mumbai,Maharashtra,Matunga,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Greater Mumbai UA
+rvce-bangalore,R.V. College of Engineering,Bengaluru,Karnataka,Mysore Road,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Bengaluru UA
+jadavpur-univ,Jadavpur University,Kolkata,West Bengal,Jadavpur,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Kolkata UA
+bits-hyderabad,BITS Pilani Hyderabad Campus,Hyderabad,Telangana,Jawahar Nagar,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Hyderabad UA
+nit-delhi,National Institute of Technology Delhi,New Delhi,Delhi NCR,Narela,Class X,1200,1500,1800,500,1000,6000,45000,MoF OM No. 2/5/2017-E.II(B) - Delhi UA
+iit-bhu,Indian Institute of Technology (BHU) Varanasi,Varanasi,Uttar Pradesh,BHU Campus,Class Y,800,1000,800,400,600,3600,35000,MoF OM No. 2/5/2017-E.II(B) - Varanasi UA
+iit-guwahati,Indian Institute of Technology Guwahati,Guwahati,Assam,Amingaon,Class Y,800,1000,800,400,600,3600,35000,MoF OM No. 2/5/2017-E.II(B) - Guwahati UA
+iit-patna,Indian Institute of Technology Patna,Patna,Bihar,Bihta,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Patna UA
+iit-gandhinagar,Indian Institute of Technology Gandhinagar,Gandhinagar,Gujarat,Palaj,Class Y,800,1000,800,400,600,3600,35000,MoF OM No. 2/5/2017-E.II(B) - Ahmedabad/Gandhinagar UA
+iit-indore,Indian Institute of Technology Indore,Indore,Madhya Pradesh,Simrol,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Indore UA
+iit-bhubaneswar,Indian Institute of Technology Bhubaneswar,Bhubaneswar,Odisha,Argul,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Bhubaneswar UA
+iit-jodhpur,Indian Institute of Technology Jodhpur,Jodhpur,Rajasthan,Karwar,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Jodhpur UA
+iit-dhanbad,Indian Institute of Technology (ISM) Dhanbad,Dhanbad,Jharkhand,Sardar Patel Nagar,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Dhanbad UA
+iit-tirupati,Indian Institute of Technology Tirupati,Tirupati,Andhra Pradesh,Yerpedu,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Tirupati UA
+iit-goa,Indian Institute of Technology Goa,Ponda,Goa,Farmagudi,Class Y,800,1000,800,400,600,3600,25000,MoF OM No. 2/5/2017-E.II(B) - Goa State Municipalities
+nit-trichy,National Institute of Technology Tiruchirappalli,Tiruchirappalli,Tamil Nadu,Thuvakudi,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Tiruchirappalli UA
+nit-surathkal,National Institute of Technology Karnataka Surathkal,Mangalore,Karnataka,Srinivasnagar,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Mangalore UA
+nit-warangal,National Institute of Technology Warangal,Warangal,Telangana,Kazipet,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Warangal UA
+nit-calicut,National Institute of Technology Calicut,Kozhikode,Kerala,Chathamangalam,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Kozhikode UA
+mnit-jaipur,Malaviya National Institute of Technology Jaipur,Jaipur,Rajasthan,JLN Marg,Class Y,800,1000,800,400,600,3600,35000,MoF OM No. 2/5/2017-E.II(B) - Jaipur UA
+vnit-nagpur,Visvesvaraya National Institute of Technology Nagpur,Nagpur,Maharashtra,South Ambazari,Class Y,800,1000,800,400,600,3600,35000,MoF OM No. 2/5/2017-E.II(B) - Nagpur UA
+mnnit-allahabad,Motilal Nehru National Institute of Technology Allahabad,Prayagraj,Uttar Pradesh,Teliarganj,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Allahabad UA
+nit-rourkela,National Institute of Technology Rourkela,Rourkela,Odisha,Sector 1,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Rourkela UA
+nit-durgapur,National Institute of Technology Durgapur,Durgapur,West Bengal,Mahatma Gandhi Road,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Durgapur UA
+nit-jamshedpur,National Institute of Technology Jamshedpur,Jamshedpur,Jharkhand,Adityapur,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Jamshedpur UA
+manit-bhopal,Maulana Azad National Institute of Technology Bhopal,Bhopal,Madhya Pradesh,Link Road 3,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Bhopal UA
+svnit-surat,Sardar Vallabhbhai National Institute of Technology Surat,Surat,Gujarat,Ichchhanath,Class Y,800,1000,800,400,600,3600,35000,MoF OM No. 2/5/2017-E.II(B) - Surat UA
+nit-patna,National Institute of Technology Patna,Patna,Bihar,Ashok Rajpath,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Patna UA
+nit-raipur,National Institute of Technology Raipur,Raipur,Chhattisgarh,GE Road,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Raipur UA
+nit-jalandhar,Dr B R Ambedkar National Institute of Technology Jalandhar,Jalandhar,Punjab,GT Road Bye-pass,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Jalandhar UA
+bits-goa,BITS Pilani Goa Campus,Zuarinagar,Goa,NH 17B Sancoale,Class Y,800,1000,800,400,600,3600,35000,MoF OM No. 2/5/2017-E.II(B) - Goa State Municipalities
+iiit-allahabad,Indian Institute of Information Technology Allahabad,Prayagraj,Uttar Pradesh,Jhalwa,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Allahabad UA
+iiit-gwalior,ABV-Indian Institute of Information Technology and Management Gwalior,Gwalior,Madhya Pradesh,Morena Link Road,Class Y,800,1000,800,400,600,3600,30000,MoF OM No. 2/5/2017-E.II(B) - Gwalior UA
+iit-kharagpur,Indian Institute of Technology Kharagpur,Kharagpur,West Bengal,Paschim Medinipur,Class Z,600,700,400,300,400,2400,25000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+iit-roorkee,Indian Institute of Technology Roorkee,Roorkee,Uttarakhand,Haridwar District,Class Z,600,700,400,300,400,2400,25000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+iit-kanpur,Indian Institute of Technology Kanpur,Kanpur,Uttar Pradesh,Kalyanpur,Class Z,600,700,400,300,400,2400,25000,MoF OM No. 2/5/2017-E.II(B) - Kanpur Rural Peripheral Boundary
+iit-mandi,Indian Institute of Technology Mandi,Mandi,Himachal Pradesh,Kamand Valley,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Rural Mountain District
+iit-ropar,Indian Institute of Technology Ropar,Rupnagar,Punjab,Bara Phool,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+iit-palakkad,Indian Institute of Technology Palakkad,Palakkad,Kerala,Kanjikode,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+iit-dharwad,Indian Institute of Technology Dharwad,Dharwad,Karnataka,WALMI Belur,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+iit-jammu,Indian Institute of Technology Jammu,Jammu,Jammu and Kashmir,Jagti Nagrota,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+iit-bhilai,Indian Institute of Technology Bhilai,Bhilai,Chhattisgarh,Kutelabhata Durg,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+nit-kurukshetra,National Institute of Technology Kurukshetra,Kurukshetra,Haryana,Mirzapur,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+nit-silchar,National Institute of Technology Silchar,Silchar,Assam,Cachar District,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+nit-hamirpur,National Institute of Technology Hamirpur,Hamirpur,Himachal Pradesh,Anu,Class Z,600,700,400,300,400,2400,20000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area
+bits-pilani,BITS Pilani Pilani Campus,Pilani,Rajasthan,Vidya Vihar,Class Z,600,700,400,300,400,2400,25000,MoF OM No. 2/5/2017-E.II(B) - Non-Classified Municipal Area

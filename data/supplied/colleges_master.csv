@@ -1,0 +1,119 @@
+id,name,shortName,stream,type,city,state,tier,region,nirfRank,accreditation
+iit-madras,Indian Institute of Technology Madras,IIT Madras,Engineering,Public / Institute of National Importance,Chennai,Tamil Nadu,Tier 1,South,1,Institute of National Importance (IIT Act 1961)
+iit-delhi,Indian Institute of Technology Delhi,IIT Delhi,Engineering,Public / Institute of National Importance,New Delhi,Delhi,Tier 1,North,2,Institute of National Importance (IIT Act 1961)
+iit-bombay,Indian Institute of Technology Bombay,IIT Bombay,Engineering,Public / Institute of National Importance,Mumbai,Maharashtra,Tier 1,West,3,Institute of National Importance (IIT Act 1961)
+iit-kanpur,Indian Institute of Technology Kanpur,IIT Kanpur,Engineering,Public / Institute of National Importance,Kanpur,Uttar Pradesh,Tier 2,North,4,Institute of National Importance (IIT Act 1961)
+iit-kharagpur,Indian Institute of Technology Kharagpur,IIT Kharagpur,Engineering,Public / Institute of National Importance,Kharagpur,West Bengal,Tier 2,East,5,Institute of National Importance (IIT Act 1961)
+iit-roorkee,Indian Institute of Technology Roorkee,IIT Roorkee,Engineering,Public / Institute of National Importance,Roorkee,Uttarakhand,Tier 2,North,6,Institute of National Importance (IIT Act 1961)
+iit-guwahati,Indian Institute of Technology Guwahati,IIT Guwahati,Engineering,Public / Institute of National Importance,Guwahati,Assam,Tier 2,East,7,Institute of National Importance (IIT Act 1961)
+iit-hyderabad,Indian Institute of Technology Hyderabad,IIT Hyderabad,Engineering,Public / Institute of National Importance,Sangareddy,Telangana,Tier 1,South,8,Institute of National Importance (IIT Act 1961)
+iit-bhu,Indian Institute of Technology (BHU) Varanasi,IIT BHU,Engineering,Public / Institute of National Importance,Varanasi,Uttar Pradesh,Tier 2,North,10,Institute of National Importance (IIT Act 1961)
+iit-dhanbad,Indian Institute of Technology (ISM) Dhanbad,IIT ISM Dhanbad,Engineering,Public / Institute of National Importance,Dhanbad,Jharkhand,Tier 2,East,15,Institute of National Importance (IIT Act 1961)
+iit-indore,Indian Institute of Technology Indore,IIT Indore,Engineering,Public / Institute of National Importance,Indore,Madhya Pradesh,Tier 2,West,16,Institute of National Importance (IIT Act 1961)
+iit-bhubaneswar,Indian Institute of Technology Bhubaneswar,IIT Bhubaneswar,Engineering,Public / Institute of National Importance,Bhubaneswar,Odisha,Tier 2,East,27,Institute of National Importance (IIT Act 1961)
+iit-gandhinagar,Indian Institute of Technology Gandhinagar,IIT Gandhinagar,Engineering,Public / Institute of National Importance,Gandhinagar,Gujarat,Tier 2,West,18,Institute of National Importance (IIT Act 1961)
+iit-ropar,Indian Institute of Technology Ropar,IIT Ropar,Engineering,Public / Institute of National Importance,Rupnagar,Punjab,Tier 2,North,22,Institute of National Importance (IIT Act 1961)
+iit-patna,Indian Institute of Technology Patna,IIT Patna,Engineering,Public / Institute of National Importance,Patna,Bihar,Tier 2,East,34,Institute of National Importance (IIT Act 1961)
+iit-mandi,Indian Institute of Technology Mandi,IIT Mandi,Engineering,Public / Institute of National Importance,Mandi,Himachal Pradesh,Tier 3,North,33,Institute of National Importance (IIT Act 1961)
+iit-jodhpur,Indian Institute of Technology Jodhpur,IIT Jodhpur,Engineering,Public / Institute of National Importance,Jodhpur,Rajasthan,Tier 2,North,28,Institute of National Importance (IIT Act 1961)
+iit-tirupati,Indian Institute of Technology Tirupati,IIT Tirupati,Engineering,Public / Institute of National Importance,Tirupati,Andhra Pradesh,Tier 2,South,61,Institute of National Importance (IIT Act 1961)
+iit-bhilai,Indian Institute of Technology Bhilai,IIT Bhilai,Engineering,Public / Institute of National Importance,Bhilai,Chhattisgarh,Tier 3,East,73,Institute of National Importance (IIT Act 1961)
+iit-goa,Indian Institute of Technology Goa,IIT Goa,Engineering,Public / Institute of National Importance,Ponda,Goa,Tier 2,West,85,Institute of National Importance (IIT Act 1961)
+iit-jammu,Indian Institute of Technology Jammu,IIT Jammu,Engineering,Public / Institute of National Importance,Jammu,Jammu & Kashmir,Tier 3,North,62,Institute of National Importance (IIT Act 1961)
+iit-dharwad,Indian Institute of Technology Dharwad,IIT Dharwad,Engineering,Public / Institute of National Importance,Dharwad,Karnataka,Tier 3,South,93,Institute of National Importance (IIT Act 1961)
+iit-palakkad,Indian Institute of Technology Palakkad,IIT Palakkad,Engineering,Public / Institute of National Importance,Palakkad,Kerala,Tier 3,South,64,Institute of National Importance (IIT Act 1961)
+nit-trichy,National Institute of Technology Tiruchirappalli,NIT Trichy,Engineering,Public / Institute of National Importance,Tiruchirappalli,Tamil Nadu,Tier 2,South,9,Institute of National Importance (NITSER Act)
+nit-surathkal,National Institute of Technology Karnataka Surathkal,NIT Surathkal,Engineering,Public / Institute of National Importance,Mangalore,Karnataka,Tier 2,South,12,Institute of National Importance (NITSER Act)
+nit-rourkela,National Institute of Technology Rourkela,NIT Rourkela,Engineering,Public / Institute of National Importance,Rourkela,Odisha,Tier 2,East,19,Institute of National Importance (NITSER Act)
+nit-warangal,National Institute of Technology Warangal,NIT Warangal,Engineering,Public / Institute of National Importance,Warangal,Telangana,Tier 2,South,21,Institute of National Importance (NITSER Act)
+nit-calicut,National Institute of Technology Calicut,NIT Calicut,Engineering,Public / Institute of National Importance,Kozhikode,Kerala,Tier 2,South,23,Institute of National Importance (NITSER Act)
+mnit-jaipur,Malaviya National Institute of Technology Jaipur,MNIT Jaipur,Engineering,Public / Institute of National Importance,Jaipur,Rajasthan,Tier 1,North,43,Institute of National Importance (NITSER Act)
+nit-silchar,National Institute of Technology Silchar,NIT Silchar,Engineering,Public / Institute of National Importance,Silchar,Assam,Tier 3,East,40,Institute of National Importance (NITSER Act)
+vnit-nagpur,Visvesvaraya National Institute of Technology Nagpur,VNIT Nagpur,Engineering,Public / Institute of National Importance,Nagpur,Maharashtra,Tier 2,West,41,Institute of National Importance (NITSER Act)
+nit-durgapur,National Institute of Technology Durgapur,NIT Durgapur,Engineering,Public / Institute of National Importance,Durgapur,West Bengal,Tier 2,East,43,Institute of National Importance (NITSER Act)
+mnnit-allahabad,Motilal Nehru National Institute of Technology Allahabad,MNNIT Allahabad,Engineering,Public / Institute of National Importance,Prayagraj,Uttar Pradesh,Tier 2,North,49,Institute of National Importance (NITSER Act)
+nit-jalandhar,Dr. B. R. Ambedkar National Institute of Technology Jalandhar,NIT Jalandhar,Engineering,Public / Institute of National Importance,Jalandhar,Punjab,Tier 2,North,46,Institute of National Importance (NITSER Act)
+nit-kurukshetra,National Institute of Technology Kurukshetra,NIT Kurukshetra,Engineering,Public / Institute of National Importance,Kurukshetra,Haryana,Tier 2,North,58,Institute of National Importance (NITSER Act)
+nit-patna,National Institute of Technology Patna,NIT Patna,Engineering,Public / Institute of National Importance,Patna,Bihar,Tier 2,East,55,Institute of National Importance (NITSER Act)
+nit-raipur,National Institute of Technology Raipur,NIT Raipur,Engineering,Public / Institute of National Importance,Raipur,Chhattisgarh,Tier 2,East,70,Institute of National Importance (NITSER Act)
+nit-jamshedpur,National Institute of Technology Jamshedpur,NIT Jamshedpur,Engineering,Public / Institute of National Importance,Jamshedpur,Jharkhand,Tier 2,East,86,Institute of National Importance (NITSER Act)
+nit-hamirpur,National Institute of Technology Hamirpur,NIT Hamirpur,Engineering,Public / Institute of National Importance,Hamirpur,Himachal Pradesh,Tier 3,North,95,Institute of National Importance (NITSER Act)
+manit-bhopal,Maulana Azad National Institute of Technology Bhopal,MANIT Bhopal,Engineering,Public / Institute of National Importance,Bhopal,Madhya Pradesh,Tier 2,West,80,Institute of National Importance (NITSER Act)
+nit-goa,National Institute of Technology Goa,NIT Goa,Engineering,Public / Institute of National Importance,Cuncolim,Goa,Tier 2,West,90,Institute of National Importance (NITSER Act)
+nit-agartala,National Institute of Technology Agartala,NIT Agartala,Engineering,Public / Institute of National Importance,Agartala,Tripura,Tier 3,East,91,Institute of National Importance (NITSER Act)
+nit-meghalaya,National Institute of Technology Meghalaya,NIT Meghalaya,Engineering,Public / Institute of National Importance,Shillong,Meghalaya,Tier 3,East,68,Institute of National Importance (NITSER Act)
+nit-puducherry,National Institute of Technology Puducherry,NIT Puducherry,Engineering,Public / Institute of National Importance,Karaikal,Puducherry,Tier 3,South,97,Institute of National Importance (NITSER Act)
+nit-srinagar,National Institute of Technology Srinagar,NIT Srinagar,Engineering,Public / Institute of National Importance,Srinagar,Jammu & Kashmir,Tier 2,North,82,Institute of National Importance (NITSER Act)
+nit-uttarakhand,National Institute of Technology Uttarakhand,NIT Uttarakhand,Engineering,Public / Institute of National Importance,Srinagar Garhwal,Uttarakhand,Tier 3,North,131,Institute of National Importance (NITSER Act)
+nit-delhi,National Institute of Technology Delhi,NIT Delhi,Engineering,Public / Institute of National Importance,New Delhi,Delhi,Tier 1,North,51,Institute of National Importance (NITSER Act)
+nit-manipur,National Institute of Technology Manipur,NIT Manipur,Engineering,Public / Institute of National Importance,Imphal,Manipur,Tier 3,East,95,Institute of National Importance (NITSER Act)
+nit-mizoram,National Institute of Technology Mizoram,NIT Mizoram,Engineering,Public / Institute of National Importance,Aizawl,Mizoram,Tier 3,East,140,Institute of National Importance (NITSER Act)
+nit-nagaland,National Institute of Technology Nagaland,NIT Nagaland,Engineering,Public / Institute of National Importance,Chumukedima,Nagaland,Tier 3,East,151,Institute of National Importance (NITSER Act)
+nit-sikkim,National Institute of Technology Sikkim,NIT Sikkim,Engineering,Public / Institute of National Importance,Ravangla,Sikkim,Tier 3,East,160,Institute of National Importance (NITSER Act)
+nit-arunachal,National Institute of Technology Arunachal Pradesh,NIT Arunachal Pradesh,Engineering,Public / Institute of National Importance,Yupia,Arunachal Pradesh,Tier 3,East,165,Institute of National Importance (NITSER Act)
+nit-andhra,National Institute of Technology Andhra Pradesh,NIT Andhra Pradesh,Engineering,Public / Institute of National Importance,Tadepalligudem,Andhra Pradesh,Tier 3,South,170,Institute of National Importance (NITSER Act)
+iiest-shibpur,Indian Institute of Engineering Science and Technology Shibpur,IIEST Shibpur,Engineering,Public / Institute of National Importance,Howrah,West Bengal,Tier 1,East,35,Institute of National Importance (NITSER Act)
+iiit-gwalior,Atal Bihari Vajpayee IIITM Gwalior,ABV-IIITM Gwalior,Engineering,Public / Institute of National Importance,Gwalior,Madhya Pradesh,Tier 2,North,88,Institute of National Importance (IIIT Act)
+iiit-allahabad,Indian Institute of Information Technology Allahabad,IIIT Allahabad,Engineering,Public / Institute of National Importance,Prayagraj,Uttar Pradesh,Tier 2,North,89,Institute of National Importance (IIIT Act)
+iiit-jabalpur,PDPM IIITDM Jabalpur,IIITDM Jabalpur,Engineering,Public / Institute of National Importance,Jabalpur,Madhya Pradesh,Tier 2,West,97,Institute of National Importance (IIIT Act)
+iiit-kancheepuram,IIITDM Kancheepuram,IIITDM Kancheepuram,Engineering,Public / Institute of National Importance,Chennai,Tamil Nadu,Tier 1,South,110,Institute of National Importance (IIIT Act)
+iiit-kurnool,IIITDM Kurnool,IIITDM Kurnool,Engineering,Public / Institute of National Importance,Kurnool,Andhra Pradesh,Tier 3,South,145,Institute of National Importance (IIIT Act)
+iiit-lucknow,Indian Institute of Information Technology Lucknow,IIIT Lucknow,Engineering,Public / Institute of National Importance,Lucknow,Uttar Pradesh,Tier 2,North,120,Institute of National Importance (IIIT PPP Act)
+iiit-kota,Indian Institute of Information Technology Kota,IIIT Kota,Engineering,Public / Institute of National Importance,Kota,Rajasthan,Tier 2,North,135,Institute of National Importance (IIIT PPP Act)
+iiit-guwahati,Indian Institute of Information Technology Guwahati,IIIT Guwahati,Engineering,Public / Institute of National Importance,Guwahati,Assam,Tier 2,East,112,Institute of National Importance (IIIT PPP Act)
+iiit-vadodara,Indian Institute of Information Technology Vadodara,IIIT Vadodara,Engineering,Public / Institute of National Importance,Gandhinagar,Gujarat,Tier 2,West,125,Institute of National Importance (IIIT PPP Act)
+iiit-sricity,Indian Institute of Information Technology Sri City,IIIT Sri City,Engineering,Public / Institute of National Importance,Chittoor,Andhra Pradesh,Tier 2,South,130,Institute of National Importance (IIIT PPP Act)
+iiit-kalyani,Indian Institute of Information Technology Kalyani,IIIT Kalyani,Engineering,Public / Institute of National Importance,Kalyani,West Bengal,Tier 3,East,155,Institute of National Importance (IIIT PPP Act)
+iiit-una,Indian Institute of Information Technology Una,IIIT Una,Engineering,Public / Institute of National Importance,Una,Himachal Pradesh,Tier 3,North,160,Institute of National Importance (IIIT PPP Act)
+iiit-sonepat,Indian Institute of Information Technology Sonepat,IIIT Sonepat,Engineering,Public / Institute of National Importance,Sonepat,Haryana,Tier 2,North,140,Institute of National Importance (IIIT PPP Act)
+iiit-dharwad,Indian Institute of Information Technology Dharwad,IIIT Dharwad,Engineering,Public / Institute of National Importance,Dharwad,Karnataka,Tier 3,South,165,Institute of National Importance (IIIT PPP Act)
+iiit-kottayam,Indian Institute of Information Technology Kottayam,IIIT Kottayam,Engineering,Public / Institute of National Importance,Kottayam,Kerala,Tier 3,South,150,Institute of National Importance (IIIT PPP Act)
+iiit-manipur,Indian Institute of Information Technology Manipur,IIIT Manipur,Engineering,Public / Institute of National Importance,Senapati,Manipur,Tier 3,East,175,Institute of National Importance (IIIT PPP Act)
+iiit-trichy,Indian Institute of Information Technology Tiruchirappalli,IIIT Trichy,Engineering,Public / Institute of National Importance,Tiruchirappalli,Tamil Nadu,Tier 2,South,148,Institute of National Importance (IIIT PPP Act)
+iiit-nagpur,Indian Institute of Information Technology Nagpur,IIIT Nagpur,Engineering,Public / Institute of National Importance,Nagpur,Maharashtra,Tier 2,West,138,Institute of National Importance (IIIT PPP Act)
+iiit-pune,Indian Institute of Information Technology Pune,IIIT Pune,Engineering,Public / Institute of National Importance,Pune,Maharashtra,Tier 1,West,122,Institute of National Importance (IIIT PPP Act)
+iiit-ranchi,Indian Institute of Information Technology Ranchi,IIIT Ranchi,Engineering,Public / Institute of National Importance,Ranchi,Jharkhand,Tier 2,East,168,Institute of National Importance (IIIT PPP Act)
+iiit-surat,Indian Institute of Information Technology Surat,IIIT Surat,Engineering,Public / Institute of National Importance,Surat,Gujarat,Tier 2,West,142,Institute of National Importance (IIIT PPP Act)
+iiit-bhopal,Indian Institute of Information Technology Bhopal,IIIT Bhopal,Engineering,Public / Institute of National Importance,Bhopal,Madhya Pradesh,Tier 2,West,172,Institute of National Importance (IIIT PPP Act)
+iiit-bhagalpur,Indian Institute of Information Technology Bhagalpur,IIIT Bhagalpur,Engineering,Public / Institute of National Importance,Bhagalpur,Bihar,Tier 3,East,180,Institute of National Importance (IIIT PPP Act)
+iiit-agartala,Indian Institute of Information Technology Agartala,IIIT Agartala,Engineering,Public / Institute of National Importance,Agartala,Tripura,Tier 3,East,185,Institute of National Importance (IIIT PPP Act)
+iiit-raichur,Indian Institute of Information Technology Raichur,IIIT Raichur,Engineering,Public / Institute of National Importance,Raichur,Karnataka,Tier 3,South,190,Institute of National Importance (IIIT PPP Act)
+iiit-hyderabad,International Institute of Information Technology Hyderabad,IIIT Hyderabad,Engineering,Deemed / Top Private,Hyderabad,Telangana,Tier 1,South,62,Deemed to be University / NAAC A++
+pec-chandigarh,Punjab Engineering College Chandigarh,PEC Chandigarh,Engineering,State Govt,Chandigarh,Chandigarh,Tier 1,North,87,Deemed to be University / NAAC A+
+bit-mesra,Birla Institute of Technology Mesra,BIT Mesra,Engineering,Deemed / Top Private,Ranchi,Jharkhand,Tier 2,East,53,Deemed to be University / NAAC A
+jnu-delhi-soeng,"School of Engineering, Jawaharlal Nehru University",JNU Delhi Engg,Engineering,Public / Institute of National Importance,New Delhi,Delhi,Tier 1,North,2,Central University / NAAC A++
+assam-university,Assam University Silchar (School of Technology),Assam Univ Engg,Engineering,Public / Institute of National Importance,Silchar,Assam,Tier 3,East,102,Central University / NAAC B++
+gurukula-kangri,Gurukula Kangri Vishwavidyalaya Haridwar,GKV Haridwar,Engineering,Deemed / Top Private,Haridwar,Uttarakhand,Tier 3,North,145,Deemed to be University / NAAC A
+hnbgu-srinagar,Hemvati Nandan Bahuguna Garhwal University,HNBGU Garhwal,Engineering,Public / Institute of National Importance,Srinagar Garhwal,Uttarakhand,Tier 3,North,135,Central University / NAAC A
+iiit-bhubaneswar,International Institute of Information Technology Bhubaneswar,IIIT Bhubaneswar,Engineering,State Govt,Bhubaneswar,Odisha,Tier 2,East,128,State University / NAAC A
+tezpur-university,Tezpur University Napaam (School of Engineering),Tezpur Univ Engg,Engineering,Public / Institute of National Importance,Tezpur,Assam,Tier 3,East,69,Central University / NAAC A+
+sliet-longowal,Sant Longowal Institute of Engineering & Technology,SLIET Punjab,Engineering,Public / Institute of National Importance,Longowal,Punjab,Tier 3,North,99,Centrally Funded Deemed Univ / NBA
+niftem-kundli,National Institute of Food Technology Entrepreneurship Kundli,NIFTEM Kundli,Engineering,Public / Institute of National Importance,Sonepat,Haryana,Tier 2,North,115,Institute of National Importance (NIFTEM Act)
+bits-pilani,Birla Institute of Technology and Science Pilani,BITS Pilani,Engineering,Deemed / Top Private,Pilani,Rajasthan,Tier 3,North,20,Institute of Eminence (IoE) / NAAC A
+bits-goa,BITS Pilani K. K. Birla Goa Campus,BITS Goa,Engineering,Deemed / Top Private,Zuarinagar,Goa,Tier 2,West,20,Institute of Eminence (IoE) / NAAC A
+bits-hyderabad,BITS Pilani Hyderabad Campus,BITS Hyderabad,Engineering,Deemed / Top Private,Hyderabad,Telangana,Tier 1,South,20,Institute of Eminence (IoE) / NAAC A
+dtu-delhi,Delhi Technological University,DTU Delhi,Engineering,State Govt,New Delhi,Delhi,Tier 1,North,29,State University / NBA Tier-1 / NAAC A+
+nsut-delhi,Netaji Subhas University of Technology,NSUT Delhi,Engineering,State Govt,New Delhi,Delhi,Tier 1,North,60,State University / NAAC A
+coep-pune,COEP Technological University Pune,COEP Pune,Engineering,State Govt,Pune,Maharashtra,Tier 1,West,73,State Unitary Univ / NBA Tier-1 Accredited
+vjti-mumbai,Veermata Jijabai Technological Institute Mumbai,VJTI Mumbai,Engineering,State Govt,Mumbai,Maharashtra,Tier 1,West,84,State Autonomous / NBA Accredited
+spit-mumbai,Sardar Patel Institute of Technology Mumbai,SPIT Mumbai,Engineering,Deemed / Top Private,Mumbai,Maharashtra,Tier 1,West,125,Autonomous / NAAC A+
+pict-pune,Pune Institute of Computer Technology Pune,PICT Pune,Engineering,Deemed / Top Private,Pune,Maharashtra,Tier 1,West,140,Savitribai Phule Pune Univ / NAAC A+
+rvce-bangalore,RV College of Engineering Bangalore,RVCE Bangalore,Engineering,Deemed / Top Private,Bangalore,Karnataka,Tier 1,South,96,Autonomous / NBA Tier-1 / NAAC A+
+bmsce-bangalore,BMS College of Engineering Bangalore,BMSCE Bangalore,Engineering,Deemed / Top Private,Bangalore,Karnataka,Tier 1,South,105,Autonomous / NBA Tier-1 / NAAC A++
+msrit-bangalore,Ramaiah Institute of Technology Bangalore,MSRIT Bangalore,Engineering,Deemed / Top Private,Bangalore,Karnataka,Tier 1,South,78,Autonomous / NBA Tier-1 / NAAC A+
+jadavpur-univ,Jadavpur University (Faculty of Engg & Tech),Jadavpur University,Engineering,State Govt,Kolkata,West Bengal,Tier 1,East,10,State University / NAAC A++
+thapar-patiala,Thapar Institute of Engineering and Technology,Thapar Patiala,Engineering,Deemed / Top Private,Patiala,Punjab,Tier 2,North,20,Deemed University / NAAC A+
+manipal-mit,Manipal Institute of Technology Manipal,MIT Manipal,Engineering,Deemed / Top Private,Manipal,Karnataka,Tier 3,South,61,Deemed University / NAAC A++
+vit-vellore,Vellore Institute of Technology Vellore,VIT Vellore,Engineering,Deemed / Top Private,Vellore,Tamil Nadu,Tier 2,South,11,Institute of Eminence (IoE) / NAAC A++
+psg-tech,PSG College of Technology Coimbatore,PSG Tech,Engineering,State Govt,Coimbatore,Tamil Nadu,Tier 2,South,67,Autonomous / NBA Tier-1 / NAAC A
+iet-lucknow,Institute of Engineering and Technology Lucknow,IET Lucknow,Engineering,State Govt,Lucknow,Uttar Pradesh,Tier 2,North,152,AKTU Constituent / NBA
+fms-delhi-mba,"Faculty of Management Studies, University of Delhi",FMS Delhi,Management,State Govt,New Delhi,Delhi,Tier 1,North,8,Central University / NAAC A++
+iim-ahmedabad,Indian Institute of Management Ahmedabad,IIM Ahmedabad,Management,Public / Institute of National Importance,Ahmedabad,Gujarat,Tier 1,West,1,EQUIS / AACSB / INI (IIM Act 2017)
+iim-bangalore,Indian Institute of Management Bangalore,IIM Bangalore,Management,Public / Institute of National Importance,Bangalore,Karnataka,Tier 1,South,2,EQUIS / AACSB / INI (IIM Act 2017)
+iim-calcutta,Indian Institute of Management Calcutta,IIM Calcutta,Management,Public / Institute of National Importance,Kolkata,West Bengal,Tier 1,East,3,"Triple Crown (AACSB, AMBA, EQUIS)"
+iim-lucknow,Indian Institute of Management Lucknow,IIM Lucknow,Management,Public / Institute of National Importance,Lucknow,Uttar Pradesh,Tier 2,North,6,AACSB / AMBA / INI (IIM Act 2017)
+iim-kozhikode,Indian Institute of Management Kozhikode,IIM Kozhikode,Management,Public / Institute of National Importance,Kozhikode,Kerala,Tier 2,South,3,EQUIS / AMBA / INI (IIM Act 2017)
+xlri-jamshedpur,XLRI Xavier School of Management Jamshedpur,XLRI Jamshedpur,Management,Deemed / Top Private,Jamshedpur,Jharkhand,Tier 2,East,9,AACSB / AMBA / AICTE Approved
+spjimr-mumbai,S.P. Jain Institute of Management and Research,SPJIMR Mumbai,Management,Deemed / Top Private,Mumbai,Maharashtra,Tier 1,West,20,AACSB / AMBA / AICTE Approved
+jbims-mumbai,Jamnalal Bajaj Institute of Management Studies,JBIMS Mumbai,Management,State Govt,Mumbai,Maharashtra,Tier 1,West,25,University of Mumbai / State Autonomy
+nmims-mumbai,NMIMS School of Business Management Mumbai,NMIMS Mumbai,Management,Deemed / Top Private,Mumbai,Maharashtra,Tier 1,West,21,Deemed to be University / AACSB / NAAC A+

@@ -122,3 +122,9 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [ ] T-10.08 CSAB 2025 (Part C1, needs domain approval)
 - [ ] T-10.09 NIRF 2025 at scale (Part C2)
 - [ ] T-10.10 MHT-CET 2025 (Part C4)
+
+## Phase 12 — Supplied dataset (branch feature/zip-data, see DATA_ZIP_REVIEW.md and D-53)
+- [x] T-12.01 Archive the verified data; load the zip's 108 engineering institutes — 2026-11-12 · data/_archive_verified/, data/supplied/ (22 CSVs + SHA256SUMS), scripts/build_supplied_records.py; `npm run validate:data` 108/108 gates pass; 93 tests pass, 16 skipped (need the archive)
+- [x] T-12.02 Label the data honestly across the app — 2026-11-12 · "Supplied, not audited" badge, header, source popup, README; checked in browser
+- [ ] T-12.03 Decide what to do with the B-schools, branch placements and trend files (loaded: none)
+- [ ] T-12.04 Decide merge: this branch replaces what is live; nothing pushed

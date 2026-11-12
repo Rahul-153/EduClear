@@ -1,0 +1,51 @@
+{
+  "id": "tezpur-university",
+  "name": "Tezpur University (School of Engineering)",
+  "shortName": "Tezpur University",
+  "stream": "Engineering",
+  "type": "Public / Central University",
+  "location": {
+    "city": "Tezpur",
+    "state": "Assam",
+    "tier": "Tier 3",
+    "region": "East"
+  },
+  "nirfRank": 85,
+  "accreditation": "NAAC A+ / Visitor Best Univ",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main (JoSAA)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: All India closing AIR 35000",
+    "safeCutoffScore": 95.1
+  },
+  "fees": {
+    "tuitionAnnual": 75000,
+    "mandatoryInstituteFeesAnnual": 22000,
+    "hostelAndMessAnnual": 48000,
+    "estimatedLivingAnnual": 26000,
+    "totalFourYearCostINR": 684000
+  },
+  "placement": {
+    "headlineCTC": 22.0,
+    "medianBaseSalary": 8.5,
+    "batchSize": 234,
+    "eligibleStudents": 210,
+    "actuallyPlaced": 168,
+    "higherStudiesOrFounders": 24,
+    "disclosedPlacementRate": 80.0,
+    "placementAuditNote": "Premier central university with lush residential campus in Napaam; 4-yr total ₹6.84 Lakhs. Supplied dataset, not independently verified; graduating batch as supplied: 240 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.tezu.ernet.in/nirf",
+    "feeCircularDate": "July 2024 Schedule",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

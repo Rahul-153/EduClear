@@ -19,6 +19,7 @@ from pydantic import ValidationError  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 EVIDENCE_MISSING: List[str] = []
+SUPPLIED: List[str] = []  # records from the supplied dataset: integrity gates only, no evidence checks (D-53)
 REQUIRED_COMMERCIAL = "None (100% Student-Funded & Independent)"
 REQUIRED_PROVENANCE = [
     "placement.medianBaseSalary",
@@ -57,7 +58,7 @@ def run_integrity_check(c: College) -> Tuple[bool, List[str]]:
         errors.append("G2 eligibleStudents is zero")
 
     # Gate 3: CTC distortion sanity
-    if p.headlineCTC < p.medianBaseSalary:
+    if p.headlineCTC is not None and p.headlineCTC < p.medianBaseSalary:
         errors.append(f"G3 headline CTC {p.headlineCTC} < median {p.medianBaseSalary}")
 
     # Gate 4: total cost
@@ -73,6 +74,12 @@ def run_integrity_check(c: College) -> Tuple[bool, List[str]]:
     # Gate 6: conflict of interest
     if c.commercialRelationship != REQUIRED_COMMERCIAL:
         errors.append("G6 invalid commercialRelationship declaration")
+
+    # Supplied dataset (D-53): the evidence checks below cannot pass because no source documents exist for it. It is
+    # labelled "not audited" instead, and the gates above still apply.
+    if c.sources.verificationStatus.startswith("Supplied"):
+        SUPPLIED.append(c.id)
+        return (not errors, errors)
 
     # Extra audit checks (D-04)
     s = c.sources
@@ -173,6 +180,8 @@ def main() -> int:
                 print(f"   - {e}")
     if EVIDENCE_MISSING:
         print(f"\nNOTE: no local evidence folder for {len(EVIDENCE_MISSING)} record(s); snapshot files and hashes were not re-checked (URL + SHA-256 are recorded in each record).")
+    if SUPPLIED:
+        print(f"\nNOTE: {len(SUPPLIED)} record(s) are from the supplied dataset: integrity gates G1 to G6 ran; provenance, snapshot and URL checks were not applicable.")
     print(f"\n{len(files) - failed}/{len(files)} records valid")
     return 0 if failed == 0 else 1
 

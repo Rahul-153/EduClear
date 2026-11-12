@@ -1,0 +1,131 @@
+{
+  "id": "nit-silchar",
+  "name": "National Institute of Technology Silchar",
+  "shortName": "NIT Silchar",
+  "stream": "Engineering",
+  "type": "Institute of National Importance (NIT)",
+  "location": {
+    "city": "Silchar",
+    "state": "Assam",
+    "tier": "Tier 3",
+    "region": "East"
+  },
+  "nirfRank": 50,
+  "accreditation": "NBA: UG Computer Science & Engineering accredited for academic years 2021-22 to 2023-24, i.e. up to 30-06-2024 (NBA letter dated 18-02-2022); that validity has lapsed as of 2026-11-09 and no later CSE letter was found. UG Civil renewed 01-07-2025 to 31-12-2028 (NBA letter 06-11-2025). NAAC not found in official sources reviewed.",
+  "flagshipPrograms": [
+    "B.Tech Computer Science and Engineering",
+    "B.Tech Electronics and Communication Engineering",
+    "B.Tech Electrical Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General (OPEN)",
+    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral: Other State closing AIR 12665 (opening 8010); Home State closing AIR 23366 (opening 10077) (JEE Main rank)",
+    "safeCutoffScore": null
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 20150,
+    "hostelAndMessAnnual": 56260,
+    "estimatedLivingAnnual": 25000,
+    "totalFourYearCostINR": 905640
+  },
+  "placement": {
+    "headlineCTC": 52.89,
+    "medianBaseSalary": 11.0,
+    "batchSize": 823,
+    "eligibleStudents": 784,
+    "actuallyPlaced": 520,
+    "higherStudiesOrFounders": 39,
+    "disclosedPlacementRate": 66.33,
+    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 823 graduated, 39 to higher studies, 520 placed of 784 eligible. Median Rs 1,100,000. Headline CTC: Highest B.Tech package 52.89 LPA from the institute's own 2023-24 annual report (AWS PPO row also 52.89). No conflicting official figure found. Domestic/international and CTC-vs-base not specified."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0055.pdf",
+    "feeCircularDate": "AY 2026-27 (B.Tech 2026 entry; balance notice 2026-08-10)",
+    "verificationStatus": "Audited & Verified",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-09",
+    "headlineCtcUrl": "https://www.nits.ac.in/storage/files/annual-report-english-final-23-24.pdf",
+    "feeCircularUrl": "https://www.nits.ac.in/storage/Feestructure/Feestructure_6a15a5b6d6c231779803574.pdf",
+    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+    "snapshots": {
+      "nirf-2025-dcs.pdf": "f2611fb9031c84bf1ab61357e35fac9e482d847b89d936d1a6063e3287900640",
+      "nits-annual-report-2023-24.pdf": "def8e86178458d1cb7e9502585a773833dc8133afec11d932fee9d1bc380c859",
+      "nba-letter-2022-02-18-ug-cse-and-pg.pdf": "28c6a2f5ea3f235e1d7568981e396340e9eb1b419b3b7aff959f59bd75dedfaf",
+      "josaa-2025-round6.html": "542c41fff571139ef0c35eaa6c1b845dea9e60b5aaa8a8c1f586686ba31a7b45",
+      "nits-btech-1st-sem-fee-structure-2026-entry.pdf": "0c3231749434730ba6e491e131965bf16253a8112ebddd2214e986167c118c44",
+      "hra-doe-om-2017-07-07.pdf": "ce31b4b4c520ecd07178510143f05bce990849789b0e0117b5ea3b6333a20b50",
+      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
+      "nits-btech-even-sem-fee-structure-jan-jun-2027.pdf": "89bbc2c5f7597b24fc476040b39f359b477e6fb9754c50e8ec64989d13c12432",
+      "nits-btech-balance-admission-fee-notice-2026-08-10.pdf": "73c346a0e043634b7a32e4035fee47a2439fa04c1676cb94a3c8c275c3b4669c",
+      "nits-hostel-mess-fee-procedure-notice-2026-08-04.pdf": "9f7665cbde3bf408abb66495ed40051fe3243bc3b686b3950d1bcfd828af7fab",
+      "nba-letter-2025-11-06-ug-civil-renewal.pdf": "83d4f3b0686e06084b20478e23ac4ac1d7882500e51bee01ce0a3afbff312ffd",
+      "nits-nba-cell-page.html": "9cd101977df0a80d27c29e1a3ca6117c5bf63fa307be5287472edeb7576e493a",
+      "nits-fee-structure-page.html": "19326f4316650009c8d255113f05a7039db57d23cc14ad5909fb68067cabc292"
+    },
+    "provenance": {
+      "placement.batchSize": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0055.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.eligibleStudents": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0055.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.actuallyPlaced": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0055.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.medianBaseSalary": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0055.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.headlineCTC": {
+        "url": "https://www.nits.ac.in/storage/files/annual-report-english-final-23-24.pdf",
+        "locator": "NIT Silchar Annual Report 2023-24, 'Placement Statistics of NIT Silchar 2023-24' summary table (PDF p.48 / printed p.44), row 'Highest Salary 52.89 LPA' (rotated table, read from page image)",
+        "snapshot": "nits-annual-report-2023-24.pdf"
+      },
+      "fees.tuitionAnnual": {
+        "url": "https://www.nits.ac.in/storage/Feestructure/Feestructure_6a15a5b6d6c231779803574.pdf",
+        "locator": "B.Tech 2026 entry fee circulars (scanned, hand-read): sem-1 sheet Part I/II '>5 lakh' column; even-sem sheet (2nd/4th/6th) and 8th-sem sheet; hostel notice 2026-08-04 (BHM 1,500 + mess advance 22,500). Mandatory = recurring 15,150/yr + one-time non-refundable (Dev 10,000, Corpus 5,000, SAF 1,000, Alumni 1,000, Misc 500, sem-1 extra T&P 500, Transcript 1,000, Convocation reg 1,000 = 20,000)/4 = 5,000. Hostel = seat rent+light&water+cable+mess establishment 8,260 + BHM 3,000 + mess advance 45,000; refundable cautions excluded. Scanned figures; sem-1 T&P 1,000 vs 500 later treated as 500 one-time (flag)",
+        "snapshot": "nits-btech-1st-sem-fee-structure-2026-entry.pdf"
+      },
+      "fees.hostelAndMessAnnual": {
+        "url": "https://www.nits.ac.in/storage/Feestructure/Feestructure_6a15a5b6d6c231779803574.pdf",
+        "locator": "B.Tech 2026 entry fee circulars (scanned, hand-read): sem-1 sheet Part I/II '>5 lakh' column; even-sem sheet (2nd/4th/6th) and 8th-sem sheet; hostel notice 2026-08-04 (BHM 1,500 + mess advance 22,500). Mandatory = recurring 15,150/yr + one-time non-refundable (Dev 10,000, Corpus 5,000, SAF 1,000, Alumni 1,000, Misc 500, sem-1 extra T&P 500, Transcript 1,000, Convocation reg 1,000 = 20,000)/4 = 5,000. Hostel = seat rent+light&water+cable+mess establishment 8,260 + BHM 3,000 + mess advance 45,000; refundable cautions excluded. Scanned figures; sem-1 T&P 1,000 vs 500 later treated as 500 one-time (flag)",
+        "snapshot": "nits-btech-1st-sem-fee-structure-2026-entry.pdf"
+      },
+      "fees.mandatoryInstituteFeesAnnual": {
+        "url": "https://www.nits.ac.in/storage/Feestructure/Feestructure_6a15a5b6d6c231779803574.pdf",
+        "locator": "B.Tech 2026 entry fee circulars (scanned, hand-read): sem-1 sheet Part I/II '>5 lakh' column; even-sem sheet (2nd/4th/6th) and 8th-sem sheet; hostel notice 2026-08-04 (BHM 1,500 + mess advance 22,500). Mandatory = recurring 15,150/yr + one-time non-refundable (Dev 10,000, Corpus 5,000, SAF 1,000, Alumni 1,000, Misc 500, sem-1 extra T&P 500, Transcript 1,000, Convocation reg 1,000 = 20,000)/4 = 5,000. Hostel = seat rent+light&water+cable+mess establishment 8,260 + BHM 3,000 + mess advance 45,000; refundable cautions excluded. Scanned figures; sem-1 T&P 1,000 vs 500 later treated as 500 one-time (flag)",
+        "snapshot": "nits-btech-1st-sem-fee-structure-2026-entry.pdf"
+      },
+      "fees.estimatedLivingAnnual": {
+        "url": "https://doe.gov.in/files/circulars_document/7th_July_2017.pdf",
+        "locator": "HRA class Z for Silchar; band midpoint per D-19",
+        "snapshot": "hra-doe-om-2017-07-07.pdf"
+      },
+      "cutoffs.minPercentileOrRank": {
+        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
+        "snapshot": "josaa-2025-round6.html"
+      },
+      "nirfRank": {
+        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+        "locator": "NIRF 2025 Engineering ranking table",
+        "snapshot": "nirf-2025-engineering-ranking.html"
+      },
+      "accreditation": {
+        "url": "https://www.nits.ac.in/more/nba-cell",
+        "locator": "NIT Silchar NBA cell page and linked NBA letters",
+        "snapshot": "nba-letter-2022-02-18-ug-cse-and-pg.pdf"
+      }
+    }
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

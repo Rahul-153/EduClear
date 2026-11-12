@@ -1,0 +1,51 @@
+{
+  "id": "iiit-jabalpur",
+  "name": "PDPM Indian Institute of Information Technology Jabalpur",
+  "shortName": "IIITDM Jabalpur",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Jabalpur",
+    "state": "Madhya Pradesh",
+    "tier": "Tier 2",
+    "region": "West"
+  },
+  "nirfRank": 97,
+  "accreditation": "Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: All India closing AIR 22000",
+    "safeCutoffScore": 98.0
+  },
+  "fees": {
+    "tuitionAnnual": 150000,
+    "mandatoryInstituteFeesAnnual": 30000,
+    "hostelAndMessAnnual": 66000,
+    "estimatedLivingAnnual": 30000,
+    "totalFourYearCostINR": 1104000
+  },
+  "placement": {
+    "headlineCTC": 52.0,
+    "medianBaseSalary": 16.5,
+    "batchSize": 300,
+    "eligibleStudents": 280,
+    "actuallyPlaced": 252,
+    "higherStudiesOrFounders": 20,
+    "disclosedPlacementRate": 90.0,
+    "placementAuditNote": "Design & manufacturing focus; active robotics and computer vision labs. Supplied dataset, not independently verified; graduating batch as supplied: 310 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiitdmj.ac.in/nirf",
+    "feeCircularDate": "July 2024 Circular",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

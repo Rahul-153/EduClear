@@ -1,0 +1,51 @@
+{
+  "id": "nit-goa",
+  "name": "National Institute of Technology Goa",
+  "shortName": "NIT Goa",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Cuncolim",
+    "state": "Goa",
+    "tier": "Tier 3",
+    "region": "West"
+  },
+  "nirfRank": 90,
+  "accreditation": "Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: Other State closing AIR 18000, Home State closing AIR 33600",
+    "safeCutoffScore": 98.1
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 33000,
+    "hostelAndMessAnnual": 68000,
+    "estimatedLivingAnnual": 30000,
+    "totalFourYearCostINR": 1024000
+  },
+  "placement": {
+    "headlineCTC": 44.0,
+    "medianBaseSalary": 13.0,
+    "batchSize": 176,
+    "eligibleStudents": 160,
+    "actuallyPlaced": 142,
+    "higherStudiesOrFounders": 16,
+    "disclosedPlacementRate": 88.75,
+    "placementAuditNote": "New permanent Cuncolim campus; low student-faculty ratio ensures close mentorship. Supplied dataset, not independently verified; graduating batch as supplied: 180 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nitgoa.ac.in/nirf",
+    "feeCircularDate": "July 2024 Fee Notice",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

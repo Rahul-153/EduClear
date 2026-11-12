@@ -1,0 +1,51 @@
+{
+  "id": "iiit-bhopal",
+  "name": "Indian Institute of Information Technology Bhopal",
+  "shortName": "IIIT Bhopal",
+  "stream": "Engineering",
+  "type": "Public-Private Partnership (PPP)",
+  "location": {
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "tier": "Tier 2",
+    "region": "West"
+  },
+  "nirfRank": 170,
+  "accreditation": "Institute of National Importance (PPP)",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: All India closing AIR 22000",
+    "safeCutoffScore": 96.9
+  },
+  "fees": {
+    "tuitionAnnual": 180000,
+    "mandatoryInstituteFeesAnnual": 30000,
+    "hostelAndMessAnnual": 68000,
+    "estimatedLivingAnnual": 35000,
+    "totalFourYearCostINR": 1252000
+  },
+  "placement": {
+    "headlineCTC": 60.0,
+    "medianBaseSalary": 14.5,
+    "batchSize": 187,
+    "eligibleStudents": 175,
+    "actuallyPlaced": 155,
+    "higherStudiesOrFounders": 12,
+    "disclosedPlacementRate": 88.57,
+    "placementAuditNote": "Operating from MANIT Bhopal premises; impressive placement statistics for young institute. Supplied dataset, not independently verified; graduating batch as supplied: 190 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiitbhopal.ac.in/nirf",
+    "feeCircularDate": "CSAB Matrix 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

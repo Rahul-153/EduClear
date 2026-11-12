@@ -1,0 +1,48 @@
+{
+  "id": "iiit-delhi",
+  "name": "Indraprastha Institute of Information Technology Delhi",
+  "shortName": "IIIT Delhi",
+  "stream": "Engineering",
+  "type": "State Govt (Govt of NCT Delhi)",
+  "location": {
+    "city": "New Delhi",
+    "state": "Delhi NCR",
+    "tier": "Tier 1",
+    "region": "North"
+  },
+  "nirfRank": 75,
+  "accreditation": "NAAC A / State Act",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main (JAC Delhi)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 7,500 (Delhi) / 3,100 (Outside) (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 98.8
+  },
+  "fees": {
+    "tuitionAnnual": 425000,
+    "mandatoryInstituteFeesAnnual": 48000,
+    "hostelAndMessAnnual": 98000,
+    "estimatedLivingAnnual": 48000,
+    "totalFourYearCostINR": 2476000
+  },
+  "placement": {
+    "headlineCTC": 51.3,
+    "medianBaseSalary": 20.5,
+    "batchSize": 495,
+    "eligibleStudents": 470,
+    "actuallyPlaced": 440,
+    "higherStudiesOrFounders": 25,
+    "disclosedPlacementRate": 93.62,
+    "placementAuditNote": "85% Delhi reservation; heavy research emphasis with world-class computing faculty. Supplied dataset, not independently verified; graduating batch as supplied: 510 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiitd.ac.in/nirf",
+    "feeCircularDate": "July 2024 Gazette",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

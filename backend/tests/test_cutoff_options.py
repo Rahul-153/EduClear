@@ -1,4 +1,5 @@
 """Cutoff-only options (PLAN_VIEWS_AND_DATA.md B2): rank matching on the shipped JoSAA 2025 table, no invented figures."""
+import pytest
 from fastapi.testclient import TestClient
 
 from backend.app.data import cutoff_rows
@@ -9,6 +10,9 @@ from backend.app.services.recommend import recommend
 
 client = TestClient(app)
 A = Assumptions()
+
+# These tests need the JoSAA table and partial records now archived in data/_archive_verified (D-53). They run again once those are restored.
+pytestmark = pytest.mark.skipif(not cutoff_rows(), reason="needs data/_archive_verified restored")
 
 
 def items(r):

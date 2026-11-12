@@ -8,24 +8,26 @@ client = TestClient(app)
 
 
 def test_health_and_list():
-    assert client.get("/api/health").json() == {"status": "ok", "colleges": 11}
     rows = client.get("/api/colleges").json()
+    assert rows and client.get("/api/health").json() == {"status": "ok", "colleges": len(rows)}
     assert [r["nirf_rank"] for r in rows] == sorted(r["nirf_rank"] for r in rows)
     assert all(r["source_url"].startswith("http") for r in rows)
 
 
 def test_college_and_sources():
     c = client.get("/api/colleges/nit-calicut").json()
-    assert c["fees"]["totalFourYearCostINR"] == 1_163_500
+    f = c["fees"]
+    assert f["totalFourYearCostINR"] == 4 * (f["tuitionAnnual"] + f["mandatoryInstituteFeesAnnual"] + f["hostelAndMessAnnual"] + f["estimatedLivingAnnual"])
     s = client.get("/api/colleges/nit-calicut/sources").json()
-    assert s["verification"] == "Audited & Verified" and "placement.batchSize" in s["provenance"]
+    assert s["verification"] == "Supplied dataset, not audited" and s["provenance"] == {}  # no source documents exist for it
     assert client.get("/api/colleges/nope").status_code == 404
 
 
 def test_recommend_deck_and_filters():
-    r = client.post("/api/recommend", json={"percentile": 99.75, "budget_lakhs": 12, "region": "All"}).json()
-    assert r["supported"] and all(m["four_year_cost_inr"] <= 1_200_000 for m in r["matches"])
-    assert r["deck"]["safe_anchor"]["id"] == "nit-calicut"
+    r = client.post("/api/recommend", json={"percentile": 99.95, "budget_lakhs": 12, "region": "All"}).json()
+    assert r["supported"] and r["matches"] and all(m["four_year_cost_inr"] <= 1_200_000 for m in r["matches"])
+    assert r["deck"]["safe_anchor"]["fit"]["tier"] == "Safe" and all(m["data_level"] == "supplied" for m in r["matches"])
+    assert "cutoff_only" not in r  # no JoSAA table is shipped with the supplied dataset
     south = client.post("/api/recommend", json={"percentile": 99.75, "budget_lakhs": 40, "region": "South"}).json()
     assert {m["region"] for m in south["matches"]} == {"South"}
     unsupported = client.post("/api/recommend", json={"stream": "MBA"}).json()
@@ -35,8 +37,9 @@ def test_recommend_deck_and_filters():
 def test_roi_finance_alignment():
     roi = client.post("/api/roi", json={"college_id": "mnit-jaipur"}).json()
     assert roi["payback"]["payback_months"] > roi["payback"]["payback_months_gross_pay"]
+    cost = client.get("/api/colleges/mnit-jaipur").json()["fees"]["totalFourYearCostINR"]
     fin = client.post("/api/finance/plan", json={"college_id": "mnit-jaipur", "family_savings": 500_000}).json()
-    assert fin["total_deficit_inr"] == 1_110_348 - 500_000 or abs(fin["total_deficit_inr"] - (1_110_348 - 500_000)) <= 8
+    assert abs(fin["total_deficit_inr"] - (cost - 500_000)) <= 8
     ok = dict(brand_prestige=3, branch_passion=3, location_safety=3, budget_strictness=3)
     assert client.post("/api/alignment", json={"student": ok, "parent": ok}).json()["alignment_score"] == 100
     assert client.post("/api/alignment", json={"student": {"x": 1}, "parent": ok}).status_code == 422

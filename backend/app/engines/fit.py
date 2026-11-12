@@ -21,10 +21,13 @@ def parse_cutoff(c: College) -> dict:
     if exam == "JEE Advanced":
         m = re.search(r"closing AIR (\d+)", t)
         return {"kind": "jee_advanced", "closing": int(m.group(1))} if m else {"kind": "unknown"}
-    if exam == "JEE Main":
+    if exam.startswith("JEE Main"):  # also "JEE Main (JoSAA)", "JEE Main / UGEE", "JEE Main (JAC Delhi)"
         os_, hs = re.search(r"Other State closing AIR (\d+)", t), re.search(r"Home State closing AIR (\d+)", t)
-        return {"kind": "jee_main", "os": int(os_.group(1)), "hs": int(hs.group(1))} if os_ and hs else {"kind": "unknown"}
-    if exam.startswith("JEE Main") and "JAC Delhi" in exam:
+        if os_ and hs:
+            return {"kind": "jee_main", "os": int(os_.group(1)), "hs": int(hs.group(1))}
+        ai = re.search(r"All India closing AIR (\d+)", t)  # all-India seats: one rank for every candidate
+        if ai:
+            return {"kind": "jee_main", "os": int(ai.group(1)), "hs": int(ai.group(1))}
         o, d = re.search(r"Outside Delhi Region GNGNO (\d+)", t), re.search(r"Delhi Region GNGND (\d+)", t)
         return {"kind": "jee_main", "os": int(o.group(1)), "hs": int(d.group(1))} if o and d else {"kind": "unknown"}
     if exam == "BITSAT":

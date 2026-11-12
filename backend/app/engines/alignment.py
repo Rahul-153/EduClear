@@ -8,8 +8,8 @@ DIMENSIONS = {
     "budget_strictness": "Budget strictness",
 }
 PROMPTS = {
-    "brand_prestige": "Compare what the brand adds in audited median pay against the cost difference.",
-    "branch_passion": "Check whether the preferred branch is open at the colleges both sides like, and its audited outcomes.",
+    "brand_prestige": "Compare what the brand adds in median pay against the cost difference.",
+    "branch_passion": "Check whether the preferred branch is open at the colleges both sides like, and its outcomes.",
     "location_safety": "Agree on regions and campus conditions that feel safe; shortlist colleges inside them.",
     "budget_strictness": "Fix a hard 4-year budget together and test it against the loan EMI plan.",
 }

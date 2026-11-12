@@ -1,0 +1,48 @@
+{
+  "id": "smvdu-katra",
+  "name": "Shri Mata Vaishno Devi University",
+  "shortName": "SMVDU Katra",
+  "stream": "Engineering",
+  "type": "State Statutory / GFTI",
+  "location": {
+    "city": "Katra",
+    "state": "Jammu & Kashmir",
+    "tier": "Tier 3",
+    "region": "North"
+  },
+  "nirfRank": 101,
+  "accreditation": "UGC / AICTE / JoSAA",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main (JoSAA)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 48,000 - 95,000 (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 93.8
+  },
+  "fees": {
+    "tuitionAnnual": 135000,
+    "mandatoryInstituteFeesAnnual": 28000,
+    "hostelAndMessAnnual": 58000,
+    "estimatedLivingAnnual": 26000,
+    "totalFourYearCostINR": 988000
+  },
+  "placement": {
+    "headlineCTC": 24.0,
+    "medianBaseSalary": 8.0,
+    "batchSize": 258,
+    "eligibleStudents": 230,
+    "actuallyPlaced": 180,
+    "higherStudiesOrFounders": 28,
+    "disclosedPlacementRate": 78.26,
+    "placementAuditNote": "Sprawling campus in foothills of Trikuta mountains; fully residential with active coding clubs. Supplied dataset, not independently verified; graduating batch as supplied: 260 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.smvdu.ac.in/nirf",
+    "feeCircularDate": "CSAB Compendium 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

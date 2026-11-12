@@ -1,0 +1,51 @@
+{
+  "id": "pec-chandigarh",
+  "name": "Punjab Engineering College (Deemed to be University)",
+  "shortName": "PEC Chandigarh",
+  "stream": "Engineering",
+  "type": "Public / Centrally Funded",
+  "location": {
+    "city": "Chandigarh",
+    "state": "Chandigarh",
+    "tier": "Tier 2",
+    "region": "North"
+  },
+  "nirfRank": 82,
+  "accreditation": "NAAC A / Central Govt Funded",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main (JoSAA)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: All India closing AIR 35000",
+    "safeCutoffScore": 98.4
+  },
+  "fees": {
+    "tuitionAnnual": 175000,
+    "mandatoryInstituteFeesAnnual": 35000,
+    "hostelAndMessAnnual": 68000,
+    "estimatedLivingAnnual": 35000,
+    "totalFourYearCostINR": 1252000
+  },
+  "placement": {
+    "headlineCTC": 54.0,
+    "medianBaseSalary": 15.0,
+    "batchSize": 705,
+    "eligibleStudents": 650,
+    "actuallyPlaced": 580,
+    "higherStudiesOrFounders": 55,
+    "disclosedPlacementRate": 89.23,
+    "placementAuditNote": "Historic engineering college (est. 1921); stellar alumni in Indian aviation and technology. Supplied dataset, not independently verified; graduating batch as supplied: 720 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.pec.ac.in/nirf",
+    "feeCircularDate": "July 2024 Gazette",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

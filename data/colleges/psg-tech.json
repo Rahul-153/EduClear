@@ -1,0 +1,51 @@
+{
+  "id": "psg-tech",
+  "name": "PSG College of Technology",
+  "shortName": "PSG Tech Coimbatore",
+  "stream": "Engineering",
+  "type": "State Govt Aided / Autonomous",
+  "location": {
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "tier": "Tier 2",
+    "region": "South"
+  },
+  "nirfRank": 67,
+  "accreditation": "NAAC A / NBA Tier 1",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "TNEA",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "Cutoff 197.5 / 200 (TNEA) (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 97.5
+  },
+  "fees": {
+    "tuitionAnnual": 85000,
+    "mandatoryInstituteFeesAnnual": 25000,
+    "hostelAndMessAnnual": 72000,
+    "estimatedLivingAnnual": 32000,
+    "totalFourYearCostINR": 856000
+  },
+  "placement": {
+    "headlineCTC": 40.0,
+    "medianBaseSalary": 11.5,
+    "batchSize": 1195,
+    "eligibleStudents": 1100,
+    "actuallyPlaced": 980,
+    "higherStudiesOrFounders": 95,
+    "disclosedPlacementRate": 89.09,
+    "placementAuditNote": "Industry integrated engineering education; strong alumni network across South India. Supplied dataset, not independently verified; graduating batch as supplied: 1220 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.psgtech.edu/nirf",
+    "feeCircularDate": "TNEA Fee Schedule",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

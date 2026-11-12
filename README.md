@@ -1,8 +1,13 @@
 # EduClear — clear truth in higher education
 
-An independent, student-funded advisory platform for Indian college choice and financing. Every college figure links to an
-official filing; placement numbers show the true denominator (placed ÷ eligible); payments run **only in the PayPal sandbox**.
-Built for the PayPal AI Hackathon 2026.
+An independent, student-funded advisory platform for Indian college choice and financing. Placement numbers show the true
+denominator (placed ÷ eligible); payments run **only in the PayPal sandbox**. Built for the PayPal AI Hackathon 2026.
+
+> **Data status (branch `feature/zip-data`, decision D-53):** the 108 engineering colleges in this branch come from a dataset
+> supplied to the project (`data/supplied/`, from `rehackathonfileseom.zip`). It is **not source-verified**: no source documents
+> are on file and its figures do not match the earlier verified data, so the app labels every record "Supplied dataset, not
+> audited". The earlier source-verified data (11 audited colleges, 19 partly verified IITs, the JoSAA 2025 cutoff table) is kept in
+> `data/_archive_verified/`. See `DATA_ZIP_REVIEW.md`.
 
 **Live demo:** https://educlear.onrender.com (Render, Postgres, PayPal **sandbox**). The first load after idle can take about a minute while Render wakes the service.
 

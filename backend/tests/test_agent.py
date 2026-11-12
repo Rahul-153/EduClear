@@ -98,7 +98,8 @@ def test_affordability_numbers_come_from_engine():
     out = ag.handle("Can I afford NIT Calicut with 8 lakh savings?", {}, "en", a, "o1", None)
     plan = funding_plan(get_college("nit-calicut").fees.totalFourYearCostINR, 800_000, 0, a)
     assert out["tool"] == "affordability" and f"{plan['total_deficit_inr']:,}" in out["reply"] and f"{plan['loan']['emi_inr']:,}" in out["reply"]
-    assert 360_000 < plan["total_deficit_inr"] < 370_000  # hand check: 11,63,500 - 8,00,000 = 3,63,500 (+-rounding)
+    cost = get_college("nit-calicut").fees.totalFourYearCostINR
+    assert abs(plan["total_deficit_inr"] - (cost - 800_000)) <= 8  # hand check: cost minus savings (+-rounding)
 
 
 def test_hindi_message_gets_hindi_reply():

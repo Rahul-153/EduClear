@@ -1,0 +1,51 @@
+{
+  "id": "manipal-mit",
+  "name": "Manipal Institute of Technology (MAHE)",
+  "shortName": "MIT Manipal",
+  "stream": "Engineering",
+  "type": "Deemed / Top Private",
+  "location": {
+    "city": "Manipal",
+    "state": "Karnataka",
+    "tier": "Tier 2",
+    "region": "South"
+  },
+  "nirfRank": 61,
+  "accreditation": "Institute of Eminence (MAHE)",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "MET (Manipal)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "Rank < 1,800 for CSE (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 93.5
+  },
+  "fees": {
+    "tuitionAnnual": 475000,
+    "mandatoryInstituteFeesAnnual": 35000,
+    "hostelAndMessAnnual": 145000,
+    "estimatedLivingAnnual": 45000,
+    "totalFourYearCostINR": 2800000
+  },
+  "placement": {
+    "headlineCTC": 54.7,
+    "medianBaseSalary": 10.5,
+    "batchSize": 2470,
+    "eligibleStudents": 2150,
+    "actuallyPlaced": 1720,
+    "higherStudiesOrFounders": 320,
+    "disclosedPlacementRate": 80.0,
+    "placementAuditNote": "Top tier campus culture and maker spaces; popular choice for students scoring 90-95%ile in JEE. Supplied dataset, not independently verified; graduating batch as supplied: 2400 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://manipal.edu/mit/about-mit/nirf.html",
+    "feeCircularDate": "May 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

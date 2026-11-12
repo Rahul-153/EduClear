@@ -1,0 +1,48 @@
+{
+  "id": "iit-ism-dhanbad",
+  "name": "Indian Institute of Technology (ISM) Dhanbad",
+  "shortName": "IIT ISM Dhanbad",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Dhanbad",
+    "state": "Jharkhand",
+    "tier": "Tier 2",
+    "region": "East"
+  },
+  "nirfRank": 15,
+  "accreditation": "Institute of National Importance",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Advanced",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 1400 - 3200 (CSE) (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 99.2
+  },
+  "fees": {
+    "tuitionAnnual": 200000,
+    "mandatoryInstituteFeesAnnual": 34000,
+    "hostelAndMessAnnual": 72000,
+    "estimatedLivingAnnual": 36000,
+    "totalFourYearCostINR": 1368000
+  },
+  "placement": {
+    "headlineCTC": 83.0,
+    "medianBaseSalary": 17.0,
+    "batchSize": 1250,
+    "eligibleStudents": 1100,
+    "actuallyPlaced": 950,
+    "higherStudiesOrFounders": 150,
+    "disclosedPlacementRate": 86.36,
+    "placementAuditNote": "Historic mining and petroleum pioneer; now premier computing and electronics powerhouse. Supplied dataset, not independently verified; graduating batch as supplied: 1250 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iitism.ac.in/nirf",
+    "feeCircularDate": "July 2024 Circular",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

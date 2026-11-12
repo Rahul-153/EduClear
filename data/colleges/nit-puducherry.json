@@ -1,0 +1,51 @@
+{
+  "id": "nit-puducherry",
+  "name": "National Institute of Technology Puducherry",
+  "shortName": "NIT Puducherry",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Karaikal",
+    "state": "Puducherry",
+    "tier": "Tier 3",
+    "region": "South"
+  },
+  "nirfRank": 97,
+  "accreditation": "Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: Other State closing AIR 18000, Home State closing AIR 33600",
+    "safeCutoffScore": 97.7
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 29000,
+    "hostelAndMessAnnual": 63000,
+    "estimatedLivingAnnual": 26000,
+    "totalFourYearCostINR": 972000
+  },
+  "placement": {
+    "headlineCTC": 42.0,
+    "medianBaseSalary": 11.5,
+    "batchSize": 240,
+    "eligibleStudents": 215,
+    "actuallyPlaced": 182,
+    "higherStudiesOrFounders": 25,
+    "disclosedPlacementRate": 84.65,
+    "placementAuditNote": "Permanent campus at Karaikal coastal belt; growing industry internships in Chennai and Bangalore. Supplied dataset, not independently verified; graduating batch as supplied: 240 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nitpy.ac.in/nirf",
+    "feeCircularDate": "CSAB Compendium",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

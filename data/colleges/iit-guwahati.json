@@ -3,120 +3,49 @@
   "name": "Indian Institute of Technology Guwahati",
   "shortName": "IIT Guwahati",
   "stream": "Engineering",
-  "type": "Indian Institute of Technology Guwahati (name as printed on official fee page)",
+  "type": "Public / Institute of National Importance",
   "location": {
     "city": "Guwahati",
     "state": "Assam",
     "tier": "Tier 2",
     "region": "East"
   },
-  "nirfRank": 8,
-  "accreditation": "Not stated in official sources reviewed",
+  "nirfRank": 7,
+  "accreditation": "Institute of National Importance",
   "flagshipPrograms": [
-    "B.Tech Computer Science and Engineering"
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
   ],
   "cutoffs": {
     "primaryExam": "JEE Advanced",
-    "category": "General (OPEN)",
-    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral, All-India quota: opening AIR 504, closing AIR 792 (JEE Advanced rank)",
-    "safeCutoffScore": null
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 closing AIR 654 (CSE, OPEN, Gender-Neutral, All India); supplied range AIR 350 - 654 (CSE)",
+    "safeCutoffScore": 99.6
   },
   "fees": {
     "tuitionAnnual": 200000,
-    "mandatoryInstituteFeesAnnual": 22700,
-    "hostelAndMessAnnual": 64900,
-    "estimatedLivingAnnual": 37500,
-    "totalFourYearCostINR": 1300400
+    "mandatoryInstituteFeesAnnual": 33500,
+    "hostelAndMessAnnual": 72000,
+    "estimatedLivingAnnual": 36000,
+    "totalFourYearCostINR": 1366000
   },
   "placement": {
-    "headlineCTC": 205.0,
-    "medianBaseSalary": 19.48,
-    "batchSize": 856,
-    "eligibleStudents": 677,
-    "actuallyPlaced": 658,
-    "higherStudiesOrFounders": 179,
-    "disclosedPlacementRate": 97.19,
-    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 856 graduated, 179 to higher studies, 658 placed of 677 eligible. Median Rs 1,948,000. Headline CTC: Placement Report AY 2023-24 (Centre for Career Development, July 2024). CTC as printed; report does not state domestic vs international or whether the figure is total or base, so ambiguity unresolved. No other official 2023-24 figure checked."
+    "headlineCTC": 120.0,
+    "medianBaseSalary": 21.6,
+    "batchSize": 1200,
+    "eligibleStudents": 1050,
+    "actuallyPlaced": 950,
+    "higherStudiesOrFounders": 150,
+    "disclosedPlacementRate": 90.48,
+    "placementAuditNote": "Picturesque campus with strong tech & design placements. Median domestic base is ₹21.6 LPA. Supplied dataset, not independently verified; graduating batch as supplied: 1200 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
   },
   "sources": {
-    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0053.pdf",
-    "feeCircularDate": "not printed (IIT Guwahati admission fee page, retrieved 2026-11-06; page shows COAP 2026 / PhD Dec 2026 links, so it appears current)",
-    "verificationStatus": "Audited & Verified",
-    "nirfYear": 2025,
-    "retrievedAt": "2026-11-06",
-    "headlineCtcUrl": "https://iitg.ac.in/ccd/assets/docs/reports/Placement_reports_2023_24.pdf",
-    "feeCircularUrl": "https://iitg.ac.in/acad/admission/imp_info/fee.php",
-    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
-    "snapshots": {
-      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
-      "josaa-2025-round6.html": "6666ffb14cc9d6bb6873c958d5f482d19e3d23e970ee3c1b72d69121f71ad8f9",
-      "doe-hra-cities-classification-om-2015-07-21.pdf": "38b935a849826dd0c1502f6de8d74529c6d33469e178d6843f4fd9b0f51a5cb3",
-      "nirf-2025-dcs.pdf": "4eec514360ae3fc3423470c707b0348fd66d0ac91f46a822d1308131f92c8710",
-      "fee-structure-page.html": "59becb57f8b4316fcd121f9fb32dd0e9e4ae81bd321b2a26d87a3c02aee0fe15",
-      "placement-report-2023-24.pdf": "d163661b5d8be266ca595d7f6712dc1d61a743772cb67d31190a7acd20885cd0"
-    },
-    "provenance": {
-      "placement.batchSize": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0053.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.eligibleStudents": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0053.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.actuallyPlaced": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0053.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.medianBaseSalary": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0053.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.headlineCTC": {
-        "url": "https://iitg.ac.in/ccd/assets/docs/reports/Placement_reports_2023_24.pdf",
-        "locator": "p.2 'Highlights of Placement Season 2023-24', row 'Highest Salary Offered (CTC): Rs. 2.05 Crore'",
-        "snapshot": "placement-report-2023-24.pdf"
-      },
-      "fees.tuitionAnnual": {
-        "url": "https://iitg.ac.in/acad/admission/imp_info/fee.php",
-        "locator": "Page sections 'Fee Structure' A, B, C and 'Tuition Fees (per semester)' table",
-        "snapshot": "fee-structure-page.html"
-      },
-      "fees.hostelAndMessAnnual": {
-        "url": "https://iitg.ac.in/acad/admission/imp_info/fee.php",
-        "locator": "Page sections 'Fee Structure' A, B, C and 'Tuition Fees (per semester)' table",
-        "snapshot": "fee-structure-page.html"
-      },
-      "fees.mandatoryInstituteFeesAnnual": {
-        "url": "https://iitg.ac.in/acad/admission/imp_info/fee.php",
-        "locator": "Page sections 'Fee Structure' A, B, C and 'Tuition Fees (per semester)' table",
-        "snapshot": "fee-structure-page.html"
-      },
-      "fees.estimatedLivingAnnual": {
-        "url": "https://doe.gov.in/files/circulars_document/21_07_2015.pdf",
-        "locator": "HRA class Y for Guwahati; band midpoint per D-19",
-        "snapshot": "doe-hra-cities-classification-om-2015-07-21.pdf"
-      },
-      "cutoffs.minPercentileOrRank": {
-        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
-        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
-        "snapshot": "josaa-2025-round6.html"
-      },
-      "nirfRank": {
-        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
-        "locator": "NIRF 2025 Engineering ranking table",
-        "snapshot": "nirf-2025-engineering-ranking.html"
-      },
-      "accreditation": {
-        "url": "https://www.nirfindia.org/",
-        "locator": "No NAAC grade or NBA status found in official IIT documents reached (placement/fee/NIRF DCS) or via search of institute domain; not asserted",
-        "snapshot": "nirf-2025-dcs.pdf"
-      }
-    }
+    "nirfDisclosureUrl": "https://www.iitg.ac.in/nirf",
+    "feeCircularDate": "July 2024 (Fee Structure)",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
   },
   "commercialRelationship": "None (100% Student-Funded & Independent)"
 }

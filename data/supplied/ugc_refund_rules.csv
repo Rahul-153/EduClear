@@ -1,0 +1,6 @@
+category,daysPriorToAdmissionCutoff,refundPercentage,deductionAmountMaxINR,ruleSummary
+15_DAYS_OR_MORE_PRIOR,15,100,1500,"100% refund with deduction of no more than ₹1,500 as processing fee if withdrawn 15+ days before last date of admission."
+LESS_THAN_15_DAYS_PRIOR,1,90,0,90% refund if formally withdrawn less than 15 days before the formally notified last date of admission.
+LESS_THAN_15_DAYS_AFTER,-15,80,0,80% refund if formally withdrawn 15 days or less after the formally notified last date of admission.
+BETWEEN_15_AND_30_DAYS_AFTER,-30,50,0,50% refund if formally withdrawn between 16 and 30 days after the formally notified last date of admission.
+MORE_THAN_30_DAYS_AFTER,-999,0,0,0% refund (caution deposit only) if withdrawn more than 30 days after the formally notified last date of admission.

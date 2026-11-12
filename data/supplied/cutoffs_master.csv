@@ -1,0 +1,370 @@
+collegeId,programCode,programName,exam,counsellingBody,quota,seatCategory,gender,round,year,openingRank,closingRank,safeCutoffPercentile
+iit-madras,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,59,148,99.97
+iit-madras,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,118,237,99.37
+iit-madras,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,89,215,99.17
+iit-delhi,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,46,115,99.98
+iit-delhi,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,92,184,99.38
+iit-delhi,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,69,167,99.18
+iit-bombay,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,27,68,99.99
+iit-bombay,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,54,109,99.39
+iit-bombay,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,41,99,99.19
+iit-kanpur,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,95,238,99.95
+iit-kanpur,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,190,381,99.35
+iit-kanpur,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,143,345,99.15
+iit-kharagpur,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,112,279,99.94
+iit-kharagpur,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,223,446,99.34
+iit-kharagpur,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,167,405,99.14
+iit-roorkee,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,165,412,99.91
+iit-roorkee,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,330,659,99.31
+iit-roorkee,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,247,597,99.11
+iit-guwahati,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,262,654,99.85
+iit-guwahati,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,523,1046,99.25
+iit-guwahati,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,392,948,99.05
+iit-hyderabad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,268,670,99.84
+iit-hyderabad,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,536,1072,99.24
+iit-hyderabad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,402,972,99.04
+iit-bhu,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,406,1015,99.75
+iit-bhu,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,812,1624,99.15
+iit-bhu,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,609,1472,98.95
+iit-dhanbad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-dhanbad,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-dhanbad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-indore,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-indore,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-indore,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-bhubaneswar,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-bhubaneswar,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-bhubaneswar,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-gandhinagar,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-gandhinagar,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-gandhinagar,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-ropar,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-ropar,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-ropar,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-patna,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-patna,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-patna,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-mandi,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-mandi,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-mandi,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-jodhpur,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-jodhpur,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-jodhpur,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-tirupati,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-tirupati,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-tirupati,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-bhilai,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-bhilai,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-bhilai,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-goa,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1680,4200,99.1
+iit-goa,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,3360,6720,98.5
+iit-goa,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2520,6090,98.3
+iit-jammu,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-jammu,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-jammu,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-dharwad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-dharwad,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-dharwad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+iit-palakkad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1400,3500,99.25
+iit-palakkad,ECE,Electronics and Communication Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,2800,5600,98.65
+iit-palakkad,CSE,Computer Science and Engineering,JEE_ADVANCED,JoSAA,AI,OPEN,Female-Only,Round 6,2025,2100,5075,98.45
+nit-trichy,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,600,1500,99.9
+nit-trichy,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,1200,2400,99.3
+nit-trichy,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,1500,4525,98.7
+nit-trichy,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,900,2175,99.1
+nit-trichy,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,750,3900,98.4
+nit-surathkal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,920,2300,99.85
+nit-surathkal,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,1840,3680,99.25
+nit-surathkal,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,2300,5605,98.65
+nit-surathkal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,1380,3335,99.05
+nit-surathkal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,1150,5340,98.35
+nit-rourkela,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-rourkela,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-rourkela,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-rourkela,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-rourkela,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-warangal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,1120,2800,99.8
+nit-warangal,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,2240,4480,99.2
+nit-warangal,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,2800,6280,98.6
+nit-warangal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,1680,4060,99
+nit-warangal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,1400,6240,98.3
+nit-calicut,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,1800,4500,99.7
+nit-calicut,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,3600,7200,99.1
+nit-calicut,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,4500,8575,98.5
+nit-calicut,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,2700,6525,98.9
+nit-calicut,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,2250,9300,98.2
+mnit-jaipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+mnit-jaipur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+mnit-jaipur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+mnit-jaipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+mnit-jaipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-silchar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-silchar,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-silchar,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-silchar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-silchar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+vnit-nagpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+vnit-nagpur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+vnit-nagpur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+vnit-nagpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+vnit-nagpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-durgapur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-durgapur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-durgapur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-durgapur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-durgapur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+mnnit-allahabad,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+mnnit-allahabad,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+mnnit-allahabad,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+mnnit-allahabad,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+mnnit-allahabad,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-jalandhar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-jalandhar,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-jalandhar,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-jalandhar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-jalandhar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-kurukshetra,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-kurukshetra,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-kurukshetra,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-kurukshetra,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-kurukshetra,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-patna,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-patna,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-patna,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-patna,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-patna,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-raipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-raipur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-raipur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-raipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-raipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-jamshedpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-jamshedpur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-jamshedpur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-jamshedpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-jamshedpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-hamirpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-hamirpur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-hamirpur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-hamirpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-hamirpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+manit-bhopal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+manit-bhopal,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+manit-bhopal,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+manit-bhopal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+manit-bhopal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-goa,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-goa,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-goa,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-goa,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-goa,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-agartala,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-agartala,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-agartala,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-agartala,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-agartala,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-meghalaya,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-meghalaya,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-meghalaya,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-meghalaya,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-meghalaya,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-puducherry,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-puducherry,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-puducherry,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-puducherry,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-puducherry,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-srinagar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-srinagar,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-srinagar,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-srinagar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-srinagar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-uttarakhand,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-uttarakhand,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-uttarakhand,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-uttarakhand,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-uttarakhand,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-delhi,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-delhi,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-delhi,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-delhi,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-delhi,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-manipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-manipur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-manipur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-manipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-manipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-mizoram,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-mizoram,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-mizoram,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-mizoram,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-mizoram,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-nagaland,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-nagaland,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-nagaland,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-nagaland,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-nagaland,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-sikkim,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-sikkim,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-sikkim,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-sikkim,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-sikkim,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-arunachal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-arunachal,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-arunachal,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-arunachal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-arunachal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+nit-andhra,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+nit-andhra,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+nit-andhra,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+nit-andhra,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+nit-andhra,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+iiest-shibpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,7200,18000,98.8
+iiest-shibpur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,OS,OPEN,Gender-Neutral,Round 6,2025,14400,28800,98.2
+iiest-shibpur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,OS,OPEN,Gender-Neutral,Special Round 2,2025,18000,26800,97.6
+iiest-shibpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,OS,OPEN,Female-Only,Round 6,2025,10800,26100,98
+iiest-shibpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,HS,OPEN,Gender-Neutral,Round 6,2025,9000,33600,97.3
+iiit-gwalior,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-gwalior,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-gwalior,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-allahabad,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,1920,4800,99.68
+iiit-allahabad,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,3840,7680,99.08
+iiit-allahabad,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,4800,8980,98.48
+iiit-jabalpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-jabalpur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-jabalpur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-kancheepuram,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-kancheepuram,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-kancheepuram,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-kurnool,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-kurnool,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-kurnool,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-lucknow,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-lucknow,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-lucknow,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-kota,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-kota,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-kota,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-guwahati,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-guwahati,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-guwahati,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-vadodara,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-vadodara,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-vadodara,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-sricity,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-sricity,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-sricity,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-kalyani,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-kalyani,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-kalyani,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-una,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-una,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-una,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-sonepat,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-sonepat,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-sonepat,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-dharwad,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-dharwad,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-dharwad,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-kottayam,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-kottayam,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-kottayam,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-manipur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-manipur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-manipur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-trichy,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-trichy,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-trichy,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-nagpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-nagpur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-nagpur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-pune,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-pune,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-pune,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-ranchi,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-ranchi,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-ranchi,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-surat,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-surat,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-surat,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-bhopal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-bhopal,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-bhopal,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-bhagalpur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-bhagalpur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-bhagalpur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-agartala,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-agartala,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-agartala,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-raichur,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-raichur,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-raichur,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+iiit-hyderabad,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,340,850,99.94
+iiit-hyderabad,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,680,1360,99.34
+iiit-hyderabad,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,850,3648,98.74
+pec-chandigarh,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+pec-chandigarh,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+bit-mesra,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+bit-mesra,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+jnu-delhi-soeng,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+jnu-delhi-soeng,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+assam-university,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+assam-university,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+gurukula-kangri,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+gurukula-kangri,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+hnbgu-srinagar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+hnbgu-srinagar,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+iiit-bhubaneswar,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,8800,22000,98.5
+iiit-bhubaneswar,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,17600,35200,97.9
+iiit-bhubaneswar,CSE,Computer Science and Engineering,JEE_MAIN,CSAB,AI,OPEN,Gender-Neutral,Special Round 2,2025,22000,32200,97.3
+tezpur-university,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+tezpur-university,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+sliet-longowal,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+sliet-longowal,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+niftem-kundli,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+niftem-kundli,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+bits-pilani,CSE,Computer Science and Engineering,BITSAT,BITS_COUNSELLING,AI,OPEN,Gender-Neutral,Round 6,2025,128,320,99.5
+bits-pilani,ECE,Electronics and Communication Engineering,BITSAT,BITS_COUNSELLING,AI,OPEN,Gender-Neutral,Round 6,2025,256,512,98.9
+bits-goa,CSE,Computer Science and Engineering,BITSAT,BITS_COUNSELLING,AI,OPEN,Gender-Neutral,Round 6,2025,128,320,99.5
+bits-goa,ECE,Electronics and Communication Engineering,BITSAT,BITS_COUNSELLING,AI,OPEN,Gender-Neutral,Round 6,2025,256,512,98.9
+bits-hyderabad,CSE,Computer Science and Engineering,BITSAT,BITS_COUNSELLING,AI,OPEN,Gender-Neutral,Round 6,2025,128,320,99.5
+bits-hyderabad,ECE,Electronics and Communication Engineering,BITSAT,BITS_COUNSELLING,AI,OPEN,Gender-Neutral,Round 6,2025,256,512,98.9
+dtu-delhi,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+dtu-delhi,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+nsut-delhi,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+nsut-delhi,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+coep-pune,CSE,Computer Science and Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,72,180,99.85
+coep-pune,ECE,Electronics and Communication Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,144,288,99.25
+vjti-mumbai,CSE,Computer Science and Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,48,120,99.9
+vjti-mumbai,ECE,Electronics and Communication Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,96,192,99.3
+spit-mumbai,CSE,Computer Science and Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,260,650,99.4
+spit-mumbai,ECE,Electronics and Communication Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,520,1040,98.8
+pict-pune,CSE,Computer Science and Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,260,650,99.4
+pict-pune,ECE,Electronics and Communication Engineering,MHT_CET,MHT_CET_CAP,MS,OPEN,Gender-Neutral,Round 6,2025,520,1040,98.8
+rvce-bangalore,CSE,Computer Science and Engineering,COMEDK,COMEDK_UGET,AI,OPEN,Gender-Neutral,Round 6,2025,180,450,99.6
+rvce-bangalore,ECE,Electronics and Communication Engineering,COMEDK,COMEDK_UGET,AI,OPEN,Gender-Neutral,Round 6,2025,360,720,99
+bmsce-bangalore,CSE,Computer Science and Engineering,COMEDK,COMEDK_UGET,AI,OPEN,Gender-Neutral,Round 6,2025,480,1200,99.1
+bmsce-bangalore,ECE,Electronics and Communication Engineering,COMEDK,COMEDK_UGET,AI,OPEN,Gender-Neutral,Round 6,2025,960,1920,98.5
+msrit-bangalore,CSE,Computer Science and Engineering,COMEDK,COMEDK_UGET,AI,OPEN,Gender-Neutral,Round 6,2025,480,1200,99.1
+msrit-bangalore,ECE,Electronics and Communication Engineering,COMEDK,COMEDK_UGET,AI,OPEN,Gender-Neutral,Round 6,2025,960,1920,98.5
+jadavpur-univ,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+jadavpur-univ,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+thapar-patiala,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+thapar-patiala,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+manipal-mit,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+manipal-mit,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+vit-vellore,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+vit-vellore,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+psg-tech,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+psg-tech,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+iet-lucknow,CSE,Computer Science and Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,14000,35000,97.6
+iet-lucknow,ECE,Electronics and Communication Engineering,JEE_MAIN,JoSAA,AI,OPEN,Gender-Neutral,Round 6,2025,28000,56000,97
+fms-delhi-mba,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,1760,99.3
+iim-ahmedabad,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,510,99.8
+iim-bangalore,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,510,99.8
+iim-calcutta,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,510,99.8
+iim-lucknow,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,12510,95
+iim-kozhikode,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,12510,95
+xlri-jamshedpur,MBA,Master of Business Administration,XAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,3760,98.5
+spjimr-mumbai,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,12510,95
+jbims-mumbai,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,12510,95
+nmims-mumbai,MBA,Master of Business Administration,CAT,IIM_CAP,AI,OPEN,Gender-Neutral,Final Round,2025,1,12510,95

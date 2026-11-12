@@ -1,0 +1,127 @@
+{
+  "id": "mnit-jaipur",
+  "name": "Malaviya National Institute of Technology Jaipur",
+  "shortName": "MNIT Jaipur",
+  "stream": "Engineering",
+  "type": "Institution of National Importance (under NITs Act), per MNIT hostel circular letterhead; 'An Institute of National Importance' per NBA list letterhead",
+  "location": {
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "tier": "Tier 2",
+    "region": "North"
+  },
+  "nirfRank": 42,
+  "accreditation": "NAAC: not found in any official document retrieved (null). NBA: official MNIT list 'List of UG Programmes NBA Accredited or Applied for Accreditation as on 02.08.22' shows B.Tech Computer Science & Engineering: '3 YEARS W.E.F.19-07-2008', remark 'Currently Not Accredited', action 'Department need to submit SAR for first cycle of Accreditation'. This list is dated Aug 2022 and may be outdated.",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Artificial Intelligence and Data Engineering",
+    "Mathematics and Computing",
+    "Electrical Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General (OPEN)",
+    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral: Other State closing AIR 5601 (opening 3027); Home State closing AIR 6013 (opening 2937) (JEE Main rank)",
+    "safeCutoffScore": null
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 40337,
+    "hostelAndMessAnnual": 74750,
+    "estimatedLivingAnnual": 37500,
+    "totalFourYearCostINR": 1110348
+  },
+  "placement": {
+    "headlineCTC": 64,
+    "medianBaseSalary": 11.0,
+    "batchSize": 733,
+    "eligibleStudents": 715,
+    "actuallyPlaced": 603,
+    "higherStudiesOrFounders": 18,
+    "disclosedPlacementRate": 84.34,
+    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 733 graduated, 18 to higher studies, 603 placed of 715 eligible. Median Rs 1,100,000. Headline CTC: Institute-wide UG highest, 2023-24 placement report, as printed in LPA (CTC/domestic-vs-international not specified in the document). Corroborated by Annual Report 2023-24 (saved as mnit-annual-report-2023-24.pdf, https://www.mnit.ac.in/uploads/Annual_Report/2023-24_Eng.pdf): 'highest package for UG being INR 64 lakh and PG INR 48 lakh'. Ambiguity: PG highest differs (placement report chart 33.06 LPA vs annual report 48 lakh); the lower PG figure is not relevant to the B.Tech headline. The report's 'Salient Features' heading reads 'Session 2022-23' (apparent typo in a report titled 2023-24)."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0410.pdf",
+    "feeCircularDate": "not printed (fee structure PDF carries no date; inferred from the institute upload path /cms/uploads/2026/05/ i.e. May 2026; hostel circular is dated 25/03/2026)",
+    "verificationStatus": "Audited & Verified",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-06",
+    "headlineCtcUrl": "https://placements.mnit.ac.in/public/assets/docs/PlacementReport2023-24.pdf",
+    "feeCircularUrl": "https://www.mnit.ac.in/cms/uploads/2026/05/Fee_UG_2026-27.pdf",
+    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+    "snapshots": {
+      "hra-doe-om-2017-07-07.pdf": "ce31b4b4c520ecd07178510143f05bce990849789b0e0117b5ea3b6333a20b50",
+      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
+      "josaa-2025-round6.html": "14dcca22bce33427cf83c204bf4273d0bb0b68d19cd21aceadbc7d9d3b852db9",
+      "mnit-nba-accreditation-status-2022-08.pdf": "fd855059fb6ea2ce03836280c847392e3a8a0c9fbcdb96b815e706ba3489b4a6",
+      "nirf-2025-dcs.pdf": "a9e9fe4001c7c4aaa4ccca7f298ba876521599dcb815680570038e21eb02bac5",
+      "mnit-fee-ug-2026-27.pdf": "f9fd24aaff2dfb0037f3d538f17532e4c572ca52b72bf6f036da6c28e3ac3bc9",
+      "mnit-placement-report-2023-24.pdf": "6ce499315dd5855ebfc0ac5b7316de935e2a92eaaa630cfdd9653a46c689fb6f"
+    },
+    "provenance": {
+      "placement.batchSize": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0410.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.eligibleStudents": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0410.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.actuallyPlaced": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0410.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.medianBaseSalary": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0410.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.headlineCTC": {
+        "url": "https://placements.mnit.ac.in/public/assets/docs/PlacementReport2023-24.pdf",
+        "locator": "UG Placement Statistics table, TOTAL row, Highest (LPA) = 64 (also CSE row 64); chart 'Package Details (UG)' Maximum 64",
+        "snapshot": "mnit-placement-report-2023-24.pdf"
+      },
+      "fees.tuitionAnnual": {
+        "url": "https://www.mnit.ac.in/cms/uploads/2026/05/Fee_UG_2026-27.pdf",
+        "locator": "mnit-fee-ug-2026-27.pdf page 1 'Fee Structure for B. Tech. students admitted in the session 2026-27' (Tuition, Institute Fee A-D, Notes); hostel: mnit-hostel-fee-mess-advance-2026-27.pdf page 1 table",
+        "snapshot": "mnit-fee-ug-2026-27.pdf"
+      },
+      "fees.hostelAndMessAnnual": {
+        "url": "https://www.mnit.ac.in/cms/uploads/2026/05/Fee_UG_2026-27.pdf",
+        "locator": "mnit-fee-ug-2026-27.pdf page 1 'Fee Structure for B. Tech. students admitted in the session 2026-27' (Tuition, Institute Fee A-D, Notes); hostel: mnit-hostel-fee-mess-advance-2026-27.pdf page 1 table",
+        "snapshot": "mnit-fee-ug-2026-27.pdf"
+      },
+      "fees.mandatoryInstituteFeesAnnual": {
+        "url": "https://www.mnit.ac.in/cms/uploads/2026/05/Fee_UG_2026-27.pdf",
+        "locator": "mnit-fee-ug-2026-27.pdf page 1 'Fee Structure for B. Tech. students admitted in the session 2026-27' (Tuition, Institute Fee A-D, Notes); hostel: mnit-hostel-fee-mess-advance-2026-27.pdf page 1 table",
+        "snapshot": "mnit-fee-ug-2026-27.pdf"
+      },
+      "fees.estimatedLivingAnnual": {
+        "url": "Department of Expenditure OM dated 07.07.2017 on HRA city classification (saved copy hra-doe-om-2017-07-07.pdf; original URL not re-verified)",
+        "locator": "HRA class Y for Jaipur; band midpoint per D-19",
+        "snapshot": "hra-doe-om-2017-07-07.pdf"
+      },
+      "cutoffs.minPercentileOrRank": {
+        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
+        "snapshot": "josaa-2025-round6.html"
+      },
+      "nirfRank": {
+        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+        "locator": "NIRF 2025 Engineering ranking table",
+        "snapshot": "nirf-2025-engineering-ranking.html"
+      },
+      "accreditation": {
+        "url": "https://www.mnit.ac.in/cms/uploads/2022/08/AccrditationStatus.pdf",
+        "locator": "UG list, row 3 B.Tech - Computer Science & Engineering",
+        "snapshot": "mnit-nba-accreditation-status-2022-08.pdf"
+      }
+    }
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}
