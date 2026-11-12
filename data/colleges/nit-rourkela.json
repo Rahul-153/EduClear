@@ -1,0 +1,51 @@
+{
+  "id": "nit-rourkela",
+  "name": "National Institute of Technology Rourkela",
+  "shortName": "NIT Rourkela",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Rourkela",
+    "state": "Odisha",
+    "tier": "Tier 2",
+    "region": "East"
+  },
+  "nirfRank": 19,
+  "accreditation": "NBA Tier 1 / Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: Other State closing AIR 18000, Home State closing AIR 33600",
+    "safeCutoffScore": 98.9
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 39000,
+    "hostelAndMessAnnual": 74000,
+    "estimatedLivingAnnual": 35000,
+    "totalFourYearCostINR": 1092000
+  },
+  "placement": {
+    "headlineCTC": 52.9,
+    "medianBaseSalary": 14.5,
+    "batchSize": 1250,
+    "eligibleStudents": 1140,
+    "actuallyPlaced": 1020,
+    "higherStudiesOrFounders": 110,
+    "disclosedPlacementRate": 89.47,
+    "placementAuditNote": "Largest NIT campus by area; extensive metallurgy, mining, and CS placement drives. Supplied dataset, not independently verified; graduating batch as supplied: 1280 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nitrkl.ac.in/nirf",
+    "feeCircularDate": "CSAB 2024 Matrix",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

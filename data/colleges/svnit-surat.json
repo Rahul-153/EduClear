@@ -1,0 +1,48 @@
+{
+  "id": "svnit-surat",
+  "name": "Sardar Vallabhbhai National Institute of Technology Surat",
+  "shortName": "SVNIT Surat",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Surat",
+    "state": "Gujarat",
+    "tier": "Tier 2",
+    "region": "West"
+  },
+  "nirfRank": 59,
+  "accreditation": "NBA Accredited / Institute of National Importance",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 5,800 - 13,500 (OS) (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 98.5
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 32000,
+    "hostelAndMessAnnual": 66000,
+    "estimatedLivingAnnual": 35000,
+    "totalFourYearCostINR": 1032000
+  },
+  "placement": {
+    "headlineCTC": 48.0,
+    "medianBaseSalary": 13.2,
+    "batchSize": 895,
+    "eligibleStudents": 815,
+    "actuallyPlaced": 720,
+    "higherStudiesOrFounders": 80,
+    "disclosedPlacementRate": 88.34,
+    "placementAuditNote": "Premier Gujarat technical institute located in diamond/textile hub of Surat. Supplied dataset, not independently verified; graduating batch as supplied: 910 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.svnit.ac.in/nirf",
+    "feeCircularDate": "CSAB Matrix 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

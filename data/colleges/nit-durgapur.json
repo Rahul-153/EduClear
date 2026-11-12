@@ -1,0 +1,51 @@
+{
+  "id": "nit-durgapur",
+  "name": "National Institute of Technology Durgapur",
+  "shortName": "NIT Durgapur",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Durgapur",
+    "state": "West Bengal",
+    "tier": "Tier 2",
+    "region": "East"
+  },
+  "nirfRank": 43,
+  "accreditation": "NBA Accredited / Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: Other State closing AIR 18000, Home State closing AIR 33600",
+    "safeCutoffScore": 98.4
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 31500,
+    "hostelAndMessAnnual": 65000,
+    "estimatedLivingAnnual": 32000,
+    "totalFourYearCostINR": 1014000
+  },
+  "placement": {
+    "headlineCTC": 70.0,
+    "medianBaseSalary": 13.0,
+    "batchSize": 845,
+    "eligibleStudents": 770,
+    "actuallyPlaced": 680,
+    "higherStudiesOrFounders": 75,
+    "disclosedPlacementRate": 88.31,
+    "placementAuditNote": "Industrial hub placement network; strong performance in software engineering and chemical. Supplied dataset, not independently verified; graduating batch as supplied: 860 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nitdgp.ac.in/nirf",
+    "feeCircularDate": "CSAB Compendium 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

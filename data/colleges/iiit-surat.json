@@ -1,0 +1,51 @@
+{
+  "id": "iiit-surat",
+  "name": "Indian Institute of Information Technology Surat",
+  "shortName": "IIIT Surat",
+  "stream": "Engineering",
+  "type": "Public-Private Partnership (PPP)",
+  "location": {
+    "city": "Surat",
+    "state": "Gujarat",
+    "tier": "Tier 2",
+    "region": "West"
+  },
+  "nirfRank": 165,
+  "accreditation": "Institute of National Importance (PPP)",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: All India closing AIR 22000",
+    "safeCutoffScore": 97.2
+  },
+  "fees": {
+    "tuitionAnnual": 210000,
+    "mandatoryInstituteFeesAnnual": 32000,
+    "hostelAndMessAnnual": 68000,
+    "estimatedLivingAnnual": 35000,
+    "totalFourYearCostINR": 1380000
+  },
+  "placement": {
+    "headlineCTC": 34.0,
+    "medianBaseSalary": 13.5,
+    "batchSize": 140,
+    "eligibleStudents": 130,
+    "actuallyPlaced": 114,
+    "higherStudiesOrFounders": 10,
+    "disclosedPlacementRate": 87.69,
+    "placementAuditNote": "Mentored by SVNIT Surat; solid domestic packages in western tech corridor. Supplied dataset, not independently verified; graduating batch as supplied: 140 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiitsurat.ac.in/nirf",
+    "feeCircularDate": "July 2024 Schedule",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

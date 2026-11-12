@@ -35,7 +35,7 @@ export default function RoiPanel({ s, card, a, setA }: Props) {
             <input id="sr" type="range" min={10} max={80} value={Math.round(a.savings_rate * 100)} onChange={(e) => setA({ ...a, savings_rate: Number(e.target.value) / 100 })} /></div>
           <div className="slider"><label htmlFor="sg">Yearly salary growth (illustrative)</label><span className="num">{Math.round(a.salary_growth * 100)}%</span>
             <input id="sg" type="range" min={0} max={20} value={Math.round(a.salary_growth * 100)} onChange={(e) => setA({ ...a, salary_growth: Number(e.target.value) / 100 })} /></div>
-          <p className="note">Model assumptions, not audited data. Year 0 is the audited NIRF median; later years apply your growth setting. Tax: new regime FY2025-26.</p>
+          <p className="note">Model assumptions, not audited data. Year 0 is the median base salary in the supplied data; later years apply your growth setting. Tax: new regime FY2025-26.</p>
         </div>
         <div style={{ minHeight: 260 }}>
           {data && (

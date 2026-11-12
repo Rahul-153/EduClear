@@ -1,6 +1,6 @@
 export interface Fit { tier: "Safe" | "Target" | "Reach" | "Out of reach" | null; reason: string | null; quota?: string; closing_rank_used?: number; approx_user_rank?: number }
 export interface Payback { total_cost_inr: number; median_base_lpa: number; in_hand_monthly_inr: number; disposable_monthly_inr: number; payback_months: number; payback_months_gross_pay: number }
-export type DataLevel = "audited" | "partly_verified" | "cutoffs_only";
+export type DataLevel = "audited" | "supplied" | "partly_verified" | "cutoffs_only";
 export interface CutoffOption {
   institute: string; kind: string; program: string; quota: string; seat_type: string; gender: string; closing_rank: number; user_rank: number;
   tier: "Safe" | "Target" | "Reach"; data_level: DataLevel; source: string; source_url: string;
@@ -25,7 +25,7 @@ export interface Profile {
   seat_type: string; gender: string; category_rank: string;
 }
 export interface Roi { payback: Payback; trajectory: { points: { year: number; salary_lpa: number }[]; note: string } }
-export interface Sources { retrieved_at: string; nirf_year: number; provenance: Record<string, { url: string; locator: string }> }
+export interface Sources { retrieved_at: string; nirf_year: number | null; verification: string; provenance: Record<string, { url: string; locator: string }> }
 
 async function post<T>(url: string, body: unknown): Promise<T> {
   const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json", "X-Requested-With": "educlear" }, body: JSON.stringify(body) });

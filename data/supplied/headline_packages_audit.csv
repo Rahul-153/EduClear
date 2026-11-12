@@ -1,0 +1,37 @@
+institute_id,institute_name,policy_status,is_aipc_compliant,domestic_highest_lpa,conservative_primary_lpa,conflicting_secondary_lpa,international_highest_forex,international_currency,international_inr_lpa,ppp_equivalent_lpa,audit_note,source_url
+iit-bombay,IIT Bombay,AIPC_POLICY_WITHHELD,True,,,,12000000,JPY,68.0,32.5,Withheld under All IIT Placement Committee (AIPC) resolution. Media reports of ₹1.2 Cr+ unconfirmed by SPO.,https://campus.placements.iitb.ac.in/
+iit-delhi,IIT Delhi,AIPC_POLICY_WITHHELD,True,,,,150000,USD,125.0,48.0,Withheld under AIPC student mental well-being guidelines. OCS does not disclose top domestic/international packages.,https://ocs.iitd.ac.in/
+iit-madras,IIT Madras,AIPC_POLICY_WITHHELD,True,,,,155000,USD,131.0,52.0,Withheld under AIPC non-disclosure policy. Focus placed on audited median base pay (D-22 / CORE-01 resolved).,https://placement.iitm.ac.in/
+iit-kharagpur,IIT Kharagpur,CONFLICT_RESOLVED,False,168.0,168.0,169.0,214000,USD,178.0,65.0,Conservative Principle (D-23) applied: ₹1.68 Cr annualized package selected over ₹1.69 Cr (which bundled multi-year retention bonuses).,http://www.iitkgp.ac.in/cdc
+iit-kanpur,IIT Kanpur,OFFICIALLY_PUBLISHED,False,65.0,65.0,,287000,USD,190.0,72.0,"Official SPO release: Domestic highest ₹65.0 LPA. International package $287,000 USD before local US taxes.",https://www.iitk.ac.in/spo/
+iit-roorkee,IIT Roorkee,OFFICIALLY_PUBLISHED,False,130.0,130.0,,250000,USD,205.0,78.0,Pic Cell report: Domestic highest ₹1.30 Cr. International top offer ₹2.05 Cr equivalent.,https://pic.iitr.ac.in/
+iit-guwahati,IIT Guwahati,OFFICIALLY_PUBLISHED,False,120.0,120.0,,240000,USD,195.0,74.0,CCD report: Highest domestic package ₹1.20 Cr. International offers converted at prevailing FX.,https://www.iitg.ac.in/ccd/
+iit-hyderabad,IIT Hyderabad,OFFICIALLY_PUBLISHED,False,65.0,65.0,,180000,USD,145.0,55.0,OCS placement summary: Highest domestic CTC ₹65.0 LPA.,https://ocs.iith.ac.in/
+iit-bhu,IIT BHU,OFFICIALLY_PUBLISHED,False,168.0,168.0,,200000,USD,168.0,64.0,Training & Placement Cell release: Domestic highest ₹1.68 Cr.,https://www.placement.iitbhu.ac.in/
+iit-indore,IIT Indore,OFFICIALLY_PUBLISHED,False,68.0,68.0,,,,,,TPO verified summary: Highest domestic CTC ₹68.0 LPA.,https://placement.iiti.ac.in/
+iit-patna,IIT Patna,OFFICIALLY_PUBLISHED,False,82.0,82.0,,,,,,TPO report: Highest domestic package ₹82.05 LPA.,https://www.iitp.ac.in/placement/
+iit-gandhinagar,IIT Gandhinagar,OFFICIALLY_PUBLISHED,False,62.0,62.0,,,,,,CDC annual report: Highest domestic CTC ₹62.0 LPA.,https://cdc.iitgn.ac.in/
+iit-ropar,IIT Ropar,OFFICIALLY_PUBLISHED,False,55.0,55.0,,,,,,CDPC report: Highest domestic CTC ₹55.0 LPA.,https://www.iitrpr.ac.in/placement
+iit-mandi,IIT Mandi,OFFICIALLY_PUBLISHED,False,60.0,60.0,,,,,,Career Services report: Highest domestic CTC ₹60.0 LPA.,https://www.iitmandi.ac.in/cnp/
+iit-jodhpur,IIT Jodhpur,OFFICIALLY_PUBLISHED,False,61.0,61.0,,,,,,CDC verified report: Highest package ₹61.0 LPA.,https://cdc.iitj.ac.in/
+iit-bhubaneswar,IIT Bhubaneswar,OFFICIALLY_PUBLISHED,False,56.0,56.0,,,,,,CDC release: Highest domestic CTC ₹55.75 LPA.,https://www.iitbbs.ac.in/cdc/
+iit-tirupati,IIT Tirupati,OFFICIALLY_PUBLISHED,False,46.0,46.0,,,,,,Career Development Centre: Highest package ₹46.0 LPA.,https://cdc.iittp.ac.in/
+iit-palakkad,IIT Palakkad,OFFICIALLY_PUBLISHED,False,47.0,47.0,,,,,,CDC report: Highest package ₹47.0 LPA.,https://cdc.iitpkd.ac.in/
+iit-dharwad,IIT Dharwad,OFFICIALLY_PUBLISHED,False,40.0,40.0,,,,,,CDC report: Highest domestic package ₹40.0 LPA.,https://cdc.iitdh.ac.in/
+iit-bhilai,IIT Bhilai,OFFICIALLY_PUBLISHED,False,48.0,48.0,,,,,,TPO report: Highest package ₹48.64 LPA.,https://www.iitbhilai.ac.in/index.php?pid=placement
+iit-goa,IIT Goa,OFFICIALLY_PUBLISHED,False,60.0,60.0,,,,,,CDC verified summary: Highest package ₹60.0 LPA.,https://iitgoa.ac.in/cdc/
+iit-jammu,IIT Jammu,OFFICIALLY_PUBLISHED,False,53.0,53.0,,,,,,PIC placement release: Highest package ₹53.0 LPA.,https://iitjammu.ac.in/placement/
+iit-ism-dhanbad,IIT Dhanbad,OFFICIALLY_PUBLISHED,False,83.0,83.0,,,,,,Career Development Centre: Highest package ₹83.0 LPA.,https://www.iitism.ac.in/cdc/
+nit-trichy,NIT Trichy,OFFICIALLY_PUBLISHED,False,52.8,52.8,,,,,,TPO annual release: Highest domestic CTC ₹52.8 LPA.,https://www.nitt.edu/home/administration/nirf/
+nit-surathkal,NIT Surathkal,OFFICIALLY_PUBLISHED,False,54.0,54.0,,,,,,Career Development Centre: Highest domestic CTC ₹54.0 LPA.,https://career.nitk.ac.in/
+nit-warangal,NIT Warangal,OFFICIALLY_PUBLISHED,False,88.0,88.0,,,,,,Centre for Career Planning: Highest domestic package ₹88.0 LPA.,https://www.nitw.ac.in/placement/
+nit-calicut,NIT Calicut,OFFICIALLY_PUBLISHED,False,47.0,47.0,,,,,,CCD report: Highest CTC ₹47.0 LPA.,https://nitc.ac.in/placements
+mnit-jaipur,MNIT Jaipur,OFFICIALLY_PUBLISHED,False,64.0,64.0,,,,,,Training & Placement Cell: Highest domestic CTC ₹64.0 LPA.,http://www.mnit.ac.in/placement/
+vnit-nagpur,VNIT Nagpur,OFFICIALLY_PUBLISHED,False,64.2,64.2,,,,,,TPO report: Highest package ₹64.2 LPA.,https://vnit.ac.in/placement/
+nit-kurukshetra,NIT Kurukshetra,OFFICIALLY_PUBLISHED,False,51.0,51.0,,,,,,CCN TPO release: Highest package ₹51.0 LPA.,http://www.nitkkr.ac.in/placement
+nit-rourkela,NIT Rourkela,OFFICIALLY_PUBLISHED,False,83.6,83.6,,,,,,Career Development Centre: Highest CTC ₹83.6 LPA.,https://www.nitrkl.ac.in/placement
+mnnit-allahabad,MNNIT Allahabad,OFFICIALLY_PUBLISHED,False,135.0,135.0,,,,,,T&P cell report: Highest package ₹1.35 Cr.,http://www.mnnit.ac.in/placement
+bits-pilani,BITS Pilani,OFFICIALLY_PUBLISHED,False,60.7,60.7,,,,,,Practice School & Placement Report: Highest domestic package ₹60.75 LPA.,https://www.bits-pilani.ac.in/placements/
+dtu-delhi,DTU Delhi,OFFICIALLY_PUBLISHED,False,82.0,82.0,,,,,,TPO verified summary: Highest domestic CTC ₹82.05 LPA.,http://dtu.ac.in/placement
+iiit-hyderabad,IIIT Hyderabad,OFFICIALLY_PUBLISHED,False,102.0,102.0,,,,,,Placement report: Highest package ₹102.0 LPA (₹1.02 Cr).,https://www.iiit.ac.in/placements/
+vit-vellore,VIT Vellore,OFFICIALLY_PUBLISHED,False,102.0,102.0,,,,,,PAT office report: Highest package ₹1.02 Cr (Motorq).,https://vit.ac.in/placements

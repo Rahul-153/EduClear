@@ -1,0 +1,51 @@
+{
+  "id": "iiit-hyderabad",
+  "name": "International Institute of Information Technology Hyderabad",
+  "shortName": "IIIT Hyderabad",
+  "stream": "Engineering",
+  "type": "Deemed / Top Private",
+  "location": {
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "tier": "Tier 1",
+    "region": "South"
+  },
+  "nirfRank": 55,
+  "accreditation": "NAAC A++",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main / UGEE",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: All India closing AIR 850",
+    "safeCutoffScore": 99.5
+  },
+  "fees": {
+    "tuitionAnnual": 400000,
+    "mandatoryInstituteFeesAnnual": 45000,
+    "hostelAndMessAnnual": 95000,
+    "estimatedLivingAnnual": 40000,
+    "totalFourYearCostINR": 2320000
+  },
+  "placement": {
+    "headlineCTC": 69.0,
+    "medianBaseSalary": 30.0,
+    "batchSize": 375,
+    "eligibleStudents": 360,
+    "actuallyPlaced": 345,
+    "higherStudiesOrFounders": 15,
+    "disclosedPlacementRate": 95.83,
+    "placementAuditNote": "Highest domestic median base in India for undergraduate CSE (₹30.0 LPA). Supplied dataset, not independently verified; graduating batch as supplied: 380 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiit.ac.in/about/nirf/",
+    "feeCircularDate": "April 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

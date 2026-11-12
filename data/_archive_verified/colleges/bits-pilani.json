@@ -1,0 +1,126 @@
+{
+  "id": "bits-pilani",
+  "name": "Birla Institute of Technology & Science, Pilani",
+  "shortName": "BITS Pilani",
+  "stream": "Engineering",
+  "type": "An Institution Deemed to be University estd. vide Sec.3 of the UGC Act, 1956 (as printed in site footer)",
+  "location": {
+    "city": "Pilani",
+    "state": "Rajasthan",
+    "tier": "Tier 3",
+    "region": "North"
+  },
+  "nirfRank": 11,
+  "accreditation": "BITS, Pilani has been accredited by the National Assessment & Accreditation Council (NAAC) with 'A++' grade with a CGPA of 3.68 on a four point scale in the fourth cycle for five years, from 29th November 2024 to 28th November 2029. NBA status: not found.",
+  "flagshipPrograms": [
+    "B.E. Computer Science",
+    "B.E. Electrical & Electronics",
+    "B.E. Electronics & Instrumentation",
+    "B.E. Mechanical"
+  ],
+  "cutoffs": {
+    "primaryExam": "BITSAT",
+    "category": "General (no category split published)",
+    "minPercentileOrRank": "BITSAT 2026 (Academic Year 2026-2027 admission session) 'final BITSAT cut-off scores' (page does not label a round): B.E. Computer Science: 308 (BITSAT maximum marks 390). Score, not rank. Prior sessions on same page (Pilani B.E. CS): 2025-26 = 304/390. (Pilani campus)",
+    "safeCutoffScore": null
+  },
+  "fees": {
+    "tuitionAnnual": 583000,
+    "mandatoryInstituteFeesAnnual": 16700,
+    "hostelAndMessAnnual": 92000,
+    "estimatedLivingAnnual": 25000,
+    "totalFourYearCostINR": 2866800
+  },
+  "placement": {
+    "headlineCTC": 65,
+    "medianBaseSalary": 18.0,
+    "batchSize": 2759,
+    "eligibleStudents": 2476,
+    "actuallyPlaced": 2458,
+    "higherStudiesOrFounders": 283,
+    "disclosedPlacementRate": 99.27,
+    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 2,759 graduated, 283 to higher studies, 2,458 placed of 2,476 eligible. Median Rs 1,800,000. Headline CTC: Pilani Campus, 2023-24, Maximum Salary (Domestic) printed as 6500000 INR (=65 LPA). Sheet does not say whether CTC or base, and gives no international maximum (not found in this sheet). Prior years in same sheet: 90 LPA (2021-22), 70 LPA (2022-23)."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0391.pdf",
+    "feeCircularDate": "April 2026",
+    "verificationStatus": "Audited & Verified",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-06",
+    "headlineCtcUrl": "https://www.bits-pilani.ac.in/wp-content/uploads/Pilani-Placement-Statistics-03-06-2025.pdf",
+    "feeCircularUrl": "https://www.bitsadmission.com/FD/FD_fee.html",
+    "cutoffUrl": "https://www.bitsadmission.com/FD/BITSAT_cutOffs.html",
+    "snapshots": {
+      "fd-fee.html": "009996fb571de67a6983535a1b1e74629fdcdbdcebe7b1f966fc1abd653dca8e",
+      "pilani-placement-statistics.pdf": "441fd19b237366bddf8d2a77cb68ee51ff24caebf342978e1a9ef4c7adb469ce",
+      "hra-doe-om-2017-07-07.pdf": "ce31b4b4c520ecd07178510143f05bce990849789b0e0117b5ea3b6333a20b50",
+      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
+      "nirf-2025-dcs.pdf": "a02f3395add211b119b691b4189e6d4e1bce5e8de492ebdd8d049eb2863b6731",
+      "bitsat-cutoffs.html": "88a35a2e101f5740f7bd0c983d7ed6d2136436d53247c396aa798edc2cfb43d7",
+      "awards-and-accreditations.html": "bf9375e9f63e80aefcb06a1a903a554e860b4b8855c7970b50368fbb88a4c93b"
+    },
+    "provenance": {
+      "placement.batchSize": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0391.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.eligibleStudents": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0391.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.actuallyPlaced": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0391.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.medianBaseSalary": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0391.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.headlineCTC": {
+        "url": "https://www.bits-pilani.ac.in/wp-content/uploads/Pilani-Placement-Statistics-03-06-2025.pdf",
+        "locator": "Page 1, row 'Maximum Salary ( Domestic)', column 2023-24 = 6500000",
+        "snapshot": "pilani-placement-statistics.pdf"
+      },
+      "fees.tuitionAnnual": {
+        "url": "https://www.bitsadmission.com/FD/FD_fee.html",
+        "locator": "Page 'Schedule of Fees for the academic year 2026-27', Pilani Campus column, First Degree programmes (B.E., M.Sc., B.Pharm.)",
+        "snapshot": "fd-fee.html"
+      },
+      "fees.hostelAndMessAnnual": {
+        "url": "https://www.bitsadmission.com/FD/FD_fee.html",
+        "locator": "Page 'Schedule of Fees for the academic year 2026-27', Pilani Campus column, First Degree programmes (B.E., M.Sc., B.Pharm.)",
+        "snapshot": "fd-fee.html"
+      },
+      "fees.mandatoryInstituteFeesAnnual": {
+        "url": "https://www.bitsadmission.com/FD/FD_fee.html",
+        "locator": "Page 'Schedule of Fees for the academic year 2026-27', Pilani Campus column, First Degree programmes (B.E., M.Sc., B.Pharm.)",
+        "snapshot": "fd-fee.html"
+      },
+      "fees.estimatedLivingAnnual": {
+        "url": "https://doe.gov.in/files/circulars_document/7th_July_2017.pdf",
+        "locator": "HRA class Z for Pilani (Jhunjhunu district, Rajasthan); band midpoint per D-19",
+        "snapshot": "hra-doe-om-2017-07-07.pdf"
+      },
+      "cutoffs.minPercentileOrRank": {
+        "url": "https://www.bitsadmission.com/FD/BITSAT_cutOffs.html",
+        "locator": "Section 'BITSAT Cut-off Scores for Academic Year 2026-2027', Pilani, B.E. Computer Science",
+        "snapshot": "bitsat-cutoffs.html"
+      },
+      "nirfRank": {
+        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+        "locator": "NIRF 2025 Engineering ranking table",
+        "snapshot": "nirf-2025-engineering-ranking.html"
+      },
+      "accreditation": {
+        "url": "https://www.bits-pilani.ac.in/awardsandaccreditations",
+        "locator": "NAAC Accreditation section",
+        "snapshot": "awards-and-accreditations.html"
+      }
+    }
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

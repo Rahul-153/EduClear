@@ -1,0 +1,124 @@
+{
+  "id": "iit-hyderabad",
+  "name": "Indian Institute of Technology Hyderabad",
+  "shortName": "IIT Hyderabad",
+  "stream": "Engineering",
+  "type": "Indian Institute of Technology (public; NIRF category Engineering, Institute IR-E-U-0013)",
+  "location": {
+    "city": "Kandi, Sangareddy (Hyderabad)",
+    "state": "Telangana",
+    "tier": "Tier 1",
+    "region": "South"
+  },
+  "nirfRank": 7,
+  "accreditation": "NAAC: institute states it has no valid NAAC accreditation (NIRF 2025 data submitted by institute: 'valid NAAC Accreditation? NO'). NBA: no official statement found.",
+  "flagshipPrograms": [
+    "B.Tech Computer Science and Engineering",
+    "B.Tech Artificial Intelligence (Dept. of AI established 2019, per Annual Report 2023-24)"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Advanced",
+    "category": "General (OPEN)",
+    "minPercentileOrRank": "JoSAA 2025 Round 6, CSE (4-yr B.Tech), OPEN, Gender-Neutral, All-India quota: opening AIR 339, closing AIR 673 (JEE Advanced rank)",
+    "safeCutoffScore": null
+  },
+  "fees": {
+    "tuitionAnnual": 200000,
+    "mandatoryInstituteFeesAnnual": 36488,
+    "hostelAndMessAnnual": 64860,
+    "estimatedLivingAnnual": 62500,
+    "totalFourYearCostINR": 1455392
+  },
+  "placement": {
+    "headlineCTC": 90,
+    "medianBaseSalary": 21.0,
+    "batchSize": 399,
+    "eligibleStudents": 362,
+    "actuallyPlaced": 306,
+    "higherStudiesOrFounders": 37,
+    "disclosedPlacementRate": 84.53,
+    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 399 graduated, 37 to higher studies, 306 placed of 362 eligible. Median Rs 2,100,000. Headline CTC: Institute-wide highest annual package 2023-24 as printed by Office of Career Services; not labelled CTC vs base, not labelled domestic vs international (43 international offers made in total). Both official documents agree on 90. Other doc saved: annual-report-2023-24.pdf."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0013.pdf",
+    "feeCircularDate": "not printed (file name of the circular carries '15.05'; inferred 15 May 2026, not printed in the document)",
+    "verificationStatus": "Audited & Verified",
+    "nirfYear": 2025,
+    "retrievedAt": "2026-11-06",
+    "headlineCtcUrl": "https://ocs.iith.ac.in/static/media/Placement-Stats-23-24.2b81e8ea.pdf",
+    "feeCircularUrl": "https://iith.ac.in/academics/assets/files/fee/2026/jan-jun-2026/Fee_Structure_Jul-Dec2026Semester_15.05-1.pdf",
+    "cutoffUrl": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+    "snapshots": {
+      "fee-structure-jul-dec-2026.pdf": "d08372cc5affba287900a7112d8fbbdcde9884b180690c16d8af343f94009d5a",
+      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
+      "josaa-2025-round6.html": "f2498895eb9b32e4a7242f38963ab1c7befef9b8ea96bf1e789e886926a06c1c",
+      "placement-stats-2023-24.pdf": "83fc62dc8a7a262c205a471357f4afdfd54220a4f88e9d7fd3473f4d7b4cf7c7",
+      "nirf-2025-dcs.pdf": "afd57ead579c3b7032353a23fed81dd7764c381316acdc6be2fb6f974263d068",
+      "nirf-2025-overall.pdf": "53c30cd02a48e7671dd51c06eb49164594a87be0c1021841247e160a51ac5864",
+      "doe-hra-om-2015-07-21.pdf": "38b935a849826dd0c1502f6de8d74529c6d33469e178d6843f4fd9b0f51a5cb3"
+    },
+    "provenance": {
+      "placement.batchSize": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0013.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.eligibleStudents": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0013.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.actuallyPlaced": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0013.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.medianBaseSalary": {
+        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0013.pdf",
+        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
+        "snapshot": "nirf-2025-dcs.pdf"
+      },
+      "placement.headlineCTC": {
+        "url": "https://ocs.iith.ac.in/static/media/Placement-Stats-23-24.2b81e8ea.pdf",
+        "locator": "Placement Statistics 2023-24 p.1 'Highest Annual Package (in Lakhs) 90'; B.Tech highest 90 LPA (p.2). Agrees with Annual Report 2023-24: 'Highest Package: Rs 90.00 Lakhs' (pr.iith.ac.in/reports/annual/IITH-AR-2023-24.pdf, Placement section)",
+        "snapshot": "placement-stats-2023-24.pdf"
+      },
+      "fees.tuitionAnnual": {
+        "url": "https://iith.ac.in/academics/assets/files/fee/2026/jan-jun-2026/Fee_Structure_Jul-Dec2026Semester_15.05-1.pdf",
+        "locator": "IIT Hyderabad Fee Structure for the Semester July-December 2026, 'UG Newly Enrolled Students in July 2026', GEN/OBC column (p.2); items 1.1-1.3, 2.1-2.5, 3.1; mess note 1",
+        "snapshot": "fee-structure-jul-dec-2026.pdf"
+      },
+      "fees.hostelAndMessAnnual": {
+        "url": "https://iith.ac.in/academics/assets/files/fee/2026/jan-jun-2026/Fee_Structure_Jul-Dec2026Semester_15.05-1.pdf",
+        "locator": "IIT Hyderabad Fee Structure for the Semester July-December 2026, 'UG Newly Enrolled Students in July 2026', GEN/OBC column (p.2); items 1.1-1.3, 2.1-2.5, 3.1; mess note 1",
+        "snapshot": "fee-structure-jul-dec-2026.pdf"
+      },
+      "fees.mandatoryInstituteFeesAnnual": {
+        "url": "https://iith.ac.in/academics/assets/files/fee/2026/jan-jun-2026/Fee_Structure_Jul-Dec2026Semester_15.05-1.pdf",
+        "locator": "IIT Hyderabad Fee Structure for the Semester July-December 2026, 'UG Newly Enrolled Students in July 2026', GEN/OBC column (p.2); items 1.1-1.3, 2.1-2.5, 3.1; mess note 1",
+        "snapshot": "fee-structure-jul-dec-2026.pdf"
+      },
+      "fees.estimatedLivingAnnual": {
+        "url": "https://doe.gov.in/files/circulars_document/21_07_2015.pdf",
+        "locator": "HRA class X for Hyderabad (UA); band midpoint per D-19",
+        "snapshot": "doe-hra-om-2015-07-21.pdf"
+      },
+      "cutoffs.minPercentileOrRank": {
+        "url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",
+        "locator": "JoSAA Opening & Closing Rank Archive 2025, Round 6, filtered to CSE 4-yr B.Tech, OPEN, Gender-Neutral",
+        "snapshot": "josaa-2025-round6.html"
+      },
+      "nirfRank": {
+        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+        "locator": "NIRF 2025 Engineering ranking table",
+        "snapshot": "nirf-2025-engineering-ranking.html"
+      },
+      "accreditation": {
+        "url": "https://iith.ac.in/assets/files/NIRF-Reports/2025/Indian_Institute_of_Technology_Hyderabad_Overall_2025.pdf",
+        "locator": "NIRF 2025 Overall report, Accreditation > NAAC Accreditation, question 1: NO",
+        "snapshot": "nirf-2025-overall.pdf"
+      }
+    }
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

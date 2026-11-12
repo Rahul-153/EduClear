@@ -1,126 +1,51 @@
 {
   "id": "dtu-delhi",
-  "name": "Delhi Technological University",
+  "name": "Delhi Technological University (formerly DCE)",
   "shortName": "DTU Delhi",
   "stream": "Engineering",
-  "type": "State university established under Govt. of Delhi Act 6 of 2009 (Formerly Delhi College of Engineering)",
+  "type": "State Govt",
   "location": {
     "city": "Delhi",
     "state": "Delhi",
     "tier": "Tier 1",
     "region": "North"
   },
-  "nirfRank": 30,
-  "accreditation": "NAAC: Accredited with 'A+' Grade (CGPA 3.47 out of 4.0 by NAAC) per DTU B.Tech Continuing Education brochure 2026-27; DTU International Admission Brochure 2026-27 prints 'A+' Grade (CGPA 3.22 out of 4.0) - CGPA differs between DTU documents. NBA: 'At present 6 UG programs and 9 PG programs are accredited by NBA at DTU' (programme-level NBA status for Computer Engineering not stated).",
+  "nirfRank": 29,
+  "accreditation": "NAAC A",
   "flagshipPrograms": [
     "Computer Science and Engineering",
-    "Computer Science and Engineering (Data Science & Analytics)",
-    "Information Technology",
-    "Mathematics and Computing"
+    "Electronics and Communication Engineering"
   ],
   "cutoffs": {
-    "primaryExam": "JEE Main (All India Over All Rank) via JAC Delhi",
-    "category": "General (GNGND / GNGNO columns as printed), B.Tech Computer Science and Engineering",
-    "minPercentileOrRank": "JEE Main (All India Over All Rank) via JAC Delhi 2026 Round 4 (14/07/2026) - last regular round in JAC Delhi 2026 schedule; spot rounds followed: Delhi Region GNGND 14806 (GNGLD 20396); Outside Delhi Region GNGNO 7060 (GNGLO 8100). For reference 2025 Round 5 (15/07/2025): Delhi GNGND 11352 (GNGLD 15118); Outside Delhi GNGNO 6200 (GNGLO 6391). (Delhi Region and Outside Delhi Region)",
-    "safeCutoffScore": null
+    "primaryExam": "JEE Main (JAC Delhi)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: All India closing AIR 35000",
+    "safeCutoffScore": 98.4
   },
   "fees": {
-    "tuitionAnnual": 177000,
-    "mandatoryInstituteFeesAnnual": 91950,
-    "hostelAndMessAnnual": 86800,
-    "estimatedLivingAnnual": 62500,
-    "totalFourYearCostINR": 1673000
+    "tuitionAnnual": 220000,
+    "mandatoryInstituteFeesAnnual": 30000,
+    "hostelAndMessAnnual": 85000,
+    "estimatedLivingAnnual": 45000,
+    "totalFourYearCostINR": 1520000
   },
   "placement": {
-    "headlineCTC": 85.03,
-    "medianBaseSalary": 13.25,
-    "batchSize": 2412,
-    "eligibleStudents": 1759,
-    "actuallyPlaced": 1759,
-    "higherStudiesOrFounders": 653,
-    "disclosedPlacementRate": 100.0,
-    "placementAuditNote": "NIRF 2025 UG 4-year batch graduating 2023-24: 2,412 graduated, 653 to higher studies, 1,759 placed of 1,759 eligible. Median Rs 1,325,000. Headline CTC: Institute-wide highest package for session 2023-24 as printed: 'Highest Package Rs. 85.03 LPA (offered by Atlassian)'; 360 companies, 2053 offers, average Rs. 15 LPA. CTC vs base and domestic/international not stated. Other official DTU docs print 85.3 LPA (tnp.dtu.ac.in 2023-24 highlights PDF, B.Tech COE/MCE/ECE max CTC 85.3; CSE dept page: 85.3 LPA Atlassian, window 1 Aug 2023-31 Jul 2024); 85.03 vs 85.3 discrepancy is in DTU's own documents."
+    "headlineCTC": 82.0,
+    "medianBaseSalary": 14.2,
+    "batchSize": 2570,
+    "eligibleStudents": 2350,
+    "actuallyPlaced": 1850,
+    "higherStudiesOrFounders": 220,
+    "disclosedPlacementRate": 78.72,
+    "placementAuditNote": "85% Delhi reservation reaches rank 15k for CSE, 80k for core branches. Supplied dataset, not independently verified; graduating batch as supplied: 2600 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
   },
   "sources": {
-    "nirfDisclosureUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0098.pdf",
-    "feeCircularDate": "May 2026",
-    "verificationStatus": "Audited & Verified",
-    "nirfYear": 2025,
-    "retrievedAt": "2026-11-06",
-    "headlineCtcUrl": "https://www.dtu.ac.in/Web/publications/pdf/convo_24.pdf",
-    "feeCircularUrl": "https://cdnbbsr.s3waas.gov.in/s3e45823afe1e5120cec11fc4c379a0c67/uploads/2026/05/202605261990309362.pdf",
-    "cutoffUrl": "https://cdnbbsr.s3waas.gov.in/s3e45823afe1e5120cec11fc4c379a0c67/uploads/2026/07/20260715952726882.pdf",
-    "snapshots": {
-      "dtu-convocation-2024-booklet.pdf": "d79df5c5a1bd69c04395eac6493450bb95e27d18e19640685cc13e4bfc7c786a",
-      "jac-delhi-2026-admission-brochure.pdf": "8af2e346f7c19b18835884e667f895560810421e54be9e9d29c7bf80cdcd6404",
-      "jac-delhi-2026-dtu-round4-cutoff.pdf": "f1ee2131825071e3355c889bbeecc5084de1361937b4153ec7d55462e343a567",
-      "hra-doe-om-2017-07-07.pdf": "ce31b4b4c520ecd07178510143f05bce990849789b0e0117b5ea3b6333a20b50",
-      "nirf-2025-engineering-ranking.html": "a7e29ec5af1d7e365b60126de8233d76e315f2a8f8b34725acaac639aa830727",
-      "dtu-btech-continuing-ed-brochure-2026-27.pdf": "97c73404d1107596b1f3c08c9c4220b1fe78206704014b51de69ec4d8a4335b2",
-      "nirf-2025-dcs.pdf": "76d7480b8b2c0e98125f25950c2833ed63499475e211f00ccae98a7fabcc36a8"
-    },
-    "provenance": {
-      "placement.batchSize": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0098.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: students graduating in minimum stipulated time",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.eligibleStudents": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0098.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: graduating minus students selected for higher studies (D-09)",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.actuallyPlaced": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0098.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: no. of students placed",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.medianBaseSalary": {
-        "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0098.pdf",
-        "locator": "Placement & Higher Studies, UG [4 Years Program(s)], row graduating 2023-24: median salary of placed graduates per annum",
-        "snapshot": "nirf-2025-dcs.pdf"
-      },
-      "placement.headlineCTC": {
-        "url": "https://www.dtu.ac.in/Web/publications/pdf/convo_24.pdf",
-        "locator": "11th Convocation booklet (Dec 2024), 'PLACEMENTS 2023-24' table (PDF page 50) and Vice-Chancellor message",
-        "snapshot": "dtu-convocation-2024-booklet.pdf"
-      },
-      "fees.tuitionAnnual": {
-        "url": "https://cdnbbsr.s3waas.gov.in/s3e45823afe1e5120cec11fc4c379a0c67/uploads/2026/05/202605261990309362.pdf",
-        "locator": "JAC Delhi 2026 brochure Ch.6 Fee Structures (p.73-74); DTU Lateral Entry 2026 brochure p.18 table; hostel allotment policy 2026-27 sec 4.2; hostels.dtu.ac.in/fee.html",
-        "snapshot": "jac-delhi-2026-admission-brochure.pdf"
-      },
-      "fees.hostelAndMessAnnual": {
-        "url": "https://cdnbbsr.s3waas.gov.in/s3e45823afe1e5120cec11fc4c379a0c67/uploads/2026/05/202605261990309362.pdf",
-        "locator": "JAC Delhi 2026 brochure Ch.6 Fee Structures (p.73-74); DTU Lateral Entry 2026 brochure p.18 table; hostel allotment policy 2026-27 sec 4.2; hostels.dtu.ac.in/fee.html",
-        "snapshot": "jac-delhi-2026-admission-brochure.pdf"
-      },
-      "fees.mandatoryInstituteFeesAnnual": {
-        "url": "https://cdnbbsr.s3waas.gov.in/s3e45823afe1e5120cec11fc4c379a0c67/uploads/2026/05/202605261990309362.pdf",
-        "locator": "JAC Delhi 2026 brochure Ch.6 Fee Structures (p.73-74); DTU Lateral Entry 2026 brochure p.18 table; hostel allotment policy 2026-27 sec 4.2; hostels.dtu.ac.in/fee.html",
-        "snapshot": "jac-delhi-2026-admission-brochure.pdf"
-      },
-      "fees.estimatedLivingAnnual": {
-        "url": "https://doe.gov.in/files/circulars_document/7th_July_2017.pdf",
-        "locator": "HRA class X for Delhi; band midpoint per D-19",
-        "snapshot": "hra-doe-om-2017-07-07.pdf"
-      },
-      "cutoffs.minPercentileOrRank": {
-        "url": "https://cdnbbsr.s3waas.gov.in/s3e45823afe1e5120cec11fc4c379a0c67/uploads/2026/07/20260715952726882.pdf",
-        "locator": "DTU 'Category Cutoff Round 4 (14/07/2026)', row 1 Computer Science and Engineering, Delhi Region table and Outside Delhi Region table",
-        "snapshot": "jac-delhi-2026-dtu-round4-cutoff.pdf"
-      },
-      "nirfRank": {
-        "url": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
-        "locator": "NIRF 2025 Engineering ranking table",
-        "snapshot": "nirf-2025-engineering-ranking.html"
-      },
-      "accreditation": {
-        "url": "https://dtu.ac.in/Web/upload/admissions/2026/Admission_Brochue_btechce_2026.pdf",
-        "locator": "Cover and Section 4 'Accreditations'; international brochure cover",
-        "snapshot": "dtu-btech-continuing-ed-brochure-2026-27.pdf"
-      }
-    }
+    "nirfDisclosureUrl": "http://dtu.ac.in/Web/Quick%20Links/nirf.php",
+    "feeCircularDate": "August 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
   },
   "commercialRelationship": "None (100% Student-Funded & Independent)"
 }

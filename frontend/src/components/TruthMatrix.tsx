@@ -35,8 +35,8 @@ export default function TruthMatrix({ s, rows, truth, setTruth, onSelect }: Prop
     { headerName: "Accreditation", field: "accreditation", width: 190, tooltipField: "accreditation" },
     { headerName: "Commission", width: 150, valueGetter: (p) => (p.data?.commercial_relationship.startsWith("None") ? "0% commission" : "Check"),
       cellRenderer: (p: ICellRendererParams<Card>) => <span className="badge green" title={p.data?.commercial_relationship}>{p.value}</span> },
-    { headerName: "Source", width: 110, sortable: false, cellRenderer: (p: ICellRendererParams<Card>) =>
-      p.data ? <a href={p.data.source_url} target="_blank" rel="noreferrer">NIRF ↗</a> : null },
+    { headerName: "Link (as supplied)", width: 150, sortable: false, cellRenderer: (p: ICellRendererParams<Card>) =>
+      p.data ? <a href={p.data.source_url} target="_blank" rel="noreferrer" title="Link given in the supplied dataset; not checked against the figures">Link ↗</a> : null },
   ], [s, truth]);
 
   return (

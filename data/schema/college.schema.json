@@ -103,8 +103,16 @@
       "additionalProperties": false,
       "properties": {
         "headlineCTC": {
-          "title": "Headlinectc",
-          "type": "number"
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Headlinectc"
         },
         "medianBaseSalary": {
           "title": "Medianbasesalary",
@@ -136,7 +144,6 @@
         }
       },
       "required": [
-        "headlineCTC",
         "medianBaseSalary",
         "batchSize",
         "eligibleStudents",

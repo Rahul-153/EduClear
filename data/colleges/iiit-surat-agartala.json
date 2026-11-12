@@ -1,0 +1,48 @@
+{
+  "id": "iiit-surat-agartala",
+  "name": "Indian Institute of Information Technology Agartala",
+  "shortName": "IIIT Agartala",
+  "stream": "Engineering",
+  "type": "Public-Private Partnership (PPP)",
+  "location": {
+    "city": "Agartala",
+    "state": "Tripura",
+    "tier": "Tier 3",
+    "region": "East"
+  },
+  "nirfRank": 200,
+  "accreditation": "Institute of National Importance (PPP)",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 34,000 - 55,000 (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 95.2
+  },
+  "fees": {
+    "tuitionAnnual": 180000,
+    "mandatoryInstituteFeesAnnual": 29000,
+    "hostelAndMessAnnual": 62000,
+    "estimatedLivingAnnual": 26000,
+    "totalFourYearCostINR": 1188000
+  },
+  "placement": {
+    "headlineCTC": 23.0,
+    "medianBaseSalary": 10.5,
+    "batchSize": 68,
+    "eligibleStudents": 62,
+    "actuallyPlaced": 50,
+    "higherStudiesOrFounders": 6,
+    "disclosedPlacementRate": 80.65,
+    "placementAuditNote": "Mentored by NIT Agartala; shared campus facilities and faculty pool. Supplied dataset, not independently verified; graduating batch as supplied: 70 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiita.ac.in/nirf",
+    "feeCircularDate": "CSAB Compendium",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

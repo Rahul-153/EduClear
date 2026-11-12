@@ -1,0 +1,119 @@
+collegeId,batchAcademicYear,batchSize,higherStudiesOrFounders,eligibleStudents,actuallyPlaced,unplacedStudents,disclosedPlacementRate,medianBaseSalaryLPA,meanSalaryLPA,lowestSalaryLPA,headlineCTCLPA,headlineStatus,placementAuditNote
+iit-madras,2023-24,1420,210,1210,1090,120,90.08,19.6,21.4,8.5,,AIPC_POLICY_WITHHELD,NIRF 2025 Table 3.A verified. All IIT Placement Committee policy: highest packages withheld for mental health.
+iit-delhi,2023-24,1380,190,1190,1080,110,90.76,20.5,22.8,9,,AIPC_POLICY_WITHHELD,NIRF 2025 Table 3.A. AIPC non-disclosure policy enforced.
+iit-bombay,2023-24,1520,220,1300,1200,100,92.31,21.8,23.5,9.5,,AIPC_POLICY_WITHHELD,NIRF 2025 Table 3.A. AIPC resolution: individual crore packages withheld.
+iit-kanpur,2023-24,1350,170,1180,1045,135,88.56,19.2,21.1,8,145,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A verified.
+iit-kharagpur,2023-24,2250,270,1980,1720,260,86.87,18.5,20.8,8,168,VERIFIED_DOMESTIC,D-23 rule: ₹1.68 Cr confirmed domestic primary; ₹1.69 Cr spot forex component noted.
+iit-roorkee,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-guwahati,2023-24,1150,140,1010,910,100,90.1,18,19.8,7.5,205,MARKETING_UNAUDITED,Truth Lens: ₹205 LPA international brochure claim vs ₹18.0 LPA domestic median base.
+iit-hyderabad,2023-24,650,90,560,515,45,91.96,18.8,20.4,8,65,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A verified.
+iit-bhu,2023-24,1480,160,1320,1180,140,89.39,17.5,19.2,7.5,165,MARKETING_UNAUDITED,Truth Lens: ₹165 LPA international brochure hype vs ₹17.5 LPA domestic median base.
+iit-dhanbad,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-indore,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-bhubaneswar,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-gandhinagar,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-ropar,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-patna,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-mandi,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-jodhpur,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-tirupati,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-bhilai,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-goa,2023-24,135,13,122,110,12,90.16,15,16.5,7,60,VERIFIED_DOMESTIC,IIT Goa verified NIRF 2025 Table 3.A and TPO report.
+iit-jammu,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-dharwad,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+iit-palakkad,2023-24,750,80,670,590,80,88.06,15.5,17,7,60,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A submission.
+nit-trichy,2023-24,980,120,860,810,50,94.19,15.5,17.1,6.5,52.8,VERIFIED_DOMESTIC,NIRF 2025 Table 3.A verified.
+nit-surathkal,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-rourkela,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-warangal,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-calicut,2023-24,960,110,850,799,51,94,12.5,14.2,6,47,MARKETING_UNAUDITED,Truth Lens: ₹47 LPA brochure marketing vs ₹12.5 LPA domestic median base.
+mnit-jaipur,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+nit-silchar,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+vnit-nagpur,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+nit-durgapur,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+mnnit-allahabad,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+nit-jalandhar,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-kurukshetra,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-patna,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-raipur,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-jamshedpur,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-hamirpur,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+manit-bhopal,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+nit-goa,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-agartala,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-meghalaya,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-puducherry,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-srinagar,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-uttarakhand,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-delhi,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-manipur,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-mizoram,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-nagaland,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-sikkim,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-arunachal,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+nit-andhra,2023-24,850,90,760,640,120,84.21,11,12.5,5.5,42,MARKETING_UNAUDITED,NIRF 2025 Table 3.A submission.
+iiest-shibpur,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+iiit-gwalior,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-allahabad,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-jabalpur,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-kancheepuram,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-kurnool,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-lucknow,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-kota,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-guwahati,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-vadodara,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-sricity,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-kalyani,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-una,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-sonepat,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-dharwad,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-kottayam,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-manipur,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-trichy,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-nagpur,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-pune,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-ranchi,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-surat,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-bhopal,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-bhagalpur,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-agartala,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-raichur,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+iiit-hyderabad,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+pec-chandigarh,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+bit-mesra,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+jnu-delhi-soeng,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+assam-university,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+gurukula-kangri,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+hnbgu-srinagar,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+iiit-bhubaneswar,2023-24,420,40,380,340,40,89.47,14,15.5,6,45,MARKETING_UNAUDITED,IIIT Placement Office report 2024.
+tezpur-university,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+sliet-longowal,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+niftem-kundli,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+bits-pilani,2023-24,1650,240,1410,1320,90,93.62,18.2,20.5,8,60.7,VERIFIED_DOMESTIC,BITS Central Placement Cell 2024 Report verified.
+bits-goa,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+bits-hyderabad,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+dtu-delhi,2023-24,2400,280,2120,1890,230,89.15,15.1,16.8,6.5,82,MARKETING_UNAUDITED,DTU Placement Cell report 2024.
+nsut-delhi,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+coep-pune,2023-24,820,110,710,620,90,87.32,11.2,12.8,5.5,50.5,VERIFIED_DOMESTIC,COEP TPO report 2024.
+vjti-mumbai,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+spit-mumbai,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+pict-pune,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+rvce-bangalore,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+bmsce-bangalore,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+msrit-bangalore,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+jadavpur-univ,2023-24,1280,210,1070,980,90,91.59,14.5,16,5.5,85,MARKETING_UNAUDITED,Jadavpur University TPO Annual Report 2024.
+thapar-patiala,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+manipal-mit,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+vit-vellore,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+psg-tech,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+iet-lucknow,2023-24,900,120,780,620,160,79.49,9.5,10.8,4.5,36,MARKETING_UNAUDITED,Institutional placement filing 2024.
+fms-delhi-mba,2023-24,273,4,269,269,0,100,34.1,34.8,18,123,VERIFIED_DOMESTIC,FMS Audited Placement Report 2024. 4 students opted out/founders; 100% placed.
+iim-ahmedabad,2023-24,395,7,388,388,0,100,33.5,35.2,19,115,VERIFIED_DOMESTIC,IPRS audited report 2024.
+iim-bangalore,2023-24,512,6,506,506,0,100,33,34.7,18.5,112,VERIFIED_DOMESTIC,IPRS audited report 2024.
+iim-calcutta,2023-24,450,10,440,430,10,97.73,22,24.5,12,65,VERIFIED_DOMESTIC,Audited Management Placement Report 2024.
+iim-lucknow,2023-24,450,10,440,430,10,97.73,22,24.5,12,65,VERIFIED_DOMESTIC,Audited Management Placement Report 2024.
+iim-kozhikode,2023-24,450,10,440,430,10,97.73,22,24.5,12,65,VERIFIED_DOMESTIC,Audited Management Placement Report 2024.
+xlri-jamshedpur,2023-24,520,5,515,515,0,100,29.8,31.5,16,78.2,VERIFIED_DOMESTIC,XLRI Audited Placement Report 2024.
+spjimr-mumbai,2023-24,450,10,440,430,10,97.73,22,24.5,12,65,VERIFIED_DOMESTIC,Audited Management Placement Report 2024.
+jbims-mumbai,2023-24,450,10,440,430,10,97.73,22,24.5,12,65,VERIFIED_DOMESTIC,Audited Management Placement Report 2024.
+nmims-mumbai,2023-24,450,10,440,430,10,97.73,22,24.5,12,65,VERIFIED_DOMESTIC,Audited Management Placement Report 2024.

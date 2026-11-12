@@ -1,0 +1,51 @@
+{
+  "id": "vnit-nagpur",
+  "name": "Visvesvaraya National Institute of Technology Nagpur",
+  "shortName": "VNIT Nagpur",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "tier": "Tier 2",
+    "region": "West"
+  },
+  "nirfRank": 41,
+  "accreditation": "NBA Tier 1 / Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 CSE OPEN: Other State closing AIR 18000, Home State closing AIR 33600",
+    "safeCutoffScore": 98.6
+  },
+  "fees": {
+    "tuitionAnnual": 125000,
+    "mandatoryInstituteFeesAnnual": 38200,
+    "hostelAndMessAnnual": 72000,
+    "estimatedLivingAnnual": 36000,
+    "totalFourYearCostINR": 1084800
+  },
+  "placement": {
+    "headlineCTC": 64.2,
+    "medianBaseSalary": 13.8,
+    "batchSize": 900,
+    "eligibleStudents": 820,
+    "actuallyPlaced": 730,
+    "higherStudiesOrFounders": 80,
+    "disclosedPlacementRate": 89.02,
+    "placementAuditNote": "Prominent alumni in global leadership; strong industry linkage across Maharashtra auto and IT. Supplied dataset, not independently verified; graduating batch as supplied: 920 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.vnit.ac.in/nirf",
+    "feeCircularDate": "BoG Approved Schedule 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "iiitram-ahmedabad",
+  "name": "Institute of Infrastructure Technology Research and Management",
+  "shortName": "IITRAM Ahmedabad",
+  "stream": "Engineering",
+  "type": "State Autonomous / GFTI",
+  "location": {
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "tier": "Tier 1",
+    "region": "West"
+  },
+  "nirfRank": 135,
+  "accreditation": "State Act / JoSAA GFTI",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main (JoSAA)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 28,000 - 52,000 (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 96.0
+  },
+  "fees": {
+    "tuitionAnnual": 160000,
+    "mandatoryInstituteFeesAnnual": 28000,
+    "hostelAndMessAnnual": 68000,
+    "estimatedLivingAnnual": 45000,
+    "totalFourYearCostINR": 1204000
+  },
+  "placement": {
+    "headlineCTC": 28.0,
+    "medianBaseSalary": 10.0,
+    "batchSize": 155,
+    "eligibleStudents": 140,
+    "actuallyPlaced": 115,
+    "higherStudiesOrFounders": 15,
+    "disclosedPlacementRate": 82.14,
+    "placementAuditNote": "Specialized in infrastructure, electrical and computer engineering; located in Ahmedabad. Supplied dataset, not independently verified; graduating batch as supplied: 160 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iitram.ac.in/nirf",
+    "feeCircularDate": "CSAB Fee Compendium",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

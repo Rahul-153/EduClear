@@ -1,0 +1,48 @@
+{
+  "id": "mizoram-university",
+  "name": "Mizoram University, Aizawl",
+  "shortName": "Mizoram University",
+  "stream": "Engineering",
+  "type": "Public / Central University",
+  "location": {
+    "city": "Aizawl",
+    "state": "Mizoram",
+    "tier": "Tier 3",
+    "region": "East"
+  },
+  "nirfRank": 82,
+  "accreditation": "Central University (NAAC A)",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main (JoSAA)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 62,000 - 1,15,000 (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 92.2
+  },
+  "fees": {
+    "tuitionAnnual": 58000,
+    "mandatoryInstituteFeesAnnual": 16000,
+    "hostelAndMessAnnual": 44000,
+    "estimatedLivingAnnual": 25000,
+    "totalFourYearCostINR": 572000
+  },
+  "placement": {
+    "headlineCTC": 14.5,
+    "medianBaseSalary": 6.8,
+    "batchSize": 136,
+    "eligibleStudents": 120,
+    "actuallyPlaced": 88,
+    "higherStudiesOrFounders": 16,
+    "disclosedPlacementRate": 73.33,
+    "placementAuditNote": "Lowest cost JoSAA engineering degree (₹5.72 Lakhs total 4-yr); closes at CRL ~1,15,000. Supplied dataset, not independently verified; graduating batch as supplied: 140 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.mzu.edu.in/nirf",
+    "feeCircularDate": "CSAB Matrix",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

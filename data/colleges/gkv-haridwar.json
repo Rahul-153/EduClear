@@ -1,0 +1,48 @@
+{
+  "id": "gkv-haridwar",
+  "name": "Gurukula Kangri Vishwavidyalaya",
+  "shortName": "GKV Haridwar",
+  "stream": "Engineering",
+  "type": "Public / Deemed to be Univ",
+  "location": {
+    "city": "Haridwar",
+    "state": "Uttarakhand",
+    "tier": "Tier 3",
+    "region": "North"
+  },
+  "nirfRank": 140,
+  "accreditation": "NAAC Accredited / GFTI",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main (JoSAA)",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 55,000 - 1,12,000 (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 92.5
+  },
+  "fees": {
+    "tuitionAnnual": 95000,
+    "mandatoryInstituteFeesAnnual": 20000,
+    "hostelAndMessAnnual": 48000,
+    "estimatedLivingAnnual": 26000,
+    "totalFourYearCostINR": 756000
+  },
+  "placement": {
+    "headlineCTC": 18.0,
+    "medianBaseSalary": 7.0,
+    "batchSize": 275,
+    "eligibleStudents": 245,
+    "actuallyPlaced": 185,
+    "higherStudiesOrFounders": 30,
+    "disclosedPlacementRate": 75.51,
+    "placementAuditNote": "Low-cost anchor reaching down to 92.5 percentile in JoSAA Round 6 (total cost ₹7.56 Lakhs). Supplied dataset, not independently verified; graduating batch as supplied: 280 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.gkv.ac.in/nirf",
+    "feeCircularDate": "July 2024 Notice",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

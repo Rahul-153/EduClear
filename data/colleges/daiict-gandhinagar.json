@@ -1,0 +1,48 @@
+{
+  "id": "daiict-gandhinagar",
+  "name": "Dhirubhai Ambani Institute of ICT",
+  "shortName": "DA-IICT Gandhinagar",
+  "stream": "Engineering",
+  "type": "Private University",
+  "location": {
+    "city": "Gandhinagar",
+    "state": "Gujarat",
+    "tier": "Tier 2",
+    "region": "West"
+  },
+  "nirfRank": 125,
+  "accreditation": "NAAC A+ / UGC",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main / ACPC",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 12,000 - 18,500 (All India) (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 98.2
+  },
+  "fees": {
+    "tuitionAnnual": 240000,
+    "mandatoryInstituteFeesAnnual": 35000,
+    "hostelAndMessAnnual": 75000,
+    "estimatedLivingAnnual": 35000,
+    "totalFourYearCostINR": 1540000
+  },
+  "placement": {
+    "headlineCTC": 52.0,
+    "medianBaseSalary": 16.0,
+    "batchSize": 415,
+    "eligibleStudents": 385,
+    "actuallyPlaced": 345,
+    "higherStudiesOrFounders": 30,
+    "disclosedPlacementRate": 89.61,
+    "placementAuditNote": "Top communication and ICT institute in western India; median base compensation ₹16.0 LPA. Supplied dataset, not independently verified; graduating batch as supplied: 420 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.daiict.ac.in/nirf",
+    "feeCircularDate": "June 2024 Schedule",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

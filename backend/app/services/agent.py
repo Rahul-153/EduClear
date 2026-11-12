@@ -140,13 +140,13 @@ def run_tool(tool: str, msg: str, profile: dict, a: Assumptions, owner: str, lan
         c = cs[ids[0]]
         p = payback(c.fees.totalFourYearCostINR, c.placement.medianBaseSalary, a)
         txt = (f"{c.shortName}: {_inr(c.fees.totalFourYearCostINR)} की लागत चुकाने में लगभग {p['payback_months']} महीने ({int(a.savings_rate * 100)}% बचत पर); मीडियन {c.placement.medianBaseSalary} LPA।" if hi else
-               f"{c.shortName}: about {p['payback_months']} months to repay {_inr(c.fees.totalFourYearCostINR)} using {int(a.savings_rate * 100)}% of in-hand pay on the audited median of {c.placement.medianBaseSalary} LPA (gross-pay view: {p['payback_months_gross_pay']} months).")
+               f"{c.shortName}: about {p['payback_months']} months to repay {_inr(c.fees.totalFourYearCostINR)} using {int(a.savings_rate * 100)}% of in-hand pay on the median of {c.placement.medianBaseSalary} LPA (gross-pay view: {p['payback_months_gross_pay']} months).")
         return {"tool": tool, "data": p, "reply": txt}
     if tool == "explain_college":
         c = cs[ids[0]]
         pl = c.placement
         txt = (f"{c.shortName} (NIRF #{c.nirfRank}): लागत {_inr(c.fees.totalFourYearCostINR)}, मीडियन {pl.medianBaseSalary} LPA, {pl.actuallyPlaced:,}/{pl.eligibleStudents:,} प्लेस्ड, ब्रोशर CTC {pl.headlineCTC} LPA।" if hi else
-               f"{c.shortName} (NIRF #{c.nirfRank}): 4-year cost {_inr(c.fees.totalFourYearCostINR)}, audited median {pl.medianBaseSalary} LPA, {pl.actuallyPlaced:,} of {pl.eligibleStudents:,} eligible students placed, headline CTC {pl.headlineCTC} LPA.")
+               f"{c.shortName} (NIRF #{c.nirfRank}): 4-year cost {_inr(c.fees.totalFourYearCostINR)}, median {pl.medianBaseSalary} LPA, {pl.actuallyPlaced:,} of {pl.eligibleStudents:,} eligible students placed, headline CTC {pl.headlineCTC} LPA.")
         return {"tool": tool, "data": {"id": ids[0]}, "reply": txt}
     if tool in ("list_slots", "propose_booking"):
         pid = _program_from(msg)

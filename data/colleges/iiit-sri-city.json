@@ -1,0 +1,48 @@
+{
+  "id": "iiit-sri-city",
+  "name": "Indian Institute of Information Technology Sri City",
+  "shortName": "IIIT Sri City",
+  "stream": "Engineering",
+  "type": "Public-Private Partnership (PPP)",
+  "location": {
+    "city": "Chittoor",
+    "state": "Andhra Pradesh",
+    "tier": "Tier 3",
+    "region": "South"
+  },
+  "nirfRank": 155,
+  "accreditation": "Institute of National Importance (PPP)",
+  "flagshipPrograms": [],
+  "cutoffs": {
+    "primaryExam": "JEE Main",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "AIR 19,500 - 32,000 (not comparable with a JEE Main percentile)",
+    "safeCutoffScore": 97.2
+  },
+  "fees": {
+    "tuitionAnnual": 210000,
+    "mandatoryInstituteFeesAnnual": 34000,
+    "hostelAndMessAnnual": 72000,
+    "estimatedLivingAnnual": 28000,
+    "totalFourYearCostINR": 1376000
+  },
+  "placement": {
+    "headlineCTC": 41.0,
+    "medianBaseSalary": 14.5,
+    "batchSize": 283,
+    "eligibleStudents": 265,
+    "actuallyPlaced": 235,
+    "higherStudiesOrFounders": 18,
+    "disclosedPlacementRate": 88.68,
+    "placementAuditNote": "Located in Sri City Special Economic Zone; direct access to 200+ multinational firms. Supplied dataset, not independently verified; graduating batch as supplied: 290 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iiits.ac.in/nirf",
+    "feeCircularDate": "CSAB Matrix 2024",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}

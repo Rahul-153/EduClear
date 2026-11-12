@@ -1,0 +1,51 @@
+{
+  "id": "iit-patna",
+  "name": "Indian Institute of Technology Patna",
+  "shortName": "IIT Patna",
+  "stream": "Engineering",
+  "type": "Public / Institute of National Importance",
+  "location": {
+    "city": "Bihta",
+    "state": "Bihar",
+    "tier": "Tier 2",
+    "region": "East"
+  },
+  "nirfRank": 34,
+  "accreditation": "Institute of National Importance",
+  "flagshipPrograms": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering"
+  ],
+  "cutoffs": {
+    "primaryExam": "JEE Advanced",
+    "category": "General / OPEN",
+    "minPercentileOrRank": "JoSAA 2025 Round 6 closing AIR 3500 (CSE, OPEN, Gender-Neutral, All India); supplied range AIR 1600 - 2800 (CSE)",
+    "safeCutoffScore": 99.1
+  },
+  "fees": {
+    "tuitionAnnual": 200000,
+    "mandatoryInstituteFeesAnnual": 30500,
+    "hostelAndMessAnnual": 67000,
+    "estimatedLivingAnnual": 36000,
+    "totalFourYearCostINR": 1334000
+  },
+  "placement": {
+    "headlineCTC": 82.0,
+    "medianBaseSalary": 18.2,
+    "batchSize": 380,
+    "eligibleStudents": 340,
+    "actuallyPlaced": 310,
+    "higherStudiesOrFounders": 40,
+    "disclosedPlacementRate": 91.18,
+    "placementAuditNote": "Strong international coding finalist teams; modern campus at Bihta satellite town. Supplied dataset, not independently verified; graduating batch as supplied: 380 students; the file does not say which branches the figures cover. Headline package status: DISCLOSED."
+  },
+  "sources": {
+    "nirfDisclosureUrl": "https://www.iitp.ac.in/nirf",
+    "feeCircularDate": "AY 2024-25 Fee Circular",
+    "verificationStatus": "Supplied dataset, not audited",
+    "retrievedAt": "2026-11-12",
+    "snapshots": {},
+    "provenance": {}
+  },
+  "commercialRelationship": "None (100% Student-Funded & Independent)"
+}
