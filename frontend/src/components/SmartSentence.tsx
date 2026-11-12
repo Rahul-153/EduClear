@@ -32,7 +32,7 @@ export default function SmartSentence({ s, p, setP }: Props) {
       <div className="sentence">
         {s.iAmLooking}
         <select aria-label="Stream" value={p.stream} onChange={(e) => set("stream", e.target.value)}>
-          <option>Computer Science</option><option disabled>Electronics & ECE (data pending)</option><option disabled>MBA (data pending)</option>
+          {["Computer Science", "Electronics & Communication", "Electrical", "Mechanical", "Civil"].map((b) => <option key={b}>{b}</option>)}<option disabled>MBA (data pending)</option>
         </select>
         {s.forStudent}
         <select aria-label="JEE Main percentile" value={p.percentile} onChange={(e) => set("percentile", Number(e.target.value))}>

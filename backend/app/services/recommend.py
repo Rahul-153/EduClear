@@ -28,9 +28,9 @@ def recommend(stream: str, budget_lakhs: float, region: str, a: Assumptions, opt
     has_table = bool(cutoff_rows())  # the JoSAA cutoff table is optional; without it only the college records are used
     if stream not in BRANCH_GROUPS or (stream not in SUPPORTED_STREAMS and not has_table):
         return {"supported": False, "message": f"Data currently covers: {', '.join(SUPPORTED_STREAMS)}", "deck": {}, "matches": []}
-    cutoff_only = options(stream, a, percentile=user.get("percentile"), jee_advanced_rank=user.get("jee_advanced_rank"), **(opts or {})) if has_table else None
-    extra = {"cutoff_only": cutoff_only} if cutoff_only else {}
-    if stream not in SUPPORTED_STREAMS:
+    if stream not in SUPPORTED_STREAMS:  # other branches: official JoSAA closing ranks only, every institute in the table (D-59)
+        extra = {"cutoff_only": options(stream, a, percentile=user.get("percentile"), jee_advanced_rank=user.get("jee_advanced_rank"),
+                                        include_audited=True, **(opts or {}))}
         return {"supported": True, "message": f"Cost and placement are available for {', '.join(SUPPORTED_STREAMS)} only. Showing cutoff-only options for {stream}.",
                 "deck": {"safe_anchor": None, "sweet_spot": None, "dream_reach": None}, "matches": [], "needs_more_input": [], **extra}
     pool = [c for c in colleges().values()
@@ -41,5 +41,5 @@ def recommend(stream: str, budget_lakhs: float, region: str, a: Assumptions, opt
     for slot, tier in (("safe_anchor", "Safe"), ("sweet_spot", "Target"), ("dream_reach", "Reach")):
         deck[slot] = next((x for x in ranked if x["fit"]["tier"] == tier), None)
     unrated = [x for x in ranked if x["fit"]["tier"] is None]
-    return {"supported": True, "deck": deck, "matches": ranked, **extra, "needs_more_input": [
+    return {"supported": True, "deck": deck, "matches": ranked, "needs_more_input": [
         {"id": x["id"], "reason": x["fit"]["reason"]} for x in unrated]}

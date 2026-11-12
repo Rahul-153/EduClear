@@ -44,10 +44,10 @@ def _published(v: float):
 
 
 def options(stream: str, a: Assumptions, *, percentile=None, jee_advanced_rank=None, seat_type="OPEN",
-            gender="Any", category_rank=None) -> dict:
+            gender="Any", category_rank=None, include_audited=False) -> dict:
     pattern = re.compile(BRANCH_GROUPS[stream], re.I)
     genders = {"Gender-Neutral"} | ({FEMALE_ONLY} if gender == "Female" else set())
-    skip = set(AUDITED_JOSAA_NAMES.values())
+    skip = set() if include_audited else set(AUDITED_JOSAA_NAMES.values())  # those institutes already show as cards, for Computer Science only
     best: dict = {}  # institute -> (closing, row, user rank): the most generous programme and quota for this student
     for r in cutoff_rows():
         if r["is_prep"] or r["closing"] is None or r["seat_type"] != seat_type or r["gender"] not in genders or r["institute"] in skip:

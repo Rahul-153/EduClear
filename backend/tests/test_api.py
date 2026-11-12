@@ -27,7 +27,17 @@ def test_recommend_deck_and_filters():
     r = client.post("/api/recommend", json={"percentile": 99.95, "budget_lakhs": 12, "region": "All"}).json()
     assert r["supported"] and r["matches"] and all(m["four_year_cost_inr"] <= 1_200_000 for m in r["matches"])
     assert r["deck"]["safe_anchor"]["fit"]["tier"] == "Safe" and all(m["data_level"] == "supplied" for m in r["matches"])
-    assert "cutoff_only" not in r  # no JoSAA table is shipped with the supplied dataset
+    assert "cutoff_only" not in r  # Computer Science uses the supplied records only; the JoSAA table serves the other branches (D-59)
+
+
+def test_other_branches_show_cutoff_only_options_from_the_josaa_table():
+    for stream, word in (("Mechanical", "Mechanical"), ("Civil", "Civil"), ("Electrical", "Electrical"), ("Electronics & Communication", "Electronics")):
+        r = client.post("/api/recommend", json={"stream": stream, "percentile": 97, "budget_lakhs": 12, "region": "All"}).json()
+        rows = r["cutoff_only"]["items"]
+        assert r["supported"] and r["matches"] == [] and rows and all(word in x["program"] for x in rows), stream
+    top = client.post("/api/recommend", json={"stream": "Civil", "percentile": 99.9, "budget_lakhs": 12, "region": "All"}).json()["cutoff_only"]["items"]
+    assert any(x["institute"] == "National Institute of Technology Calicut" for x in top)  # no institute is left out for these branches
+    assert client.post("/api/recommend", json={"stream": "Astrology", "percentile": 97, "budget_lakhs": 12, "region": "All"}).json()["supported"] is False
     south = client.post("/api/recommend", json={"percentile": 99.75, "budget_lakhs": 40, "region": "South"}).json()
     assert {m["region"] for m in south["matches"]} == {"South"}
     unsupported = client.post("/api/recommend", json={"stream": "MBA"}).json()

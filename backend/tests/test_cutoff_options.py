@@ -2,7 +2,7 @@
 import pytest
 from fastapi.testclient import TestClient
 
-from backend.app.data import cutoff_rows
+from backend.app.data import cutoff_rows, partial_colleges
 from backend.app.engines.assumptions import Assumptions
 from backend.app.main import app
 from backend.app.services import cutoff_options as co
@@ -11,8 +11,9 @@ from backend.app.services.recommend import recommend
 client = TestClient(app)
 A = Assumptions()
 
-# These tests need the JoSAA table and partial records now archived in data/_archive_verified (D-57). They run again once those are restored.
-pytestmark = pytest.mark.skipif(not cutoff_rows(), reason="needs data/_archive_verified restored")
+# These tests describe the verified-data mode: the JoSAA table plus the audited and partial records archived in data/_archive_verified (D-57).
+# Only the table is back (D-59, other branches; covered in test_api.py), so they stay skipped until the records are restored too.
+pytestmark = pytest.mark.skipif(not cutoff_rows() or not partial_colleges(), reason="needs data/_archive_verified restored")
 
 
 def items(r):

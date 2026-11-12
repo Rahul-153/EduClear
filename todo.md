@@ -149,3 +149,4 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 ## Phase 14 — Merge (see D-58)
 - [x] T-14.01 Merge auth, LLM and supplied-data branches into main — 2026-11-12 · 148 tests pass, validator 108/108, build ok; local only
 - [ ] T-14.02 Decide whether and when to push main (replaces the live data and adds accounts and the LLM fallback)
+- [x] T-14.03 Other branches back (Electronics & Communication, Electrical, Mechanical, Civil) — 2026-11-12 · JoSAA 2025 table restored to data/cutoffs_2025.sqlite and copied in the Dockerfile; used for non-CS branches only; dropdown lists the five branches again; 149 tests pass (14 skipped: verified-data mode), build ok; browser: Mechanical shows cutoff-only rows, no console errors. Not committed, not pushed, so the live site is unchanged; see D-59
