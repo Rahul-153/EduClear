@@ -15,7 +15,7 @@ from ..engines.roi import payback, trajectory
 from ..services.recommend import SUPPORTED_STREAMS, card, recommend
 from ..engines import refund as refund_engine
 from ..db import Deposit, get_session
-from ..services import admissions, brief
+from ..services import admissions, brief, rounds as rounds_service
 from ..engines.choice import analyse as analyse_choices
 
 router = APIRouter(prefix="/api")
@@ -217,3 +217,42 @@ def refund_letter(body: LetterIn):
             f"Kindly refund the amount to the original payment source and confirm receipt of this application, and return my original documents.\n\n"
             f"Yours faithfully,\n{body.student_name}")
     return {"letter": text, "calculation": r, "policy_reference": n["title"], "disclaimer": "Template for convenience, not legal advice. Check your institution's own rules and the latest UGC notice."}
+
+
+class SeatIn(BaseModel):
+    institute: str
+    program: str
+    quota: str
+    closing_this_round: Optional[float] = Field(None, gt=0)  # own round only: the closing rank JoSAA published for this round
+
+
+class RoundIn(BaseModel):
+    year: int = Field(ge=2016, le=2100)
+    round: int = Field(ge=1, le=10)
+    choices: List[SeatIn] = Field(min_length=1, max_length=30)  # in the family's order of preference
+    seat_type: Literal["OPEN", "EWS", "OBC-NCL", "SC", "ST"] = "OPEN"
+    gender: Literal["Gender-Neutral", "Female-only (including Supernumerary)"] = "Gender-Neutral"
+    main_rank: Optional[int] = Field(None, ge=1)  # JEE Main rank for this seat type (CRL for OPEN, category rank otherwise)
+    advanced_rank: Optional[int] = Field(None, ge=1)
+    allotted: Optional[int] = Field(None, ge=0)  # position in `choices` (0-based); left out in a replay
+    no_seat: bool = False
+
+
+@router.get("/rounds/cycles")
+def round_cycles():
+    return rounds_service.cycles()
+
+
+@router.get("/rounds/seats")
+def round_seats(year: int, seat_type: str = "OPEN", gender: str = "Gender-Neutral"):
+    return {"items": rounds_service.seats(year, seat_type, gender)}
+
+
+@router.post("/rounds/advise")
+def round_advise(body: RoundIn):
+    try:
+        return rounds_service.advise(year=body.year, rnd=body.round, choices=[c.model_dump() for c in body.choices],
+                                     seat_type=body.seat_type, gender=body.gender, main_rank=body.main_rank,
+                                     advanced_rank=body.advanced_rank, allotted=body.allotted, no_seat=body.no_seat)
+    except ValueError as e:
+        raise HTTPException(422, str(e))

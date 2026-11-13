@@ -24,6 +24,7 @@ COPY scripts/partial_model.py scripts/partial_model.py
 COPY data/colleges data/colleges
 COPY data/admissions data/admissions
 COPY data/cutoffs_2025.sqlite data/cutoffs_2025.sqlite
+COPY data/round_history.sqlite data/round_history.sqlite
 COPY data/supplied/branch_placements.csv data/supplied/branch_placements.csv
 COPY --from=web /web/dist frontend/dist
 EXPOSE 8000

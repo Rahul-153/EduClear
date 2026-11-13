@@ -19,6 +19,12 @@ def refund_policy() -> dict:
     return json.loads((DIR / "refund_policy.json").read_text())
 
 
+@lru_cache(maxsize=1)
+def josaa_rules() -> dict:
+    """Freeze / float / slide and withdrawal clauses, quoted from the saved JoSAA Business Rules (T-16.02)."""
+    return json.loads((DIR / "josaa_rules.json").read_text())
+
+
 def timeline(today: Optional[date] = None) -> dict:
     today = today or date.today()
     out = []

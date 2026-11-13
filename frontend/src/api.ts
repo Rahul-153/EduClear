@@ -148,3 +148,24 @@ export const createFamily = () => call<Me>("POST", "/api/family");
 export const makeInvite = () => call<{ code: string; role_to_join: Role; expires_at: string }>("POST", "/api/family/invite");
 export const joinFamily = (code: string) => call<Me>("POST", "/api/family/join", { code });
 export const removeMember = (id: number) => call<Me>("DELETE", `/api/family/members/${id}`);
+
+// ---- round-by-round coach (Phase 16) ----
+export interface RoundSeat { institute: string; program: string; quota: string; inst_type?: string; closing_this_round?: number | null }
+export interface RoundHistory {
+  basis: "relative_move" | "absolute_rank"; years_reached: number; years_with_data: number; closing_now: number | null; short_by_pct: number | null;
+  years: { year: number; available: boolean; closing_at_round?: number; highest_closing_from_round?: number; moved_pct?: number; reached?: boolean }[];
+}
+export interface RoundAdvice {
+  year: number; round: number; total_rounds: number; mode: "replay" | "own_round"; held: number | null; history_years: number[];
+  option: { action: "no_seat" | "freeze_only" | "last_round" | "float" | "slide"; rule_ids: string[] };
+  choices: (RoundSeat & { position: number; rank_used: number | null; held: boolean; above_held: boolean; history?: RoundHistory | null })[];
+  money: { status: "no_seat" | "seat_held"; seat_acceptance_fee_inr: number; withdrawal_charge_inr?: number; refund_on_withdrawal_inr?: number;
+    withdrawal_open_this_round?: boolean; withdrawal_first_round?: number; withdrawal_last_round?: number };
+  rules: { id: string; clause: string; page: number; quote: string }[]; rules_source: { document: string; url: string };
+  source: string; source_url: string; needs_rank: string[];
+}
+export interface RoundCycles { replay_years: number[]; rounds: Record<string, number>; own_round: { year: number; total_rounds: number } }
+export const roundCycles = () => call<RoundCycles>("GET", "/api/rounds/cycles");
+export const roundSeats = (year: number, seat_type: string, gender: string) =>
+  call<{ items: RoundSeat[] }>("GET", `/api/rounds/seats?year=${year}&seat_type=${encodeURIComponent(seat_type)}&gender=${encodeURIComponent(gender)}`);
+export const roundAdvise = (b: Record<string, unknown>) => call<RoundAdvice>("POST", "/api/rounds/advise", b);
