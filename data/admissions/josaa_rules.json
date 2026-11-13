@@ -1,0 +1,101 @@
+{
+ "cycle": "2026",
+ "retrievedAt": "2026-11-06",
+ "document": "JoSAA 2026 Business Rules",
+ "url": "https://cdnbbsr.s3waas.gov.in/s313111c20aee51aeb480ecbd988cd8cc9/uploads/2026/06/20260601632081678.pdf",
+ "snapshot": "data/sources/_admissions/josaa2026_business_rules.pdf",
+ "sha256": "09e466ee727f0cce62be65bc409ab43f54158640c01325448a05ecc4ca678217",
+ "withdrawalChargeInr": 7000,
+ "rules": [
+  {
+   "id": "first_choice_freeze_only",
+   "clause": "Section XX, Clause 48",
+   "page": 46,
+   "quote": "In case the candidate has been allocated seat as per the candidate’s first choice, the candidate will not be given any of the above options other than Freeze."
+  },
+  {
+   "id": "must_accept_to_continue",
+   "clause": "Section XX, Clause 48",
+   "page": 46,
+   "quote": "the candidate MUST accept the allotted seat by choosing one of the available options (i.e. Float or Slide), in order to continue in further rounds (if any) of the JoSAA process."
+  },
+  {
+   "id": "freeze",
+   "clause": "Section XX, Clause 48 (A)",
+   "page": 46,
+   "quote": "Choosing the option “Freeze” means that the candidate accepts the offered seat and indicates that the candidate is content with the allocated academic program and that the candidate does not want to participate in further rounds of seat allocation while retaining the same seat."
+  },
+  {
+   "id": "float",
+   "clause": "Section XX, Clause 48 (B)",
+   "page": 47,
+   "quote": "Choosing the option “Float” means that (i) the candidate accepts the offered seat and (ii) indicates that, if admission to an academic program of higher preference in any Institute is offered in subsequent rounds of seat allocation, the candidate will accept it. Else, the candidate will continue with the currently accepted academic program."
+  },
+  {
+   "id": "slide",
+   "clause": "Section XX, Clause 48 (C)",
+   "page": 47,
+   "quote": "Choosing the option “Slide” means that (i) the candidate accepts the offered seat and (ii) indicates that, if admission to an academic program of higher preference is offered within the same Institute in subsequent rounds of seat allocation, the candidate will accept it."
+  },
+  {
+   "id": "upgrade_replaces_seat",
+   "clause": "Section XX, Clause 48",
+   "page": 47,
+   "quote": "For candidates who choose the float or slide option, allocation of a seat in an academic program of the candidate’s higher preference would automatically result in the replacement of the seat accepted by the candidate in the earlier round."
+  },
+  {
+   "id": "rejecting_upgrade_ends_participation",
+   "clause": "Section XX, Clause 48",
+   "page": 47,
+   "quote": "In case such candidate rejects or cancels the seat of higher preference, offered as a result of float or slide, then the candidate would no longer be entitled to any seat and would not be permitted to participate any further in JoSAA 2026."
+  },
+  {
+   "id": "no_float_slide_in_last_round",
+   "clause": "Section XX, Clause 50",
+   "page": 47,
+   "quote": "Slide and float options are NOT available in the last round of JoSAA 2026."
+  },
+  {
+   "id": "can_step_down_option",
+   "clause": "Section XX, Clause 51",
+   "page": 47,
+   "quote": "A candidate can change from float to slide/freeze and slide to freeze in the online portal during all rounds of Seat Allocation EXCEPT the last round."
+  },
+  {
+   "id": "freeze_is_final",
+   "clause": "Section XX, Clause 52",
+   "page": 48,
+   "quote": "If a candidate opts Freeze against a seat, the option cannot be changed in the subsequent rounds under any circumstances."
+  },
+  {
+   "id": "fee_paid_once",
+   "clause": "Section XXII, Clause 57",
+   "page": 50,
+   "quote": "Candidates have to remit seat acceptance fee only once in the round where the candidate has been allotted a seat for the first time, unless the fee has already been paid through the “pre-payment” option."
+  },
+  {
+   "id": "withdrawal_refund",
+   "clause": "Section XXII, Clause 58",
+   "page": 50,
+   "quote": "if a candidate later validly withdraws from the seat allocation process, then the seat acceptance fee paid will be refunded after deducting the JoSAA withdrawal processing charges of Rs. 7000."
+  },
+  {
+   "id": "withdrawal_window_iit",
+   "clause": "Section XXIV, Clause 63",
+   "page": 52,
+   "quote": "This option is available starting from the 2nd round and up to the second last round of seat allocation, i.e. before the last round of seat allocation"
+  },
+  {
+   "id": "withdrawal_window_nit_plus",
+   "clause": "Section XXIV, Clause 63",
+   "page": 52,
+   "quote": "For NIT+ System, the candidate can withdraw the seat by reporting online and following the steps contained in Clause 66 up to the final round of online seat allocation."
+  },
+  {
+   "id": "withdrawal_excludes",
+   "clause": "Section XXIV, Clause 64",
+   "page": 52,
+   "quote": "The candidate withdrawing shall be excluded from the JoSAA process, which means the candidate shall not be considered for subsequent rounds of seat allocation (if any)."
+  }
+ ]
+}

@@ -71,3 +71,25 @@ def get_college(cid: str) -> College:
         return colleges()[cid]
     except KeyError:
         raise KeyError(f"unknown college '{cid}'")
+
+
+ROUNDS_DB = settings.data_dir.parent / "round_history.sqlite"  # JoSAA closing rank per round, built by scripts/export_round_history.py
+
+
+@lru_cache(maxsize=1)
+def round_history() -> dict:
+    """{"rounds": {year: rounds in the archive}, "seats": {(institute, program, quota, seat type, gender): {"inst_type", "years": {year: [r1..r6]}}}}.
+    Closing ranks as published; None where the archive has no row. Empty if the file is absent, so the app still runs."""
+    out: dict = {"rounds": {}, "seats": {}}
+    if not ROUNDS_DB.exists():
+        return out
+    db = sqlite3.connect(f"file:{ROUNDS_DB}?mode=ro", uri=True)
+    try:
+        meta = dict(db.execute("SELECT key, value FROM meta"))
+        out["rounds"] = {int(y): int(n) for y, n in (p.split(":") for p in meta["rounds"].split(";"))}
+        for year, inst_type, *key, r1, r2, r3, r4, r5, r6 in db.execute("SELECT * FROM closing"):
+            seat = out["seats"].setdefault(tuple(key), {"inst_type": inst_type, "years": {}})
+            seat["years"][year] = [r1, r2, r3, r4, r5, r6]
+    finally:
+        db.close()
+    return out

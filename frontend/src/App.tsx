@@ -16,6 +16,7 @@ import Login from "./components/Login";
 import AdmissionsTimeline from "./components/AdmissionsTimeline";
 import DepositTracker from "./components/DepositTracker";
 import ChoiceSimulator from "./components/ChoiceSimulator";
+import RoundCoach from "./components/RoundCoach";
 import Sessions from "./components/Sessions";
 import Copilot from "./components/Copilot";
 import TechKit from "./components/TechKit";
@@ -84,6 +85,7 @@ export default function App() {
       {page === "apply" && (
         <>
           <Boundary name="Choice-filling simulator"><ChoiceSimulator s={s} colleges={rows} profile={p} /></Boundary>
+          <Boundary name="Round-by-round coach"><RoundCoach lang={lang} profile={p} view={view} feeLocked={me?.user?.role === "student"} /></Boundary>
           <Boundary name="Admissions timeline"><AdmissionsTimeline s={s} /></Boundary>
         </>
       )}
