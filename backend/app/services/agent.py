@@ -18,7 +18,7 @@ from ..engines.roi import payback
 from ..llm.client import LLM
 from ..services.programs import PROGRAMS, slots
 from ..services.recommend import card, recommend
-from . import admissions, claims, glossary, intake
+from . import admissions, claims, glossary, intake, rounds
 
 TOOLS = ["recommend", "affordability", "emi_compare", "payback", "explain_college", "list_slots", "propose_booking", "help"]
 # Only aliases that point to exactly one college (T-15.04). Bare cities shared by several colleges live in AMBIGUOUS.
@@ -77,6 +77,9 @@ def route_rules(msg: str, prof: dict) -> str:
         return "propose_booking" if re.search(r"\b(book|reserve)\b|बुक", t) else "list_slots"
     if re.search(r"\bmean(s|ing)?\b|\bdefine\b|definition|क्या (है|होता है)|मतलब|अर्थ", t) and glossary.best(msg):
         return "explain_term"
+    if re.search(r"\b(float|freeze|slide)\b|फ़्लोट|फ्लोट|फ़्रीज़|फ्रीज|स्लाइड", t) or (
+            re.search(r"(round|राउंड)\s*\d", t) and re.search(r"\b(got|allotted|allocated)\b|मिल", t)):
+        return "round_advice"  # what to do after a JoSAA round (T-16.08)
     if re.search(r"refund|withdraw|cancel (my )?seat|रिफंड|वापसी", t):
         return "refund"
     if re.search(r"choice order|choice list|preference (list|order)|choice filling|वरीयता|चॉइस", t):
@@ -248,6 +251,8 @@ def run_tool(tool: str, msg: str, profile: dict, a: Assumptions, owner: str, lan
         src = e["source"]
         tail = (f"\nस्रोत: {src['label']}" if hi else f"\nSource: {src['label']}") + (f" ({src['url']})" if src.get("url") else "")
         return {"tool": tool, "data": {"id": e["id"]}, "reply": f"{e['term']['hi' if hi else 'en']}: {e['definition']['hi' if hi else 'en']}{tail}"}
+    if tool == "round_advice":
+        return {"tool": tool, **rounds.copilot(msg, profile, a, hi)}
     if tool == "check_claim":
         res = claims.check(msg, ids, None, lang)
         return {"tool": tool, "data": res, "reply": "\n".join(res["lines"])}

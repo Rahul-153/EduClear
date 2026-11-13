@@ -176,8 +176,8 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [x] T-16.05 `POST /api/rounds/advise` and seat picker endpoint — 2026-11-13 · services/rounds.py; /api/rounds/{cycles,seats,advise}; 15 tests in test_rounds.py; suite 212 passed, 14 skipped; ruff F/E722 clean. No rate limit (no model behind it, same as /api/choice-order)
 - [x] T-16.06 `RoundCoach.tsx` on the Apply page, EN+HI — 2026-11-13 · `npm run build` ok; browser: seat held, option card with rule quotes, history table, money strip, parent view shows money first; Hindi strings render; no horizontal overflow at 375 px
 - [x] T-16.07 Replay mode with JoSAA 2025 rounds — 2026-11-13 · browser: rank 5000 holds NIT Patna CSE in rounds 1-5 and NIT Calicut CSE in round 6; 'My own round' (2026 rules, 5 rounds, history 2021-2025) checked with allotted, typed closing rank and no seat. Not deployed, not committed
-- [ ] T-16.08 `round_advice` Copilot tool
-- [ ] T-16.09 Save the season per family (`RoundState`)
+- [x] T-16.08 `round_advice` Copilot tool — 2026-11-13 · services/rounds.copilot + routing in agent.py (EN+HI, rules only); institute names matched exactly on the JoSAA list (full name or NIT/IIT/IIIT short form); tests: routing, written order, numbers equal the engine in three wordings; browser: Copilot answered 'In 2025 I got NIT Patna in round 2 and want NIT Calicut' with 4,846 / 3.2% / 5 of 5, routed by rules. Live-model run NOT done (the tool never calls the model)
+- [x] T-16.09 Save the season per family (`RoundState`) — 2026-11-13 · db.RoundState (one row per owner, year, round); GET/PUT/DELETE /api/rounds/season; any family member records a round, only a parent (or a guest) sets fee paid; response adds the institute deposits total from the tracker; 2 tests in test_auth.py; suite 225 passed, 14 skipped; browser (guest): save, open and delete a round on the Apply page. Signed-in parent and student NOT checked in the browser (covered by tests only)
 - [ ] T-16.10 Deadline alerts by email (blocked on T-11.04)
 - [ ] T-16.11 WhatsApp alerts (needs provider, templates, opt-in; ask first)
 - [ ] T-16.12 Load JoSAA 2027 schedule and rules when published

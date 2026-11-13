@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { roundAdvise, roundCycles, roundSeats, type Profile, type RoundAdvice, type RoundCycles, type RoundSeat } from "../api";
+import { deleteRound, roundAdvise, roundCycles, roundSeason, roundSeats, saveRound, type Profile, type RoundAdvice, type RoundCycles, type RoundSeason, type RoundSeat } from "../api";
 import type { Lang } from "../i18n";
 import type { View } from "../lib/nav";
 import { inr } from "../lib/format";
@@ -35,6 +35,9 @@ const TXT = {
     fee: "Seat acceptance fee", back: "Back if you withdraw", charge: "charge", wd: "Withdrawal this round", open: "open", closed: "not open", rounds: "rounds",
     feeNote: "Paid once, in the round a seat is first allotted. Institute fees and their refund dates are in the deposit tracker on the Cost page.",
     source: "Source",
+    saved: "Saved rounds", save: "Save this round", took: "Option taken", none: "Not decided", freeze: "Freeze", float: "Float", slide: "Slide", withdrew: "Withdrew",
+    feePaid: "Seat fee paid", feeParent: "Only a parent can record a payment.", load: "Open", noSeatShort: "No seat", deposits: "Institute deposits in your tracker",
+    savedNote: "Saved for your family: parent and student see the same record.",
   },
   hi: {
     title: "राउंड-दर-राउंड सहायक", replay: "JoSAA दोबारा चलाएँ", own: "मेरा अपना राउंड",
@@ -58,6 +61,9 @@ const TXT = {
     fee: "सीट स्वीकृति शुल्क", back: "सीट छोड़ने पर वापसी", charge: "कटौती", wd: "इस राउंड में सीट छोड़ना", open: "खुला", closed: "बंद", rounds: "राउंड",
     feeNote: "एक ही बार, जिस राउंड में पहली बार सीट मिले। संस्थान की फ़ीस और रिफ़ंड की तारीखें Cost पेज के जमा-राशि ट्रैकर में हैं।",
     source: "स्रोत",
+    saved: "सहेजे गए राउंड", save: "यह राउंड सहेजें", took: "चुना गया विकल्प", none: "तय नहीं", freeze: "फ़्रीज़", float: "फ़्लोट", slide: "स्लाइड", withdrew: "सीट छोड़ी",
+    feePaid: "सीट शुल्क जमा हुआ", feeParent: "भुगतान केवल अभिभावक दर्ज कर सकते हैं।", load: "खोलें", noSeatShort: "सीट नहीं", deposits: "आपके ट्रैकर में संस्थान की जमा-राशि",
+    savedNote: "आपके परिवार के लिए सहेजा गया: अभिभावक और छात्र एक ही रिकॉर्ड देखते हैं।",
   },
 };
 
@@ -66,7 +72,7 @@ const label = (c: RoundSeat) => `${c.institute} | ${c.program.replace(/\s*\(4 Ye
 const num = (n: number | null | undefined) => (n == null ? "—" : n.toLocaleString("en-IN"));
 const field = { font: "inherit", fontSize: 13, padding: "6px 10px", borderRadius: 10, border: "1px solid var(--hairline)", background: "#fff" } as const;
 
-export default function RoundCoach({ lang, profile, view }: { lang: Lang; profile: Profile; view: View }) {
+export default function RoundCoach({ lang, profile, view, feeLocked }: { lang: Lang; profile: Profile; view: View; feeLocked: boolean }) {
   const x = TXT[lang];
   const [cycles, setCycles] = useState<RoundCycles | null>(null);
   const [own, setOwn] = useState(false);
@@ -81,12 +87,17 @@ export default function RoundCoach({ lang, profile, view }: { lang: Lang; profil
   const [draft, setDraft] = useState("");
   const [res, setRes] = useState<RoundAdvice | null>(null);
   const [err, setErr] = useState("");
+  const [season, setSeason] = useState<RoundSeason | null>(null);
+  const [took, setTook] = useState("");
+  const [feePaid, setFeePaid] = useState(false);
 
   useEffect(() => { roundCycles().then(setCycles).catch((e) => setErr((e as Error).message)); }, []);
   const replayYear = cycles?.replay_years[0];
   const year = own ? cycles?.own_round.year : replayYear;
   const total = own ? cycles?.own_round.total_rounds ?? 5 : (replayYear ? cycles!.rounds[String(replayYear)] : 6);
   const gender = female ? FEMALE : "Gender-Neutral";
+  const ownYear = cycles?.own_round.year;
+  useEffect(() => { if (ownYear) roundSeason(ownYear).then((r) => { setSeason(r); setFeePaid(r.seat_fee_paid); }).catch(() => setSeason(null)); }, [ownYear]);
 
   useEffect(() => { if (replayYear) roundSeats(replayYear, seatType, gender).then((r) => setSeats(r.items)).catch(() => setSeats([])); }, [replayYear, seatType, gender]);
   useEffect(() => { if (round > total) setRound(total); }, [total]);
@@ -114,6 +125,14 @@ export default function RoundCoach({ lang, profile, view }: { lang: Lang; profil
   };
   const setClosing = (i: number, v: string) => setChoices(choices.map((c, j) => (j === i ? { ...c, closing_this_round: Number(v) || null } : c)));
 
+  const save = () => saveRound({ ...JSON.parse(body), action_taken: took || null, ...(feeLocked ? {} : { fee_paid: feePaid }) })
+    .then((r) => { setSeason(r); setErr(""); }).catch((e) => setErr((e as Error).message));
+  const open = (r: RoundSeason["rounds"][number]) => {
+    const q = r.request;
+    setChoices(q.choices); setRound(r.round); setAllotted(q.no_seat ? -1 : q.allotted); setMainRank(q.main_rank ? String(q.main_rank) : "");
+    setAdvRank(q.advanced_rank ? String(q.advanced_rank) : ""); setSeatType(q.seat_type); setFemale(q.gender === FEMALE); setTook(r.action_taken ?? ""); setFeePaid(r.fee_paid);
+  };
+  const actions = ["freeze", "float", "slide", "withdrew"] as const;
   const held = res && res.held !== null ? res.choices[res.held] : null;
   const act = res?.option.action;
   const higher = res?.choices.filter((c) => c.above_held) ?? [];
@@ -187,12 +206,35 @@ export default function RoundCoach({ lang, profile, view }: { lang: Lang; profil
         <div aria-live="polite">
           {err && <p className="note" role="alert">{err}</p>}
           {own && allotted === null && <div className="empty">{x.pick}</div>}
+          {own && season && season.rounds.length > 0 && (
+            <div style={{ marginBottom: 10 }}>
+              <div className="label" style={{ marginBottom: 4 }}>{x.saved}</div>
+              {season.rounds.map((r) => (
+                <div className="row" key={r.round}>
+                  <span><span className="mono">{x.round} {r.round}</span> · {r.held ? short(r.held) : x.noSeatShort}{r.action_taken ? ` · ${x[r.action_taken as (typeof actions)[number]]}` : ""}{r.fee_paid ? ` · ${x.feePaid}` : ""}</span>
+                  <span style={{ display: "flex", gap: 10 }}><button className="link" onClick={() => open(r)}>{x.load}</button>
+                    <button className="link" aria-label={`${x.remove}: ${x.round} ${r.round}`} onClick={() => deleteRound(season.year, r.round).then(setSeason).catch((e) => setErr((e as Error).message))}>✕</button></span>
+                </div>
+              ))}
+              <p className="note">{x.savedNote}</p>
+            </div>
+          )}
           {res && (
             <>
               {held && <div className="clock"><span>{res.mode === "replay" ? x.holdReplay : x.holdOwn}: <strong>{short(held)}</strong></span><span>{x.round} {res.round}/{res.total_rounds}</span></div>}
               {res.mode === "replay" && <p className="note">{x.replayNote}</p>}
               {view === "parent" ? <>{money}{option}</> : <>{option}{money}</>}
               {m?.status === "seat_held" && <p className="note">{x.feeNote}</p>}
+              {season && season.institute_deposits.count > 0 && <p className="note">{x.deposits}: <strong className="num">{inr(season.institute_deposits.total_inr)}</strong></p>}
+              {own && (
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center", marginTop: 8 }}>
+                  <label className="note">{x.took} <select style={field} value={took} onChange={(e) => setTook(e.target.value)}>
+                    <option value="">{x.none}</option>{actions.map((k) => <option key={k} value={k}>{x[k]}</option>)}</select></label>
+                  <label className="note" title={feeLocked ? x.feeParent : undefined} style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                    <input type="checkbox" checked={feePaid} disabled={feeLocked} onChange={(e) => setFeePaid(e.target.checked)} />{x.feePaid}</label>
+                  <button className="capsule" style={{ padding: "6px 14px" }} onClick={save}>{x.save}</button>
+                </div>
+              )}
             </>
           )}
         </div>

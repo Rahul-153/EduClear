@@ -169,3 +169,9 @@ export const roundCycles = () => call<RoundCycles>("GET", "/api/rounds/cycles");
 export const roundSeats = (year: number, seat_type: string, gender: string) =>
   call<{ items: RoundSeat[] }>("GET", `/api/rounds/seats?year=${year}&seat_type=${encodeURIComponent(seat_type)}&gender=${encodeURIComponent(gender)}`);
 export const roundAdvise = (b: Record<string, unknown>) => call<RoundAdvice>("POST", "/api/rounds/advise", b);
+export interface RoundSeason { year: number; seat_fee_paid: boolean; institute_deposits: { count: number; total_inr: number };
+  rounds: { round: number; held: RoundSeat | null; action_taken: string | null; fee_paid: boolean;
+    request: { choices: RoundSeat[]; allotted: number | null; no_seat: boolean; main_rank: number | null; advanced_rank: number | null; seat_type: string; gender: string } }[] }
+export const roundSeason = (year: number) => call<RoundSeason>("GET", `/api/rounds/season?year=${year}`);
+export const saveRound = (b: Record<string, unknown>) => call<RoundSeason>("PUT", "/api/rounds/season", b);
+export const deleteRound = (year: number, round: number) => call<RoundSeason>("DELETE", `/api/rounds/season/${year}/${round}`);

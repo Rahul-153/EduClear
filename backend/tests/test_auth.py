@@ -365,3 +365,35 @@ def test_display_name_is_kept_and_emails_are_masked_to_family_members(env):
     names = {m["role"]: m["name"] for m in p.get("/api/auth/me").json()["family"]["members"]}
     assert names["parent"] == "Mum" and names["student"] == "k***@example.com"
     assert "kid@example.com" not in p.get("/api/auth/me").text  # a family member never sees the other's email
+
+
+# ---------- saved counselling season (T-16.09) ----------
+_CSE = "Computer Science and Engineering (4 Years, Bachelor of Technology)"
+ROUND = {"year": 2026, "round": 2, "main_rank": 5000, "allotted": 1, "choices": [
+    {"institute": "National Institute of Technology Calicut", "program": _CSE, "quota": "OS"},
+    {"institute": "National Institute of Technology Patna", "program": _CSE, "quota": "OS"}]}
+
+
+def test_family_shares_one_season_and_only_a_parent_records_the_fee(env):
+    p, st = family(env)
+    r = st.put("/api/rounds/season", json={**ROUND, "action_taken": "float"}, headers=X)  # a student may record the round
+    assert r.status_code == 200 and r.json()["rounds"][0]["held"]["institute"].endswith("Patna")
+    assert st.put("/api/rounds/season", json={**ROUND, "fee_paid": True}, headers=X).status_code == 403
+    assert p.put("/api/rounds/season", json={**ROUND, "action_taken": "float", "fee_paid": True}, headers=X).status_code == 200
+    again = st.put("/api/rounds/season", json={**ROUND, "action_taken": "slide"}, headers=X).json()  # same round: updated, fee flag kept
+    assert [(x["round"], x["action_taken"], x["fee_paid"]) for x in again["rounds"]] == [(2, "slide", True)] and again["seat_fee_paid"] is True
+    dep = {"college_id": "nit-calicut", "amount_inr": 30000, "paid_on": "2026-06-20", "closure_date": "2026-08-01"}
+    p.post("/api/deposits", json=dep, headers=X)
+    assert p.get("/api/rounds/season", params={"year": 2026}).json()["institute_deposits"] == {"count": 1, "total_inr": 30000}
+    assert st.delete("/api/rounds/season/2026/2", headers=X).json()["rounds"] == []
+
+
+def test_season_is_private_to_its_owner_and_checks_the_round(env):
+    a, b = browser(), browser()
+    other = {"X-Client-Id": "browser-bbbb-2222"}
+    assert a.put("/api/rounds/season", json={**ROUND, "fee_paid": True}, headers=GUEST).status_code == 200  # a guest keeps their own record
+    assert b.get("/api/rounds/season", params={"year": 2026}, headers=other).json()["rounds"] == []
+    assert b.delete("/api/rounds/season/2026/2", headers=other).status_code == 404
+    assert a.put("/api/rounds/season", json={**ROUND, "allotted": None}, headers=GUEST).status_code == 422
+    assert a.put("/api/rounds/season", json={**ROUND, "allotted": 0, "action_taken": "float"}, headers=GUEST).status_code == 422  # first choice: freeze only
+    assert a.put("/api/rounds/season", json={**ROUND, "round": 9}, headers=GUEST).status_code == 422

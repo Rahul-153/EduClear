@@ -8,7 +8,9 @@ from backend.app.config import ROOT
 from backend.app.data import round_history
 from backend.app.engines import rounds as eng
 from backend.app.main import app
+from backend.app.engines.assumptions import Assumptions
 from backend.app.services import admissions, cutoff_options
+from backend.app.services import agent as ag
 from backend.app.services import rounds as svc
 from scripts import backtest_rounds, export_round_history
 
@@ -162,3 +164,47 @@ def test_backtest_runs_and_counts_cases():
     cells = r["by_gap"]["relative"][1.05]
     assert r["history_years"] == [2020, 2021, 2022, 2023, 2024] and sum(n for n, _ in cells.values()) > 10_000
     assert all(k <= n for n, k in cells.values())
+
+
+# ---- Copilot tool (T-16.08) ------------------------------------------------------------------------------------------
+@pytest.mark.parametrize("msg,tool", [
+    ("I got NIT Patna in round 2, should I float?", "round_advice"), ("freeze or slide?", "round_advice"),
+    ("राउंड 2 में NIT Patna मिला", "round_advice"), ("फ्लोट करूँ या फ्रीज", "round_advice"),
+    ("when is the next JoSAA round", "deadlines"), ("how do I withdraw my seat", "refund"),
+])
+def test_round_advice_routing_leaves_older_routes_alone(msg, tool):
+    assert ag.route_rules(msg, {}) == tool
+
+
+@pytestmark_data
+def test_institute_names_match_exactly_and_in_written_order():
+    assert [i for _, i in svc.find_institutes("want NIT Calicut but got NIT Patna")] == [CALICUT["institute"], PATNA["institute"]]
+    assert [i for _, i in svc.find_institutes("Indian Institute of Information Technology Guwahati or IIT Guwahati")] == [
+        "Indian Institute of Information Technology Guwahati", "Indian Institute of Technology Guwahati"]
+    assert svc.find_institutes("tell me about Guwahati") == []  # a bare city is not an institute
+
+
+@pytestmark_data
+@pytest.mark.parametrize("msg", ["In 2025 I got NIT Patna in round 2 and want NIT Calicut, rank 5000, should I float?",
+                                 "2025: I want NIT Calicut but got NIT Patna in round 2. rank 5,000. float?",
+                                 "2025 के राउंड 2 में NIT Patna मिला, NIT Calicut चाहिए, रैंक 5000, फ्लोट करूँ?"])
+def test_copilot_numbers_equal_the_engine(msg):
+    r = ag.handle(msg, {}, "en", Assumptions(), "o1", None)
+    direct = svc.advise(year=2025, rnd=2, choices=[CALICUT, PATNA], seat_type="OPEN", gender=GN, main_rank=5000, advanced_rank=None, allotted=1)
+    assert r["tool"] == "round_advice" and r["data"]["choices"] == direct["choices"] and r["data"]["option"]["action"] == "float"
+    h = direct["choices"][0]["history"]
+    assert (h["closing_now"], h["short_by_pct"], h["years_reached"], h["years_with_data"]) == (4846, 3.2, 5, 5)
+    for n in ("4,846", "3.2%", "30,000", "23,000", "7,000"):
+        assert n in r["reply"]
+    assert "Patna" in r["reply"].split("\n")[0]  # the seat held is Patna in every wording
+
+
+@pytestmark_data
+def test_copilot_without_a_live_closing_rank_says_so_and_never_guesses():
+    r = ag.handle("I got NIT Patna in round 2 and want NIT Calicut, should I float?", {"percentile": 99.66}, "en", Assumptions(), "o1", None)
+    assert r["data"]["mode"] == "own_round" and r["data"]["choices"][0]["history"]["basis"] == "absolute_rank"
+    assert "worked out from your percentile" in r["reply"] and "Add this round's closing rank" in r["reply"]
+    ask = ag.handle("should I float or freeze", {}, "en", Assumptions(), "o1", None)
+    assert ask["data"] == {} and "Tell me the round" in ask["reply"]
+    none = ag.handle("I got NIT Patna in round 2 and want NIT Calicut, float?", {"stream": "Civil", "seat_type": "ST"}, "en", Assumptions(), "o1", None)
+    assert none["tool"] == "round_advice"  # either a real ST Civil seat or a plain "not in our record", never an invented one

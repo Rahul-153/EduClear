@@ -85,7 +85,7 @@ export default function App() {
       {page === "apply" && (
         <>
           <Boundary name="Choice-filling simulator"><ChoiceSimulator s={s} colleges={rows} profile={p} /></Boundary>
-          <Boundary name="Round-by-round coach"><RoundCoach lang={lang} profile={p} view={view} /></Boundary>
+          <Boundary name="Round-by-round coach"><RoundCoach lang={lang} profile={p} view={view} feeLocked={me?.user?.role === "student"} /></Boundary>
           <Boundary name="Admissions timeline"><AdmissionsTimeline s={s} /></Boundary>
         </>
       )}

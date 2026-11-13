@@ -3,6 +3,7 @@ from datetime import date, datetime
 from typing import Optional
 
 from pydantic import NaiveDatetime
+from sqlalchemy import UniqueConstraint
 from sqlmodel import Field, Session, SQLModel, create_engine
 
 from .config import settings
@@ -51,6 +52,19 @@ class Deposit(SQLModel, table=True):
 
 
 # ---- accounts (PLAN_AUTH.md) ----
+class RoundState(SQLModel, table=True):
+    """One counselling round as the family recorded it (T-16.09). Owner strings as for Deposit: a family shares one record."""
+    __table_args__ = (UniqueConstraint("owner", "year", "round"),)
+    id: Optional[int] = Field(default=None, primary_key=True)
+    owner: str = Field(index=True)
+    year: int
+    round: int
+    request_json: str  # the saved /api/rounds/advise request: list, ranks, seat type, what was allotted
+    action_taken: Optional[str] = None  # freeze | float | slide | withdrew
+    fee_paid: bool = False  # seat acceptance fee paid; set by a parent (or a guest), never by a signed-in student
+    updated_at: NaiveDatetime = Field(default_factory=datetime.utcnow)
+
+
 class User(SQLModel, table=True):
     __tablename__ = "app_user"  # "user" is a reserved word in Postgres
     id: Optional[int] = Field(default=None, primary_key=True)

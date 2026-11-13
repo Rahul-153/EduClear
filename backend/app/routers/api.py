@@ -1,12 +1,13 @@
+import json
 from typing import Dict, List, Literal, Optional
 
-from datetime import date
+from datetime import date, datetime
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select
 from pydantic import BaseModel, Field
 
-from ..auth.deps import actor_read, family_actor
+from ..auth.deps import actor_read, current_user, family_actor
 from ..data import colleges, get_college
 from ..engines import alignment as align
 from ..engines.assumptions import Assumptions
@@ -14,7 +15,7 @@ from ..engines.emi import funding_plan
 from ..engines.roi import payback, trajectory
 from ..services.recommend import SUPPORTED_STREAMS, card, recommend
 from ..engines import refund as refund_engine
-from ..db import Deposit, get_session
+from ..db import Deposit, RoundState, User, get_session
 from ..services import admissions, brief, rounds as rounds_service
 from ..engines.choice import analyse as analyse_choices
 
@@ -256,3 +257,54 @@ def round_advise(body: RoundIn):
                                      advanced_rank=body.advanced_rank, allotted=body.allotted, no_seat=body.no_seat)
     except ValueError as e:
         raise HTTPException(422, str(e))
+
+
+# ---- saved season (T-16.09): one record per family, any member may write it; only a parent records the fee ----
+class SeasonIn(RoundIn):
+    action_taken: Optional[Literal["freeze", "float", "slide", "withdrew"]] = None
+    fee_paid: Optional[bool] = None
+
+
+def _season(s: Session, o: str, year: int) -> dict:
+    rows = s.exec(select(RoundState).where(RoundState.owner == o, RoundState.year == year).order_by(RoundState.round)).all()
+    out = []
+    for r in rows:
+        req = json.loads(r.request_json)
+        held = None if req.get("no_seat") or req.get("allotted") is None else req["choices"][req["allotted"]]
+        out.append({"round": r.round, "request": req, "held": held, "action_taken": r.action_taken, "fee_paid": r.fee_paid, "updated_at": r.updated_at})
+    deposits = s.exec(select(Deposit).where(Deposit.owner == o)).all()
+    return {"year": year, "rounds": out, "seat_fee_paid": any(r.fee_paid for r in rows),
+            "institute_deposits": {"count": len(deposits), "total_inr": sum(d.amount_inr for d in deposits)}}
+
+
+@router.get("/rounds/season")
+def season(year: int, s: Session = Depends(get_session), o: str = Depends(actor_read)):
+    return _season(s, o, year)
+
+
+@router.put("/rounds/season")
+def save_round(body: SeasonIn, s: Session = Depends(get_session), o: str = Depends(actor_read), u: Optional[User] = Depends(current_user)):
+    if body.allotted is None and not body.no_seat:
+        raise HTTPException(422, "say which choice was allotted, or that no seat was allotted")
+    advice = round_advise(body)  # same checks as the answer itself: known seats, round in range
+    if body.action_taken in ("float", "slide") and advice["option"]["action"] not in ("float", "slide"):
+        raise HTTPException(422, "float and slide are not offered for this seat and round")
+    if body.fee_paid is not None and u and u.role != "parent":
+        raise HTTPException(403, "Only a parent can record a payment.")
+    row = s.exec(select(RoundState).where(RoundState.owner == o, RoundState.year == body.year, RoundState.round == body.round)).first() \
+        or RoundState(owner=o, year=body.year, round=body.round, request_json="")
+    row.request_json = json.dumps(body.model_dump(exclude={"action_taken", "fee_paid"}))
+    row.action_taken, row.updated_at = body.action_taken, datetime.utcnow()
+    if body.fee_paid is not None:
+        row.fee_paid = body.fee_paid
+    s.add(row); s.commit()
+    return _season(s, o, body.year)
+
+
+@router.delete("/rounds/season/{year}/{rnd}")
+def delete_round(year: int, rnd: int, s: Session = Depends(get_session), o: str = Depends(actor_read)):
+    row = s.exec(select(RoundState).where(RoundState.owner == o, RoundState.year == year, RoundState.round == rnd)).first()
+    if not row:
+        raise HTTPException(404, "round not found")
+    s.delete(row); s.commit()
+    return _season(s, o, year)

@@ -1,6 +1,6 @@
 # Plan — Round-by-round counselling co-pilot (Phase 16)
 
-Written 2026-11-13. Status: Stages 1 and 2 built the same day (T-16.01 to T-16.07, D-66); Stages 3 to 5 open. Tasks are T-16.xx in `todo.md`.
+Written 2026-11-13. Status: Stages 1 to 3 built the same day (T-16.01 to T-16.09, D-66 and D-67); Stage 4 (alerts) and Stage 5 (season pass) open. Tasks are T-16.xx in `todo.md`.
 
 ## 1. What it is
 
