@@ -163,6 +163,7 @@ export interface RoundAdvice {
     withdrawal_open_this_round?: boolean; withdrawal_first_round?: number; withdrawal_last_round?: number };
   rules: { id: string; clause: string; page: number; quote: string }[]; rules_source: { document: string; url: string };
   source: string; source_url: string; needs_rank: string[];
+  order_alerts: { severity: "high" | "medium"; above: number; below: number; above_closing: number; below_closing: number }[]; order_reference_year: number | null;
 }
 export interface RoundCycles { replay_years: number[]; rounds: Record<string, number>; own_round: { year: number; total_rounds: number } }
 export const roundCycles = () => call<RoundCycles>("GET", "/api/rounds/cycles");

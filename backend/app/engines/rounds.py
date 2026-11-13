@@ -80,3 +80,24 @@ def money_at_risk(held_inst_type: Optional[str], seat_type: str, rnd: int, total
             "withdrawal_first_round": 2, "withdrawal_last_round": last,
             "rule_ids": ["fee_paid_once", "withdrawal_refund", "withdrawal_window_iit"]  # this clause also states the start (2nd round)
             + ([] if held_inst_type == "IIT" else ["withdrawal_window_nit_plus"]) + ["withdrawal_excludes"]}
+
+
+def order_alerts(items: List[dict], reach_margin: float) -> List[dict]:
+    """Same rule as engines/choice.py, on seats: an easier seat (larger closing rank) listed above a harder one the
+    student could also get means the harder one is never reached. `items` in list order, each with `basis`, `closing`
+    (a past final-round closing rank) and `rank`; entries without a closing rank or a rank are skipped."""
+    out = []
+    for i, hi in enumerate(items):
+        for j in range(i + 1, len(items)):
+            lo = items[j]
+            if None in (hi["closing"], lo["closing"], hi["rank"]) or hi["basis"] != lo["basis"] or hi["closing"] <= lo["closing"]:
+                continue
+            if hi["rank"] <= lo["closing"]:
+                sev = "high"
+            elif hi["rank"] <= lo["closing"] * reach_margin:
+                sev = "medium"
+            else:
+                continue
+            out.append({"severity": sev, "above": i, "below": j, "above_closing": published(hi["closing"]), "below_closing": published(lo["closing"])})
+    return out
+

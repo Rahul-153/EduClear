@@ -182,3 +182,7 @@ Legend: `[ ]` open · `[x]` done (add `— YYYY-MM-DD · evidence`). Deadline 13
 - [ ] T-16.11 WhatsApp alerts (needs provider, templates, opt-in; ask first)
 - [ ] T-16.12 Load JoSAA 2027 schedule and rules when published
 - [ ] T-16.13 Season pass through the existing checkout
+- [x] T-16.14 Choice-filling simulator 422 on the Apply page — 2026-11-13 · /api/choice-order accepts up to 200 ids (the simulator sends all 96 matching colleges; the limit was 50); test in test_choice.py; browser: no console errors on the Apply page. The 96-row list itself is unchanged
+- [x] T-16.15 Order check on the coach's seat list — 2026-11-13 · engines/rounds.order_alerts (same rule as engines/choice.py) against the last published round of the year before the cycle; shown under the list, EN+HI; 2 tests; browser: NIT Patna above NIT Calicut at rank 4,000 shows "Check this order" (14,442 vs 4,482 in 2024); suite 228 passed
+- [x] T-16.16 Signed-in family check of the saved season — 2026-11-13 · browser, local auth demo server, two identities (localhost parent, 127.0.0.1 student, test addresses): student saved a round and the fee box was locked; parent saw the same round after a reload and marked the fee paid. The record is read when the page loads, so the other person's change shows after a reload. Test round deleted; the two test accounts stay in the local database only
+

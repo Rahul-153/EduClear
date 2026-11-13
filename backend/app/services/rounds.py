@@ -68,6 +68,11 @@ def advise(*, year: int, rnd: int, choices: List[dict], seat_type: str, gender: 
         if item["above_held"]:
             item["history"] = eng.movement(s["years"], rnd, rank, use_years, now) if rank is not None else None
         items.append(item)
+    # Order check against the last published round of the latest year before this cycle (never the cycle's own outcome).
+    ref_year = use_years[-1] if use_years else None
+    last = lambda s: next((c for c in reversed(s["years"].get(ref_year) or []) if c is not None), None)
+    alerts = eng.order_alerts([{"basis": "advanced" if s["inst_type"] == "IIT" else "main", "closing": last(s), "rank": r}
+                               for s, r in zip(rows, ranks)], Assumptions().reach_margin)
     opt = eng.option(held, [c["institute"] for c in choices], rnd, total)
     money = eng.money_at_risk(rows[held]["inst_type"] if held is not None else None, seat_type, rnd, total,
                               admissions.timeline_data()["seatAcceptanceFee"], admissions.josaa_rules()["withdrawalChargeInr"])
@@ -75,6 +80,7 @@ def advise(*, year: int, rnd: int, choices: List[dict], seat_type: str, gender: 
     used = set(opt["rule_ids"]) | set(money.get("rule_ids", []))
     return {"year": year, "round": rnd, "total_rounds": total, "mode": "replay" if replay else "own_round", "held_from": held_from,
             "held": held, "option": opt, "choices": items, "money": money, "history_years": use_years,
+            "order_alerts": alerts, "order_reference_year": ref_year,
             "rules": [r for r in doc["rules"] if r["id"] in used],
             "rules_source": {"document": doc["document"], "url": doc["url"], "cycle": doc["cycle"]},
             "source": SOURCE, "source_url": "https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx",

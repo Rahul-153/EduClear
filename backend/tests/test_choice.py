@@ -32,3 +32,12 @@ def test_iit_advanced_inversion():
     # BHU closing 1489 (easier) above Hyderabad closing 673 for AIR 600 -> high
     r = analyse(["iit-bhu", "iit-hyderabad"], A, jee_advanced_rank=600)
     assert r["alerts"][0]["severity"] == "high" and r["suggested_order"] == ["iit-hyderabad", "iit-bhu"]
+
+
+def test_endpoint_accepts_every_college_the_app_can_list():
+    from fastapi.testclient import TestClient
+    from backend.app.data import colleges
+    from backend.app.main import app
+    ids = list(colleges())
+    r = TestClient(app).post("/api/choice-order", json={"college_ids": ids, "percentile": 99.75})
+    assert r.status_code == 200 and len(r.json()["items"]) == len(ids)  # the simulator sends the whole matching list (was 422 above 50)

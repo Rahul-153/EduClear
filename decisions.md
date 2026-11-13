@@ -164,3 +164,6 @@ Stages 1 and 2 of `PLAN_ROUND_COPILOT.md`, built on the owner's "build it with t
 ## D-68 — Round coach merged and pushed; live site redeployed (2026-11-13, user)
 `feature/round-coach` was merged into `main` (merge commit 8ab836a) and `main` was pushed to GitHub at the owner's request; five commits went out (AI plan stages 1-4 and the round coach). Render redeployed and the new endpoints answer on https://educlear.onrender.com. The `RoundState` table is new and is created at startup; no existing table changed. The feature branch is kept locally and was not pushed.
 
+## D-69 — Follow-ups after the round coach (2026-11-13, user: "work on the pending items one by one")
+(1) `/api/choice-order` takes up to 200 college ids: with the supplied dataset the simulator sends 96 and the old limit of 50 returned 422 on every visit to the Apply page. The long list in the simulator is left as it is. (2) The coach warns when an easier seat sits above a harder one the student could also get, using the same margins as the choice-filling rehearsal and the last published round of the year before the cycle, so a replay never uses its own result. It is a prompt to check, not an error: the family may prefer the easier seat. (3) The saved season is loaded once per page load; live refresh between two family members was not added.
+

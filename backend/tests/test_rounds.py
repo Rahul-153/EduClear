@@ -208,3 +208,24 @@ def test_copilot_without_a_live_closing_rank_says_so_and_never_guesses():
     assert ask["data"] == {} and "Tell me the round" in ask["reply"]
     none = ag.handle("I got NIT Patna in round 2 and want NIT Calicut, float?", {"stream": "Civil", "seat_type": "ST"}, "en", Assumptions(), "o1", None)
     assert none["tool"] == "round_advice"  # either a real ST Civil seat or a plain "not in our record", never an invented one
+
+
+# ---- order check on the seat list ------------------------------------------------------------------------------------
+def test_order_alerts_rule():
+    mk = lambda closing, rank=100, basis="main": {"basis": basis, "closing": closing, "rank": rank}
+    assert eng.order_alerts([mk(500), mk(200)], 1.5) == [{"severity": "high", "above": 0, "below": 1, "above_closing": 500, "below_closing": 200}]
+    assert eng.order_alerts([mk(500, 250), mk(200, 250)], 1.5)[0]["severity"] == "medium"  # 250 is within 1.5 x 200
+    assert eng.order_alerts([mk(500, 400), mk(200, 400)], 1.5) == []  # the harder seat is out of reach: nothing to warn about
+    assert eng.order_alerts([mk(200), mk(500)], 1.5) == []  # harder seat first: fine
+    assert eng.order_alerts([mk(500), mk(200, basis="advanced")], 1.5) == [] and eng.order_alerts([mk(None), mk(200)], 1.5) == []
+
+
+@pytestmark_data
+def test_patna_above_calicut_is_flagged_from_the_year_before_the_cycle():
+    # 2024 last published round (5): NIT Patna CSE OS closed far beyond NIT Calicut CSE OS (4482); rank 4000 reaches both.
+    h = round_history()["seats"]
+    patna_2024 = next(c for c in reversed(h[(PATNA["institute"], PATNA["program"], "OS", "OPEN", GN)]["years"][2024]) if c is not None)
+    r = svc.advise(year=2025, rnd=1, choices=[PATNA, CALICUT], seat_type="OPEN", gender=GN, main_rank=4000, advanced_rank=None)
+    assert r["order_reference_year"] == 2024
+    assert r["order_alerts"] == [{"severity": "high", "above": 0, "below": 1, "above_closing": int(patna_2024), "below_closing": 4482}]
+    assert svc.advise(year=2025, rnd=1, choices=[CALICUT, PATNA], seat_type="OPEN", gender=GN, main_rank=4000, advanced_rank=None)["order_alerts"] == []

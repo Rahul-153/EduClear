@@ -49,7 +49,7 @@ class FinanceIn(BaseModel):
 
 
 class ChoiceIn(BaseModel):
-    college_ids: list[str] = Field(min_length=1, max_length=50)
+    college_ids: list[str] = Field(min_length=1, max_length=200)  # the simulator starts from every matching college (96 of the 108 supplied)
     percentile: Optional[float] = Field(None, ge=0, le=100)
     home_state: Optional[str] = None
     jee_advanced_rank: Optional[int] = Field(None, ge=1)

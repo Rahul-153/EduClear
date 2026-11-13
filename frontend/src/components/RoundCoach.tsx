@@ -38,6 +38,8 @@ const TXT = {
     saved: "Saved rounds", save: "Save this round", took: "Option taken", none: "Not decided", freeze: "Freeze", float: "Float", slide: "Slide", withdrew: "Withdrew",
     feePaid: "Seat fee paid", feeParent: "Only a parent can record a payment.", load: "Open", noSeatShort: "No seat", deposits: "Institute deposits in your tracker",
     savedNote: "Saved for your family: parent and student see the same record.",
+    orderHigh: "Check this order", orderMed: "Worth a look",
+    orderMsg: (a: string, ac: string, b: string, bc: string, y: number) => `${a} (closed at ${ac} in ${y}) is above ${b} (closed at ${bc}). Seats are given top-down, so you would get the first and never reach the second. If you would rather have ${b}, move it up.`,
   },
   hi: {
     title: "राउंड-दर-राउंड सहायक", replay: "JoSAA दोबारा चलाएँ", own: "मेरा अपना राउंड",
@@ -64,6 +66,8 @@ const TXT = {
     saved: "सहेजे गए राउंड", save: "यह राउंड सहेजें", took: "चुना गया विकल्प", none: "तय नहीं", freeze: "फ़्रीज़", float: "फ़्लोट", slide: "स्लाइड", withdrew: "सीट छोड़ी",
     feePaid: "सीट शुल्क जमा हुआ", feeParent: "भुगतान केवल अभिभावक दर्ज कर सकते हैं।", load: "खोलें", noSeatShort: "सीट नहीं", deposits: "आपके ट्रैकर में संस्थान की जमा-राशि",
     savedNote: "आपके परिवार के लिए सहेजा गया: अभिभावक और छात्र एक ही रिकॉर्ड देखते हैं।",
+    orderHigh: "यह क्रम जाँचें", orderMed: "एक बार देख लें",
+    orderMsg: (a: string, ac: string, b: string, bc: string, y: number) => `${a} (${y} में क्लोज़िंग ${ac}) सूची में ${b} (क्लोज़िंग ${bc}) से ऊपर है। सीटें ऊपर से नीचे मिलती हैं, इसलिए पहली मिल जाएगी और दूसरी तक बात नहीं पहुँचेगी। अगर ${b} ज़्यादा पसंद है तो उसे ऊपर करें।`,
   },
 };
 
@@ -199,6 +203,13 @@ export default function RoundCoach({ lang, profile, view, feeLocked }: { lang: L
             ))}
           </ol>
           {own && <label className="note" style={{ display: "block", margin: "4px 0 8px" }}><input type="radio" name="allotted" checked={allotted === -1} onChange={() => setAllotted(-1)} /> {x.noSeat}</label>}
+          {res?.order_alerts.map((o) => (
+            <div key={`${o.above}-${o.below}`} role="alert" style={{ padding: 10, borderRadius: 12, marginBottom: 8, fontSize: 13, color: "var(--ink)",
+              background: o.severity === "high" ? "#fffbeb" : "#f8fafc", border: `1px solid ${o.severity === "high" ? "#fcd34d" : "var(--hairline)"}` }}>
+              <strong style={{ color: "var(--amber)" }}>{o.severity === "high" ? x.orderHigh : x.orderMed}</strong><br />
+              {x.orderMsg(short(res.choices[o.above]), num(o.above_closing), short(res.choices[o.below]), num(o.below_closing), res.order_reference_year!)}
+            </div>
+          ))}
           <input style={{ ...field, width: "100%" }} list="round-seats" aria-label={x.add} placeholder={`${x.add}: ${x.addPh}`} value={draft} onChange={(e) => addDraft(e.target.value)} />
           <datalist id="round-seats">{seats.map((s) => <option key={label(s)} value={label(s)} />)}</datalist>
         </div>
